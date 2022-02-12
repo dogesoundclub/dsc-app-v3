@@ -5,6 +5,7 @@ import Gallery from "./view/Gallery";
 import FollowMe from "./view/FollowMe";
 import Holder from "./view/Holder";
 import BuyMate from "./view/BuyMate";
+import MyMate from "./view/MyMate";
 
 (async () => {
 
@@ -15,6 +16,7 @@ import BuyMate from "./view/BuyMate";
     SkyRouter.route("followMe", FollowMe);
     SkyRouter.route("holder", Holder);
     SkyRouter.route("buyMate", BuyMate);
+    SkyRouter.route("myMate", MyMate);
 
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);
