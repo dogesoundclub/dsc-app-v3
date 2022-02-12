@@ -1,0 +1,42 @@
+.holder-view {
+    background-image: url("/images/view/home/club.png");
+    height          : 800px;
+    margin          : auto;
+    display         : flex;
+    justify-content : center;
+
+    >section {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+
+        >img {
+            width        : 176px;
+            height       : 176px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        >h1 {
+            font-size  : 42px;
+            line-height: 42px;
+            text-align : center;
+        }
+
+        >.button-container {
+            margin-top: 14px;
+            text-align: center;
+
+            >a {
+                font-size  : 42px;
+                line-height: 42px;
+                padding    : 35px;
+
+                &:hover {
+                    color: #E73C83;
+                }
+            }
+        }
+    }
+}

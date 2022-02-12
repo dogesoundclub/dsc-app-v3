@@ -686,4 +686,78 @@ body {
 .follow-me-view > section > section > article > .content-container > img {
   margin-right: 10px;
 }
+.holder-view {
+  background-image: url("/images/view/home/club.png");
+  height: 800px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.holder-view > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.holder-view > section > img {
+  width: 176px;
+  height: 176px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.holder-view > section > h1 {
+  font-size: 42px;
+  line-height: 42px;
+  text-align: center;
+}
+.holder-view > section > .button-container {
+  margin-top: 14px;
+  text-align: center;
+}
+.holder-view > section > .button-container > a {
+  font-size: 42px;
+  line-height: 42px;
+  padding: 35px;
+}
+.holder-view > section > .button-container > a:hover {
+  color: #E73C83;
+}
+.buy-mate-view {
+  background-image: url("/images/view/home/club.png");
+  height: 800px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.buy-mate-view > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.buy-mate-view > section > img {
+  width: 176px;
+  height: 176px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.buy-mate-view > section > h1 {
+  font-size: 42px;
+  line-height: 42px;
+  text-align: center;
+}
+.buy-mate-view > section > button {
+  margin-top: 20px;
+  font-family: DungGeunMo;
+  font-size: 24px;
+  line-height: 24px;
+  color: #FFFFFF;
+  background-color: #E73C83;
+  border-radius: 8px;
+  padding: 20px 100px;
+}
+.buy-mate-view > section > button:hover {
+  background-color: #FFFFFF;
+  color: #E73C83;
+}
 
