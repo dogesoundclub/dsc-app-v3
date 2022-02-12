@@ -1,0 +1,90 @@
+.layout {
+
+    >header {
+        max-width     : 1156px;
+        margin        : auto;
+        display       : flex;
+        padding-top   : 10px;
+        padding-bottom: 10px;
+
+        >.pc-menu {
+            @media @phone {
+                display: none;
+            }
+        }
+    }
+
+    >footer {
+        margin-top: 60px;
+
+        >.sidebar {
+            background-color: #222222;
+
+            >.content {
+                display        : flex;
+                align-items    : center;
+                justify-content: space-between;
+                max-width      : 1156px;
+                margin         : auto;
+
+                >.term {
+                    display    : flex;
+                    align-items: center;
+                    height     : 44px;
+
+                    >a {
+                        font-family: Noto Sans KR;
+                        font-style : normal;
+                        font-weight: normal;
+                        font-size  : 12px;
+                        line-height: 20px;
+                    }
+
+                    >span {
+                        color : #474747;
+                        margin: 10px 10px;
+                    }
+                }
+
+                >.social {
+                    display        : flex;
+                    align-items    : center;
+                    justify-content: center;
+                    height         : 44px;
+
+                    >a {
+                        display    : flex;
+                        align-items: center;
+                        height     : 44px;
+                        margin     : 0px 10px;
+                    }
+                }
+            }
+        }
+
+        >.provider {
+            display       : flex;
+            flex-direction: column;
+            max-width     : 1156px;
+            margin        : auto;
+            margin-top    : 30px;
+
+            >img {
+                width : 70px;
+                height: 60px;
+            }
+
+            >p {
+                font-family: Noto Sans KR;
+                font-style : normal;
+                font-weight: normal;
+                font-size  : 12px;
+                line-height: 20px;
+                margin-top : 20px;
+
+
+                color: #838383;
+            }
+        }
+    }
+}

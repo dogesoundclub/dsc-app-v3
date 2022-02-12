@@ -1,0 +1,42 @@
+.mobile-menu {
+    position        : fixed;
+    width           : 170px;
+    background-color: #000000;
+    border          : 1px solid #A1A1A1;
+
+    >ul {
+        padding: 10px;
+
+        >li {
+            >a {
+                display  : block;
+                padding  : 5px;
+                color    : #06BC00;
+                font-size: 18px;
+            }
+
+            >ul {
+                margin-left: 10px;
+
+                >li {
+                    >a {
+                        display: block;
+                        padding: 5px;
+                        color  : #BFC500;
+                    }
+
+                    &.parent {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    >.language-select {
+        padding        : 10px 0;
+        display        : flex;
+        justify-content: center;
+        border-top     : 1px solid #A1A1A1;
+    }
+}

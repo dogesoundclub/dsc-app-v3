@@ -1,0 +1,38 @@
+.pc-menu {
+    position: absolute;
+    top     : 0;
+    left    : 0;
+    z-index : 3;
+    width   : 100%;
+
+    >ul {
+        display        : flex;
+        justify-content: center;
+
+        >li {
+            >a {
+                display   : block;
+                padding   : 20px 20px;
+                text-align: center;
+                color     : white;
+                font-size : 20px;
+
+                &:hover {
+                    color: #E73C83;
+                }
+
+                &:active {
+                    color: #E73C83;
+                }
+            }
+        }
+    }
+
+    >.language-select {
+        font-size: 18px;
+
+        >select {
+            font-size: 18px;
+        }
+    }
+}
