@@ -11,6 +11,7 @@ import DscFamily from "./view/DscFamily";
 import FullyOn from "./view/FullyOn";
 import Terms from "./view/Terms";
 import Contest from "./view/Contest";
+import Governance from "./view/governance";
 
 (async () => {
 
@@ -27,6 +28,7 @@ import Contest from "./view/Contest";
     SkyRouter.route("fullyOn", FullyOn);
     SkyRouter.route("terms", Terms);
     SkyRouter.route("contest", Contest);
+    SkyRouter.route("governance", Governance);
 
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);
