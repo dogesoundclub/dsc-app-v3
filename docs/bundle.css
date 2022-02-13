@@ -1075,4 +1075,28 @@ body {
   height: 200px;
   margin-bottom: 20px;
 }
+.terms-view {
+  max-width: 1156px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.terms-view > header > h1 {
+  font-size: 32px;
+  line-height: 32px;
+}
+.terms-view > article > h2 {
+  margin-top: 34px;
+  font-size: 24px;
+  line-height: 24px;
+}
+.terms-view > article > p {
+  font-size: 16px;
+  line-height: 20px;
+}
+.terms-view > article > .caption {
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 20px;
+}
 

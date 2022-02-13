@@ -9,6 +9,7 @@ import MyMate from "./view/MyMate";
 import Activities from "./view/activities";
 import DscFamily from "./view/DscFamily";
 import FullyOn from "./view/FullyOn";
+import Terms from "./view/Terms";
 
 (async () => {
 
@@ -23,6 +24,7 @@ import FullyOn from "./view/FullyOn";
     SkyRouter.route("activities", Activities);
     SkyRouter.route("dscFamily", DscFamily);
     SkyRouter.route("fullyOn", FullyOn);
+    SkyRouter.route("terms", Terms);
 
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);
