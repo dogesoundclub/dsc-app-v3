@@ -179,6 +179,94 @@ body {
   color: #FFFFFF;
   line-height: 1.5em;
 }
+.popup-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 20px 0;
+}
+.dialogue.alert {
+  position: relative;
+  max-width: 360px;
+  width: 100%;
+  margin: auto;
+  background: #131313;
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.dialogue.alert > p {
+  padding: 50px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.dialogue.alert > .button-container > button {
+  font-family: DungGeunMo;
+  width: 100%;
+  color: white;
+  padding: 16px 0px;
+  font-size: 16px;
+  line-height: 16px;
+  background: #E73C83;
+  border-radius: 0px 0px 10px 10px;
+}
+.dialogue.alert > .button-container > button:hover {
+  background-color: white;
+  color: #E73C83;
+}
+.dialogue.confirm {
+  position: relative;
+  max-width: 360px;
+  width: 100%;
+  margin: auto;
+  background: #131313;
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.dialogue.confirm > p {
+  padding: 50px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.dialogue.confirm > .button-container {
+  display: flex;
+}
+.dialogue.confirm > .button-container > .cancel {
+  font-family: DungGeunMo;
+  width: 100%;
+  color: white;
+  padding: 16px 0px;
+  font-size: 16px;
+  line-height: 16px;
+  background: #E73C83;
+  border-radius: 0px 0px 0px 10px;
+}
+.dialogue.confirm > .button-container > .cancel:hover {
+  background-color: white;
+  color: #E73C83;
+}
+.dialogue.confirm > .button-container > .confirm {
+  font-family: DungGeunMo;
+  width: 100%;
+  color: white;
+  padding: 16px 0px;
+  font-size: 16px;
+  line-height: 16px;
+  background: #E73C83;
+  border-radius: 0px 0px 10px 0px;
+}
+.dialogue.confirm > .button-container > .confirm:hover {
+  background-color: white;
+  color: #E73C83;
+}
 .pc-menu {
   position: absolute;
   top: 0;

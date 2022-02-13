@@ -190,6 +190,16 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 
 /***/ }),
 
+/***/ "./src/component/shared/dialogue/Confirm.ts":
+/*!**************************************************!*\
+  !*** ./src/component/shared/dialogue/Confirm.ts ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst skynode_1 = __webpack_require__(/*! @hanul/skynode */ \"./node_modules/@hanul/skynode/lib/index.js\");\nclass Confirm extends skynode_1.Popup {\n    constructor(message, confirmTitle, confirm) {\n        super(\".popup-background\");\n        this.append(this.content = (0, skynode_1.el)(\".dialogue.confirm\", (0, skynode_1.el)(\"p\", message), (0, skynode_1.el)(\".button-container\", (0, skynode_1.el)(\"button.cancel\", \"Cancel\", {\n            click: () => this.delete(),\n        }), (0, skynode_1.el)(\"button.confirm\", confirmTitle, {\n            click: () => {\n                confirm();\n                this.delete();\n            },\n        }))));\n    }\n}\nexports[\"default\"] = Confirm;\n\n\n//# sourceURL=webpack:///./src/component/shared/dialogue/Confirm.ts?");
+
+/***/ }),
+
 /***/ "./src/main.ts":
 /*!*********************!*\
   !*** ./src/main.ts ***!
@@ -356,7 +366,7 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
   \********************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst skynode_1 = __webpack_require__(/*! @hanul/skynode */ \"./node_modules/@hanul/skynode/lib/index.js\");\nconst Layout_1 = __importDefault(__webpack_require__(/*! ./Layout */ \"./src/view/Layout.ts\"));\nclass Governance {\n    constructor() {\n        Layout_1.default.current.title = \"거버넌스\";\n        Layout_1.default.current.content.append(this.container = (0, skynode_1.el)(\".governance-view\", (0, skynode_1.el)(\"header\", (0, skynode_1.el)(\"h1\", \"GOVERNANCE 🐙🌵🌞\"), (0, skynode_1.el)(\"h2\", \"Mate represents the voting rights of the governor's sound club governance. You can make a proposal or vote as much as you have a mate for or against a registered proposal. In order to create a proposal, 800 mixes per case must be incinerated, and if the turnout does not exceed 30%, the agenda will be invalidated regardless of the pros and cons ratio.\"), (0, skynode_1.el)(\".button-wrap\", (0, skynode_1.el)(\"button\", \"Create suggestions\"))), (0, skynode_1.el)(\"section\", (0, skynode_1.el)(\"hr\"), (0, skynode_1.el)(\"h2\", \"Suggestions 👑🚀✌️\"), (0, skynode_1.el)(\"\", \"테이블\"))));\n    }\n    changeParams(params, uri) {\n    }\n    close() {\n        this.container.delete();\n    }\n}\nexports[\"default\"] = Governance;\n\n\n//# sourceURL=webpack:///./src/view/governance.ts?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst skynode_1 = __webpack_require__(/*! @hanul/skynode */ \"./node_modules/@hanul/skynode/lib/index.js\");\nconst Confirm_1 = __importDefault(__webpack_require__(/*! ../component/shared/dialogue/Confirm */ \"./src/component/shared/dialogue/Confirm.ts\"));\nconst Layout_1 = __importDefault(__webpack_require__(/*! ./Layout */ \"./src/view/Layout.ts\"));\nclass Governance {\n    constructor() {\n        Layout_1.default.current.title = \"거버넌스\";\n        Layout_1.default.current.content.append(this.container = (0, skynode_1.el)(\".governance-view\", new Confirm_1.default(\"test\", \"OK\", () => { }), (0, skynode_1.el)(\"header\", (0, skynode_1.el)(\"h1\", \"GOVERNANCE 🐙🌵🌞\"), (0, skynode_1.el)(\"h2\", \"Mate represents the voting rights of the governor's sound club governance. You can make a proposal or vote as much as you have a mate for or against a registered proposal. In order to create a proposal, 800 mixes per case must be incinerated, and if the turnout does not exceed 30%, the agenda will be invalidated regardless of the pros and cons ratio.\"), (0, skynode_1.el)(\".button-wrap\", (0, skynode_1.el)(\"button\", \"Create suggestions\"))), (0, skynode_1.el)(\"section\", (0, skynode_1.el)(\"hr\"), (0, skynode_1.el)(\"h2\", \"Suggestions 👑🚀✌️\"), (0, skynode_1.el)(\"\", \"테이블\"))));\n    }\n    changeParams(params, uri) {\n    }\n    close() {\n        this.container.delete();\n    }\n}\nexports[\"default\"] = Governance;\n\n\n//# sourceURL=webpack:///./src/view/governance.ts?");
 
 /***/ }),
 
