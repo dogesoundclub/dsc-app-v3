@@ -1,0 +1,132 @@
+.dsc-family-view {
+    max-width     : 1156px;
+    margin        : auto;
+    display       : flex;
+    flex-direction: column;
+
+    >header {
+        >h1 {
+            font-size    : 32px;
+            line-height  : 32px;
+            margin-bottom: 10px;
+        }
+
+        >h2 {
+            font-size  : 16px;
+            line-height: 20px;
+        }
+    }
+
+    >section {
+        >hr {
+            border          : none;
+            height          : 1px;
+            color           : #2C2C2C;
+            background-color: #2C2C2C;
+            margin          : 60px 0px;
+        }
+
+        >.input-container {
+            display       : flex;
+            flex-direction: column;
+            margin-top    : 20px;
+
+            >label {
+                font-size    : 18px;
+                line-height  : 18px;
+                margin-bottom: 10px;
+            }
+
+            >input {
+                font-family  : DungGeunMo;
+                background   : #222222;
+                border-radius: 8px;
+                padding      : 16px 0px 16px 20px;
+                color        : white;
+                font-size    : 20px;
+                line-height  : 20px;
+            }
+        }
+
+        >.channel-container {
+            display              : grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap             : 20px;
+
+            >.input-container {
+                width         : 100%;
+                margin-top    : 30px;
+                display       : flex;
+                flex-direction: column;
+
+                >label {
+                    font-size    : 18px;
+                    line-height  : 18px;
+                    margin-bottom: 10px;
+                }
+
+                >input {
+                    font-family  : DungGeunMo;
+                    background   : #222222;
+                    border-radius: 8px;
+                    padding      : 16px 0px 16px 20px;
+                    color        : white;
+                    font-size    : 20px;
+                    line-height  : 20px;
+                }
+            }
+        }
+
+        >.introduction-container {
+            display              : grid;
+            grid-template-columns: 70% 30%;
+            grid-gap             : 20px;
+
+            >.input-container {
+                width         : 100%;
+                margin-top    : 30px;
+                display       : flex;
+                flex-direction: column;
+
+                >label {
+                    font-size    : 18px;
+                    line-height  : 18px;
+                    margin-bottom: 10px;
+                }
+
+                >input {
+                    font-family  : DungGeunMo;
+                    background   : #222222;
+                    border-radius: 8px;
+                    padding      : 16px 0px 16px 20px;
+                    color        : white;
+                    font-size    : 20px;
+                    line-height  : 20px;
+                }
+            }
+        }
+
+        >.button-wrap {
+            display        : flex;
+            justify-content: center;
+
+            >button {
+                max-width       : 380px;
+                margin-top      : 30px;
+                font-family     : DungGeunMo;
+                font-size       : 16px;
+                color           : #E73C83;
+                background-color: transparent;
+                border          : 1px solid #E73C83;
+                box-sizing      : border-box;
+                border-radius   : 8px;
+                padding         : 18px 111px;
+
+                &:hover {
+                    background-color: white;
+                    border-color    : white;
+                }
+            }
+        }
+    }
+}
