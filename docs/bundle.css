@@ -805,11 +805,99 @@ body {
   margin-bottom: 20px;
 }
 .my-mate-view > section > .certification-container > button {
+  font-family: DungGeunMo;
+  font-size: 16px;
   color: #E73C83;
   background-color: transparent;
   border: 1px solid #E73C83;
   box-sizing: border-box;
   border-radius: 8px;
   padding: 18px 111px;
+}
+.my-mate-view > section > .certification-container > button:hover {
+  background-color: white;
+  border-color: white;
+}
+.activities-view {
+  max-width: 1156px;
+  margin: auto;
+  margin-top: 60px;
+}
+.activities-view > header > h1 {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.activities-view > header > h2 {
+  font-size: 18px;
+}
+.activities-view > section > .certification-container {
+  background: #222222;
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 30px;
+  margin-top: 30px;
+}
+.activities-view > section > .certification-container > h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.activities-view > section > .certification-container > p {
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+.activities-view > section > .certification-container > button {
+  font-family: DungGeunMo;
+  font-size: 16px;
+  color: #E73C83;
+  background-color: transparent;
+  border: 1px solid #E73C83;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 18px 111px;
+}
+.activities-view > section > .certification-container > button:hover {
+  background-color: white;
+  border-color: white;
+}
+.activities-view > section > hr {
+  border: none;
+  height: 1px;
+  color: #2C2C2C;
+  background-color: #2C2C2C;
+  margin: 60px 0px;
+}
+.activities-view > section > article > img {
+  width: 100%;
+  height: 100%;
+  max-height: 360px;
+}
+.activities-view > section > article > h2 {
+  margin-top: 30px;
+  font-size: 24px;
+  line-height: 24px;
+  color: #E73C83;
+}
+.activities-view > section > article > p {
+  margin-top: 4px;
+  font-size: 16px;
+  line-height: 20px;
+}
+.activities-view > section > article > button {
+  font-family: DungGeunMo;
+  font-size: 16px;
+  color: #E73C83;
+  background-color: transparent;
+  border: 1px solid #E73C83;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 14px 110px;
+  margin-top: 20px;
+}
+.activities-view > section > article > button:hover {
+  background-color: white;
+  border-color: white;
 }
 
