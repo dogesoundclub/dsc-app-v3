@@ -455,6 +455,11 @@ body {
   line-height: 24px;
   color: white;
 }
+.home-view > header > .content > button:hover {
+  background-color: white;
+  color: #E73C83;
+  border-color: white;
+}
 .home-view > section {
   max-width: 1156px;
   margin: auto;
@@ -573,6 +578,7 @@ body {
   padding: 15px 30px 30px 30px;
 }
 .home-view > section > .buy-mate > .card > .button-wrap > button {
+  font-family: DungGeunMo;
   font-size: 24px;
   line-height: 24px;
   color: #E73C83;
@@ -580,6 +586,11 @@ body {
   border-radius: 8px;
   padding: 15px 100px;
   margin-top: 15px;
+}
+.home-view > section > .buy-mate > .card > .button-wrap > button:hover {
+  background-color: white;
+  color: #E73C83;
+  border-color: white;
 }
 .home-view > section > .buy-mate > .warning {
   margin-top: 12px;
@@ -590,6 +601,95 @@ body {
 .home-view > section > .nft > .title {
   font-size: 26px;
   line-height: 26px;
+  margin-bottom: 16px;
+}
+.home-view > section > .nft > section {
+  display: grid;
+}
+.home-view > section > .nft > section > .mate-container {
+  display: flex;
+  grid-column: 1 / 3;
+  flex-wrap: wrap;
+}
+.home-view > section > .nft > section > .mate-container > img {
+  width: 176px;
+  height: 176px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+.home-view > section > .nft > section > article {
+  padding: 20px;
+  background: #222222;
+  border: 1px solid #3D3D3D;
+  box-sizing: border-box;
+  border-radius: 8px;
+  grid-column: 3 / 5;
+  max-height: 372px;
+}
+.home-view > section > .nft > section > article > p {
+  font-size: 16px;
+  line-height: 20px;
+}
+.home-view > section > .nft > section > article > .caption {
+  font-size: 16px;
+  line-height: 16px;
+  color: #676767;
+}
+.home-view > section > .nft > section > article > .button-container {
+  display: flex;
+  width: 100%;
+  margin-top: 16px;
+  gap: 10px;
+}
+.home-view > section > .nft > section > article > .button-container > button {
+  font-family: DungGeunMo;
+  width: 100%;
+  font-size: 16px;
+  line-height: 16px;
+  background-color: transparent;
+  color: #E73C83;
+  border: 1px solid #E73C83;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.home-view > section > .nft > section > article > .button-container > button:hover {
+  color: white;
+  border: 1px solid white;
+}
+.home-view > section > .nft > section > article > button {
+  width: 100%;
+  font-size: 16px;
+  line-height: 16px;
+  background-color: transparent;
+  color: #E73C83;
+  border: 1px solid #E73C83;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.home-view > section > .nft > section > article > button:hover {
+  color: white;
+  border: 1px solid white;
+}
+.home-view > section > .nft > section > article > .image-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.home-view > section > .nft > section > article > .image-wrap > img {
+  width: 54px;
+  height: 46px;
+}
+.home-view > section > .nft > section > article > hr {
+  border: none;
+  height: 1px;
+  color: #2C2C2C;
+  background-color: #2C2C2C;
+  margin-top: 20px 0px;
 }
 .home-view > section > .mission > .title {
   font-size: 26px;
