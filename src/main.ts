@@ -12,6 +12,7 @@ import FullyOn from "./view/FullyOn";
 import Terms from "./view/Terms";
 import Contest from "./view/Contest";
 import Governance from "./view/governance";
+import Mates from "./view/Mates";
 
 (async () => {
 
@@ -22,6 +23,7 @@ import Governance from "./view/governance";
     SkyRouter.route("followMe", FollowMe);
     SkyRouter.route("holder", Holder);
     SkyRouter.route("buyMate", BuyMate);
+    SkyRouter.route("mates", Mates);
     SkyRouter.route("myMate", MyMate);
     SkyRouter.route("activities", Activities);
     SkyRouter.route("dscFamily", DscFamily);

@@ -12,7 +12,11 @@ export default class BuyMate implements View {
                 el("img", { src: "/images/shared/img/mate-mock.png" }),
                 el("h1", "Join the Club"),
                 el("p", "This is only open to DSC members. \nTo get your Mate, check out on OpenSea."),
-                el("button", "Buy a Mate on Opensea"),
+                el("button", "Buy a Mate on Opensea", {
+                    click: () => {
+                        window.open("https://opensea.io/collection/dogesoundclub-mates")
+                    }
+                }),
             ),
         ))
     }

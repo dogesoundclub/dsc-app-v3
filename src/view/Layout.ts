@@ -13,8 +13,8 @@ export default class Layout implements View {
         Layout.current = this;
         BodyNode.append(this.container = el(".layout",
             el("header",
-                el("a", { click: () => ViewUtil.go("/") },
-                    el("img", { src: "/images/logo.svg" }),
+                el("a", { href: "/" },
+                    el("img", { src: "/images/logo.svg", alt: "logo" }),
                 ),
                 new PCMenu(),
             ),
