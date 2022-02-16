@@ -60,23 +60,15 @@
                 font-size       : 16px;
                 color           : #E73C83;
                 padding         : 16px 0px;
+                appearance      : none;
             }
         }
 
         >article {
-            margin-left: 160px;
-
-            >section {
-                >img {
-                    border-radius: 8px;
-                }
-
-                >header {
-                    text-align : center;
-                    font-size  : 24px;
-                    line-height: 24px;
-                }
-            }
+            display              : grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap                  : 20px;
+            margin-left          : 160px;
         }
     }
 }

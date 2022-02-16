@@ -1,5 +1,6 @@
 import { DomNode, el } from "@hanul/skynode";
 import { View, ViewParams } from "skyrouter";
+import GalleryMateItem from "../component/mate/GalleryMateItem";
 import Layout from "./Layout";
 
 export default class Gallery implements View {
@@ -23,10 +24,7 @@ export default class Gallery implements View {
                     el("button", "RESET FILTERR SETTING")
                 ),
                 el("article",
-                    el("section",
-                        el("img", { src: "/images/shared/img/mate-mock.png" }),
-                        el("header", "#1"),
-                    ),
+                    new GalleryMateItem(1, "/images/shared/img/mate-mock.png"),
                 ),
             ),
         ))

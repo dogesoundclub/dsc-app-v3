@@ -13,6 +13,8 @@ import Terms from "./view/Terms";
 import Contest from "./view/Contest";
 import Governance from "./view/governance";
 import Mates from "./view/Mates";
+import Faq from "./view/Faq";
+import CreateGovernance from "./view/CreateGovernance";
 
 (async () => {
 
@@ -30,7 +32,9 @@ import Mates from "./view/Mates";
     SkyRouter.route("fullyOn", FullyOn);
     SkyRouter.route("terms", Terms);
     SkyRouter.route("contest", Contest);
+    SkyRouter.route("faq", Faq);
     SkyRouter.route("governance", Governance);
+    SkyRouter.route("governance/create", CreateGovernance);
 
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);
