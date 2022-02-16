@@ -106,40 +106,8 @@
 
             >.checkbox-container {
                 >label {
-                    margin-left : 10px;
-                    margin-right: 40px;
-                    font-size   : 16px;
-                }
-
-                >input[type="checkbox"] {
-                    display: none;
-                }
-
-                >input[type="checkbox"]+label:before {
-                    content           : '';
-                    -webkit-appearance: none;
-                    background-color  : transparent;
-                    border            : 1px solid #E73C83;
-                    box-shadow        : 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
-                    padding           : 10px;
-                    display           : inline-block;
-                    position          : relative;
-                    vertical-align    : middle;
-                    cursor            : pointer;
-                    margin-right      : 5px;
-                }
-
-                >input:checked+label:after {
-                    content     : '';
-                    display     : block;
-                    position    : absolute;
-                    top         : 2px;
-                    left        : 9px;
-                    width       : 6px;
-                    height      : 14px;
-                    border      : solid #E73C83;
-                    border-width: 0 2px 2px 0;
-                    transform   : rotate(45deg);
+                    margin   : 10px;
+                    font-size: 16px;
                 }
             }
         }
@@ -150,10 +118,17 @@
             margin-top     : 30px;
 
             >button {
+                font-size    : 20px;
+                font-family  : Dunggeunmo;
                 background   : #E73C83;
                 border-radius: 8px;
                 color        : white;
                 padding      : 16px 170px;
+
+                &:hover {
+                    color     : #E73C83;
+                    background: white;
+                }
             }
         }
     }

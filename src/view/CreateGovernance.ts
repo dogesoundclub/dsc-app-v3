@@ -55,19 +55,8 @@ export default class CreateGovernance implements View {
                     el("input", { type: "checkbox" }),
                     el("label", "I agree that the submitted proposal can be canceled, but it cannot be modified. I agree that the mate will be kept at the governance contract address during the period of the proposal. This interface is just a convenient tool of your choice for governance, and I agree that the owner of the wallet who signed it is responsible for the consequences of all transactions under the signature.")
                 ),
-                el(".submit-container",
-                    el(".checkbox-container",
-                        el("input", { id: "check", type: "checkbox" }),
-                        el("label", { for: "check" }),
-                        el("label", "FOR")
-                    ),
-                    el(".checkbox-container",
-                        el("input", { type: "checkbox" }),
-                        el("label", "AGAINST")
-                    ),
-                ),
                 el(".button-wrap",
-                    el("button", "VOTE"),
+                    el("button", "REGISTER"),
                 ),
             ),
         ))

@@ -1560,37 +1560,8 @@ body {
   margin-top: 30px;
 }
 .create-governance-view > section > .submit-container > .checkbox-container > label {
-  margin-left: 10px;
-  margin-right: 40px;
+  margin: 10px;
   font-size: 16px;
-}
-.create-governance-view > section > .submit-container > .checkbox-container > input[type="checkbox"] {
-  display: none;
-}
-.create-governance-view > section > .submit-container > .checkbox-container > input[type="checkbox"] + label:before {
-  content: '';
-  -webkit-appearance: none;
-  background-color: transparent;
-  border: 1px solid #E73C83;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
-  padding: 10px;
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  cursor: pointer;
-  margin-right: 5px;
-}
-.create-governance-view > section > .submit-container > .checkbox-container > input:checked + label:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 2px;
-  left: 9px;
-  width: 6px;
-  height: 14px;
-  border: solid #E73C83;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
 }
 .create-governance-view > section > .button-wrap {
   display: flex;
@@ -1598,10 +1569,158 @@ body {
   margin-top: 30px;
 }
 .create-governance-view > section > .button-wrap > button {
+  font-size: 20px;
+  font-family: Dunggeunmo;
   background: #E73C83;
   border-radius: 8px;
   color: white;
   padding: 16px 170px;
+}
+.create-governance-view > section > .button-wrap > button:hover {
+  color: #E73C83;
+  background: white;
+}
+.governance-detail-view {
+  max-width: 1156px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.governance-detail-view > header {
+  margin-top: 60px;
+}
+.governance-detail-view > header > h1 {
+  font-size: 32px;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+.governance-detail-view > hr {
+  border: none;
+  height: 1px;
+  color: #2C2C2C;
+  background-color: #2C2C2C;
+  margin: 60px 0px;
+}
+.governance-detail-view > section > article {
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.governance-detail-view > section > article > hr {
+  border: none;
+  height: 1px;
+  color: #2C2C2C;
+  background-color: #2C2C2C;
+}
+.governance-detail-view > section > article > header {
+  padding: 30px;
+}
+.governance-detail-view > section > article > header > h2 {
+  font-size: 20px;
+}
+.governance-detail-view > section > article > header > p {
+  font-size: 14px;
+}
+.governance-detail-view > section > article > header > .caption-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.governance-detail-view > section > article > header > .caption-container > .status {
+  font-size: 12px;
+  color: #56F545;
+  background: #222222;
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 9px 20px;
+}
+.governance-detail-view > section > article > header > .caption-container > p {
+  margin-left: 20px;
+}
+.governance-detail-view > section > article > .content {
+  padding: 30px;
+}
+.governance-detail-view > section > article > .content > .tool-container > h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.governance-detail-view > section > article > .content > .tool-container > p {
+  font-size: 16px;
+}
+.governance-detail-view > section > article > .content > .body-container {
+  margin-top: 30px;
+}
+.governance-detail-view > section > article > .content > .body-container > h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.governance-detail-view > section > article > .content > .remarks {
+  margin-top: 30px;
+}
+.governance-detail-view > section > hr {
+  border: none;
+  height: 1px;
+  color: #2C2C2C;
+  background-color: #2C2C2C;
+  margin: 60px 0px;
+}
+.governance-detail-view > section > .proposer-container > h3 {
+  font-size: 24px;
+  color: #E73C83;
+}
+.governance-detail-view > section > .proposer-container > .address {
+  font-size: 18px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+.governance-detail-view > section > .mate-container > h3 {
+  font-size: 24px;
+}
+.governance-detail-view > section > .mate-container > .checkbox-container {
+  display: flex;
+  margin-top: 20px;
+}
+.governance-detail-view > section > .mate-container > .checkbox-container > label {
+  padding-left: 9px;
+  font-size: 16px;
+}
+.governance-detail-view > section > .mate-container > .checkbox-container > input {
+  background: #E73C83;
+}
+.governance-detail-view > section > .checkbox-container {
+  display: flex;
+}
+.governance-detail-view > section > .checkbox-container > label {
+  padding-left: 13px;
+  color: #676767;
+  font-size: 16px;
+}
+.governance-detail-view > section > .submit-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.governance-detail-view > section > .submit-container > .checkbox-container > label {
+  margin: 10px;
+  font-size: 16px;
+}
+.governance-detail-view > section > .button-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.governance-detail-view > section > .button-wrap > button {
+  font-size: 20px;
+  font-family: Dunggeunmo;
+  background: #E73C83;
+  border-radius: 8px;
+  color: white;
+  padding: 16px 170px;
+}
+.governance-detail-view > section > .button-wrap > button:hover {
+  color: #E73C83;
+  background: white;
 }
 .mates-view {
   max-width: 1156px;
