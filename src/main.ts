@@ -1,21 +1,21 @@
 import { SkyRouter } from "skyrouter";
-import Layout from "./view/Layout";
-import Home from "./view/Home";
-import Gallery from "./view/Gallery";
-import FollowMe from "./view/FollowMe";
-import Holder from "./view/Holder";
+import Activities from "./view/Activities";
 import BuyMate from "./view/BuyMate";
-import MyMate from "./view/MyMate";
-import Activities from "./view/activities";
-import DscFamily from "./view/DscFamily";
-import FullyOn from "./view/FullyOn";
-import Terms from "./view/Terms";
 import Contest from "./view/Contest";
-import Governance from "./view/governance";
-import GovernanceDetail from "./view/governanceDetail";
-import Mates from "./view/Mates";
-import Faq from "./view/Faq";
 import CreateGovernance from "./view/CreateGovernance";
+import DscFamily from "./view/DscFamily";
+import Faq from "./view/Faq";
+import FollowMe from "./view/FollowMe";
+import FullyOn from "./view/FullyOn";
+import Gallery from "./view/Gallery";
+import Governance from "./view/Governance";
+import GovernanceDetail from "./view/GovernanceDetail";
+import Holder from "./view/Holder";
+import Home from "./view/Home";
+import Layout from "./view/Layout";
+import Mates from "./view/Mates";
+import MyMate from "./view/MyMate";
+import Terms from "./view/Terms";
 
 (async () => {
 

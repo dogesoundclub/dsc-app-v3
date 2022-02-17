@@ -1,0 +1,1 @@
+{"version":3,"file":"BrowserInfo.d.ts","sourceRoot":"","sources":["../src/BrowserInfo.ts"],"names":[],"mappings":"AAKA,cAAM,WAAW;IAEb,OAAO,CAAC,QAAQ,CAAC,MAAM,CAAsE;IAC7F,OAAO,CAAC,KAAK,CAAqC;IAElD,IAAW,QAAQ,IAWW,MAAM,CAFnC;IAED,IAAW,QAAQ,CAAC,QAAQ,EAAE,MAAM,EAGnC;IAEM,cAAc,CAAC,QAAQ,EAAE,MAAM;CAIzC;;AAED,wBAAiC"}

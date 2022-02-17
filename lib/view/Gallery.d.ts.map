@@ -1,0 +1,1 @@
+{"version":3,"file":"Gallery.d.ts","sourceRoot":"","sources":["../../src/view/Gallery.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,IAAI,EAAE,UAAU,EAAE,MAAM,WAAW,CAAC;AAI7C,MAAM,CAAC,OAAO,OAAO,OAAQ,YAAW,IAAI;IACxC,OAAO,CAAC,SAAS,CAAU;;IA2BpB,YAAY,CAAC,MAAM,EAAE,UAAU,EAAE,GAAG,EAAE,MAAM,GAAG,IAAI;IAGnD,KAAK,IAAI,IAAI;CAGvB"}

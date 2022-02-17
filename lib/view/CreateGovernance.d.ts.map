@@ -1,0 +1,1 @@
+{"version":3,"file":"CreateGovernance.d.ts","sourceRoot":"","sources":["../../src/view/CreateGovernance.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,IAAI,EAAE,UAAU,EAAE,MAAM,WAAW,CAAC;AAG7C,MAAM,CAAC,OAAO,OAAO,gBAAiB,YAAW,IAAI;IACjD,OAAO,CAAC,SAAS,CAAU;;IA4DpB,YAAY,CAAC,MAAM,EAAE,UAAU,EAAE,GAAG,EAAE,MAAM,GAAG,IAAI;IAGnD,KAAK,IAAI,IAAI;CAGvB"}

@@ -1,0 +1,32 @@
+{
+    "menu": [
+        {
+            "uri": "buyMate",
+            "name": "BUY MATE"
+        },
+        {
+            "uri": "team",
+            "name": "TEAM"
+        },
+        {
+            "uri": "gallery",
+            "name": "GALLERY"
+        },
+        {
+            "uri": "mates",
+            "name": "MATES"
+        },
+        {
+            "uri": "member",
+            "name": "MEMBER"
+        },
+        {
+            "uri": "achievement",
+            "name": "ACHIEVEMENT"
+        },
+        {
+            "uri": "faq",
+            "name": "FAQ"
+        }
+    ]
+}
