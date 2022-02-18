@@ -13,7 +13,7 @@ class BrowserInfo {
         if (language === undefined) {
             language = navigator.language;
         }
-        if (language.indexOf("-") !== -1 && language !== "zh-TW" && language !== "zh-CN") {
+        if (language.indexOf("-") !== -1 && language !== "zh-TC" && language !== "zh-SC") {
             language = language.substring(0, language.indexOf("-"));
         }
         return language;

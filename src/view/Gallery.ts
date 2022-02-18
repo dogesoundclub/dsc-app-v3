@@ -1,4 +1,5 @@
 import { DomNode, el } from "@hanul/skynode";
+import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import GalleryMateItem from "../component/mate/GalleryMateItem";
 import Layout from "./Layout";
@@ -7,21 +8,21 @@ export default class Gallery implements View {
     private container: DomNode;
 
     constructor() {
-        Layout.current.title = "갤러리";
+        Layout.current.title = msg("GALLERY_TITLE");
         Layout.current.content.append(this.container = el(".gallery-view",
             el("header",
-                el("h1", "GALLERY 🖼🖌"),
+                el("h1", msg("GALLERY_TITLE")),
             ),
             el("section",
                 el("aside",
                     el(".input-container",
-                        el("input", { placeholder: "ID/이름 검색" }),
-                        el("button", "검색")
+                        el("input", { placeholder: msg("GALLERY_SEARCH_INPUT") }),
+                        el("button", msg("GALLERY_SEARCH_BUTTON"))
                     ),
                     el("select",
                         el("option", "FACE"),
                     ),
-                    el("button", "RESET FILTERR SETTING")
+                    el("button", msg("GALLERY_FILTER_BUTTON"))
                 ),
                 el("article",
                     new GalleryMateItem(1, "/images/shared/img/mate-mock.png"),

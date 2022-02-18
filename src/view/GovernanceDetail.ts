@@ -1,4 +1,5 @@
 import { DomNode, el } from "@hanul/skynode";
+import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import Layout from "./Layout";
 
@@ -6,10 +7,10 @@ export default class GovernanceDetail implements View {
     private container: DomNode;
 
     constructor() {
-        Layout.current.title = "거버넌스 디테일";
+        Layout.current.title = msg("GOVERNANCE_TITLE1");
         Layout.current.content.append(this.container = el(".governance-detail-view",
             el("header",
-                el("h1", "GOVERNANCE 🐙🌵🌞"),
+                el("h1", msg("GOVERNANCE_TITLE1")),
             ),
             el("hr"),
             el("section",
@@ -38,32 +39,32 @@ export default class GovernanceDetail implements View {
                 ),
                 el("hr"),
                 el(".proposer-container",
-                    el("h3", "Proposer"),
+                    el("h3", msg("GOVERNANCE_CREATE_TITLE1")),
                     el(".address", "0x5768218dae8c5658d0B1e466c07199393B089078"),
                     el("p", "- Wallet Address: 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D")
                 ),
                 el("hr"),
                 el(".mate-container",
-                    el("h3", "Choose your mate."),
-                    el("p", "Number of mates chosen: 3."),
+                    el("h3", msg("GOVERNANCE_CREATE_SELECT_TITLE1")),
+                    el("p", msg("GOVERNANCE_CREATE_SELECT_TITLE2")),
                     el(".checkbox-container",
                         el("input", { type: "checkbox" }),
-                        el("label", "Sellect All")
+                        el("label", msg("GOVERNANCE_CREATE_SELECT_TITLE3"))
                     ),
                 ),
                 el("hr"),
                 el(".submit-container",
                     el(".checkbox-container",
                         el("input", { type: "checkbox" }),
-                        el("label", "FOR")
+                        el("label", msg("GOVERNANCE_TABLE_VOTE_DESC2"))
                     ),
                     el(".checkbox-container",
                         el("input", { type: "checkbox" }),
-                        el("label", "AGAINST")
+                        el("label", msg("GOVERNANCE_TABLE_VOTE_DESC2"))
                     ),
                 ),
                 el(".button-wrap",
-                    el("button", "VOTE"),
+                    el("button", msg("VOTE_BUTTON")),
                 ),
             ),
         ))
