@@ -2,6 +2,7 @@ import { DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import Layout from "./Layout";
+import ViewUtil from "./ViewUtil";
 
 export default class Activities implements View {
     private container: DomNode;
@@ -24,28 +25,28 @@ export default class Activities implements View {
                     el("img", { src: "/images/view/activities/bg_dsc_family.png" }),
                     el("h2", msg("ACTIVITIES_TITLE1")),
                     el("p", msg("ACTIVITIES_DESC1")),
-                    el("button", msg("ENTER_BUTTON")),
+                    el("button", msg("ENTER_BUTTON"), { click: () => ViewUtil.go("/dscFamily") }),
                 ),
                 el("hr"),
                 el("article",
                     el("img", { src: "/images/view/activities/bg_dsc_family.png" }),
                     el("h2", msg("ACTIVITIES_TITLE2")),
                     el("p", msg("ACTIVITIES_DESC2")),
-                    el("button", msg("ENTER_BUTTON")),
+                    el("button", msg("ENTER_BUTTON"), { click: () => ViewUtil.go("/myMate") }),
                 ),
                 el("hr"),
                 el("article",
                     el("img", { src: "/images/view/activities/bg_dsc_family.png" }),
                     el("h2", msg("ACTIVITIES_TITLE3")),
                     el("p", msg("ACTIVITIES_DESC3")),
-                    el("button", msg("ENTER_BUTTON")),
+                    el("button", msg("ENTER_BUTTON"), { click: () => ViewUtil.go("/contest") }),
                 ),
                 el("hr"),
                 el("article",
                     el("img", { src: "/images/view/activities/bg_dsc_family.png" }),
                     el("h2", msg("ACTIVITIES_TITLE4")),
                     el("p", msg("ACTIVITIES_DESC4")),
-                    el("button", msg("ENTER_BUTTON")),
+                    el("button", msg("ENTER_BUTTON"), { click: () => ViewUtil.go("/governance") }),
                 ),
             ),
         ))
