@@ -16,12 +16,21 @@
             height       : 176px;
             border-radius: 8px;
             margin-bottom: 30px;
+
+            @media @phone {
+                margin-bottom: 20px;
+            }
         }
 
         >h1 {
             font-size  : 42px;
             line-height: 42px;
             text-align : center;
+
+
+            @media @phone {
+                font-size: 24px;
+            }
         }
 
         >.button-container {
@@ -32,6 +41,11 @@
                 font-size  : 42px;
                 line-height: 42px;
                 padding    : 35px;
+
+
+                @media @phone {
+                    font-size: 32px;
+                }
 
                 &:hover {
                     color: #E73C83;

@@ -6,7 +6,7 @@ import Activities from "./view/Activities";
 import BuyMate from "./view/BuyMate";
 import Contest from "./view/Contest";
 import CreateGovernance from "./view/CreateGovernance";
-import DscFamily from "./view/DscFamily";
+import CreateDscFamily from "./view/CreateDscFamily";
 import Faq from "./view/Faq";
 import FollowMe from "./view/FollowMe";
 import FullyOn from "./view/FullyOn";
@@ -35,7 +35,7 @@ import Terms from "./view/Terms";
     SkyRouter.route("mates", Mates);
     SkyRouter.route("myMate", MyMate);
     SkyRouter.route("activities", Activities);
-    SkyRouter.route("dscFamily", DscFamily);
+    SkyRouter.route("dscFamily/create", CreateDscFamily);
     SkyRouter.route("fullyOn", FullyOn);
     SkyRouter.route("terms", Terms);
     SkyRouter.route("contest", Contest);
@@ -43,7 +43,7 @@ import Terms from "./view/Terms";
     SkyRouter.route("member", Member);
     SkyRouter.route("governance", Governance);
     SkyRouter.route("governance/create", CreateGovernance);
-    SkyRouter.route("governance/{id}}", GovernanceDetail);
+    SkyRouter.route("governance/detail/{id}}", GovernanceDetail);
 
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);

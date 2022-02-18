@@ -1,14 +1,23 @@
-.dsc-family-view {
+.create-dsc-family-view {
     max-width     : 1156px;
     margin        : auto;
     display       : flex;
     flex-direction: column;
+
+    @media @phone {
+        padding: 20px;
+    }
 
     >header {
         >h1 {
             font-size    : 32px;
             line-height  : 32px;
             margin-bottom: 10px;
+
+            @media @phone {
+                font-size : 20px;
+                margin-top: 26px;
+            }
         }
 
         >h2 {
@@ -24,6 +33,10 @@
             color           : #2C2C2C;
             background-color: #2C2C2C;
             margin          : 60px 0px;
+
+            @media @phone {
+                margin: 20px 0px;
+            }
         }
 
         >.input-container {
@@ -53,6 +66,10 @@
             grid-template-columns: repeat(2, 1fr);
             grid-gap             : 20px;
 
+            @media @phone {
+                grid-template-columns: 1fr;
+            }
+
             >.input-container {
                 width         : 100%;
                 margin-top    : 30px;
@@ -81,6 +98,10 @@
             display              : grid;
             grid-template-columns: 70% 30%;
             grid-gap             : 20px;
+
+            @media @phone {
+                grid-template-columns: 100%;
+            }
 
             >.input-container {
                 width         : 100%;

@@ -3,10 +3,19 @@
     margin    : auto;
     margin-top: 60px;
 
+    @media @phone {
+        margin-top: 26px;
+        padding   : 20px;
+    }
+
     >header {
         >h1 {
             font-size  : 32px;
             line-height: 32px;
+
+            @media @phone {
+                font-size: 20px;
+            }
         }
 
         >h2 {
@@ -15,6 +24,10 @@
             color        : #FFFFFF;
             margin-top   : 10px;
             margin-bottom: 60px;
+
+            @media @phone {
+                font-size: 14px;
+            }
         }
     }
 

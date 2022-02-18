@@ -3,12 +3,12 @@ import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import Layout from "./Layout";
 
-export default class DscFamily implements View {
+export default class CreateDscFamily implements View {
     private container: DomNode;
 
     constructor() {
         Layout.current.title = msg("DSC_FAMILY_TITLE");
-        Layout.current.content.append(this.container = el(".dsc-family-view",
+        Layout.current.content.append(this.container = el(".create-dsc-family-view",
             el("header",
                 el("h1", msg("DSC_FAMILY_TITLE")),
                 el("h2", msg("DSC_FAMILY_DESC")),
