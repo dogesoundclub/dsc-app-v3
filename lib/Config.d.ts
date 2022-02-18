@@ -2,6 +2,7 @@ declare const _default: {
     isTestnet: boolean;
     chainId: number;
     contracts: {
+        Mate: string;
         Attributes: string;
         DogeSoundContest: string;
         DogeSoundContestV2: string;
