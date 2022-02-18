@@ -328,6 +328,31 @@ body {
 .mate-list > .mate-line > .mate-item.off {
   opacity: 0.5;
 }
+.collapsible-item > section > .collapsible {
+  color: white;
+  cursor: pointer;
+  background: #131313;
+  padding: 24px 0px;
+  width: 100%;
+  text-align: left;
+  font-family: Dunggeunmo;
+  font-size: 20px;
+  line-height: 20px;
+  border-top: 1px solid #2C2C2C;
+  border-bottom: 1px solid #2C2C2C;
+}
+.collapsible-item > section > .active,
+.collapsible-item > section .collapsible:hover {
+  color: #E73C83;
+}
+.collapsible-item > section > .content {
+  padding: 30px 20px;
+  display: none;
+  overflow: hidden;
+  background: #1F1F1F;
+  border: 1px solid #2C2C2C;
+  box-sizing: border-box;
+}
 .pc-menu {
   top: 0;
   left: calc(50% - 360px);
@@ -3041,29 +3066,6 @@ body {
   .faq-view > header h1 {
     margin-top: 6px;
   }
-}
-.faq-view > section > .collapsible {
-  color: white;
-  cursor: pointer;
-  background: #131313;
-  padding: 24px 0px;
-  width: 100%;
-  text-align: left;
-  font-family: Dunggeunmo;
-  font-size: 20px;
-  line-height: 20px;
-  border-top: 1px solid #2C2C2C;
-  border-bottom: 1px solid #2C2C2C;
-}
-.faq-view > section > .active,
-.faq-view > section .collapsible:hover {
-  color: #E73C83;
-}
-.faq-view > section > .content {
-  padding: 30px 20px;
-  background: #1F1F1F;
-  border: 1px solid #2C2C2C;
-  box-sizing: border-box;
 }
 .member-view {
   max-width: 1156px;

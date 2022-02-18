@@ -1,11 +1,11 @@
 import { DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
+import CollapsibleItem from "../component/shared/CollapsibleItem";
 import Layout from "./Layout";
 
 export default class Faq implements View {
     private container: DomNode;
-    private collapsible: DomNode;
 
     constructor() {
         Layout.current.title = msg("FAQ_TITLE");
@@ -13,23 +13,13 @@ export default class Faq implements View {
             el("header",
                 el("h1", msg("FAQ_TITLE")),
             ),
-            el("section",
-                this.collapsible = el("button.collapsible", msg("FAQ_TITLE1"),
-                    {
-                        click: () => {
-                        }
-                    }),
-                el(".content",
-                    el("p", msg("FAQ_DESC1")),
-                ),
-            ),
-            el("section",
-                this.collapsible = el("button.collapsible", "What is the difference between Mate and Rocket Gigs?",
-                    {
-                        click: () => {
-                        }
-                    }),
-            ),
+            new CollapsibleItem(msg("FAQ_TITLE1"), msg("FAQ_DESC1")),
+            new CollapsibleItem(msg("FAQ_TITLE2"), msg("FAQ_DESC2")),
+            new CollapsibleItem(msg("FAQ_TITLE3"), msg("FAQ_DESC3")),
+            new CollapsibleItem(msg("FAQ_TITLE4"), msg("FAQ_DESC4")),
+            new CollapsibleItem(msg("FAQ_TITLE5"), msg("FAQ_DESC5")),
+            new CollapsibleItem(msg("FAQ_TITLE6"), msg("FAQ_DESC6")),
+            new CollapsibleItem(msg("FAQ_TITLE7"), msg("FAQ_DESC7")),
         ))
     }
 

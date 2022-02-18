@@ -565,6 +565,17 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
 
 /***/ }),
 
+/***/ "./src/component/shared/CollapsibleItem.ts":
+/*!*************************************************!*\
+  !*** ./src/component/shared/CollapsibleItem.ts ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst skynode_1 = __webpack_require__(/*! @hanul/skynode */ \"./node_modules/@hanul/skynode/lib/index.js\");\nclass CollapsibleItem extends skynode_1.DomNode {\n    constructor(title, desc) {\n        super(\".collapsible-item\");\n        this.append((0, skynode_1.el)(\"section\", (0, skynode_1.el)(\"button.collapsible\", title, {\n            click: () => {\n                this.content.style({\n                    display: \"block\"\n                });\n            }\n        }), this.content = (0, skynode_1.el)(\".content\", (0, skynode_1.el)(\"p\", desc))));\n    }\n}\nexports[\"default\"] = CollapsibleItem;\n\n\n//# sourceURL=webpack:///./src/component/shared/CollapsibleItem.ts?");
+
+/***/ }),
+
 /***/ "./src/main.ts":
 /*!*********************!*\
   !*** ./src/main.ts ***!
@@ -682,7 +693,7 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst skynode_1 = __webpack_require__(/*! @hanul/skynode */ \"./node_modules/@hanul/skynode/lib/index.js\");\nconst msg_js_1 = __importDefault(__webpack_require__(/*! msg.js */ \"./node_modules/msg.js/msg.js\"));\nconst Layout_1 = __importDefault(__webpack_require__(/*! ./Layout */ \"./src/view/Layout.ts\"));\nclass Faq {\n    constructor() {\n        Layout_1.default.current.title = (0, msg_js_1.default)(\"FAQ_TITLE\");\n        Layout_1.default.current.content.append(this.container = (0, skynode_1.el)(\".faq-view\", (0, skynode_1.el)(\"header\", (0, skynode_1.el)(\"h1\", (0, msg_js_1.default)(\"FAQ_TITLE\"))), (0, skynode_1.el)(\"section\", this.collapsible = (0, skynode_1.el)(\"button.collapsible\", (0, msg_js_1.default)(\"FAQ_TITLE1\"), {\n            click: () => {\n            }\n        }), (0, skynode_1.el)(\".content\", (0, skynode_1.el)(\"p\", (0, msg_js_1.default)(\"FAQ_DESC1\")))), (0, skynode_1.el)(\"section\", this.collapsible = (0, skynode_1.el)(\"button.collapsible\", \"What is the difference between Mate and Rocket Gigs?\", {\n            click: () => {\n            }\n        }))));\n    }\n    changeParams(params, uri) {\n    }\n    close() {\n        this.container.delete();\n    }\n}\nexports[\"default\"] = Faq;\n\n\n//# sourceURL=webpack:///./src/view/Faq.ts?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst skynode_1 = __webpack_require__(/*! @hanul/skynode */ \"./node_modules/@hanul/skynode/lib/index.js\");\nconst msg_js_1 = __importDefault(__webpack_require__(/*! msg.js */ \"./node_modules/msg.js/msg.js\"));\nconst CollapsibleItem_1 = __importDefault(__webpack_require__(/*! ../component/shared/CollapsibleItem */ \"./src/component/shared/CollapsibleItem.ts\"));\nconst Layout_1 = __importDefault(__webpack_require__(/*! ./Layout */ \"./src/view/Layout.ts\"));\nclass Faq {\n    constructor() {\n        Layout_1.default.current.title = (0, msg_js_1.default)(\"FAQ_TITLE\");\n        Layout_1.default.current.content.append(this.container = (0, skynode_1.el)(\".faq-view\", (0, skynode_1.el)(\"header\", (0, skynode_1.el)(\"h1\", (0, msg_js_1.default)(\"FAQ_TITLE\"))), new CollapsibleItem_1.default((0, msg_js_1.default)(\"FAQ_TITLE1\"), (0, msg_js_1.default)(\"FAQ_DESC1\")), new CollapsibleItem_1.default((0, msg_js_1.default)(\"FAQ_TITLE2\"), (0, msg_js_1.default)(\"FAQ_DESC2\")), new CollapsibleItem_1.default((0, msg_js_1.default)(\"FAQ_TITLE3\"), (0, msg_js_1.default)(\"FAQ_DESC3\")), new CollapsibleItem_1.default((0, msg_js_1.default)(\"FAQ_TITLE4\"), (0, msg_js_1.default)(\"FAQ_DESC4\")), new CollapsibleItem_1.default((0, msg_js_1.default)(\"FAQ_TITLE5\"), (0, msg_js_1.default)(\"FAQ_DESC5\")), new CollapsibleItem_1.default((0, msg_js_1.default)(\"FAQ_TITLE6\"), (0, msg_js_1.default)(\"FAQ_DESC6\")), new CollapsibleItem_1.default((0, msg_js_1.default)(\"FAQ_TITLE7\"), (0, msg_js_1.default)(\"FAQ_DESC7\"))));\n    }\n    changeParams(params, uri) {\n    }\n    close() {\n        this.container.delete();\n    }\n}\nexports[\"default\"] = Faq;\n\n\n//# sourceURL=webpack:///./src/view/Faq.ts?");
 
 /***/ }),
 
