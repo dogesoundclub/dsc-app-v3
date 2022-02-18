@@ -1,11 +1,35 @@
 .layout {
 
     >header {
-        max-width     : 1156px;
-        margin        : auto;
-        display       : flex;
-        padding-top   : 10px;
-        padding-bottom: 10px;
+        max-width      : 1156px;
+        margin         : auto;
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        padding-top    : 10px;
+        padding-bottom : 10px;
+
+        @media @phone {
+            padding         : 20px;
+            position        : sticky;
+            top             : 0;
+            background-color: black;
+        }
+
+        >.left {
+            display: flex;
+            .float-wrapper();
+
+            >.menu-button {
+                float  : right;
+                display: none;
+                padding: 10px;
+
+                @media @phone {
+                    display: block;
+                }
+            }
+        }
 
         >.pc-menu {
             @media @phone {

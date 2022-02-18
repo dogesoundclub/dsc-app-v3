@@ -1,32 +1,40 @@
 .mate-list {
     >.mate-line {
-        display        : flex;
-        justify-content: center;
+        display              : grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap                  : 20px;
+
+        @media @phone {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         >.mate-item {
+            display          : flex;
+            flex-direction   : column;
+            justify-content  : center;
+            align-items      : center;
             position         : relative;
-            width            : 90px;
-            height           : 90px;
             background-size  : contain;
             background-repeat: no-repeat;
             font-size        : 20px;
             line-height      : 1em;
 
+            >img {
+                width        : 176px;
+                height       : 176px;
+                border-radius: 8px;
+            }
+
             >.id {
-                position   : absolute;
-                left       : 3px;
-                bottom     : 0;
                 font-family: DungGeunMo;
             }
 
             >.name {
-                position   : absolute;
                 top        : 0;
                 width      : 100%;
                 text-align : center;
                 font-family: DungGeunMo;
                 color      : #FF00F6;
-                text-shadow: 3px 3px 3px #656565;
             }
 
             >.score {

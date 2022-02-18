@@ -16,7 +16,6 @@ export default class MobileMenu extends ClosableFloatingDomNode {
 
         this.append(
             MenuTreeBuilder.build(menu.menu),
-            new LanguageSelect(),
         );
         this.onDom("click", () => this.delete());
     }

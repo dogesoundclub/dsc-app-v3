@@ -25,16 +25,19 @@ export default class Gallery implements View {
             ),
             el("section",
                 el(".filter",
-                    el("input", {
-                        placeholder: msg("GALLERY_SEARCH_INPUT"),
-                        change: (event, input) => {
-                            this.query = (input.domElement as HTMLInputElement).value.trim();
-                            if (this.query === "") {
-                                this.query = undefined;
-                            }
-                            this.loadMates();
-                        },
-                    }),
+                    el(".input-container",
+                        el("input", {
+                            placeholder: msg("GALLERY_SEARCH_INPUT"),
+                            change: (event, input) => {
+                                this.query = (input.domElement as HTMLInputElement).value.trim();
+                                if (this.query === "") {
+                                    this.query = undefined;
+                                }
+                                this.loadMates();
+                            },
+                        }),
+                        el("button", msg("GALLERY_SEARCH_BUTTON")),
+                    ),
                     ...Object.entries(MateParts).map(([key, values]) => {
                         const select = el("select",
                             {

@@ -1,6 +1,8 @@
 import { BodyNode, DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
+import BrowserInfo from "../BrowserInfo";
+import MobileMenu from "../ui/menu/MobileMenu";
 import PCMenu from "../ui/menu/PCMenu";
 import ViewUtil from "./ViewUtil";
 
@@ -12,12 +14,31 @@ export default class Layout implements View {
 
     constructor() {
         Layout.current = this;
+        let select: DomNode<HTMLSelectElement>;
         BodyNode.append(this.container = el(".layout",
             el("header",
+                el(".left",
+                    el("a.menu-button", el("img", { src: "/images/shared/icn/icn_menu.svg" }), {
+                        click: (event, button) => {
+                            const rect = button.rect;
+                            new MobileMenu({ left: rect.right, top: rect.bottom }).appendTo(BodyNode);
+                        },
+                    }),
+                ),
                 el("a", { click: () => ViewUtil.go("/") },
                     el("img", { src: "/images/logo.svg", alt: "logo" }),
                 ),
                 new PCMenu(),
+                select = el("select.language-select",
+                    el("option", "🇰🇷 KOR", { value: "ko" }),
+                    el("option", "🇺🇸 ENG", { value: "en" }),
+                    el("option", "🇯🇵 JAP", { value: "jp" }),
+                    {
+                        change: () => {
+                            BrowserInfo.changeLanguage(select.domElement.value);
+                        },
+                    },
+                ),
             ),
             el("main",
                 this.content = el(".content"),
