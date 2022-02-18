@@ -15,7 +15,10 @@ export default class Contest implements View {
                 el(".warning", msg("CONTEST_DESC2")),
                 el("p", msg("CONTEST_DESC3")),
                 el(".button-wrap",
-                    el("button", msg("CONTEST_BUTTON")),
+                    el("a", msg("CONTEST_BUTTON"), {
+                        href: "https://opensea.io/collection/dsc-dogesound-winners",
+                        target: "_blank",
+                    }),
                 ),
             ),
             el("section",

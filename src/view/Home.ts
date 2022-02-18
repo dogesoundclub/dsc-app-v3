@@ -1,11 +1,14 @@
 import { DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
+import superagent from "superagent";
 import Layout from "./Layout";
 import ViewUtil from "./ViewUtil";
 
 export default class Home implements View {
+
     private container: DomNode;
+    private dogesound: DomNode;
 
     constructor() {
         Layout.current.title = msg("BAPP_TITLE");
@@ -21,13 +24,7 @@ export default class Home implements View {
             el("section",
                 el(".dogesound",
                     el("img.talker", { src: "https://storage.googleapis.com/dsc-mate/336/dscMate-3.png" }),
-                    el(".content",
-                        el(".title", msg("HOME_DOGE_SOUND_WINNER_TITLE")),
-                        el(".old-sound", msg("HOME_DOGE_SOUND_WINNER_DESC1")),
-                        el(".sound", `"대치동 APT 사는것 보다 도사클 10장 있는게 낫지"`),
-                        el("a.address", "0xcB295aB4898DF1B080e92E1b70708A09Bc113073"),
-                        el(".warning", msg("HOME_DOGE_SOUND_WINNER_WARNING")),
-                    ),
+                    this.dogesound = el(".content"),
                 ),
                 el("hr"),
                 el(".feature",
@@ -248,6 +245,30 @@ export default class Home implements View {
                 ),
             ),
         ));
+        this.loadDogeSound();
+    }
+
+    private async loadDogeSound() {
+        try {
+            const result = await superagent.get("https://api.dogesound.club/dogesoundwinner");
+            const winnerInfo = result.body;
+
+            if (this.container.deleted !== true) {
+                this.dogesound.append(
+                    el(".title", msg("HOME_DOGE_SOUND_WINNER_TITLE").replace(/{number}/, String(winnerInfo.round + 1))),
+                    el(".old-sound", msg("HOME_DOGE_SOUND_WINNER_DESC1").replace(/{number}/, String(winnerInfo.round + 1))),
+                    el(".sound", `"${winnerInfo.dogesound}"`),
+                    el("a.address", winnerInfo.winner, { href: `https://opensea.io/${winnerInfo.winner}`, target: "_blank" }),
+                    el(".warning", msg("HOME_DOGE_SOUND_WINNER_WARNING")),
+                );
+                //this.winner.empty().appendText(`${msg("HOME_WINNER_TITLE").replace(/{round}/, String(winnerInfo.round + 1))} `);
+                //this.winner.append(el("a", winnerInfo.winner, { href: `https://opensea.io/${winnerInfo.winner}`, target: "_blank" }));
+                //this.dogesound.empty().appendText(`${msg("HOME_WINNER_DESCRIPTION").replace(/{round}/, String(winnerInfo.round + 1))} \nㅡ ${winnerInfo.dogesound}`);
+            }
+        } catch (e) {
+            this.dogesound.appendText(msg("HOME_WINNER_ERROR"));
+            console.log(e);
+        }
     }
 
     public changeParams(params: ViewParams, uri: string): void {
