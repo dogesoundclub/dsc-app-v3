@@ -10,7 +10,7 @@ export default class PCMenu extends DomNode {
 
         (menu.menu[1] as any).click = () => {
             ViewUtil.go("/");
-            window.scrollTo(0, 3600);
+            window.scrollTo(0, document.getElementsByClassName("team")[0].getClientRects()[0].top - 100);
         };
 
         this.append(

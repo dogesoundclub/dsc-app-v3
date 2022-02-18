@@ -267,15 +267,58 @@ body {
   background-color: white;
   color: #E73C83;
 }
-.gallery-mate-item > a > img {
-  width: 176px;
-  height: 176px;
-  border-radius: 8px;
+.mate-list > .mate-line {
+  display: flex;
+  justify-content: center;
 }
-.gallery-mate-item > a > .id {
+.mate-list > .mate-line > .mate-item {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  line-height: 1em;
+}
+.mate-list > .mate-line > .mate-item > .id {
+  position: absolute;
+  left: 3px;
+  bottom: 0;
+  font-family: DungGeunMo;
+}
+.mate-list > .mate-line > .mate-item > .name {
+  position: absolute;
+  top: 0;
+  width: 100%;
   text-align: center;
-  font-size: 24px;
-  line-height: 24px;
+  font-family: DungGeunMo;
+  color: #FF00F6;
+  text-shadow: 3px 3px 3px #656565;
+}
+.mate-list > .mate-line > .mate-item > .score {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: right;
+  font-family: DungGeunMo;
+  color: #006400;
+}
+.mate-list > .mate-line > .mate-item > input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+}
+@media only screen and (max-width: 799px) {
+  .mate-list > .mate-line > .mate-item {
+    width: 64px;
+    height: 64px;
+    font-size: 14px;
+  }
+}
+.mate-list > .mate-line > .mate-item.off {
+  opacity: 0.5;
 }
 .pc-menu {
   position: absolute;
@@ -591,7 +634,7 @@ body {
   flex-direction: column;
   padding: 15px 30px 30px 30px;
 }
-.home-view > section > .buy-mate > .card > .button-wrap > button {
+.home-view > section > .buy-mate > .card > .button-wrap > a {
   font-family: DungGeunMo;
   font-size: 24px;
   line-height: 24px;
@@ -600,8 +643,9 @@ body {
   border-radius: 8px;
   padding: 15px 100px;
   margin-top: 15px;
+  text-decoration: none;
 }
-.home-view > section > .buy-mate > .card > .button-wrap > button:hover {
+.home-view > section > .buy-mate > .card > .button-wrap > a:hover {
   background-color: white;
   color: #E73C83;
   border-color: white;
@@ -656,7 +700,8 @@ body {
   margin-top: 16px;
   gap: 10px;
 }
-.home-view > section > .nft > section > article > .button-container > button {
+.home-view > section > .nft > section > article > .button-container > button,
+.home-view > section > .nft > section > article > .button-container > a {
   font-family: DungGeunMo;
   width: 100%;
   font-size: 16px;
@@ -668,8 +713,11 @@ body {
   border-radius: 8px;
   padding-top: 18px;
   padding-bottom: 18px;
+  text-align: center;
+  text-decoration: none;
 }
-.home-view > section > .nft > section > article > .button-container > button:hover {
+.home-view > section > .nft > section > article > .button-container > button:hover,
+.home-view > section > .nft > section > article > .button-container > a:hover {
   color: white;
   border: 1px solid white;
 }
@@ -1991,5 +2039,27 @@ body {
   background: #1F1F1F;
   border: 1px solid #2C2C2C;
   box-sizing: border-box;
+}
+.member-view {
+  max-width: 1156px;
+  margin: auto;
+  margin-top: 60px;
+}
+.member-view > header > h1 {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.member-view > section > hr {
+  border: none;
+  height: 1px;
+  color: #2C2C2C;
+  background-color: #2C2C2C;
+  margin: 60px 0px;
+}
+.member-view > section > article > p {
+  margin-top: 4px;
+  font-size: 16px;
+  line-height: 20px;
 }
 

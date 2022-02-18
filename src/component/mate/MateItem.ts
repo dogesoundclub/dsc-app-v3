@@ -1,26 +1,29 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const skynode_1 = require("@hanul/skynode");
-const skyutil_1 = __importDefault(require("skyutil"));
-const rarity_json_1 = __importDefault(require("../../rarity.json"));
-const CommonUtil_1 = __importDefault(require("../../CommonUtil"));
-const ViewUtil_1 = __importDefault(require("../../view/ViewUtil"));
-class MateItem extends skynode_1.DomNode {
-    constructor(list, id, name, selectable, showingRarity) {
+import { DomNode, el } from "@hanul/skynode";
+import { SkyRouter } from "skyrouter";
+import SkyUtil from "skyutil";
+import MateList from "./MateList";
+import rarity from "../../rarity.json";
+import CommonUtil from "../../CommonUtil";
+import ViewUtil from "../../view/ViewUtil";
+
+export default class MateItem extends DomNode {
+
+    private checkbox: DomNode<HTMLInputElement> | undefined;
+
+    constructor(list: MateList, id: number, name: string | undefined, selectable: boolean, showingRarity: boolean) {
         super(`a.mate-item${list.votedMates.includes(id) === true ? ".off" : ""}`);
         this.style({
             backgroundImage: `url(https://storage.googleapis.com/dsc-mate/336/dscMate-${id}.png)`,
         });
-        this.append((0, skynode_1.el)("span.id", `#${id}`));
+        this.append(el("span.id", `#${id}`));
+
         if (showingRarity === true) {
-            (0, skynode_1.el)("span.score", CommonUtil_1.default.numberWithCommas(String(rarity_json_1.default.scores[id]))).appendTo(this);
+            el("span.score", CommonUtil.numberWithCommas(String((rarity.scores as any)[id]))).appendTo(this);
         }
+
         else if (selectable === true) {
             if (list.votedMates.includes(id) !== true) {
-                this.checkbox = (0, skynode_1.el)("input", {
+                this.checkbox = el<HTMLInputElement>("input", {
                     type: "checkbox",
                     click: (event) => event.stopPropagation(),
                     change: () => {
@@ -29,9 +32,8 @@ class MateItem extends skynode_1.DomNode {
                                 if (list.selectedMateIds.includes(id) !== true) {
                                     list.selectedMateIds.push(id);
                                 }
-                            }
-                            else {
-                                skyutil_1.default.pull(list.selectedMateIds, id);
+                            } else {
+                                SkyUtil.pull(list.selectedMateIds, id);
                             }
                             list.fireEvent("selectMate");
                         }
@@ -40,9 +42,11 @@ class MateItem extends skynode_1.DomNode {
                 this.checkbox.domElement.checked = list.selectedMateIds.includes(id);
             }
         }
+
         else {
-            (0, skynode_1.el)("span.name", name).appendTo(this);
+            el("span.name", name).appendTo(this);
         }
+
         this.onDom("click", () => {
             if (selectable === true) {
                 if (this.checkbox !== undefined) {
@@ -51,18 +55,14 @@ class MateItem extends skynode_1.DomNode {
                         if (list.selectedMateIds.includes(id) !== true) {
                             list.selectedMateIds.push(id);
                         }
-                    }
-                    else {
-                        skyutil_1.default.pull(list.selectedMateIds, id);
+                    } else {
+                        SkyUtil.pull(list.selectedMateIds, id);
                     }
                     list.fireEvent("selectMate");
                 }
-            }
-            else {
-                ViewUtil_1.default.go(`/mates/${id}`);
+            } else {
+                ViewUtil.go(`/mates/${id}`);
             }
         });
     }
 }
-exports.default = MateItem;
-//# sourceMappingURL=GalleryMateItem.js.map
