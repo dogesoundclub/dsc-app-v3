@@ -1,4 +1,5 @@
 import { DomNode, el } from "@hanul/skynode";
+import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import Layout from "./Layout";
 
@@ -6,14 +7,14 @@ export default class FollowMe implements View {
     private container: DomNode;
 
     constructor() {
-        Layout.current.title = "홀더 인증";
+        Layout.current.title = msg("HOLDER_DISCORD_CERTIFICATION_BUTTON");
         Layout.current.content.append(this.container = el(".holder-view",
             el("section",
                 el("img", { src: "/images/shared/img/mate-mock.png" }),
-                el("h1", "LOGIN WITH METAMASK?"),
+                el("h1", msg("HOLDER_TITLE1")),
                 el(".button-container",
-                    el("a", "YES"),
-                    el("a", "NO"),
+                    el("a", msg("YES_BUTTON")),
+                    el("a", msg("NO_BUTTON")),
                 ),
             ),
         ))

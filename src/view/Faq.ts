@@ -1,4 +1,5 @@
 import { DomNode, el } from "@hanul/skynode";
+import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import Layout from "./Layout";
 
@@ -7,19 +8,19 @@ export default class Faq implements View {
     private collapsible: DomNode;
 
     constructor() {
-        Layout.current.title = "FAQ";
+        Layout.current.title = msg("FAQ_TITLE");
         Layout.current.content.append(this.container = el(".faq-view",
             el("header",
-                el("h1", "FAQ 👑😛😍"),
+                el("h1", msg("FAQ_TITLE")),
             ),
             el("section",
-                this.collapsible = el("button.collapsible", "What is Doji Sound Club?",
+                this.collapsible = el("button.collapsible", msg("FAQ_TITLE1"),
                     {
                         click: () => {
                         }
                     }),
                 el(".content",
-                    el("p", "As its name suggests, Doji Sound Club is Gaesori Club. Anyone who has an admission ticket can freely come in and talk about various thoughts.\nMate and Rocket Gicks are 10, 000 Generative Art NFTs that serve as tickets for the provincial governor's sound club."),
+                    el("p", msg("FAQ_DESC1")),
                 ),
             ),
             el("section",

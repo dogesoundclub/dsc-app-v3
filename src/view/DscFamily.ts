@@ -1,4 +1,5 @@
 import { DomNode, el } from "@hanul/skynode";
+import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import Layout from "./Layout";
 
@@ -6,44 +7,44 @@ export default class DscFamily implements View {
     private container: DomNode;
 
     constructor() {
-        Layout.current.title = "DSC Family";
+        Layout.current.title = msg("DSC_FAMILY_TITLE");
         Layout.current.content.append(this.container = el(".dsc-family-view",
             el("header",
-                el("h1", "DSC Family 👩‍❤️‍💋‍"),
-                el("h2", "Dsc, holder, or channel to build and grow their own independent community is strongly recommended and support to.Channel list of the registered holder, so far is the list below."),
+                el("h1", msg("DSC_FAMILY_TITLE")),
+                el("h2", msg("DSC_FAMILY_DESC")),
             ),
             el("section",
                 el("hr"),
                 el(".input-container",
-                    el("label", "The channel name"),
-                    el("input", { placeholder: "name" }),
+                    el("label", msg("DSC_FAMILY_DETAIL_TITLE1")),
+                    el("input", { placeholder: msg("DSC_FAMILY_DETAIL_TITLE1") }),
                 ),
                 el(".channel-container",
                     el(".input-container",
-                        el("label", "Channel"),
-                        el("input", { placeholder: "Channel" }),
+                        el("label", msg("DSC_FAMILY_DETAIL_TITLE1")),
+                        el("input", { placeholder: msg("DSC_FAMILY_DETAIL_TITLE1") }),
                     ),
                     el(".input-container",
-                        el("label", "Channel Link"),
-                        el("input", { placeholder: "Link" }),
+                        el("label", msg("DSC_FAMILY_DETAIL_INPUT2")),
+                        el("input", { placeholder: msg("DSC_FAMILY_DETAIL_INPUT2") }),
                     ),
                 ),
                 el(".introduction-container",
                     el(".input-container",
-                        el("label", "Channel introduction"),
-                        el("input", { placeholder: "Channel", type: "text" }),
+                        el("label", msg("DSC_FAMILY_DETAIL_TITLE3")),
+                        el("input", { placeholder: msg("DSC_FAMILY_DETAIL_TITLE2"), type: "text" }),
                     ),
                     el(".input-container",
                         el("label", "Image"),
-                        el("input", { placeholder: "Link", type: "file" }),
+                        el("input", { placeholder: msg("DSC_FAMILY_DETAIL_TITLE4"), type: "file" }),
                     ),
                 ),
                 el(".input-container",
-                    el("label", "Channel Link"),
-                    el("input", { placeholder: "Link" }),
+                    el("label", msg("DSC_FAMILY_DETAIL_INPUT2")),
+                    el("input", { placeholder: msg("DSC_FAMILY_DETAIL_INPUT2") }),
                 ),
                 el(".button-wrap",
-                    el("button", "REGISTER"),
+                    el("button", msg("REGISTER_BUTTON")),
                 ),
             ),
         ))

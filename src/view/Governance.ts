@@ -1,4 +1,5 @@
 import { DomNode, el } from "@hanul/skynode";
+import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import Layout from "./Layout";
 
@@ -6,18 +7,18 @@ export default class Governance implements View {
     private container: DomNode;
 
     constructor() {
-        Layout.current.title = "거버넌스";
+        Layout.current.title = msg("GOVERNANCE_TITLE1");
         Layout.current.content.append(this.container = el(".governance-view",
             el("header",
-                el("h1", "GOVERNANCE 🐙🌵🌞"),
-                el("h2", "Mate represents the voting rights of the governor's sound club governance. You can make a proposal or vote as much as you have a mate for or against a registered proposal. In order to create a proposal, 800 mixes per case must be incinerated, and if the turnout does not exceed 30%, the agenda will be invalidated regardless of the pros and cons ratio."),
+                el("h1", msg("GOVERNANCE_TITLE1")),
+                el("h2", msg("GOVERNANCE_DESC1")),
                 el(".button-wrap",
-                    el("button", "Create suggestions"),
+                    el("button", msg("GOVERNANCE_BUTTON")),
                 ),
             ),
             el("section",
                 el("hr"),
-                el("h2", "Suggestions 👑🚀✌️"),
+                el("h2", msg("GOVERNANCE_TITLE2")),
                 el("table",
                     el("thead",
                         el("tr",
@@ -27,15 +28,15 @@ export default class Governance implements View {
                     ),
                     el("tbody",
                         el("tr",
-                            el("td.agreement", "AGREEMENT"),
+                            el("td.agreement", msg("GOVERNANCE_TABLE_VOTE_DESC1")),
                             el("td.dogesound", "DIP-19: We would like to enter into a partnership with the rice mill community."),
                         ),
                         el("tr",
-                            el("td.opposition", "OPPOSITION"),
+                            el("td.opposition", msg("GOVERNANCE_TABLE_VOTE_DESC2")),
                             el("td.dogesound", "DIP-19: We would like to enter into a partnership with the rice mill community."),
                         ),
                         el("tr",
-                            el("td.cancellation", "CANCELLATION"),
+                            el("td.cancellation", msg("GOVERNANCE_TABLE_VOTE_DESC3")),
                             el("td.cancellation-dogesound", "DIP-19: We would like to enter into a partnership with the rice mill community."),
                         ),
                     ),

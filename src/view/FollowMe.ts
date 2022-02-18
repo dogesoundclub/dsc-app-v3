@@ -1,4 +1,5 @@
 import { DomNode, el } from "@hanul/skynode";
+import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import Layout from "./Layout";
 
@@ -6,11 +7,11 @@ export default class FollowMe implements View {
     private container: DomNode;
 
     constructor() {
-        Layout.current.title = "Follow Me";
+        Layout.current.title = msg("FOLLOW_ME_TITLE");
         Layout.current.content.append(this.container = el(".follow-me-view",
             el("header",
-                el("h1", "FOLLOW ME 💗😍"),
-                el("h2", "If you leave a Twitter or Instagram ID for your mate, they will be registered on the list below. Change your social media profile picture to Mate, and follow the Twitter list below. They will recognize that you are part of the same community and will follow you back to help you adapt on social media."),
+                el("h1", msg("FOLLOW_ME_TITLE")),
+                el("h2", msg("FOLLOW_ME_DESC")),
             ),
             el("section",
                 el("section",
