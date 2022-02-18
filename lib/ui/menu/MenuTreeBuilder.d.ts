@@ -1,11 +1,12 @@
 import { DomNode } from "@hanul/skynode";
 interface Menu {
-    uri: string;
+    uri?: string;
     name: string;
     children?: {
         uri: string;
         name: string;
     }[];
+    click?: () => void;
 }
 declare class MenuTreeBuilder {
     build(menus: Menu[], parent?: Menu): DomNode<HTMLElement>;

@@ -5,4 +5,4 @@ export default class Activities implements View {
     changeParams(params: ViewParams, uri: string): void;
     close(): void;
 }
-//# sourceMappingURL=activities.d.ts.map
+//# sourceMappingURL=Activities.d.ts.map

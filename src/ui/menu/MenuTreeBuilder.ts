@@ -3,12 +3,13 @@ import { SkyRouter } from "skyrouter";
 import ViewUtil from "../../view/ViewUtil";
 
 interface Menu {
-    uri: string;
+    uri?: string;
     name: string;
     children?: {
         uri: string;
         name: string;
     }[];
+    click?: () => void,
 }
 
 class MenuTreeBuilder {
@@ -17,14 +18,14 @@ class MenuTreeBuilder {
         const lis: DomNode[] = parent === undefined ? [] : [el("li.parent",
             el(`a${location.pathname === `/${parent.uri}` ? ".on" : ""}`,
                 parent.name,
-                { click: () => ViewUtil.go(`/${parent.uri}`) },
+                { click: () => parent.click !== undefined ? parent.click() : ViewUtil.go(`/${parent.uri}`) },
             ),
         )];
         for (const menuItem of menus) {
             const li = el("li",
                 el(`a${location.pathname === `/${menuItem.uri}` ? ".on" : ""}`,
                     menuItem.name,
-                    { click: () => ViewUtil.go(`/${menuItem.uri}`) },
+                    { click: () => menuItem.click !== undefined ? menuItem.click() : ViewUtil.go(`/${menuItem.uri}`) },
                 ),
             );
             if (menuItem.children !== undefined) {

@@ -1,11 +1,9 @@
 {
-    "menu": [
-        {
+    "menu": [{
             "uri": "buyMate",
             "name": "BUY MATE"
         },
         {
-            "uri": "team",
             "name": "TEAM"
         },
         {
@@ -21,7 +19,7 @@
             "name": "MEMBER"
         },
         {
-            "uri": "achievement",
+            "uri": "fullyOn",
             "name": "ACHIEVEMENT"
         },
         {

@@ -1,6 +1,7 @@
 import { DomNode, el } from "@hanul/skynode";
 import { View, ViewParams } from "skyrouter";
 import Layout from "./Layout";
+import ViewUtil from "./ViewUtil";
 
 export default class FullyOn implements View {
     private container: DomNode;
@@ -17,7 +18,9 @@ export default class FullyOn implements View {
                     el("img", { src: "/images/view/activities/bg_dsc_family.png" }),
                     el("h2", "DSC Family"),
                     el("p", "DSC actively encourages and supports holders to build and grow their own independent communities or channels. The list below is the channel list of holders registered so far."),
-                    el("button", "ENTER"),
+                    el("button", "ENTER", {
+                        click: () => ViewUtil.go("/dscFamily"),
+                    }),
                 ),
                 el("hr"),
                 el("article",

@@ -1,6 +1,7 @@
 import { DomNode, el } from "@hanul/skynode";
 import { View, ViewParams } from "skyrouter";
 import Layout from "./Layout";
+import ViewUtil from "./ViewUtil";
 
 export default class Mates implements View {
     private container: DomNode;
@@ -37,7 +38,7 @@ export default class Mates implements View {
                     Below If you press the button, you can browse the distributed copy of dsc mates.`),
                 ),
                 el(".button-wrap",
-                    el("button", "VIEW DSC MATES "),
+                    el("button", "VIEW DSC MATES ", { click: () => ViewUtil.go("/gallery") }),
                 ),
             ),
         ))

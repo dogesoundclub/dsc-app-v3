@@ -14,6 +14,7 @@ import Holder from "./view/Holder";
 import Home from "./view/Home";
 import Layout from "./view/Layout";
 import Mates from "./view/Mates";
+import Member from "./view/Member";
 import MyMate from "./view/MyMate";
 import Terms from "./view/Terms";
 
@@ -34,6 +35,7 @@ import Terms from "./view/Terms";
     SkyRouter.route("terms", Terms);
     SkyRouter.route("contest", Contest);
     SkyRouter.route("faq", Faq);
+    SkyRouter.route("member", Member);
     SkyRouter.route("governance", Governance);
     SkyRouter.route("governance/create", CreateGovernance);
     SkyRouter.route("governance/{id}}", GovernanceDetail);

@@ -5,4 +5,4 @@ export default class GovernanceDetail implements View {
     changeParams(params: ViewParams, uri: string): void;
     close(): void;
 }
-//# sourceMappingURL=governanceDetail.d.ts.map
+//# sourceMappingURL=GovernanceDetail.d.ts.map

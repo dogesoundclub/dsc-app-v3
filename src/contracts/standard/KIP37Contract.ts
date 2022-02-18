@@ -1,11 +1,10 @@
 import { BigNumber, BigNumberish, ContractInterface } from "ethers";
-import KIP37Artifact from "../abi/klubs/artifacts/contracts/klaytn-contracts/token/KIP37/KIP37.sol/KIP37.json";
 import Contract from "../Contract";
 
 export default class KIP37Contract extends Contract {
 
-    constructor(address: string, abi?: ContractInterface) {
-        super(address, abi === undefined ? KIP37Artifact.abi : abi);
+    constructor(address: string, abi: ContractInterface) {
+        super(address, abi);
     }
 
     public async balanceOf(owner: string, id: BigNumberish): Promise<BigNumber> {
