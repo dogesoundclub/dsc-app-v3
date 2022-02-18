@@ -1,0 +1,1 @@
+{"version":3,"file":"Klaytn.d.ts","sourceRoot":"","sources":["../../src/klaytn/Klaytn.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,0BAA0B,CAAC;AAErD,cAAM,MAAM;IAER,OAAO,CAAC,KAAK,CAOT;IAEG,cAAc,CAAC,OAAO,EAAE,MAAM,EAAE,GAAG,EAAE,GAAG;IAIlC,SAAS,CAAC,OAAO,EAAE,MAAM;IAIzB,eAAe;CAG/B;;AAED,wBAA4B"}
