@@ -1,0 +1,1 @@
+{"version":3,"file":"ImageContract.d.ts","sourceRoot":"","sources":["../../src/contracts/ImageContract.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,MAAM,QAAQ,CAAC;AAEtC,OAAO,QAAQ,MAAM,YAAY,CAAC;AAElC,cAAM,aAAc,SAAQ,QAAQ;;IAMnB,KAAK,CAAC,MAAM,EAAE,YAAY,GAAG,OAAO,CAAC,MAAM,CAAC;CAG5D;;AAED,wBAAmC"}

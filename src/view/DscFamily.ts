@@ -2,6 +2,7 @@ import { DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import Layout from "./Layout";
+import ViewUtil from "./ViewUtil";
 
 export default class DscFamily implements View {
     private container: DomNode;
@@ -13,7 +14,9 @@ export default class DscFamily implements View {
             el("header",
                 el("h1", msg("DSC_FAMILY_TITLE")),
                 el("h2", msg("DSC_FAMILY_DESC")),
-                el("button", msg("REGISTER_BUTTON")),
+                el("button", msg("REGISTER_BUTTON"), {
+                    click: () => ViewUtil.go("/dscFamily/create"),
+                }),
             ),
             el("section",
                 el("hr"),

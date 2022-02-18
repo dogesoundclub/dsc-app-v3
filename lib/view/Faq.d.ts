@@ -1,7 +1,6 @@
 import { View, ViewParams } from "skyrouter";
 export default class Faq implements View {
     private container;
-    private collapsible;
     constructor();
     changeParams(params: ViewParams, uri: string): void;
     close(): void;

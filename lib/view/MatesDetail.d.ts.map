@@ -1,0 +1,1 @@
+{"version":3,"file":"MatesDetail.d.ts","sourceRoot":"","sources":["../../src/view/MatesDetail.ts"],"names":[],"mappings":"AAEA,OAAO,EAAE,IAAI,EAAE,UAAU,EAAE,MAAM,WAAW,CAAC;AAI7C,MAAM,CAAC,OAAO,OAAO,WAAY,YAAW,IAAI;IAC5C,OAAO,CAAC,SAAS,CAAU;;IAwFpB,YAAY,CAAC,MAAM,EAAE,UAAU,EAAE,GAAG,EAAE,MAAM,GAAG,IAAI;IAGnD,KAAK,IAAI,IAAI;CAGvB"}

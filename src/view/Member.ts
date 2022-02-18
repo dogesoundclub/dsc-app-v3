@@ -14,7 +14,7 @@ export default class Member implements View {
             el("section",
                 el("hr"),
                 el("article",
-                    el("p", "멤버 전용 기능 개발중입니다."),
+                    el("p", "멤버 전용 기능은 개발중입니다."),
                 ),
             ),
         ));
