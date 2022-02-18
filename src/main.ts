@@ -17,9 +17,11 @@ import Holder from "./view/Holder";
 import Home from "./view/Home";
 import Layout from "./view/Layout";
 import Mates from "./view/Mates";
+import MatesDetail from "./view/MatesDetail";
 import Member from "./view/Member";
 import MyMate from "./view/MyMate";
 import Terms from "./view/Terms";
+import DscFamily from "./view/DscFamily";
 
 (async () => {
     msg.language = BrowserInfo.language;
@@ -33,8 +35,10 @@ import Terms from "./view/Terms";
     SkyRouter.route("holder", Holder);
     SkyRouter.route("buyMate", BuyMate);
     SkyRouter.route("mates", Mates);
+    SkyRouter.route("mates/detail/{id}", MatesDetail);
     SkyRouter.route("myMate", MyMate);
     SkyRouter.route("activities", Activities);
+    SkyRouter.route("dscFamily", DscFamily);
     SkyRouter.route("dscFamily/create", CreateDscFamily);
     SkyRouter.route("fullyOn", FullyOn);
     SkyRouter.route("terms", Terms);
@@ -43,7 +47,7 @@ import Terms from "./view/Terms";
     SkyRouter.route("member", Member);
     SkyRouter.route("governance", Governance);
     SkyRouter.route("governance/create", CreateGovernance);
-    SkyRouter.route("governance/detail/{id}}", GovernanceDetail);
+    SkyRouter.route("governance/detail/{id}", GovernanceDetail);
 
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);
