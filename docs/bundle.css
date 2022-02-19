@@ -2881,6 +2881,8 @@ body {
 .mates-detail-view > header > img {
   border-radius: 8px;
   margin: 20px 0px;
+  width: 176px;
+  height: 176px;
 }
 .mates-detail-view > header > button {
   font-family: DungGeunMo;

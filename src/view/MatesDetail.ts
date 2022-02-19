@@ -32,7 +32,7 @@ export default class MatesDetail implements View {
         Layout.current.content.append(this.container = el(".mates-detail-view",
             el("header",
                 this.nameDisplay = el("h1"),
-                el("img.mate", { src: "/images/shared/img/mate-mock.png" }),
+                el("img.mate", { src: `https://storage.googleapis.com/dsc-mate/336/dscMate-${this.id}.png` }),
                 el("p", "메이트에 쌓여있는 MIX :", this.mixDisplay = el("span")),
                 el("a", "오픈씨 확인하기", { href: `https://opensea.io/assets/klaytn/0xe47e90c58f8336a2f24bcd9bcb530e2e02e1e8ae/${this.id}`, target: "_blank" }),
             ),
