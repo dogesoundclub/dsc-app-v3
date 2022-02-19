@@ -2492,9 +2492,34 @@ body {
 .create-governance-view > section > .input-container > .summary {
   text-align: left;
   min-height: 124px;
+  font-family: Dunggeunmo;
+  background: #222222;
+  border-radius: 8px;
+  font-size: 20px;
+  color: #676767;
+  padding: 16px 20px;
 }
 .create-governance-view > section > .input-container > .text {
-  height: 180px;
+  font-family: Dunggeunmo;
+  background: #222222;
+  border-radius: 8px;
+  font-size: 20px;
+  color: #676767;
+  padding: 16px 20px;
+  min-height: 180px;
+}
+.create-governance-view > section > .input-container > .remark {
+  font-family: Dunggeunmo;
+  background: #222222;
+  border-radius: 8px;
+  font-size: 20px;
+  color: #676767;
+  padding: 16px 20px;
+}
+@media only screen and (max-width: 719px) {
+  .create-governance-view > section > .input-container > .remark {
+    font-size: 14px;
+  }
 }
 @media only screen and (max-width: 719px) {
   .create-governance-view > section > .proposer-container {

@@ -2,6 +2,7 @@ import { DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import ProposalList from "../component/governance/ProposalList";
+import Alert from "../component/shared/dialogue/Alert";
 import Layout from "./Layout";
 import ViewUtil from "./ViewUtil";
 
@@ -17,7 +18,10 @@ export default class Governance implements View {
                 el("h2", msg("GOVERNANCE_DESC1")),
                 el(".button-wrap",
                     el("button", msg("GOVERNANCE_BUTTON"), {
-                        click: () => ViewUtil.go("/governance/create"),
+                        click: () => {
+                            new Alert("이메이트 클레이튼 체인 마이그레이션 이후 해당 기능이 열립니다.", msg("CONFIRM_BUTTON");
+                        }
+                        // ViewUtil.go("/governance/create"),
                     }),
                 ),
             ),

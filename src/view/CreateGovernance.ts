@@ -57,7 +57,7 @@ export default class CreateGovernance implements View {
                 ),
                 el(".input-container",
                     el("label", msg("GOVERNANCE_CREATE_INPUT_DESC7")),
-                    el("textarea"),
+                    el("textarea.remark"),
                 ),
                 el("hr"),
                 el(".proposer-container",
