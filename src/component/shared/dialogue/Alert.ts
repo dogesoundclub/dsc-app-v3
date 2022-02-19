@@ -8,6 +8,7 @@ export default class Alert extends Popup {
     constructor(
         message: string,
         confirmTitle?: string,
+        confirm?: () => void,
     ) {
         super(".popup-background");
         this.append(
@@ -15,7 +16,12 @@ export default class Alert extends Popup {
                 el("p", message),
                 el(".button-container",
                     el("button", confirmTitle === undefined ? msg("CONFIRM_BUTTON") : confirmTitle, {
-                        click: () => this.delete(),
+                        click: () => {
+                            if (confirm !== undefined) {
+                                confirm();
+                            }
+                            this.delete();
+                        },
                     }),
                 ),
             ),

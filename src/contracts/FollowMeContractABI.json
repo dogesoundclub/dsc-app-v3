@@ -1,0 +1,101 @@
+[{
+        "constant": false,
+        "inputs": [{
+                "name": "mates",
+                "type": "address"
+            },
+            {
+                "name": "mateId",
+                "type": "uint256"
+            },
+            {
+                "name": "index",
+                "type": "uint256"
+            },
+            {
+                "name": "link",
+                "type": "string"
+            }
+        ],
+        "name": "set",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [{
+                "name": "",
+                "type": "address"
+            },
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "followMes",
+        "outputs": [{
+            "name": "owner",
+            "type": "address"
+        }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [{
+                "name": "mates",
+                "type": "address"
+            },
+            {
+                "name": "mateId",
+                "type": "uint256"
+            },
+            {
+                "name": "index",
+                "type": "uint256"
+            }
+        ],
+        "name": "followMe",
+        "outputs": [{
+            "name": "link",
+            "type": "string"
+        }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "anonymous": false,
+        "inputs": [{
+                "indexed": true,
+                "name": "mates",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "name": "mateId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "owner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "name": "index",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "link",
+                "type": "string"
+            }
+        ],
+        "name": "Set",
+        "type": "event"
+    }
+]

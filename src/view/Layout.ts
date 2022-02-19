@@ -49,14 +49,14 @@ export default class Layout implements View {
                         el(".term"),
                         el(".social",
                             el("a",
-                                el("img", { src: "images/view/layout/discord.svg" }),
+                                el("img", { src: "/images/view/layout/discord.svg" }),
                                 {
                                     href: "https://discord.com/invite/79CqdTdu8w",
                                     target: "_blank",
                                 },
                             ),
                             el("a",
-                                el("img", { src: "images/view/layout/twitter.svg" }),
+                                el("img", { src: "/images/view/layout/twitter.svg" }),
                                 {
                                     href: "https://twitter.com/dogesoundclub",
                                     target: "_blank",
@@ -66,7 +66,7 @@ export default class Layout implements View {
                     ),
                 ),
                 el(".provider",
-                    el("img", { src: "images/view/layout/logo.svg" }),
+                    el("img", { src: "/images/view/layout/logo.svg" }),
                     el("p", msg("FOOTER_DESC")),
                     el("p", "Copyright @2021 DSCLabel Inc. ALL RIGHTS RESERVED.")
                 ),
