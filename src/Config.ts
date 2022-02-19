@@ -1,4 +1,4 @@
-const TESTNET = false;
+const TESTNET = true;
 
 export default {
 
@@ -14,11 +14,11 @@ export default {
         Vote: "0x2EA83A978747d2F732b5E4D3BeeB12a7c4eDD743",
         Image: "0x670CE33477dfaEd14e0c1b8C66e1687B10469b8E",
         Mix: "0xAe0a2e1DA2469FFdf8308160eE64Fe3656d9D9D0",
-        NameV2: "",
+        NameV2: "0x3Fc1745CC8336De241aE05139332c3cF676A9cdC",
         Message: "0x4843027f225da25a017a78eF419191860E482B52",
         FollowMe: "0xa8D43b45D84169076DccFd4B17C769080A8e86C6",
-        DSCFamily: "",
-        GovernanceV3: "",
+        DSCFamily: "0xF75338d3132e2457df4912e6f9b8B505F5ED1670",
+        GovernanceV3: "0x4C886ec19370212c67d26a16A7065598C6152927",
         MatesPool: "0x6f49D139359D0c7Bf44Df4520494A6ABB39434dD",
     } : {
         // Mainnet

@@ -1,10 +1,21 @@
 import { DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
+import MintForm from "../component/dogesounds/MintForm";
+import RegisterCandidateForm from "../component/dogesounds/RegisterCandidateForm";
+import VoteForm from "../component/dogesounds/VoteForm";
+import DogeSoundContestV2Contract from "../contracts/DogeSoundContestV2Contract";
 import Layout from "./Layout";
+import ViewUtil from "./ViewUtil";
 
 export default class Contest implements View {
+
     private container: DomNode;
+    private status: DomNode;
+    private remainBlocks: DomNode;
+    private form: DomNode | undefined;
+
+    private remainsInterval: any | undefined;
 
     constructor() {
         Layout.current.title = msg("CONTEST_TITLE1");
@@ -40,7 +51,7 @@ export default class Contest implements View {
                         ),
                     ),
                 ),
-                el(".pagination",
+                /*el(".pagination",
                     el("a", "<<"),
                     el("a", "<"),
                     el("a.active", "1"),
@@ -50,14 +61,14 @@ export default class Contest implements View {
                     el("a", "5"),
                     el("a", ">"),
                     el("a", ">>"),
-                ),
+                ),*/
 
                 el("hr"),
                 el("h2", msg("CONTEST_TITLE3")),
                 el("section.status-board",
                     el("img", { src: "/images/shared/img/dog.png" }),
-                    el("h3", msg("CONTEST_STATUS_BOARD_TITLE1")),
-                    el(".caption", msg("CONTEST_STATUS_BOARD_DESC1")),
+                    this.status = el("h3"),
+                    this.remainBlocks = el(".caption", msg("CONTEST_STATUS_BOARD_DESC1")),
                     el("p", msg("CONTEST_STATUS_BOARD_DESC2")),
                     el(".submit-container",
                         el(".input-container",
@@ -86,7 +97,7 @@ export default class Contest implements View {
                         ),
                     ),
                 ),
-                el(".pagination",
+                /*el(".pagination",
                     el("a", "<<"),
                     el("a", "<"),
                     el("a.active", "1"),
@@ -96,16 +107,57 @@ export default class Contest implements View {
                     el("a", "5"),
                     el("a", ">"),
                     el("a", ">>"),
-                ),
+                ),*/
             ),
-        ))
+        ));
+        this.load();
     }
 
+    private async load() {
 
-    public changeParams(params: ViewParams, uri: string): void {
+        const currentRound = (await DogeSoundContestV2Contract.getRound()).toNumber();
+        const period = (await DogeSoundContestV2Contract.getPeriod()).toNumber();
+        let remains = (await DogeSoundContestV2Contract.getRemains()).toNumber();
+
+        this.form?.delete();
+
+        //if (period === DogeSoundContestV2Contract.HOLIDAY_PERIOD) {
+            this.status.append(
+                el("p", msg("DOGESOUNDS_HOLIDAY_DESCRIPTION").replace(/{number}/, String(currentRound))),
+                el("p", msg("DOGESOUNDS_HOLIDAY_DESCRIPTION_2")),
+            );
+            this.form = new MintForm(currentRound - 1).appendTo(this.container);
+        /*}
+
+        else if (period === DogeSoundContestV2Contract.REGISTER_CANDIDATE_PERIOD) {
+            this.status.append(el("p", msg("DOGESOUNDS_REGISTER_CANDIDATE_DESCRIPTION").replace(/{round}/, String(currentRound + 1))));
+            this.form = new RegisterCandidateForm(currentRound).appendTo(this.container);
+        }
+
+        else if (period === DogeSoundContestV2Contract.VOTE_PERIOD) {
+            this.status.append(el("p", msg("DOGESOUNDS_VOTE_DESCRIPTION").replace(/{round}/, String(currentRound + 1))));
+            this.form = new VoteForm(currentRound).appendTo(this.container);
+        }
+
+        const timer = el("p", msg("DOGESOUNDS_TIMER").replace(/{block}/, String(remains))).appendTo(this.status);
+
+        this.remainsInterval = setInterval(() => {
+            if (remains <= 1) {
+                ViewUtil.waitTransactionAndRefresh();
+                clearInterval(this.remainsInterval);
+            } else {
+                remains -= 1;
+                timer.empty().appendText(msg("DOGESOUNDS_TIMER").replace(/{block}/, String(remains)));
+            }
+        }, 1000);*/
     }
+
+    public changeParams(params: ViewParams, uri: string): void { }
 
     public close(): void {
+        if (this.remainsInterval !== undefined) {
+            clearInterval(this.remainsInterval);
+        }
         this.container.delete();
     }
 }
