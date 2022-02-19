@@ -1,63 +1,63 @@
 key,ko,en,jp
-BAPP_TITLE,도지사운드클럽,DogeSoundClub,
-FOOTER_DESC,"주식회사 디에스씨레이블 | 대표이사 :권태홍 | 사업자번호 :838-86-02498 | 개인정보보호책임자:권태홍\n주소: 대전광역시 유성구 대학로 82, 5층 505호 | business@ayias.io",,
-HOME_TITLE,Welcome to Doge Sound Club!,Welcome to Doge Sound Club!,
+BAPP_TITLE,도지사운드클럽,DogeSoundClub
+FOOTER_DESC,"주식회사 디에스씨레이블 | 대표이사 :권태홍 | 사업자번호 :838-86-02498 | 개인정보보호책임자:권태홍\n주소: 대전광역시 유성구 대학로 82, 5층 505호 | business@ayias.io"
+HOME_TITLE,Welcome to Doge Sound Club!,Welcome to Doge Sound Club!
 HOME_DESC,도지사운드클럽은 NFT를 이용한 거버넌스로 운영되는 NFT 수집가들의 사교 모임입니다.\nMATES를 이용해서 클럽에 가입하고 투표할 수 있습니다.,"Doge Sound Club is a social gathering of NFT collectors
-operated by NFT governance. \nYou can use MATES to join the club and vote.",
-HOME_DOGE_SOUND_WINNER_TITLE,경) 제 {number}회 개소리 우승자 🐶🐕👻,{number}th Doge Sound Winner 🐶🐕👻,
-HOME_DOGE_SOUND_WINNER_DESC1,Announcing the {number}th best Doge Sound!,Announcing the {number}th best Doge Sound!,
-HOME_DOGE_SOUND_WINNER_WARNING,* 주의 : 위는 탈중앙화된 방식으로 DSC 홀더들에게 최다 득표를 받은 문구가 자동으로 표시된 것입니다. DSC 개발팀의 뜻과 무관할 수 있습니다.,"* Note: The text that received the most votes from DSC holders is automatically displayed. The voting is in a decentralized way. Thus, It may be irrelevant to the will of the DSC development team.",
-HOME_FEATURES_TITLE,도지사운드클럽 특징 👻😻🐕,DOGE SOUND CLUB FEATURES 👻😻🐕,
-HOME_FEATURES_TITLE1,우리는 개소리에 진심인 자들입니다,We are serious about Kak talk,
-HOME_FEATURES_DESC1,2주마다 스마트 컨트랙트를 이용해 최고의 도지사운드(개소리)를 선정합니다.,"Every two weeks, we use a smart contract to select the Kak talk. Every two weeks, we use a",
-HOME_FEATURES_TITLE2,우리는 암호화폐를 좋아합니다 ,We love cryptocurrencies,
-HOME_FEATURES_DESC2,특히 새로운 도전들에 대한 이야기를 좋아합니다.,We especially like to talk about new challenges. obsession with capital along with,
-HOME_FEATURES_TITLE3,우리는 음악를 좋아합니다,We love music. Likes,
-HOME_FEATURES_DESC3,음악은 개소리와 함께 자본에 대한 집착을 환기하는 수단이 됩니다. dsc 개발팀은 DJ SET과 로우파이 비디오를 업로드합니다.,Music is a means of having us refreshed from our obsession with capital along with Kak,
-HOME_BUY_MATE_TITLE,BUY MATE,BUY MATE,
-HOME_BUY_MATE_DESC1,메이트는 세계 최대 NFT 거래소인 OPENSA에서 구매할 수 있습니다. 국내 MIX 기반 거래소인 KLUBB에서도 구매할 수 있습니다.,"Mate can be purchased at OPENSA, the world's largest NFT exchange. It can also be purchased at KLUBB, a domestic MIX-based exchange.",
+operated by NFT governance. \nYou can use MATES to join the club and vote."
+HOME_DOGE_SOUND_WINNER_TITLE,경) 제 {number}회 개소리 우승자 🐶🐕👻,{number}th Doge Sound Winner 🐶🐕👻
+HOME_DOGE_SOUND_WINNER_DESC1,Announcing the {number}th best Doge Sound!,Announcing the {number}th best Doge Sound!
+HOME_DOGE_SOUND_WINNER_WARNING,* 주의 : 위는 탈중앙화된 방식으로 DSC 홀더들에게 최다 득표를 받은 문구가 자동으로 표시된 것입니다. DSC 개발팀의 뜻과 무관할 수 있습니다.,"* Note: The text that received the most votes from DSC holders is automatically displayed. The voting is in a decentralized way. Thus, It may be irrelevant to the will of the DSC development team."
+HOME_FEATURES_TITLE,도지사운드클럽 특징 👻😻🐕,DOGE SOUND CLUB FEATURES 👻😻🐕
+HOME_FEATURES_TITLE1,우리는 개소리에 진심인 자들입니다,We are serious about Kak talk
+HOME_FEATURES_DESC1,2주마다 스마트 컨트랙트를 이용해 최고의 도지사운드(개소리)를 선정합니다.,"Every two weeks, we use a smart contract to select the Kak talk. Every two weeks, we use a"
+HOME_FEATURES_TITLE2,"우리는 암호화폐를 좋아합니다 ",We love cryptocurrencies
+HOME_FEATURES_DESC2,특히 새로운 도전들에 대한 이야기를 좋아합니다.,We especially like to talk about new challenges. obsession with capital along with
+HOME_FEATURES_TITLE3,우리는 음악를 좋아합니다,We love music. Likes
+HOME_FEATURES_DESC3,음악은 개소리와 함께 자본에 대한 집착을 환기하는 수단이 됩니다. dsc 개발팀은 DJ SET과 로우파이 비디오를 업로드합니다.,Music is a means of having us refreshed from our obsession with capital along with Kak
+HOME_BUY_MATE_TITLE,BUY MATE,BUY MATE
+HOME_BUY_MATE_DESC1,메이트는 세계 최대 NFT 거래소인 OPENSA에서 구매할 수 있습니다. 국내 MIX 기반 거래소인 KLUBB에서도 구매할 수 있습니다.,"Mate can be purchased at OPENSA, the world's largest NFT exchange. It can also be purchased at KLUBB, a domestic MIX-based exchange."
 HOME_BUY_MATE_DESC2,최근에는 짝짓기를 복제하는 가짜 NFT가 많이 있다. OpenC의 공식 주소는 https://opensea.io/collection/dogesoundclub-mates이다.\n주소를 꼭 확인하시고 부정 프로젝트에 주의하시기 바랍니다.,"Recently, there are many false NFTs that replicate mates. The official OpenC address is https://opensea.io/collection/dogesoundclub-mates.
-Please make sure to check the address and be careful about the fraudulent project.",
-HOME_NFT_TITLE,NFT - DOGESOUNDCLUB MATES 😜😘💻,NFT - DOGESOUNDCLUB MATES 😜😘💻,
+Please make sure to check the address and be careful about the fraudulent project."
+HOME_NFT_TITLE,NFT - DOGESOUNDCLUB MATES 😜😘💻,NFT - DOGESOUNDCLUB MATES 😜😘💻
 HOME_NFT_DESC1,"DSC MATES는 컴퓨터 프로그램으로 생성된 10,000개의 24*24 픽셀 아트 캐릭터입니다. NFT(암호화폐의 한 규격)로 발행되어 이들에 대한 소유권을 쉽게 거래할 수 있습니다.","DSC MATES are 10,000 computer program generated 24*24 pixel art
-characters. They are issued as NFTs, making it easy to trade ownership of them.",
-HOME_NFT_BUTTON1,자세한 내용보러 가기,Go to see more about NFT,
-HOME_NFT_BUTTON2,이걸로 무엇을 할 수 있나요?,What can you do with this?,
-HOME_NFT_DESC2,메이트는 오픈씨(세계 최대 NFT 거래소)에서 구입할 수 있습니다.,(the world's largest NFT marketplace),
-HOME_NFT_BUTTON3,OPENSEA로 이동,Go to OPENSEA,
-HOME_MISSION_TITLE,사명 😜💻🏁,MISSION 😜💻🏁,
-HOME_MISSION_TITLE1,DSC의 사명은 NFT에 기반한 거버넌스를 통해 사회에 선한 영향력을 결집해내는데에 있습니다.,We are serious about Kak talk,
-HOME_MISSION_DESC1,DSC의 사명은 NFT에 기반한 거버넌스를 통해 사회에 선한 영향력을 결집해내는데에 있습니다. DSC의 사명은 NFT에 기반한 거버넌스를 통해 사회에 선한 영향력을 결집해내는데에 있습니다. DSC의 사명은 NFT에 기반한 거버넌스를 통해 사회에 선한 영향력을 결집해내는데에 있습니다.,"DSC MATES are 10,000 computer program generated 24*24 pixel art characters. They are issued as NFTs, making it easy to trade ownership of them. DSC MATES are 10,000 computer program generated 24*24 pixel art characters. They are issued as NFTs, making it easy to trade ownership of them.",
-HOME_TEAM_TITLE,TEAM 😏🤗🤔,TEAM 😏🤗🤔,
-HOME_TEAM_TITLE1,ARVITOR (Manager),ARVITOR (Manager),
-HOME_TEAM_DESC1,그림을 조합하는 프로그램을 만들었습니다. 슈퍼 컬렉터가 되고 싶습니다.,I made a program to assemble pictures. I want to become a super collector.,
-HOME_TEAM_TITLE2,HANUL (Dev),HANUL (Dev),
-HOME_TEAM_DESC2,그림을 조합하는 프로그램을 만들었습니다. 슈퍼 컬렉터가 되고 싶습니다.,The virtuoso of blockchain programming. I want to become a super collector.,
-HOME_TEAM_TITLE3,YONG JIN (Artist),YONG JIN (Artist),
-HOME_TEAM_DESC3,그림을 조합하는 프로그램을 만들었습니다. 슈퍼 컬렉터가 되고 싶습니다.,I drew illustrations and MATES. I want to become a super collector.,
-HOME_PARTNERSHIP_TITLE,PARTNERSHIP 🏖🏛💿,PARTNERSHIP 🏖🏛💿,
-HOME_PARTNERSHIP_GOVERNANCE_TITLE,GOVERNANCE PARTNERSHIP,DSC COMMUNITY PARTNERSHIP,
-HOME_PARTNERSHIP_LABLE_TITLE,DSC LABLE PARTNERSHIP,DSC LABLE PARTNERSHIP,
-HOME_CONTACT_TITLE,CONTACT ⌚️☎️📠,CONTACT ⌚️☎️📠,
-HOME_CONTACT_DESC11,dogesoundclub @ gmail.com,dogesoundclub @ gmail.com,
-HOME_TWEETS_TITLE,TWEETS 😊😍💕,TWEETS 😊😍💕,
-GALLERY_TITLE,GALLERY 🖼🖌,GALLERY 🖼🖌,
-GALLERY_SEARCH_INPUT,ID/이름 검색,,
-GALLERY_SEARCH_BUTTON,검색,,
-GALLERY_FILTER_BUTTON,필터 초기화,,
-FOLLOW_ME_TITLE,FOLLOW ME 💗😍,,
-FOLLOW_ME_DESC,"귀하가 보유한 메이트에게 트위터, 인스타그램 아이디를 남기면 아래 명단에 등록됩니다. 소셜 미디어의 프로필 사진을 메이트로 변경하고, 아래 명단의 트위터들을 팔로우 해보세요. 그들은 당신이 같은 커뮤니티의 일원임을 알아차리고 당신의 소셜 미디어 진출을 돕기 위해, 맞팔로우를 해줄 것입니다.",,
-JOIN_CLUB_TITLE,Join the Club,,
-JOIN_CLUB_DESC,이것은 DSC 멤버에게만 열려 있습니다.\n당신의 메이트를 얻으려면 OpenSea에서 확인하세요.,,
-JOIN_CLUB_BUTTON,Buy a Mate on Opensea,,
-MATE_TITLE,MATES 🐩🐶🤑,,
-MATES_TITLE1,DSC MATEES란 무엇입니까?,,
-MATES_DESC1,"- DSC MATES는 1만 개의 다양한 문자로 구성된 24*24 픽셀 아트입니다.\n- 10개의 얼굴과 80개가 넘는 특징들이 합쳐져 10,000명의 서로 다른 외모를 가진 짝을 만들었다. 아무것도 같지 않다. 특성에 따른 메이트 정보는 본 사이트 갤러리에서 확인할 수 있습니다.\n- 10,000마리의 짝은 모두 같은 조건에서 무작위로 생성되었다. 인위적으로 희귀한 것은 없다.",,
-MATES_TITLE2,소유권(NFT 초보자를 위한 설명),Ownership (Explanation for NFT beginners),
+characters. They are issued as NFTs, making it easy to trade ownership of them."
+HOME_NFT_BUTTON1,자세한 내용보러 가기,Go to see more about NFT
+HOME_NFT_BUTTON2,이걸로 무엇을 할 수 있나요?,What can you do with this?
+HOME_NFT_DESC2,메이트는 오픈씨(세계 최대 NFT 거래소)에서 구입할 수 있습니다.,(the world's largest NFT marketplace)
+HOME_NFT_BUTTON3,OPENSEA로 이동,Go to OPENSEA
+HOME_MISSION_TITLE,사명 😜💻🏁,MISSION 😜💻🏁
+HOME_MISSION_TITLE1,DSC의 사명은 NFT에 기반한 거버넌스를 통해 사회에 선한 영향력을 결집해내는데에 있습니다.,We are serious about Kak talk
+HOME_MISSION_DESC1,DSC의 사명은 NFT에 기반한 거버넌스를 통해 사회에 선한 영향력을 결집해내는데에 있습니다. DSC의 사명은 NFT에 기반한 거버넌스를 통해 사회에 선한 영향력을 결집해내는데에 있습니다. DSC의 사명은 NFT에 기반한 거버넌스를 통해 사회에 선한 영향력을 결집해내는데에 있습니다.,"DSC MATES are 10,000 computer program generated 24*24 pixel art characters. They are issued as NFTs, making it easy to trade ownership of them. DSC MATES are 10,000 computer program generated 24*24 pixel art characters. They are issued as NFTs, making it easy to trade ownership of them."
+HOME_TEAM_TITLE,TEAM 😏🤗🤔,TEAM 😏🤗🤔
+HOME_TEAM_TITLE1,ARVITOR (Manager),ARVITOR (Manager)
+HOME_TEAM_DESC1,그림을 조합하는 프로그램을 만들었습니다. 슈퍼 컬렉터가 되고 싶습니다.,I made a program to assemble pictures. I want to become a super collector.
+HOME_TEAM_TITLE2,HANUL (Dev),HANUL (Dev)
+HOME_TEAM_DESC2,그림을 조합하는 프로그램을 만들었습니다. 슈퍼 컬렉터가 되고 싶습니다.,The virtuoso of blockchain programming. I want to become a super collector.
+HOME_TEAM_TITLE3,YONG JIN (Artist),YONG JIN (Artist)
+HOME_TEAM_DESC3,그림을 조합하는 프로그램을 만들었습니다. 슈퍼 컬렉터가 되고 싶습니다.,I drew illustrations and MATES. I want to become a super collector.
+HOME_PARTNERSHIP_TITLE,PARTNERSHIP 🏖🏛💿,PARTNERSHIP 🏖🏛💿
+HOME_PARTNERSHIP_GOVERNANCE_TITLE,GOVERNANCE PARTNERSHIP,DSC COMMUNITY PARTNERSHIP
+HOME_PARTNERSHIP_LABLE_TITLE,DSC LABLE PARTNERSHIP,DSC LABLE PARTNERSHIP
+HOME_CONTACT_TITLE,CONTACT ⌚️☎️📠,CONTACT ⌚️☎️📠
+HOME_CONTACT_DESC11,dogesoundclub @ gmail.com,dogesoundclub @ gmail.com
+HOME_TWEETS_TITLE,TWEETS 😊😍💕,TWEETS 😊😍💕
+GALLERY_TITLE,GALLERY 🖼🖌,GALLERY 🖼🖌
+GALLERY_SEARCH_INPUT,ID/이름 검색
+GALLERY_SEARCH_BUTTON,검색
+GALLERY_RESET_FILTER_BUTTON,필터 초기화
+FOLLOW_ME_TITLE,FOLLOW ME 💗😍
+FOLLOW_ME_DESC,"귀하가 보유한 메이트에게 트위터, 인스타그램 아이디를 남기면 아래 명단에 등록됩니다. 소셜 미디어의 프로필 사진을 메이트로 변경하고, 아래 명단의 트위터들을 팔로우 해보세요. 그들은 당신이 같은 커뮤니티의 일원임을 알아차리고 당신의 소셜 미디어 진출을 돕기 위해, 맞팔로우를 해줄 것입니다."
+JOIN_CLUB_TITLE,Join the Club
+JOIN_CLUB_DESC,이것은 DSC 멤버에게만 열려 있습니다.\n당신의 메이트를 얻으려면 OpenSea에서 확인하세요.
+JOIN_CLUB_BUTTON,Buy a Mate on Opensea
+MATE_TITLE,MATES 🐩🐶🤑
+MATES_TITLE1,DSC MATEES란 무엇입니까?
+MATES_DESC1,"- DSC MATES는 1만 개의 다양한 문자로 구성된 24*24 픽셀 아트입니다.\n- 10개의 얼굴과 80개가 넘는 특징들이 합쳐져 10,000명의 서로 다른 외모를 가진 짝을 만들었다. 아무것도 같지 않다. 특성에 따른 메이트 정보는 본 사이트 갤러리에서 확인할 수 있습니다.\n- 10,000마리의 짝은 모두 같은 조건에서 무작위로 생성되었다. 인위적으로 희귀한 것은 없다."
+MATES_TITLE2,소유권(NFT 초보자를 위한 설명),Ownership (Explanation for NFT beginners)
 MATES_DESC2,"메이트의 소유권 정보는 클레이튼 블록체인에 기록됩니다.
 원활한 소유권 거래를 위해 10,000개의 암호화폐를 발행했습니다. 이 10,000개의 불가분 암호화폐들은 각각 0에서 9999 사이의 고유한 숫자를 가지고 있다. 한 명의 짝꿍이 고유번호로 하나의 암호화폐에 연동된다. 따라서 암호화폐 지갑에 DSC MATEES 정보가 담긴 암호화폐 번호 13을 가지고 있다면 자신이 메이트 번호 13의 확실한 소유자임을 증명하는 것이다. 암호화폐와 메이트의 연결고리는 불변이다.
-이런 형태의 소유권 증명은 암호화폐 기술과 같은 기초체력을 가지고 있다. 아무도 조작할 수 없기 때문에 제3자 중개자 없이도 안전한 거래가 가능하다.",,
-MATES_TITLE3,수많은 발행 토큰 중 특정 토큰이 오리지널 DSC MATEES임을 아는 방법,,
+이런 형태의 소유권 증명은 암호화폐 기술과 같은 기초체력을 가지고 있다. 아무도 조작할 수 없기 때문에 제3자 중개자 없이도 안전한 거래가 가능하다."
+MATES_TITLE3,수많은 발행 토큰 중 특정 토큰이 오리지널 DSC MATEES임을 아는 방법
 MATES_DESC3,"누구나 계약을 통해 10,000개의 토큰을 만들 수 있습니다. 따라서 수많은 계약 토큰 중 어느 것이 오리지널 DSC MATES를 대표하는지를 확인할 필요가 있다.
 
 DSC MATE 계약에는 두 가지 변수가 저장됩니다.
@@ -67,85 +67,86 @@ DSC MATE 계약에는 두 가지 변수가 저장됩니다.
 1은 10,000명의 메이트를 모두 포함하는 원래 dscmate.png(위의 sha256 해시)입니다. 원본 파일이 sha256으로 변환될 때만 얻을 수 있는 값입니다. 파일의 해시값이 나오지 않으면 정품 복사본이 아닙니다. (리눅스의 ""openssl dgst -sha256 dscmetes.png""를 통해 위 그림의 해시를 생성해 보십시오.) 무분별한 복제로 인해 이 해시값을 가진 계약이 여러 건이라면 그 중 가장 먼저 만들어진 것이 원본이다. 당신은 이 계약서에 포함된 토큰만 교환하면 됩니다.
 
 2번은 단일 서버가 원본 이미지를 잃어버리지 않도록 원본 이미지를 배포하고 저장한 키(ID)다.
-아래 버튼을 누르면 분산되어 있는 DSC 메이트 사본을 찾아볼 수 있습니다.",,
-MATES_BUTTON,VIEW DSC MATES,,
-MY_MATE_TITLE,MY MATE 💕💰💸,,
-MY_MATE_WALLET_ADDRESS,WALLET ADDRESS,,
-HOLDER_DISCORD_CERTIFICATION_TITLE,HOLDER CERTIFICATION WITH DISCORD,,
-HOLDER_DISCORD_CERTIFICATION_DESC,Discord 홀더 인증을 통해 더욱 진솔한 개소리와 고급정보를 공유하세요,"Mate can be purchased at OPENSEA, the world's largest NFT exchange. It can also be purchased at KLUBB, a domestic MIX-based exchange.",
-HOLDER_DISCORD_CERTIFICATION_BUTTON,Discord 홀더 인증,,
-MATE_DETAIL_TITLE,MATE #{id},,
-MATE_DETAIL_MIX_ACCOUNT_TITLE,메이트에 쌓여있는 MIX : {amount},,
-MATE_DETAIL_BUTTON,오픈씨에서 확인하기,,
-MATE_DETAIL_TITLE1,메이트 #3069에게 남겨진 메시지들📝✍🏻✏️,,
-MATE_DETAIL_TABLE_TITLE1,BLOCK#,,
-MATE_DETAIL_TABLE_TITLE2,NAME,,
-MATE_DETAIL_TABLE_TITLE3,MSG,,
-MATE_DETAIL_TABLE_TITLE4,HOLDER ADDRESS,,
-MATE_DETAIL_TABLE_BUTTON,메이트 전송하기,,
-MATE_DETAIL_NAMING_TITLE,메이트 이름 짓기 📛🐶😊,,
-MATE_DETAIL_NAMING_DESC1,당신의 짝에게 이름을 지어주세요. 아직 짝의 이름이 없다면 기름값만 지불하고 이름을 지어주시면 됩니다. 하지만 변경을 하시려면 10마이크를 내셔야 합니다. 당신은 다른 동료와 같은 이름을 사용할 수 없습니다. 또한 메이트 이름을 삭제하려면 20 믹스가 필요합니다. 그리고 그 친구의 이름이 갤러리에 전시되어 있습니다.,,
-MATE_DETAIL_NAMING_INPUT,메이트의 이름을 지어주세요,,
-MATE_DETAIL_NAMING_DESC2,"나는 메이트 이름을 변경하려면, 10믹스를 지불해야 하고, 이름을 삭제하려면 20믹스를 지불해야 한다는 사실을 잘 이해하고 있으며 동의합니다. 나는 제출된 이름과 같이 제출된 정보(제출 당시 메이트 소유주의 지갑 주소 등) 공개에 따른 모든 책임을 온전히 홀로 지는 것에 동의합니다. 나는 클레이튼 블록체인에 접속하기 위해 내가 선택한 이 도구와 관련하여 어떤 책임도 타인에게 물을 수 없다는 것에 대해 동의합니다.",,
-MATE_DETAIL_NAMING_BUTTON1,제출하기,,
-MATE_DETAIL_NAMING_BUTTON2,메이트 이름 삭제,,
-MATE_DETAIL_SNS_TITLE,소셜 정보 추가하기 ℹ️🎖📻,,
-MATE_DETAIL_SNS_DESC1,"귀하가 보유한 메이트에게 트위터, 인스타그램 아이디를 남길 수 있습니다. 아이디를 남기면 Follow Me 명단에 등록되며, 오픈씨 디스크립션을 통해 노출됩니다. 소셜 미디어의 프로필 사진을 메이트로 변경하고, Follow Me 명단의 트위터들을 팔로우 해보세요. 그들은 당신이 같은 커뮤니티의 일원임을 알아차리고 당신의 소셜 미디어 진출을 돕기 위해, 맞팔로우를 해줄 것입니다.",,
-MATE_DETAIL_TWITTER_INPUT,트위터 ID를 입력해주세요,,
-MATE_DETAIL_INSTA_INPUT,인스타그램 ID를 입력해주세요,,
-MATE_DETAIL_SNS_DESC2,"* 저장 버튼을 클릭하면 이 웹 사이트 및 다른 플랫폼을 통한 소셜 미디어 계정 이름 공개에 동의하게 됩니다. 이 인터페이스는 Klaytn에 접속하기 위한 편리한 도구일 뿐이며, 나의 서명에 따른 거래 결과에 대한 책임은 전적으로 나에게 있습니다.",,
-MATE_DETAIL_SNS_BUTTON,저장하기,,
-MATE_DETAIL_MESSAGE_FORM_TITLE,MATE_DETAIL_MESSAGE_FORM_TITLE 📮😺👍,,
-MATE_DETAIL_MESSAGE_FORM_DESC1,당신이 가지고 있는 MATE들에게 메시지를 남길 수 있습니다. 여러분은 하루에 한 번 짧은 일기나 메모를 남길 수 있습니다. 조심하세요! 일단 제출되면 일기는 클레이튼 블록체인에 기록돼 개발팀이 지울 수 없다. 어두운 이력을 남기지 않기 위해서는 신중해야 할 것이다. 그 일기는 다른 사람이 읽을 수 있습니다.,,
-MATE_DETAIL_MESSAGE_FORM_INPUT,MSG THAT I WILL LEAVE,,
-MATE_DETAIL_MESSAGE_FORM_DESC2,"일지를 제출한 블록체인은 조작이 불가능한 성격으로 알고 있다. 제출된 메시지, 제출 당시 MATE의 성명, 제출 당시 MATE 소유자의 지갑 주소 등 제출된 정보의 공개에 대한 모든 책임을 지는 것에 동의합니다. 내가 클레이튼 블록체인에 접속하기 위해 선택한 이 툴에 대해 책임을 물을 수 없다는 것에 동의한다.",,
-MATE_DETAIL_MESSAGE_FORM_BUTTON,제출하기,,
-ACTIVITIES_TITLE,ACTIVITIES 📑🗂💼,,
-ACTIVITIES_DESC,DSC는 DSC 정체성에 적합한 클럽 활동들을 제공합니다. 발행한 NFT를 활용한 기존에 없는 신선한 시도들을 하고 있습니다.,,
-ACTIVITIES_TITLE1,DSC Family,,
-ACTIVITIES_DESC1,Dogesound Competition은 클레이튼 체인 위에서 작동되는 개소리 경연입니다. 5개 이상의 메이트를 사용하면 개소리 후보를 제출할 수 있습니다. 최다 득표를 받은 도지사운드는 웹페이지 메인에 자동으로 게시됩니다. 사용한 메이트는 다음 회에 다시 사용할 수 있습니다. 도지사운드 후보 제출 또는 투표는 메이트 소유권에 일체 영향을 주지 않습니다. (개소리 예시 : 비트코인),,
-ACTIVITIES_TITLE2,MY MATES,,
-ACTIVITIES_DESC2,"메이트에게 이름을 지어주세요. 아직 메이트의 이름이 없다면, 가스비만을 지불하여 이름을 지어줄 수 있습니다.",,
-ACTIVITIES_TITLE3,Dogesound Competition,,
-ACTIVITIES_DESC3,Dogesound Competition은 클레이튼 체인 위에서 작동되는 개소리 경연입니다. 5개 이상의 메이트를 사용하면 개소리 후보를 제출할 수 있습니다. 최다 득표를 받은 도지사운드는 웹페이지 메인에 자동으로 게시됩니다. 사용한 메이트는 다음 회에 다시 사용할 수 있습니다. 도지사운드 후보 제출 또는 투표는 메이트 소유권에 일체 영향을 주지 않습니다. (개소리 예시 : 비트코인),,
-ACTIVITIES_TITLE4,Governance,,
-ACTIVITIES_DESC4,"메이트는 도지사운드클럽 거버넌스의 의결권을 나타냅니다. 제안을 하거나, 등록된 제안에 찬반을 메이트를 가진 개수만큼 투표할 수 있습니다.",,
-DSC_FAMILY_TITLE,DSC Family 👩‍❤️‍💋‍,,
-DSC_FAMILY_DESC,DSC는 홀더님들이 자신의 독립된 커뮤니티 또는 채널을 구축하고 성장시키는 것을 적극 권장하며 서포트하고 있습니다. 아래 목록은 지금까지 등록된 홀더님들의 채널 명단입니다.,,
-DSC_FAMILY_BUTTON1,REGISTER,,
-DSC_FAMILY_BUTTON2,My Channel,,
-DSC_FAMILY_DETAIL_TITLE1,채널 이름,,
-DSC_FAMILY_DETAIL_INPUT1,채널명을 입력해주세요,,
-DSC_FAMILY_DETAIL_TITLE2,채널,,
-DSC_FAMILY_DETAIL_INPUT2,채널 링크,,
-DSC_FAMILY_DETAIL_TITLE3,채널 소개,,
-DSC_FAMILY_DETAIL_TITLE4,Image,,
-DSC_FAMILY_DETAIL_BUTTON,REGISTER,,
-FULLY_ON_CHAIN_TITLE,Fully on - Chain 🚀,,
-FULLY_ON_CHAIN_TITLE1,소유권(NFT 초보자를 위한 설명),,
-FULLY_ON_CHAIN_DESC1,"메이트 V1을 만들면서 메이트를 발행한 계약서에 메이트 이미지의 암호화 해시를 저장함으로써 메이트의 원래 계약이 무엇인지 명확히 구분할 수 있었다. 영상 데이터가 체인에 완전히 저장되지 않아 메이트의 장기 생존에 문제가 될 수 있다는 얘기다. 다만 이미지 자체를 저장하고 해시가 아닌 온라인으로 특성 정보를 완벽하게 결합하면 메이커의 장기적 생존이 더욱 강화돼 클레이튼 고객이라면 누구나 완벽하게 접근할 수 있다. 오늘(8월 31일, 21일) 작업을 완료했으며 Mate가 완전히 온라인에 접속했음을 알려드리게 되어 기쁘게 생각합니다. 심영재 개발자님 감사합니다.",,
-FULLY_ON_CHAIN_TITLE2,데모,,
-FULLY_ON_CHAIN_DESC2,아래에 제시된 이미지와 특징들은 클레이튼 체인에 기록되어 있다.,,
-FAQ_TITLE,FAQ 👑😛😍,,
-FAQ_TITLE1,도지사운드클럽이 뭔가요?,What is ‘Doge Sound Club’?,
-FAQ_DESC1,Doge Sound Club은 클레이튼 체인을 기반으로하는 한국 최초의 온체인 PFP NFT프로젝트입니다.,‘Doge Sound Club’ is Korea’s first On-chain PFP NFT project based on Klaytn chain.,
-FAQ_TITLE2,왜 이름이 도지사운드클럽인가요?,Why is the name ‘Doge Sound Club’?,
-FAQ_DESC2,도지사운드클럽은 그 이름 그대로 [개소리 클럽]입니다. 입장권만 가지고 있다면 누구나 들어와 자유롭게 다양한 생각을 말할 수 있습니다. Mate는 도지사운드클럽의 입장권 역할을 하는 10000개의 Generative Art NFT입니다. ,"As the Name written ‘Doge Sound Club’ it’s a ‘club where you can bark’. Anyone who has an admission ticket can freely come in and talk about various thoughts. The tickets for the entrance is ‘MATE’, which is10,000 Generative Art NFT.",
-FAQ_TITLE3,MATE를 구매하려면 어디로 가야하나요?,"Where can we purchase ""MATE""",
-FAQ_DESC3,"OPENSEA에서 2차거래를통해 구매하실 수 있으며, 믹스 마켓플레이스인 KLUBS에서도 구매하실 수 있습니다. ","It can be purchases at ‘OPENSEA’ through secondary transaction, and you can also purchase it at ‘KLUBS’ which is a marketplace where it uses ‘MIX’ token.",
-FAQ_TITLE4,MIX토큰은 무엇인가요?,What is ‘MIX’ token?,
-FAQ_DESC4,MIX토큰은 도지사운드클럽에서 자체발행한 암호화페입니다. MIX토큰은 도지사운드클럽 생태계내에서 기축통화로서 작용합니다. MATE를 보유 시 일정량의 MIX토큰을 채굴하실 수 있습니다.,‘MIX’ token is a Cryptocurrency issued by ‘Doge Sound Club’. ‘MIX’ token acts as a key currency within Doge Sound Club’s ecosystem. You can mine certain amount of ‘MIX’ if you’re a holder of ‘MATE’.,
-FAQ_TITLE5,MIX토큰은 어디서 구매할 수 있나요?,Where can we purchase ‘MIX’ token?,
-FAQ_DESC5,현재 클레이스왑과 클레이파이에서 구매하실 수 있습니다.,You can currently purchase ‘MIX’ from ‘Klayswap’ and ‘Klayfi’.,
-FAQ_TITLE6,클론크래프트가 무엇인가요?,What is ‘CloneCraft’?,
-FAQ_DESC6,클론크래프트는 클론네버다이 팀과 협업을 통해 제작한 국내최초 SNG 장르의 P2E게임입니다.  ,"‘CloneCraft’ is the first SNG genre P2E game in Korea, produced in collaboration with ‘Clones Never Die’ team.",
-FAQ_TITLE7,Ayias는 뭔가요?,What is ‘Ayias’?,
-FAQ_DESC7,Ayias는 도지사운드클럽 생태계의 최종 종착점이되는 자체 메타버스 플랫폼입니다.,"‘Ayias’ is our own Metabus platform, which is the final destination of Doge Sound Club’s ecosystem.",
-TERMS_TITLE,Terms & Conditions,,
+아래 버튼을 누르면 분산되어 있는 DSC 메이트 사본을 찾아볼 수 있습니다."
+MATES_BUTTON,VIEW DSC MATES
+MATES_DETAIL_TITLE,MATE {id}
+MY_MATE_TITLE,MY MATE 💕💰💸
+MY_MATE_WALLET_ADDRESS,WALLET ADDRESS
+HOLDER_DISCORD_CERTIFICATION_TITLE,HOLDER CERTIFICATION WITH DISCORD
+HOLDER_DISCORD_CERTIFICATION_DESC,Discord 홀더 인증을 통해 더욱 진솔한 개소리와 고급정보를 공유하세요,"Mate can be purchased at OPENSEA, the world's largest NFT exchange. It can also be purchased at KLUBB, a domestic MIX-based exchange."
+HOLDER_DISCORD_CERTIFICATION_BUTTON,Discord 홀더 인증
+MATE_DETAIL_TITLE,MATE #{id}
+MATE_DETAIL_MIX_ACCOUNT_TITLE,메이트에 쌓여있는 MIX : {amount}
+MATE_DETAIL_BUTTON,오픈씨에서 확인하기
+MATE_DETAIL_TITLE1,메이트 #3069에게 남겨진 메시지들📝✍🏻✏️
+MATE_DETAIL_TABLE_TITLE1,BLOCK#
+MATE_DETAIL_TABLE_TITLE2,NAME
+MATE_DETAIL_TABLE_TITLE3,MSG
+MATE_DETAIL_TABLE_TITLE4,HOLDER ADDRESS
+MATE_DETAIL_TABLE_BUTTON,메이트 전송하기
+MATE_DETAIL_NAMING_TITLE,메이트 이름 짓기 📛🐶😊
+MATE_DETAIL_NAMING_DESC1,당신의 짝에게 이름을 지어주세요. 아직 짝의 이름이 없다면 기름값만 지불하고 이름을 지어주시면 됩니다. 하지만 변경을 하시려면 10마이크를 내셔야 합니다. 당신은 다른 동료와 같은 이름을 사용할 수 없습니다. 또한 메이트 이름을 삭제하려면 20 믹스가 필요합니다. 그리고 그 친구의 이름이 갤러리에 전시되어 있습니다.
+MATE_DETAIL_NAMING_INPUT,메이트의 이름을 지어주세요
+MATE_DETAIL_NAMING_DESC2,"나는 메이트 이름을 변경하려면, 10믹스를 지불해야 하고, 이름을 삭제하려면 20믹스를 지불해야 한다는 사실을 잘 이해하고 있으며 동의합니다. 나는 제출된 이름과 같이 제출된 정보(제출 당시 메이트 소유주의 지갑 주소 등) 공개에 따른 모든 책임을 온전히 홀로 지는 것에 동의합니다. 나는 클레이튼 블록체인에 접속하기 위해 내가 선택한 이 도구와 관련하여 어떤 책임도 타인에게 물을 수 없다는 것에 대해 동의합니다."
+MATE_DETAIL_NAMING_BUTTON1,제출하기
+MATE_DETAIL_NAMING_BUTTON2,메이트 이름 삭제
+MATE_DETAIL_SNS_TITLE,소셜 정보 추가하기 ℹ️🎖📻
+MATE_DETAIL_SNS_DESC1,"귀하가 보유한 메이트에게 트위터, 인스타그램 아이디를 남길 수 있습니다. 아이디를 남기면 Follow Me 명단에 등록되며, 오픈씨 디스크립션을 통해 노출됩니다. 소셜 미디어의 프로필 사진을 메이트로 변경하고, Follow Me 명단의 트위터들을 팔로우 해보세요. 그들은 당신이 같은 커뮤니티의 일원임을 알아차리고 당신의 소셜 미디어 진출을 돕기 위해, 맞팔로우를 해줄 것입니다."
+MATE_DETAIL_TWITTER_INPUT,트위터 ID를 입력해주세요
+MATE_DETAIL_INSTA_INPUT,인스타그램 ID를 입력해주세요
+MATE_DETAIL_SNS_DESC2,"* 저장 버튼을 클릭하면 이 웹 사이트 및 다른 플랫폼을 통한 소셜 미디어 계정 이름 공개에 동의하게 됩니다. 이 인터페이스는 Klaytn에 접속하기 위한 편리한 도구일 뿐이며, 나의 서명에 따른 거래 결과에 대한 책임은 전적으로 나에게 있습니다."
+MATE_DETAIL_SNS_BUTTON,저장하기
+MATE_DETAIL_MESSAGE_FORM_TITLE,MATE_DETAIL_MESSAGE_FORM_TITLE 📮😺👍
+MATE_DETAIL_MESSAGE_FORM_DESC1,당신이 가지고 있는 MATE들에게 메시지를 남길 수 있습니다. 여러분은 하루에 한 번 짧은 일기나 메모를 남길 수 있습니다. 조심하세요! 일단 제출되면 일기는 클레이튼 블록체인에 기록돼 개발팀이 지울 수 없다. 어두운 이력을 남기지 않기 위해서는 신중해야 할 것이다. 그 일기는 다른 사람이 읽을 수 있습니다.
+MATE_DETAIL_MESSAGE_FORM_INPUT,MSG THAT I WILL LEAVE
+MATE_DETAIL_MESSAGE_FORM_DESC2,"일지를 제출한 블록체인은 조작이 불가능한 성격으로 알고 있다. 제출된 메시지, 제출 당시 MATE의 성명, 제출 당시 MATE 소유자의 지갑 주소 등 제출된 정보의 공개에 대한 모든 책임을 지는 것에 동의합니다. 내가 클레이튼 블록체인에 접속하기 위해 선택한 이 툴에 대해 책임을 물을 수 없다는 것에 동의한다."
+MATE_DETAIL_MESSAGE_FORM_BUTTON,제출하기
+ACTIVITIES_TITLE,ACTIVITIES 📑🗂💼
+ACTIVITIES_DESC,DSC는 DSC 정체성에 적합한 클럽 활동들을 제공합니다. 발행한 NFT를 활용한 기존에 없는 신선한 시도들을 하고 있습니다.
+ACTIVITIES_TITLE1,DSC Family
+ACTIVITIES_DESC1,우리는 DSC Family 입니다. 개인의 채널/유튜브 등을 서로 공유하여 Family 만의 특권을 누리세요.
+ACTIVITIES_TITLE2,MY MATES
+ACTIVITIES_DESC2,"메이트에게 이름을 지어주세요. 아직 메이트의 이름이 없다면, 가스비만을 지불하여 이름을 지어줄 수 있습니다."
+ACTIVITIES_TITLE3,Dogesound Competition
+ACTIVITIES_DESC3,Dogesound Competition은 클레이튼 체인 위에서 작동되는 개소리 경연입니다. 5개 이상의 메이트를 사용하면 개소리 후보를 제출할 수 있습니다. 최다 득표를 받은 도지사운드는 웹페이지 메인에 자동으로 게시됩니다. 사용한 메이트는 다음 회에 다시 사용할 수 있습니다. 도지사운드 후보 제출 또는 투표는 메이트 소유권에 일체 영향을 주지 않습니다. (개소리 예시 : 비트코인)
+ACTIVITIES_TITLE4,Governance
+ACTIVITIES_DESC4,"메이트는 도지사운드클럽 거버넌스의 의결권을 나타냅니다. 제안을 하거나, 등록된 제안에 찬반을 메이트를 가진 개수만큼 투표할 수 있습니다."
+DSC_FAMILY_TITLE,DSC Family 👩‍❤️‍💋‍
+DSC_FAMILY_DESC,DSC는 홀더님들이 자신의 독립된 커뮤니티 또는 채널을 구축하고 성장시키는 것을 적극 권장하며 서포트하고 있습니다. 아래 목록은 지금까지 등록된 홀더님들의 채널 명단입니다.
+DSC_FAMILY_BUTTON1,REGISTER
+DSC_FAMILY_BUTTON2,My Channel
+DSC_FAMILY_DETAIL_TITLE1,채널 이름
+DSC_FAMILY_DETAIL_INPUT1,채널명을 입력해주세요
+DSC_FAMILY_DETAIL_TITLE2,채널
+DSC_FAMILY_DETAIL_INPUT2,채널 링크
+DSC_FAMILY_DETAIL_TITLE3,채널 소개
+DSC_FAMILY_DETAIL_TITLE4,Image
+DSC_FAMILY_DETAIL_BUTTON,REGISTER
+FULLY_ON_CHAIN_TITLE,Fully on - Chain 🚀
+FULLY_ON_CHAIN_TITLE1,소유권(NFT 초보자를 위한 설명)
+FULLY_ON_CHAIN_DESC1,"메이트 V1을 만들면서 메이트를 발행한 계약서에 메이트 이미지의 암호화 해시를 저장함으로써 메이트의 원래 계약이 무엇인지 명확히 구분할 수 있었다. 영상 데이터가 체인에 완전히 저장되지 않아 메이트의 장기 생존에 문제가 될 수 있다는 얘기다. 다만 이미지 자체를 저장하고 해시가 아닌 온라인으로 특성 정보를 완벽하게 결합하면 메이커의 장기적 생존이 더욱 강화돼 클레이튼 고객이라면 누구나 완벽하게 접근할 수 있다. 오늘(8월 31일, 21일) 작업을 완료했으며 Mate가 완전히 온라인에 접속했음을 알려드리게 되어 기쁘게 생각합니다. 심영재 개발자님 감사합니다."
+FULLY_ON_CHAIN_TITLE2,데모
+FULLY_ON_CHAIN_DESC2,아래에 제시된 이미지와 특징들은 클레이튼 체인에 기록되어 있다.
+FAQ_TITLE,FAQ 👑😛😍
+FAQ_TITLE1,도지사운드클럽이 뭔가요?,What is ‘Doge Sound Club’?
+FAQ_DESC1,Doge Sound Club은 클레이튼 체인을 기반으로하는 한국 최초의 온체인 PFP NFT프로젝트입니다.,‘Doge Sound Club’ is Korea’s first On-chain PFP NFT project based on Klaytn chain.
+FAQ_TITLE2,왜 이름이 도지사운드클럽인가요?,Why is the name ‘Doge Sound Club’?
+FAQ_DESC2,"도지사운드클럽은 그 이름 그대로 [개소리 클럽]입니다. 입장권만 가지고 있다면 누구나 들어와 자유롭게 다양한 생각을 말할 수 있습니다. Mate는 도지사운드클럽의 입장권 역할을 하는 10000개의 Generative Art NFT입니다. ","As the Name written ‘Doge Sound Club’ it’s a ‘club where you can bark’. Anyone who has an admission ticket can freely come in and talk about various thoughts. The tickets for the entrance is ‘MATE’, which is10,000 Generative Art NFT."
+FAQ_TITLE3,MATE를 구매하려면 어디로 가야하나요?,"Where can we purchase ""MATE"""
+FAQ_DESC3,"OPENSEA에서 2차거래를통해 구매하실 수 있으며, 믹스 마켓플레이스인 KLUBS에서도 구매하실 수 있습니다. ","It can be purchases at ‘OPENSEA’ through secondary transaction, and you can also purchase it at ‘KLUBS’ which is a marketplace where it uses ‘MIX’ token."
+FAQ_TITLE4,MIX토큰은 무엇인가요?,What is ‘MIX’ token?
+FAQ_DESC4,MIX토큰은 도지사운드클럽에서 자체발행한 암호화페입니다. MIX토큰은 도지사운드클럽 생태계내에서 기축통화로서 작용합니다. MATE를 보유 시 일정량의 MIX토큰을 채굴하실 수 있습니다.,‘MIX’ token is a Cryptocurrency issued by ‘Doge Sound Club’. ‘MIX’ token acts as a key currency within Doge Sound Club’s ecosystem. You can mine certain amount of ‘MIX’ if you’re a holder of ‘MATE’.
+FAQ_TITLE5,MIX토큰은 어디서 구매할 수 있나요?,Where can we purchase ‘MIX’ token?
+FAQ_DESC5,현재 클레이스왑과 클레이파이에서 구매하실 수 있습니다.,You can currently purchase ‘MIX’ from ‘Klayswap’ and ‘Klayfi’.
+FAQ_TITLE6,클론크래프트가 무엇인가요?,What is ‘CloneCraft’?
+FAQ_DESC6,"클론크래프트는 클론네버다이 팀과 협업을 통해 제작한 국내최초 SNG 장르의 P2E게임입니다.  ","‘CloneCraft’ is the first SNG genre P2E game in Korea, produced in collaboration with ‘Clones Never Die’ team."
+FAQ_TITLE7,Ayias는 뭔가요?,What is ‘Ayias’?
+FAQ_DESC7,Ayias는 도지사운드클럽 생태계의 최종 종착점이되는 자체 메타버스 플랫폼입니다.,"‘Ayias’ is our own Metabus platform, which is the final destination of Doge Sound Club’s ecosystem."
+TERMS_TITLE,Terms & Conditions
 TERMS_DESC,"돌연변이 요트 클럽은 이더리움 네트워크에서 실행되는 디지털 예술품(NFT)의 집합체이다. 이 웹사이트는 참가자들이 디지털 수집품을 구매할 수 있는 인터페이스일 뿐입니다. 사용자는 자신의 개인 이더리움 지갑의 안전 및 관리와 본 웹 사이트에서 생성된 모든 거래 및 계약의 유효성을 승인 전에 확인할 책임이 전적으로 있습니다. 더군다나 뮤턴트 에이프 요트클럽 스마트 계약이 이더리움 네트워크에서 실행되면서 어떤 거래도 취소하거나 되돌리거나 복원할 수 있는 기능이 없다.
 
-본 웹 사이트 및 연결된 서비스는 어떠한 종류의 보증도 없이 ""있는 그대로"" 및 ""사용 가능한 대로"" 제공됩니다. 이 웹사이트를 사용함으로써 당신은 돌연변이 요트 클럽 디지털 수집품과 관련된 모든 거래에 대한 단독 책임을 수락하는 것입니다.",,
-TERMS_TITLE1,1. 소유권,,
+본 웹 사이트 및 연결된 서비스는 어떠한 종류의 보증도 없이 ""있는 그대로"" 및 ""사용 가능한 대로"" 제공됩니다. 이 웹사이트를 사용함으로써 당신은 돌연변이 요트 클럽 디지털 수집품과 관련된 모든 거래에 대한 단독 책임을 수락하는 것입니다."
+TERMS_TITLE1,1. 소유권
 TERMS_DESC1,"첫째, 네가 NFT를 소유하고 있다. 각 뮤턴트 에이프는 이더리움 블록체인의 NFT이다. NFT를 구매하면, 당신은 기본 뮤턴트 Ape, the Art를 완전히 소유하게 됩니다. NFT의 소유권은 전적으로 스마트 계약과 이더리움 네트워크에 의해 조정된다. 우리는 어떤 돌연변이 유인원의 소유권을 압류, 동결 또는 수정할 수 없다.
 
 B. 개인적인 사용. 귀하의 본 약관의 지속적인 준수에 따라 유가 Labs LLC는 구입한 미술품을 (i) 개인적이고 비상업적인 용도로만 사용하거나 사용하기로 선택한 모든 확장과 함께 사용, 복사 및 전시할 수 있는 로열티 없는 전세계 라이센스를 부여합니다.Mutant Ape / NFT의 urchase 및 판매, 단, 마켓플레이스가 Mutant Ape를 위한 Art를 전시할 수 있는 각 Mutant Ape 소유자의 권리를 암호화된 방식으로 검증하여 실제 소유자만 아트 또는 (iii) 사용자의 포함, 관여 또는 참여를 허용하는 제3자 웹 사이트 또는 애플리케이션의 일부로 표시할 수 있도록 보장합니다.r 뮤턴트 Ape는 웹사이트/응용프로그램이 실제 소유자만이 예술을 전시할 수 있도록 각 뮤턴트 Ape 소유자의 권리를 암호화적으로 검증하고, 뮤턴트 Ape 소유자가 웹사이트/응용프로그램에서 나가면 더 이상 Art를 볼 수 없다는 것을 보장한다.
@@ -154,27 +155,27 @@ C. 상업적 사용. 귀하의 본 약관의 지속적인 준수에 따라 유�
 
 D. MAYC/BAYC IP.  예술에 대한 권리 외에, 본 문서에는 보어드 에이프 요트 클럽, BAYC, 보어드 에이프 케넬 클럽, BAKC, 뮤턴트 에이프 요트 클럽, MAYC 및 관련 로고를 포함한 유가 연구소의 다른 상표 또는 기타 지적 재산권에 대한 권리가 제한 없이 제공됩니다. 이 모든 권리는 유가랩스 LLC 명의로 명시적으로 보유된다.
 
-E. 피드백 귀하는 사이트에 대한 의견, 버그 보고서, 아이디어 또는 기타 피드백을 제출할 수 있습니다(사이트 개선 방법 제한 없이 ""피드백"") 피드백을 제출함으로써 귀하는 당사가 귀하에게 추가 보상 없이 이러한 피드백을 자유롭게 사용할 수 있다는 데 동의하며, 귀하는 당사가 피드백을 어떠한 목적으로든 통합하여 사용할 수 있는 영구적이고 취소 불가능하며 비독점적인 전세계 라이센스를 부여합니다.",,
-TERMS_TITLE2,2. 당신의 의무,,
-TERMS_DESC2,"귀하는 사이트에 접속하거나 사용하는 동안 자신의 행위와 그에 따른 결과에 대해 전적으로 책임을 집니다. 귀하는 본 약관 및 해당 법률 또는 규정에 따라 합법적이고 적절한 목적으로만 사이트를 사용하는 데 동의합니다. 예를 들어 귀하는 (i) 불법, 명예 훼손, 괴롭힘, 학대, 사기, 혐오, 폭력, 음란, 트로이 목마, 손상된 파일, 사기 또는 기타 불쾌한 콘텐츠를 전송, 업로드, 배포하거나 배포하지 않을 수 있습니다.파괴적이거나 기만적인 성격의 항목; (iii) 타인을 사칭; (iv) 타인의 지적 재산권 또는 재산권을 침해하거나 다른 방법으로 다른 사람의 법적 권리를 침해하는 내용을 사이트를 통해 업로드, 게시, 전송 또는 기타 방식으로 제공; (v) 불법 활동에 참여, 촉진 또는 장려(i)제한 없이 돈세탁 금지); (vi) 다른 사용자의 사이트 사용 방해; (vii) 허가되지 않은 상업적 목적을 위해 사이트 사용; (vii) 사이트의 모든 부분을 수정, 개조, 번역 또는 리버스 엔지니어링; (ix) 사이트 또는 그 부분에 포함된 저작권, 상표 또는 기타 소유권 고지 제거 (x) 인증되지 않은 목적으로 사이트에 대한 정보를 수집하기 위해 모든 기술을 사용합니다. (xi) 당사의 제품 또는 서비스와 경쟁할 수 있는 제품 또는 서비스를 만들기 위해 사이트에 액세스하거나 사용합니다. 귀하가 본 절에서 금지하는 활동에 참여하는 경우 당사는 당사의 단독적이고 절대적인 재량에 따라 귀하에게 통지하지 않고 법률 또는 형평에 따른 당사의 다른 권리 또는 구제 조치를 제한하지 않고 귀하의 사용자 계정을 즉시 정지 또는 해지할 수 있습니다.",,
-TERMS_TITLE3,3. 수수료 및 지불,,
+E. 피드백 귀하는 사이트에 대한 의견, 버그 보고서, 아이디어 또는 기타 피드백을 제출할 수 있습니다(사이트 개선 방법 제한 없이 ""피드백"") 피드백을 제출함으로써 귀하는 당사가 귀하에게 추가 보상 없이 이러한 피드백을 자유롭게 사용할 수 있다는 데 동의하며, 귀하는 당사가 피드백을 어떠한 목적으로든 통합하여 사용할 수 있는 영구적이고 취소 불가능하며 비독점적인 전세계 라이센스를 부여합니다."
+TERMS_TITLE2,2. 당신의 의무
+TERMS_DESC2,"귀하는 사이트에 접속하거나 사용하는 동안 자신의 행위와 그에 따른 결과에 대해 전적으로 책임을 집니다. 귀하는 본 약관 및 해당 법률 또는 규정에 따라 합법적이고 적절한 목적으로만 사이트를 사용하는 데 동의합니다. 예를 들어 귀하는 (i) 불법, 명예 훼손, 괴롭힘, 학대, 사기, 혐오, 폭력, 음란, 트로이 목마, 손상된 파일, 사기 또는 기타 불쾌한 콘텐츠를 전송, 업로드, 배포하거나 배포하지 않을 수 있습니다.파괴적이거나 기만적인 성격의 항목; (iii) 타인을 사칭; (iv) 타인의 지적 재산권 또는 재산권을 침해하거나 다른 방법으로 다른 사람의 법적 권리를 침해하는 내용을 사이트를 통해 업로드, 게시, 전송 또는 기타 방식으로 제공; (v) 불법 활동에 참여, 촉진 또는 장려(i)제한 없이 돈세탁 금지); (vi) 다른 사용자의 사이트 사용 방해; (vii) 허가되지 않은 상업적 목적을 위해 사이트 사용; (vii) 사이트의 모든 부분을 수정, 개조, 번역 또는 리버스 엔지니어링; (ix) 사이트 또는 그 부분에 포함된 저작권, 상표 또는 기타 소유권 고지 제거 (x) 인증되지 않은 목적으로 사이트에 대한 정보를 수집하기 위해 모든 기술을 사용합니다. (xi) 당사의 제품 또는 서비스와 경쟁할 수 있는 제품 또는 서비스를 만들기 위해 사이트에 액세스하거나 사용합니다. 귀하가 본 절에서 금지하는 활동에 참여하는 경우 당사는 당사의 단독적이고 절대적인 재량에 따라 귀하에게 통지하지 않고 법률 또는 형평에 따른 당사의 다른 권리 또는 구제 조치를 제한하지 않고 귀하의 사용자 계정을 즉시 정지 또는 해지할 수 있습니다."
+TERMS_TITLE3,3. 수수료 및 지불
 TERMS_DESC3,"A. 사이트를 통해 뮤턴트 에이프를 구매하기로 선택한 경우, 귀하가 참여하는 모든 금융 거래는 이더리움 네트워크를 통해서만 수행됩니다. 우리는 이러한 결제나 거래에 대한 통찰력이나 통제력을 갖지 못할 것이며, 어떠한 거래도 되돌릴 수 없습니다. 당사는 귀하가 관여한 모든 거래 또는 이더리움 네트워크를 통해 수행한 다른 거래의 결과로 발생할 수 있는 모든 청구 또는 손해에 대해 귀하 또는 제3자에게 어떠한 책임도 지지 않습니다.
 
 B. 이더리움은 이더리움 네트워크에서 발생하는 모든 거래에 대해 거래 수수료(이하 '가스 수수료')를 지불해야 한다. 가스요금은 분산형 이더리움 네트워크를 운영하는 컴퓨터 네트워크에 자금을 지원한다. 이것은 각 거래마다 가스 요금을 지불해야 한다는 것을 의미합니다.
-높임말높임말 번역 설정발음듣기",,
-TERMS_TITLE4,4. 고지 사항,,
+높임말높임말 번역 설정발음듣기"
+TERMS_TITLE4,4. 고지 사항
 TERMS_DESC4,"A. 귀하는 사이트에 대한 귀하의 액세스 및 사용에 전적으로 책임이 있으며, 사이트가 명시적 또는 묵시적 보증 없이 ""있는 그대로"" 또는 ""사용 가능한 그대로"" 제공된다는 것을 명시적으로 이해하고 동의합니다. 해당 법률에 따라 최대한 허용되는 범위 내에서 당사는 명시적 보증을 하지 않으며 사이트 및 사이트의 일부(사이트, 스마트 계약 또는 외부 웹 사이트를 포함하되 제한 없이 포함)와 관련된 모든 묵시적 보증을 거부합니다. 비침해성, 정확성, 정확성 또는 신뢰성. 상기 내용의 일반성을 제한하지 않고 NAT, 자회사, 계열사 및 라이센스 허여자는 다음과 같은 귀하의 사이트 액세스 또는 사용에 대한 보증 또는 대표하지 않습니다.OM 오류, (III) 사이트를 통해 제공되는 사용 데이터는 정확하며, (III) 사이트에서 또는 사이트를 통해 제공되는 모든 콘텐츠, 서비스 또는 기능에 바이러스나 기타 유해 구성 요소가 없거나 사용자가 공개하는 데이터가 없습니다.소비자와의 계약 시 발생하는 안티에 해당되므로 위의 예외 사항 중 일부 또는 전체가 적용되지 않을 수 있습니다.
 
 B. 귀하는 정보를 제공하고 인터넷을 통한 온라인 거래를 할 때의 내재된 보안 위험을 수용하고 당사의 완전한 위법행위로 인한 것이 아니라면 당사는 어떠한 보안 위반에도 책임지지 않는다는 데 동의합니다.
 
-C. 당사는 이더리움 네트워크 사용으로 인해 발생하는 모든 손실에 대해 책임지거나 책임을 지지 않으며, 스마트 계약에 대해 어떠한 통제도 하지 않으며 어떠한 보장도 하지 않습니다.",,
-TERMS_TITLE5,5. 책임의 제한,,
+C. 당사는 이더리움 네트워크 사용으로 인해 발생하는 모든 손실에 대해 책임지거나 책임을 지지 않으며, 스마트 계약에 대해 어떠한 통제도 하지 않으며 어떠한 보장도 하지 않습니다."
+TERMS_TITLE5,5. 책임의 제한
 TERMS_DESC5,"A. 귀하는 귀사가 초래하는 간접적, 부수적, 특별적, 결과적 또는 모범적 손해, 제한적, 그리고 어떠한 이론에도 책임을 지지 않는다는 것을 이해하고 이에 동의합니다.NESS의 명성, 데이터 손실, 대체 상품 또는 서비스의 조달 비용 또는 기타 무형 손실에 대해 통지받았더라도, 이러한 손해의 가능성에 대해 설명합니다.
 
 B. 귀하는 본 약관 또는 귀하의 사이트 접근 또는 사용(또는 귀하의 접근 또는 사용 불가) 또는 불법 행위와 관계없이 사이트에서 발생하는 모든 또는 모든 청구와 관련하여 귀하에 대한 당사의 총체적인 책임에 동의합니다.NDER 본 약관은 청구가 제기된 날짜 이전의 12개월 기간 또는 (나) $500.
 
-C. 귀하는 귀하가 사이트를 이용할 수 있도록 했으며 본 문서에 명시된 보증 거부 및 책임의 제한에 따라 본 약관을 체결했다는 것을 인정하며 동의합니다. 당사는 이러한 제한 없이 사이트를 제공할 수 없습니다.",,
-TERMS_TITLE6,6. Risk Assumption,,
+C. 귀하는 귀하가 사이트를 이용할 수 있도록 했으며 본 문서에 명시된 보증 거부 및 책임의 제한에 따라 본 약관을 체결했다는 것을 인정하며 동의합니다. 당사는 이러한 제한 없이 사이트를 제공할 수 없습니다."
+TERMS_TITLE6,6. Risk Assumption
 TERMS_DESC6,"You accept and acknowledge each of the following:
 
 A. To the extent that you sell your Mutant Ape NFT, please be aware that the prices of NFTs are extremely volatile and fluctuations in the prices of other NFTs and impact the price of your Mutant Ape both positively and negatively.  Given the volatility, NFTs such as Mutant Ape should not be considered an investment. You assume all risks in that connection.
@@ -185,106 +186,107 @@ C. You assume all risks associated with using an Internet-based currency, includ
 
 D. NFTs, cryptocurrencies and blockchain technology are relatively new and the regulatory landscape is unsettled.  New regulations could negatively impact such technologies impacting the value for your Mutant Ape. You understand and accept all risk in that regard.
 
-E. You assume all responsibility for any adverse effects of disruptions or other issues impacting Ethereum or the Ethereum platform.",,
-TERMS_TITLE7,7. 배상,,
-TERMS_DESC7,"귀하는 MALC와 그 자회사, 계열사, 임원, 대리인, 직원, 광고주, 라이선스 허여자, 공급업체 또는 파트너에게 발생하는 모든 종류의 청구, 성격, 소송, 판결, 소송 비용 및 합당한 변호사 수임료를 무해하게 유지하고 배상하는 데 동의합니다. (i) 귀하의 본 약관 위반, (ii) 귀하의 사이트 오남용, (iii) 귀하의 사이트 액세스 또는 사용과 관련하여 적용되는 법률, 규칙 또는 규정 위반과 관련이 있습니다.",,
-TERMS_TITLE8,8. 이용약관의 변경사항,,
-TERMS_DESC8,"당사 재량에 따라 약관을 변경할 수 있습니다. 본 약관의 변경 사항을 주기적으로 확인하십시오. 약관의 모든 변경 사항은 해당 약관이 작성된 날짜에 적용되며, 약관이 업데이트된 후 계속 액세스하거나 사용하는 것은 귀하의 구속력 있는 업데이트 수락으로 간주됩니다. 개정된 약관에 동의하지 않는 경우 사이트에 액세스하거나 사이트를 사용할 수 없습니다.",,
-TERMS_TITLE9,9. 어린이,,
-TERMS_DESC9,본 사이트는 어린이를 위한 것이 아닙니다. 이 사이트에 접속하거나 돌연변이 유인원을 구매하려면 18세 이상이어야 합니다. 귀하가 18세 미만일 경우 어떠한 이유로도 본 사이트를 사용할 수 없습니다. 사이트에 액세스함으로써 사용자는 최소 18세임을 나타내고 보증합니다.,,
-TERMS_TITLE10,10. 분쟁 해결; 중재,,
-TERMS_DESC10,"귀하의 사이트 액세스 또는 사용, 사이트를 통해 판매 또는 배포되는 제품을 포함하여 본 약관에서 또는 이와 관련하여 발생하는 모든 분쟁은 미국 중재 협회의 규칙에 따라 중재에 회부되고 최종적으로 해결됩니다. 이 사건은 단일 중재인에 의해 판결되며 해당 규칙에 따라 미국 중재 협회에 의해 관리된다. 각 당사자는 중재 절차와 관련된 자체 수수료 및 비용을 부담합니다. 중재 장소는 뉴욕, 뉴욕이 될 것입니다. 중재자의 판결은 최종적이고 구속력이 있으며, 중재자가 내린 판결에 대한 모든 판결은 관할 관할 법원에 제기될 수 있다. 전술한 내용에도 불구하고, 당사는 관할 법원의 모든 관할 구역에서 가처분 구제를 요청하고 얻을 수 있습니다.",,
-TERMS_DESC11,사이트 또는 사이트를 통해 판매 또는 배포되는 모든 제품 또는 스마트 계약과 관련된 분쟁을 포함하여 본 약관으로 인해 발생하거나 이와 관련하여 발생하는 모든 분쟁에 관하여: (I) 귀하는 명시적으로 재판을 포기할 권리가 있습니다. 해당 분쟁과 관련된 집단소송을 포함하되 이에 국한되지 않는 모든 소송에서 특정 등급의 청구인입니다.,,
-CONTEST_TITLE1,도지사운드 경연 규칙 🐶🎖💰,,
-CONTEST_DESC1,"5개 이상의 메이트를 사용하면 개소리 후보를 제출할 수 있습니다.(경연 상태가 후보 접수 중일 경우. 도지사운드 후보 예시 : 비트코인은 인류 최대의 뻘짓입니다. , DSC는 쓰레기를 수집합니다.) 최다 득표를 받은 도지사운드는 웹페이지 메인에 자동으로 게시됩니다. 후보 제출 또는 투표에 사용한 메이트는 해당 투표에서 다시 사용할 수 없습니다.Dogesound competiion은 클레이튼 체인 위에서 작동되는 개소리 경연입니다. 5개 이상의 메이트를 사용하면 개소리 후보를 제출할 수 있습니다. 최다 득표를 받은 도지사운드는 웹페이지 메인에 자동으로 게시됩니다. 사용한 메이트는 다음 회에 다시 사용할 수 있습니다. 도지사운드 후보 제출 또는 투표는 메이트 소유권에 일체 영향을 주지 않습니다. (개소리 예시 : 비트코인은 인류 최대의 뻘짓입니다. 또는 DSC가 좋아할만한 아무 문구)",,
-CONTEST_DESC2,* 도지사운드 후보 제출 또는 투표 활동은 메이트 소유권에 일체 영향을 주지 않습니다.,,
+E. You assume all responsibility for any adverse effects of disruptions or other issues impacting Ethereum or the Ethereum platform."
+TERMS_TITLE7,7. 배상
+TERMS_DESC7,"귀하는 MALC와 그 자회사, 계열사, 임원, 대리인, 직원, 광고주, 라이선스 허여자, 공급업체 또는 파트너에게 발생하는 모든 종류의 청구, 성격, 소송, 판결, 소송 비용 및 합당한 변호사 수임료를 무해하게 유지하고 배상하는 데 동의합니다. (i) 귀하의 본 약관 위반, (ii) 귀하의 사이트 오남용, (iii) 귀하의 사이트 액세스 또는 사용과 관련하여 적용되는 법률, 규칙 또는 규정 위반과 관련이 있습니다."
+TERMS_TITLE8,8. 이용약관의 변경사항
+TERMS_DESC8,"당사 재량에 따라 약관을 변경할 수 있습니다. 본 약관의 변경 사항을 주기적으로 확인하십시오. 약관의 모든 변경 사항은 해당 약관이 작성된 날짜에 적용되며, 약관이 업데이트된 후 계속 액세스하거나 사용하는 것은 귀하의 구속력 있는 업데이트 수락으로 간주됩니다. 개정된 약관에 동의하지 않는 경우 사이트에 액세스하거나 사이트를 사용할 수 없습니다."
+TERMS_TITLE9,9. 어린이
+TERMS_DESC9,본 사이트는 어린이를 위한 것이 아닙니다. 이 사이트에 접속하거나 돌연변이 유인원을 구매하려면 18세 이상이어야 합니다. 귀하가 18세 미만일 경우 어떠한 이유로도 본 사이트를 사용할 수 없습니다. 사이트에 액세스함으로써 사용자는 최소 18세임을 나타내고 보증합니다.
+TERMS_TITLE10,10. 분쟁 해결; 중재
+TERMS_DESC10,"귀하의 사이트 액세스 또는 사용, 사이트를 통해 판매 또는 배포되는 제품을 포함하여 본 약관에서 또는 이와 관련하여 발생하는 모든 분쟁은 미국 중재 협회의 규칙에 따라 중재에 회부되고 최종적으로 해결됩니다. 이 사건은 단일 중재인에 의해 판결되며 해당 규칙에 따라 미국 중재 협회에 의해 관리된다. 각 당사자는 중재 절차와 관련된 자체 수수료 및 비용을 부담합니다. 중재 장소는 뉴욕, 뉴욕이 될 것입니다. 중재자의 판결은 최종적이고 구속력이 있으며, 중재자가 내린 판결에 대한 모든 판결은 관할 관할 법원에 제기될 수 있다. 전술한 내용에도 불구하고, 당사는 관할 법원의 모든 관할 구역에서 가처분 구제를 요청하고 얻을 수 있습니다."
+TERMS_DESC11,사이트 또는 사이트를 통해 판매 또는 배포되는 모든 제품 또는 스마트 계약과 관련된 분쟁을 포함하여 본 약관으로 인해 발생하거나 이와 관련하여 발생하는 모든 분쟁에 관하여: (I) 귀하는 명시적으로 재판을 포기할 권리가 있습니다. 해당 분쟁과 관련된 집단소송을 포함하되 이에 국한되지 않는 모든 소송에서 특정 등급의 청구인입니다.
+CONTEST_TITLE1,도지사운드 경연 규칙 🐶🎖💰
+CONTEST_DESC1,"5개 이상의 메이트를 사용하면 개소리 후보를 제출할 수 있습니다.(경연 상태가 후보 접수 중일 경우. 도지사운드 후보 예시 : 비트코인은 인류 최대의 뻘짓입니다. , DSC는 쓰레기를 수집합니다.) 최다 득표를 받은 도지사운드는 웹페이지 메인에 자동으로 게시됩니다. 후보 제출 또는 투표에 사용한 메이트는 해당 투표에서 다시 사용할 수 없습니다.Dogesound competiion은 클레이튼 체인 위에서 작동되는 개소리 경연입니다. 5개 이상의 메이트를 사용하면 개소리 후보를 제출할 수 있습니다. 최다 득표를 받은 도지사운드는 웹페이지 메인에 자동으로 게시됩니다. 사용한 메이트는 다음 회에 다시 사용할 수 있습니다. 도지사운드 후보 제출 또는 투표는 메이트 소유권에 일체 영향을 주지 않습니다. (개소리 예시 : 비트코인은 인류 최대의 뻘짓입니다. 또는 DSC가 좋아할만한 아무 문구)"
+CONTEST_DESC2,* 도지사운드 후보 제출 또는 투표 활동은 메이트 소유권에 일체 영향을 주지 않습니다.
 CONTEST_DESC3,"경연은 365일 항시 가동됩니다. 경연은 총 3가지 단계(후보 접수 중, 투표 중, 휴식)로 구성되며, 일정한 시간 간격으로 상태가 전환되며 진행됩니다. 후보 접수는 1일(약 86,400 블록), 투표는 1일(약 86,400 블록), 휴식은 12일(약 1,036,800 블록)으로 2주를 주기로 한 사이클을 돌게 됩니다.
 
-우승자의 도지사운드는 NFT화되어 우승자에게 전달됩니다. 아래 링크를 통해 기존 우승작들의 NFT를 확인해보시기 바랍니다!",,
-CONTEST_BUTTON,우승작 NFT 보기,,
-CONTEST_TITLE2,도지사운드 역대 우승작 👑🚀✌️,,
-CONTEST_TITLE3,도지사운드 경연 현황판 🐶👍🎖,,
-CONTEST_TABLE_TITLE1,투표중,,
-CONTEST_TABLE_TITLE2,쉬는중,,
-CONTEST_TABLE_TITLE3,후보 접수중,,
-CONTEST_STATUS_BOARD_TITLE1,제 {number}회 경연 투표가 진행 중 입니다,,
-CONTEST_STATUS_BOARD_DESC1,다음 단계까지 {block} 블록 남음,,
+우승자의 도지사운드는 NFT화되어 우승자에게 전달됩니다. 아래 링크를 통해 기존 우승작들의 NFT를 확인해보시기 바랍니다!"
+CONTEST_BUTTON,우승작 NFT 보기
+CONTEST_TITLE2,도지사운드 역대 우승작 👑🚀✌️
+CONTEST_TITLE3,도지사운드 경연 현황판 🐶👍🎖
+CONTEST_TABLE_TITLE1,투표중
+CONTEST_TABLE_TITLE2,쉬는중
+CONTEST_TABLE_TITLE3,후보 접수중
+CONTEST_STATUS_BOARD_TITLE1,제 {number}회 경연 투표가 진행 중 입니다
+CONTEST_STATUS_BOARD_DESC1,다음 단계까지 {block} 블록 남음
 CONTEST_STATUS_BOARD_DESC2,"- 지갑 주소 : 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D
 - 보유 중인 메이트 수 : 3300 개
 - 활용 가능 메이트 수 : 110 개
-* 안심하세요! 투표 참여는 당신의 소유권에 전혀 영향을 주지 않습니다.",,
-CONTEST_STATUS_BOARD_INPUT,개,,
-CONTEST_STATUS_BOARD_DESC3,를 이용하여 ,,
-CONTEST_STATUS_BOARD_BUTTON,투표하기,,
-CONTEST_STATUS_TITLE,진행중인 투표 도지사운드 후보들 :,,
-CONTEST_STATUS_TABLE_TITLE1,투표,,
-CONTEST_STATUS_TABLE_TITLE2,득표수,,
-CONTEST_STATUS_TABLE_TITLE3,DOGESOUND,,
-CONTEST_STATUS_TABLE_DESC1,제 8회 경연 투표가 종료되었습니다.,,
-CONTEST_STATUS_TABLE_DESC2,채택된 도지사운드는 웹사이트 메인에 게시되었습니다,,
-CONTEST_STATUS_TABLE_DESC3,다음 단계까지 926405 블록 남음,,
-GOVERNANCE_TITLE1,GOVERNANCE 🐙🌵🌞,,
-GOVERNANCE_DESC1,"메이트는 도지사운드클럽 거버넌스의 의결권을 나타냅니다. 제안을 하거나, 등록된 제안에 찬반을 메이트를 가진 만큼 투표할 수 있습니다. 제안을 생성하기 위해서는 건당 800 믹스를 소각해야하며, 투표율이 30%가 넘지 않으면, 찬반비율과 관계없이 해당 의제는 무효화됩니다.",,
-GOVERNANCE_BUTTON,제안 생성,,
-GOVERNANCE_TITLE2,제안들 👑🚀✌️,,
-GOVERNANCE_TABLE_TITLE1,제안결과,,
-GOVERNANCE_TABLE_TITLE2,DOGESOUND,,
-GOVERNANCE_TABLE_VOTE_DESC1,지향,,
-GOVERNANCE_TABLE_VOTE_DESC2,지양,,
-GOVERNANCE_TABLE_VOTE_DESC3,취소,,
-GOVERNANCE_TABLE_VOTE_DESC4,투표중,,
-GOVERNANCE_DESC2,채택된 도지사운드는 웹사이트 메인에 게시되었습니다,,
-GOVERNANCE_DESC3,다음 단계까지 926405 블록 남음,,
-GOVERNANCE_CREATE_INPUT_TITLE1,제안 생성툴,,
-GOVERNANCE_CREATE_INPUT_DESC1,제안 제목을 입력하세요,,
-GOVERNANCE_CREATE_INPUT_TITLE2,투표 기간,,
-GOVERNANCE_CREATE_INPUT_DESC2,투표 기간을 블록 단위로 입력해주세요,,
-GOVERNANCE_CREATE_INPUT_TITLE3,요약,,
-GOVERNANCE_CREATE_INPUT_DESC3,제안의 핵심적인 부분만 적어주세요,,
-GOVERNANCE_CREATE_INPUT_TITLE4,본문,,
-GOVERNANCE_CREATE_INPUT_DESC4,본문은 마크다운 문법을 사용하실 수 있습니다,,
-GOVERNANCE_CREATE_INPUT_DESC5,마크다운 문법 보기,,
-GOVERNANCE_CREATE_INPUT_DESC6,제안을 설명해주세요,,
-GOVERNANCE_CREATE_INPUT_DESC7,비고,,
-GOVERNANCE_CREATE_TITLE1,제안자,,
+* 안심하세요! 투표 참여는 당신의 소유권에 전혀 영향을 주지 않습니다."
+CONTEST_STATUS_BOARD_INPUT,개
+CONTEST_STATUS_BOARD_DESC3,"를 이용하여 "
+CONTEST_STATUS_BOARD_BUTTON,투표하기
+CONTEST_STATUS_TITLE,진행중인 투표 도지사운드 후보들 :
+CONTEST_STATUS_TABLE_TITLE1,투표
+CONTEST_STATUS_TABLE_TITLE2,득표수
+CONTEST_STATUS_TABLE_TITLE3,DOGESOUND
+CONTEST_STATUS_TABLE_DESC1,제 8회 경연 투표가 종료되었습니다.
+CONTEST_STATUS_TABLE_DESC2,채택된 도지사운드는 웹사이트 메인에 게시되었습니다
+CONTEST_STATUS_TABLE_DESC3,다음 단계까지 926405 블록 남음
+GOVERNANCE_TITLE1,GOVERNANCE 🐙🌵🌞
+GOVERNANCE_DESC1,"메이트는 도지사운드클럽 거버넌스의 의결권을 나타냅니다. 제안을 하거나, 등록된 제안에 찬반을 메이트를 가진 만큼 투표할 수 있습니다. 제안을 생성하기 위해서는 건당 800 믹스를 소각해야하며, 투표율이 30%가 넘지 않으면, 찬반비율과 관계없이 해당 의제는 무효화됩니다."
+GOVERNANCE_BUTTON,제안 생성
+GOVERNANCE_TITLE2,제안들 👑🚀✌️
+GOVERNANCE_TABLE_TITLE1,제안결과
+GOVERNANCE_TABLE_TITLE2,DOGESOUND
+GOVERNANCE_TABLE_VOTE_DESC1,지향
+GOVERNANCE_TABLE_VOTE_DESC2,지양
+GOVERNANCE_TABLE_VOTE_DESC3,취소
+GOVERNANCE_TABLE_VOTE_DESC4,투표중
+GOVERNANCE_DESC2,채택된 도지사운드는 웹사이트 메인에 게시되었습니다
+GOVERNANCE_DESC3,다음 단계까지 926405 블록 남음
+GOVERNANCE_CREATE_INPUT_TITLE1,제안 생성툴
+GOVERNANCE_CREATE_INPUT_DESC1,제안 제목을 입력하세요
+GOVERNANCE_CREATE_INPUT_TITLE2,투표 기간
+GOVERNANCE_CREATE_INPUT_DESC2,투표 기간을 블록 단위로 입력해주세요
+GOVERNANCE_CREATE_INPUT_TITLE3,요약
+GOVERNANCE_CREATE_INPUT_DESC3,제안의 핵심적인 부분만 적어주세요
+GOVERNANCE_CREATE_INPUT_TITLE4,본문
+GOVERNANCE_CREATE_INPUT_DESC4,본문은 마크다운 문법을 사용하실 수 있습니다
+GOVERNANCE_CREATE_INPUT_DESC5,마크다운 문법 보기
+GOVERNANCE_CREATE_INPUT_DESC6,제안을 설명해주세요
+GOVERNANCE_CREATE_INPUT_DESC7,비고
+GOVERNANCE_CREATE_TITLE1,제안자
 GOVERNANCE_CREATE_DESC8,"- 지갑 주소 : 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D
 - 보유 중인 메이트 수 : 3300 개
 - 활용 가능 메이트 수 : 110 개
-* 안심하세요! 투표 참여는 당신의 소유권에 전혀 영향을 주지 않습니다.",,
-GOVERNANCE_CREATE_SELECT_TITLE1,메이트 선택,,
-GOVERNANCE_CREATE_SELECT_TITLE2,선택된 메이트 개수 : {number}개,,
-GOVERNANCE_CREATE_SELECT_TITLE3,전체선택,,
-GOVERNANCE_CREATE_CHECKBOX_DESC,"제출된 제안을 취소할 수 있지만, 수정할 수 없음에 동의합니다. 제안이 진행되는 기간동안 메이트가 거버넌스 계약 주소에 보관되는 것에 동의합니다. 이 인터페이스는 거버넌스를 위해 본인이 선택한 편리한 도구일뿐이며, 서명에 따른 모든 트랜잭션에 대한 결과에 대한 책임은 서명한 지갑 소유주에게 있음에 동의합니다.",,
-HOLDER_TITLE1,LOGIN WITH METAMASK?,,
-KLIP_POPUP_TITLE,QR 코드로 Klip 접속,Connect Klip via QR code,
-KLIP_POPUP_DESC1,QR 코드 리더기 또는 카카오톡 앱을 통해 QR 코드를 스캔해주세요.,Please scan the QR code through a QR Code Reader or Kakao Talk Application,
-KLIP_POPUP_DESC2,카카오톡 실행 ▶ 상단 검색창 클릭 ▶ 코드 스캔 후 로그인,Run Kakao Talk Application ▶ Click the search bar on the top ▶ Scan the code to log in,
-KLIP_POPUP_DESC3,* Klip > 코드스캔 (사이드메뉴)에서도 스캔이 가능합니다.,"* You can also scan the at ""Code Scan"" from side menu of Klip",
-CONNECT_WALLET_TITLE,지갑 연결,Connect Wallet,
-CONNECT_WALLET_DESC,도지 사운드 클럽은 클레이튼 블록체인과의 연결이 필요합니다. 카이카스 혹은 카카오톡 클립에서 연결해주시기 바랍니다.,Gaia Protocol needs a connection with the Klayton blockchain. Please connect from Kaikas or Kakao Talk Klip.,
-CONNECT_WALLET_BUTTON1,카이카스 연결,Connect Kaikas,
-CONNECT_WALLET_BUTTON2,카카오톡 클립으로 연결,Connect with Kakao Talk Klip,
-CONNECT_WALLET_BUTTON3,연결하지 않고 둘러보기,Explore without Wallet Connection,
-ENTER_BUTTON,ENTER,ENTER,
-OPENSEA_BUTTON,OPENSEA,OPENSEA,
-KLUBS_BUTTON,KLUBS,KLUBS,
-KAKAOTALK_BUTTON,Kakaotalk,Kakaotalk,
-KAKAOTALK_DESC,PASSWORD : 10000,PASSWORD : 10000,
-DISCORD_BUTTON,Discord,Discord,
-TELEGRAM_BUTTON,Telegram,Telegram,
-TWITTER_BUTTON,Twitter,Twitter,
-INSTAGRAM_BUTTON,Instagram,Instagram,
-MEDIUM_BUTTON,Medium,Medium,
-GITHUB_BUTTON,Github,Github,
-YOUTUBE_BUTTON,Youtube,Youtube,
-EMAIL_BUTTON,E-mail,E-mail,
-EMAIL_DESC,dogesoundclub @ gmail.com,dogesoundclub @ gmail.com,
-DOCS_BUTTON,Docs,Docs,
-REGISTER_BUTTON,등록하기,Register,
-SUBMIT_BUTTON,제출하기,Submit,
-SAVE_BUTTON,저장하기,Save,
-YES_BUTTON,YES,YES,
-NO_BUTTON,NO,NO,
-CONFIRM_BUTTON,확인,CONFIRM,
-CANCEL_BUTTON,취소,CANCEL,
-VOTE_BUTTON,투표하기,VOTE,
+* 안심하세요! 투표 참여는 당신의 소유권에 전혀 영향을 주지 않습니다."
+GOVERNANCE_CREATE_SELECT_TITLE1,메이트 선택
+GOVERNANCE_CREATE_SELECT_TITLE2,선택된 메이트 개수 : {number}개
+GOVERNANCE_CREATE_SELECT_TITLE3,전체선택
+GOVERNANCE_CREATE_CHECKBOX_DESC,"제출된 제안을 취소할 수 있지만, 수정할 수 없음에 동의합니다. 제안이 진행되는 기간동안 메이트가 거버넌스 계약 주소에 보관되는 것에 동의합니다. 이 인터페이스는 거버넌스를 위해 본인이 선택한 편리한 도구일뿐이며, 서명에 따른 모든 트랜잭션에 대한 결과에 대한 책임은 서명한 지갑 소유주에게 있음에 동의합니다."
+HOLDER_TITLE1,LOGIN WITH METAMASK?
+KLIP_POPUP_TITLE,QR 코드로 Klip 접속,Connect Klip via QR code
+KLIP_POPUP_DESC1,QR 코드 리더기 또는 카카오톡 앱을 통해 QR 코드를 스캔해주세요.,Please scan the QR code through a QR Code Reader or Kakao Talk Application
+KLIP_POPUP_DESC2,카카오톡 실행 ▶ 상단 검색창 클릭 ▶ 코드 스캔 후 로그인,Run Kakao Talk Application ▶ Click the search bar on the top ▶ Scan the code to log in
+KLIP_POPUP_DESC3,* Klip > 코드스캔 (사이드메뉴)에서도 스캔이 가능합니다.,"* You can also scan the at ""Code Scan"" from side menu of Klip"
+CONNECT_WALLET_TITLE,지갑 연결,Connect Wallet
+CONNECT_WALLET_DESC,도지 사운드 클럽은 클레이튼 블록체인과의 연결이 필요합니다. 카이카스 혹은 카카오톡 클립에서 연결해주시기 바랍니다.,Gaia Protocol needs a connection with the Klayton blockchain. Please connect from Kaikas or Kakao Talk Klip.
+CONNECT_WALLET_BUTTON1,카이카스 연결,Connect Kaikas
+CONNECT_WALLET_BUTTON2,카카오톡 클립으로 연결,Connect with Kakao Talk Klip
+CONNECT_WALLET_BUTTON3,연결하지 않고 둘러보기,Explore without Wallet Connection
+ENTER_BUTTON,ENTER,ENTER
+OPENSEA_BUTTON,OPENSEA,OPENSEA
+KLUBS_BUTTON,KLUBS,KLUBS
+KAKAOTALK_BUTTON,Kakaotalk,Kakaotalk
+KAKAOTALK_DESC,PASSWORD : 10000,PASSWORD : 10000
+DISCORD_BUTTON,Discord,Discord
+TELEGRAM_BUTTON,Telegram,Telegram
+TWITTER_BUTTON,Twitter,Twitter
+INSTAGRAM_BUTTON,Instagram,Instagram
+MEDIUM_BUTTON,Medium,Medium
+GITHUB_BUTTON,Github,Github
+YOUTUBE_BUTTON,Youtube,Youtube
+EMAIL_BUTTON,E-mail,E-mail
+EMAIL_DESC,dogesoundclub @ gmail.com,dogesoundclub @ gmail.com
+DOCS_BUTTON,Docs,Docs
+REGISTER_BUTTON,등록하기,Register
+SUBMIT_BUTTON,제출하기,Submit
+SAVE_BUTTON,저장하기,Save
+YES_BUTTON,YES,YES
+NO_BUTTON,NO,NO
+CONFIRM_BUTTON,확인,CONFIRM
+CANCEL_BUTTON,취소,CANCEL
+VOTE_BUTTON,투표하기,VOTE
+MATES_DETAIL_TITLE,Mates #{id}

@@ -19,6 +19,7 @@ export default {
         FollowMe: "0xa8D43b45D84169076DccFd4B17C769080A8e86C6",
         DSCFamily: "",
         GovernanceV3: "",
+        MatesPool: "0x6f49D139359D0c7Bf44Df4520494A6ABB39434dD",
     } : {
         // Mainnet
         Mate: "0xe47e90c58f8336a2f24bcd9bcb530e2e02e1e8ae",
@@ -33,5 +34,6 @@ export default {
         Mix: "0xDd483a970a7A7FeF2B223C3510fAc852799a88BF",
         DSCFamily: "0x122Dac25ac0769667f7170B46D217871e0E9Bd8B",
         GovernanceV3: "0xBdcA781a022edb23AF3fFA41b08CCb6Ca79c0F70",
+        MatesPool: "0xbc9C42267037786f42831d4f36D629A3888c9b4a",
     },
 };

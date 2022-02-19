@@ -14,6 +14,7 @@ declare const _default: {
         FollowMe: string;
         DSCFamily: string;
         GovernanceV3: string;
+        MatesPool: string;
     };
 };
 export default _default;
