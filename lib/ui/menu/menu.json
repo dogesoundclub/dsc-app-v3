@@ -15,10 +15,6 @@
             "name": "MATES"
         },
         {
-            "uri": "member",
-            "name": "MEMBER"
-        },
-        {
             "uri": "fullyOn",
             "name": "ACHIEVEMENT"
         },
