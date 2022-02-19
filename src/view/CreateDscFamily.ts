@@ -4,10 +4,14 @@ import { View, ViewParams } from "skyrouter";
 import Layout from "./Layout";
 
 export default class CreateDscFamily implements View {
+
     private container: DomNode;
+    private image: string | undefined;
 
     constructor() {
         Layout.current.title = msg("DSC_FAMILY_TITLE");
+
+        let preview: DomNode<HTMLImageElement>;
         Layout.current.content.append(this.container = el(".create-dsc-family-view",
             el("header",
                 el("h1", msg("DSC_FAMILY_TITLE")),
@@ -26,7 +30,26 @@ export default class CreateDscFamily implements View {
                     ),
                     el(".input-container",
                         el("label", "Image"),
-                        el("input", { placeholder: msg("DSC_FAMILY_DETAIL_TITLE4"), type: "file" }),
+                        preview = el("img"),
+                        el("input", {
+                            placeholder: msg("DSC_FAMILY_DETAIL_TITLE4"),
+                            type: "file",
+                            change: (event) => {
+                                const file = event.target.files[0];
+                                const reader = new FileReader();
+                                reader.addEventListener("load", async () => {
+                                    const result = await fetch(`https://api.dogesound.club/dscfamily/uploadimage`, {
+                                        method: "POST",
+                                        body: reader.result as string,
+                                    });
+                                    this.image = await result.text();
+                                    preview.domElement.src = this.image;
+                                }, false);
+                                if (file) {
+                                    reader.readAsDataURL(file);
+                                }
+                            },
+                        }),
                     ),
                 ),
                 el(".input-container",
