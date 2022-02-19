@@ -1,18 +1,15 @@
 import { DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
-import MintForm from "../component/dogesounds/MintForm";
-import RegisterCandidateForm from "../component/dogesounds/RegisterCandidateForm";
-import VoteForm from "../component/dogesounds/VoteForm";
+import RankList from "../component/dogesounds/RankList";
 import DogeSoundContestV2Contract from "../contracts/DogeSoundContestV2Contract";
 import Layout from "./Layout";
-import ViewUtil from "./ViewUtil";
 
 export default class Contest implements View {
 
     private container: DomNode;
-    private status: DomNode;
-    private remainBlocks: DomNode;
+    //private status: DomNode;
+    //private remainBlocks: DomNode;
     private form: DomNode | undefined;
 
     private remainsInterval: any | undefined;
@@ -35,22 +32,7 @@ export default class Contest implements View {
             el("section",
                 el("hr"),
                 el("h2", msg("CONTEST_TITLE2")),
-                el("table",
-                    el("thead",
-                        el("tr",
-                            el("td.id", "#"),
-                            el("td.votes", "VOTES"),
-                            el("td.dogesound", "DOGESOUND"),
-                        ),
-                    ),
-                    el("tbody",
-                        el("tr",
-                            el("td.id", "100"),
-                            el("td.votes", "39,344"),
-                            el("td.dogesound", "If your salary is less than your mate's, please vote here."),
-                        ),
-                    ),
-                ),
+                new RankList(),
                 /*el(".pagination",
                     el("a", "<<"),
                     el("a", "<"),
@@ -63,7 +45,7 @@ export default class Contest implements View {
                     el("a", ">>"),
                 ),*/
 
-                el("hr"),
+                /*el("hr"),
                 el("h2", msg("CONTEST_TITLE3")),
                 el("section.status-board",
                     el("img", { src: "/images/shared/img/dog.png" }),
@@ -97,7 +79,7 @@ export default class Contest implements View {
                         ),
                     ),
                 ),
-                /*el(".pagination",
+                el(".pagination",
                     el("a", "<<"),
                     el("a", "<"),
                     el("a.active", "1"),
@@ -121,7 +103,7 @@ export default class Contest implements View {
 
         this.form?.delete();
 
-        //if (period === DogeSoundContestV2Contract.HOLIDAY_PERIOD) {
+        /*if (period === DogeSoundContestV2Contract.HOLIDAY_PERIOD) {
             this.status.append(
                 el("p", msg("DOGESOUNDS_HOLIDAY_DESCRIPTION").replace(/{number}/, String(currentRound))),
                 el("p", msg("DOGESOUNDS_HOLIDAY_DESCRIPTION_2")),

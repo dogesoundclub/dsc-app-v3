@@ -13,7 +13,6 @@ import FollowMe from "./view/FollowMe";
 import FullyOn from "./view/FullyOn";
 import Gallery from "./view/Gallery";
 import Governance from "./view/Governance";
-import GovernanceDetail from "./view/GovernanceDetail";
 import GovernanceOldDetail from "./view/GovernanceOldDetail";
 import Holder from "./view/Holder";
 import Home from "./view/Home";

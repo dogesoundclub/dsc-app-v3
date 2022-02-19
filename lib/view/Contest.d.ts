@@ -1,8 +1,6 @@
 import { View, ViewParams } from "skyrouter";
 export default class Contest implements View {
     private container;
-    private status;
-    private remainBlocks;
     private form;
     private remainsInterval;
     constructor();

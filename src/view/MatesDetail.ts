@@ -25,7 +25,6 @@ export default class MatesDetail implements View {
     private nameDisplay: DomNode;
     private mixDisplay: DomNode;
     private snsDisplay: DomNode;
-    private messageList: DomNode;
 
     constructor(params: ViewParams) {
         this.id = parseInt(params.id, 10);

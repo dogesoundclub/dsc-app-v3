@@ -5,7 +5,6 @@ export default class MatesDetail implements View {
     private nameDisplay;
     private mixDisplay;
     private snsDisplay;
-    private messageList;
     constructor(params: ViewParams);
     private load;
     private loadSNS;
