@@ -96,7 +96,7 @@
 
         >.introduction-container {
             display              : grid;
-            grid-template-columns: 70% 30%;
+            grid-template-columns: repeat(2, 1fr);
             grid-gap             : 20px;
 
             @media @phone {
@@ -123,6 +123,31 @@
                     color        : white;
                     font-size    : 20px;
                     line-height  : 20px;
+                }
+
+                >img {
+                    max-width: 240px;
+                }
+
+                >.image-input {
+                    font-family  : DungGeunMo;
+                    background   : #222222;
+                    border-radius: 8px;
+                    padding      : 16px 0px 16px 20px;
+                    color        : white;
+                    font-size    : 20px;
+                    line-height  : 20px;
+                }
+
+                >textarea {
+                    font-family  : DungGeunMo;
+                    background   : #222222;
+                    border-radius: 8px;
+                    padding      : 16px 0px 16px 20px;
+                    color        : white;
+                    font-size    : 20px;
+                    line-height  : 20px;
+                    min-height   : 240px;
                 }
             }
         }

@@ -1633,7 +1633,7 @@ body {
 }
 .create-dsc-family-view > section > .introduction-container {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 }
 @media only screen and (max-width: 719px) {
@@ -1660,6 +1660,28 @@ body {
   color: white;
   font-size: 20px;
   line-height: 20px;
+}
+.create-dsc-family-view > section > .introduction-container > .input-container > img {
+  max-width: 240px;
+}
+.create-dsc-family-view > section > .introduction-container > .input-container > .image-input {
+  font-family: DungGeunMo;
+  background: #222222;
+  border-radius: 8px;
+  padding: 16px 0px 16px 20px;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+}
+.create-dsc-family-view > section > .introduction-container > .input-container > textarea {
+  font-family: DungGeunMo;
+  background: #222222;
+  border-radius: 8px;
+  padding: 16px 0px 16px 20px;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  min-height: 240px;
 }
 .create-dsc-family-view > section > .button-wrap {
   display: flex;
