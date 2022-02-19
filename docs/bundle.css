@@ -1685,7 +1685,10 @@ body {
 }
 .create-dsc-family-view > section > .button-wrap {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 .create-dsc-family-view > section > .button-wrap > button {
   max-width: 380px;

@@ -32,15 +32,19 @@ export default class UpdateDscFamily implements View {
                     el("label", msg("DSC_FAMILY_DETAIL_INPUT2")),
                     this.linkInput = el("input", { placeholder: msg("DSC_FAMILY_DETAIL_INPUT2") }),
                 ),
+                el(".input-container",
+                    el("label", msg("DSC_FAMILY_DETAIL_TITLE1")),
+                    this.nameInput = el("input", { placeholder: msg("DSC_FAMILY_DETAIL_TITLE1") }),
+                ),
                 el(".introduction-container",
                     el(".input-container",
-                        el("label", msg("DSC_FAMILY_DETAIL_TITLE1")),
-                        this.nameInput = el("input", { placeholder: msg("DSC_FAMILY_DETAIL_TITLE1") }),
+                        el("label", msg("DSC_FAMILY_DETAIL_TITLE3")),
+                        this.descriptionInput = el("textarea", { placeholder: msg("DSC_FAMILY_DETAIL_TITLE2") }),
                     ),
                     el(".input-container",
                         el("label", "Image"),
                         preview = el("img"),
-                        el("input", {
+                        el("input.image-input", {
                             placeholder: msg("DSC_FAMILY_DETAIL_TITLE4"),
                             type: "file",
                             change: (event) => {
@@ -61,10 +65,6 @@ export default class UpdateDscFamily implements View {
                         }),
                     ),
                 ),
-                el(".input-container",
-                    el("label", msg("DSC_FAMILY_DETAIL_TITLE3")),
-                    this.descriptionInput = el("textarea", { placeholder: msg("DSC_FAMILY_DETAIL_TITLE2") }),
-                ),
                 el(".button-wrap",
                     el("button", "수정하기", {
                         click: async () => {
@@ -77,13 +77,13 @@ export default class UpdateDscFamily implements View {
                             setTimeout(() => ViewUtil.go("/dscFamily"), 2000);
                         },
                     }),
+                    el("a", "삭제하기", {
+                        click: async () => {
+                            await DSCFamilyContract.remove(this.id);
+                            setTimeout(() => ViewUtil.go("/dscFamily"), 2000);
+                        },
+                    }),
                 ),
-                el("a", "삭제하기", {
-                    click: async () => {
-                        await DSCFamilyContract.remove(this.id);
-                        setTimeout(() => ViewUtil.go("/dscFamily"), 2000);
-                    },
-                }),
             ),
         ));
 
