@@ -696,7 +696,12 @@ body {
   height: 1px;
   color: #2C2C2C;
   background-color: #2C2C2C;
-  margin: 26px 20px;
+  margin: 60px 0px;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > section > hr {
+    margin: 20px 0px;
+  }
 }
 .home-view > section > .feature > .title {
   font-size: 26px;
@@ -875,7 +880,8 @@ body {
     flex-direction: column;
   }
 }
-.home-view > section > .nft > section > article > .button-container > button {
+.home-view > section > .nft > section > article > .button-container > a {
+  display: block;
   font-family: DungGeunMo;
   width: 100%;
   font-size: 16px;
@@ -887,12 +893,15 @@ body {
   border-radius: 8px;
   padding-top: 18px;
   padding-bottom: 18px;
+  text-decoration: none;
+  text-align: center;
 }
-.home-view > section > .nft > section > article > .button-container > button:hover {
+.home-view > section > .nft > section > article > .button-container > a:hover {
   color: white;
   border: 1px solid white;
 }
-.home-view > section > .nft > section > article > button {
+.home-view > section > .nft > section > article > a {
+  display: block;
   width: 100%;
   font-size: 16px;
   line-height: 16px;
@@ -903,8 +912,10 @@ body {
   border-radius: 8px;
   padding-top: 18px;
   padding-bottom: 18px;
+  text-decoration: none;
+  text-align: center;
 }
-.home-view > section > .nft > section > article > button:hover {
+.home-view > section > .nft > section > article > a:hover {
   color: white;
   border: 1px solid white;
 }
@@ -922,7 +933,12 @@ body {
   height: 1px;
   color: #2C2C2C;
   background-color: #2C2C2C;
-  margin-top: 20px 0px;
+  margin: 60px 0px;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > section > .nft > section > article > hr {
+    margin: 20px 0px;
+  }
 }
 .home-view > section > .mission > .title {
   font-size: 26px;
@@ -1117,13 +1133,19 @@ body {
   top: 20px;
   right: 8px;
 }
-.gallery-view > section > .filter > button {
+.gallery-view > section > .filter > .reset-button {
+  text-align: center;
+  display: block;
   width: 100%;
   background: #E73C83;
   border-radius: 8px;
   color: white;
   padding: 16px 0px;
   margin-top: 20px;
+}
+.gallery-view > section > .filter > .reset-button:hover {
+  background-color: white;
+  color: #E73C83;
 }
 .gallery-view > section > .filter > select {
   font-family: DungGeunMo;
@@ -1140,7 +1162,7 @@ body {
   margin-top: 26px;
 }
 .gallery-view > section > article > .mate-list {
-  margin-left: 26px;
+  margin-left: 0px;
 }
 .follow-me-view {
   max-width: 1156px;
@@ -1331,6 +1353,10 @@ body {
     margin-bottom: 26px;
   }
 }
+.my-mate-view > header > p > a {
+  text-decoration: none;
+  color: white;
+}
 .my-mate-view > section > article > img {
   border-radius: 8px;
   margin-right: 20px;
@@ -1368,7 +1394,8 @@ body {
     font-size: 14px;
   }
 }
-.my-mate-view > section > .certification-container > button {
+.my-mate-view > section > .certification-container > a {
+  display: block;
   font-family: DungGeunMo;
   font-size: 16px;
   color: #E73C83;
@@ -1376,14 +1403,16 @@ body {
   border: 1px solid #E73C83;
   box-sizing: border-box;
   border-radius: 8px;
-  padding: 18px 111px;
+  padding: 18px 0px;
+  text-decoration: none;
+  text-align: center;
 }
 @media only screen and (max-width: 719px) {
-  .my-mate-view > section > .certification-container > button {
+  .my-mate-view > section > .certification-container > a {
     padding: 18px 72px;
   }
 }
-.my-mate-view > section > .certification-container > button:hover {
+.my-mate-view > section > .certification-container > a:hover {
   background-color: white;
   border-color: white;
 }
@@ -1433,7 +1462,8 @@ body {
   line-height: 20px;
   margin-bottom: 20px;
 }
-.activities-view > section > .certification-container > button {
+.activities-view > section > .certification-container > a {
+  display: block;
   font-family: DungGeunMo;
   font-size: 16px;
   color: #E73C83;
@@ -1441,15 +1471,17 @@ body {
   border: 1px solid #E73C83;
   box-sizing: border-box;
   border-radius: 8px;
-  padding: 18px 111px;
+  padding: 18px 0px;
+  text-decoration: none;
+  text-align: center;
 }
 @media only screen and (max-width: 719px) {
-  .activities-view > section > .certification-container > button {
+  .activities-view > section > .certification-container > a {
     padding: 18px 0px;
     width: 100%;
   }
 }
-.activities-view > section > .certification-container > button:hover {
+.activities-view > section > .certification-container > a:hover {
   background-color: white;
   border-color: white;
 }
@@ -1826,6 +1858,29 @@ body {
     font-size: 14px;
   }
 }
+.fully-on-view > section > article > .form {
+  position: relative;
+  margin: 16px 0px;
+}
+.fully-on-view > section > article > .form > input {
+  width: 100%;
+  background: #222222;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 14px;
+  margin-top: 16px;
+  padding: 14px 20px;
+  color: #676767;
+}
+.fully-on-view > section > article > .form > button {
+  background: #E73C83;
+  border-radius: 8px;
+  padding: 10px 21px 9px 21px;
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 8px;
+}
 .fully-on-view > section > article > button {
   font-family: DungGeunMo;
   font-size: 16px;
@@ -1959,7 +2014,8 @@ body {
   margin-top: 30px;
   justify-content: center;
 }
-.contest-view > header > .button-wrap > button {
+.contest-view > header > .button-wrap > a {
+  display: block;
   font-family: DungGeunMo;
   font-size: 16px;
   background: #E73C83;
@@ -1968,8 +2024,9 @@ body {
   box-sizing: border-box;
   border-radius: 8px;
   padding: 18px 111px;
+  text-decoration: none;
 }
-.contest-view > header > .button-wrap > button:hover {
+.contest-view > header > .button-wrap > a:hover {
   color: #E73C83;
   background-color: white;
   border-color: white;
@@ -2785,7 +2842,7 @@ body {
 }
 .mates-view > section > .button-wrap > button:hover {
   background-color: white;
-  border-color: white;
+  color: #E73C83;
 }
 .mates-detail-view {
   max-width: 1156px;

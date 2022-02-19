@@ -23,7 +23,11 @@ export default class MateList extends ScrollableDomNode<number[]> {
         );
         if (window.innerWidth >= 800) {
             this.style({
-                width: 740
+                width: 770
+            });
+        } else {
+            this.style({
+                width: "100%"
             });
         }
     }

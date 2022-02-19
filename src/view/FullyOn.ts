@@ -30,7 +30,7 @@ export default class FullyOn implements View {
                     el("h2", msg("FULLY_ON_CHAIN_TITLE2")),
                     el("p", msg("FULLY_ON_CHAIN_DESC2")),
                     el(".form",
-                        this.idInput = el("input"),
+                        this.idInput = el("input", { placeholder: "검색" }),
                         el("button", "보기", {
                             click: () => {
                                 this.load(parseInt(this.idInput.domElement.value, 10));

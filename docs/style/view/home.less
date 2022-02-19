@@ -175,7 +175,11 @@
             height          : 1px;
             color           : #2C2C2C;
             background-color: #2C2C2C;
-            margin          : 26px 20px;
+            margin          : 60px 0px;
+
+            @media @phone {
+                margin: 20px 0px;
+            }
         }
 
         >.feature {
@@ -371,7 +375,8 @@
                             flex-direction: column;
                         }
 
-                        >button {
+                        >a {
+                            display         : block;
                             font-family     : DungGeunMo;
                             width           : 100%;
                             font-size       : 16px;
@@ -383,6 +388,8 @@
                             border-radius   : 8px;
                             padding-top     : 18px;
                             padding-bottom  : 18px;
+                            text-decoration : none;
+                            text-align      : center;
 
                             &:hover {
                                 color : white;
@@ -391,7 +398,8 @@
                         }
                     }
 
-                    >button {
+                    >a {
+                        display         : block;
                         width           : 100%;
                         font-size       : 16px;
                         line-height     : 16px;
@@ -402,6 +410,8 @@
                         border-radius   : 8px;
                         padding-top     : 18px;
                         padding-bottom  : 18px;
+                        text-decoration : none;
+                        text-align      : center;
 
 
                         &:hover {
@@ -426,7 +436,11 @@
                         height          : 1px;
                         color           : #2C2C2C;
                         background-color: #2C2C2C;
-                        margin-top      : 20px 0px;
+                        margin          : 60px 0px;
+
+                        @media @phone {
+                            margin: 20px 0px;
+                        }
                     }
                 }
             }

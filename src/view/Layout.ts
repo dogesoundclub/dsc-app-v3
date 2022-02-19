@@ -72,6 +72,7 @@ export default class Layout implements View {
                 ),
             ),
         ));
+        select.domElement.value = BrowserInfo.language;
     }
 
     public set title(title: string) {

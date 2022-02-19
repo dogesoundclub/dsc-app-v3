@@ -9,9 +9,15 @@ export default class CollapsibleItem extends DomNode {
                 el("button.collapsible", title,
                     {
                         click: () => {
-                            this.content.style({
-                                display: "block"
-                            })
+                            if (this.content.domElement.style.display === "block") {
+                                this.content.style({
+                                    display: "none",
+                                })
+                            } else {
+                                this.content.style({
+                                    display: "block",
+                                })
+                            }
                         }
                     }),
                 this.content = el(".content",
