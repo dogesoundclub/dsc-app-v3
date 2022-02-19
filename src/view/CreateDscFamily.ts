@@ -1,11 +1,16 @@
 import { DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
+import DSCFamilyContract from "../contracts/DSCFamilyContract";
 import Layout from "./Layout";
+import ViewUtil from "./ViewUtil";
 
 export default class CreateDscFamily implements View {
 
     private container: DomNode;
+    private linkInput: DomNode<HTMLInputElement>;
+    private nameInput: DomNode<HTMLInputElement>;
+    private descriptionInput: DomNode<HTMLInputElement>;
     private image: string | undefined;
 
     constructor() {
@@ -21,12 +26,12 @@ export default class CreateDscFamily implements View {
                 el("hr"),
                 el(".input-container",
                     el("label", msg("DSC_FAMILY_DETAIL_INPUT2")),
-                    el("input", { placeholder: msg("DSC_FAMILY_DETAIL_INPUT2") }),
+                    this.linkInput = el("input", { placeholder: msg("DSC_FAMILY_DETAIL_INPUT2") }),
                 ),
                 el(".introduction-container",
                     el(".input-container",
                         el("label", msg("DSC_FAMILY_DETAIL_TITLE1")),
-                        el("input", { placeholder: msg("DSC_FAMILY_DETAIL_TITLE1") }),
+                        this.nameInput = el("input", { placeholder: msg("DSC_FAMILY_DETAIL_TITLE1") }),
                     ),
                     el(".input-container",
                         el("label", "Image"),
@@ -54,15 +59,24 @@ export default class CreateDscFamily implements View {
                 ),
                 el(".input-container",
                     el("label", msg("DSC_FAMILY_DETAIL_TITLE3")),
-                    el("input", { placeholder: msg("DSC_FAMILY_DETAIL_TITLE2"), type: "text" }),
+                    this.descriptionInput = el("textarea", { placeholder: msg("DSC_FAMILY_DETAIL_TITLE2") }),
                 ),
                 el(".button-wrap",
-                    el("button", msg("REGISTER_BUTTON")),
+                    el("button", msg("REGISTER_BUTTON"), {
+                        click: async () => {
+                            await DSCFamilyContract.add({
+                                link: this.linkInput.domElement.value,
+                                name: this.nameInput.domElement.value,
+                                image: this.image,
+                                description: this.descriptionInput.domElement.value,
+                            });
+                            setTimeout(() => ViewUtil.go("/dscFamily"), 2000);
+                        },
+                    }),
                 ),
             ),
-        ))
+        ));
     }
-
 
     public changeParams(params: ViewParams, uri: string): void {
     }

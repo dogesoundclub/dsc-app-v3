@@ -5,8 +5,9 @@ import BrowserInfo from "./BrowserInfo";
 import Activities from "./view/Activities";
 import BuyMate from "./view/BuyMate";
 import Contest from "./view/Contest";
-import CreateGovernance from "./view/CreateGovernance";
 import CreateDscFamily from "./view/CreateDscFamily";
+import CreateGovernance from "./view/CreateGovernance";
+import DscFamily from "./view/DscFamily";
 import Faq from "./view/Faq";
 import FollowMe from "./view/FollowMe";
 import FullyOn from "./view/FullyOn";
@@ -21,7 +22,7 @@ import MatesDetail from "./view/MatesDetail";
 import Member from "./view/Member";
 import MyMate from "./view/MyMate";
 import Terms from "./view/Terms";
-import DscFamily from "./view/DscFamily";
+import UpdateDscFamily from "./view/UpdateDscFamily";
 
 (async () => {
     msg.language = BrowserInfo.language;
@@ -40,6 +41,7 @@ import DscFamily from "./view/DscFamily";
     SkyRouter.route("activities", Activities);
     SkyRouter.route("dscFamily", DscFamily);
     SkyRouter.route("dscFamily/create", CreateDscFamily);
+    SkyRouter.route("dscFamily/{id}/update", UpdateDscFamily);
     SkyRouter.route("fullyOn", FullyOn);
     SkyRouter.route("terms", Terms);
     SkyRouter.route("contest", Contest);

@@ -1,12 +1,14 @@
 import { DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
+import DSCFamilyContract from "../contracts/DSCFamilyContract";
+import Wallet from "../klaytn/Wallet";
 import Layout from "./Layout";
 import ViewUtil from "./ViewUtil";
 
 export default class DscFamily implements View {
+
     private container: DomNode;
-    // private collapsible: DomNode;
 
     constructor() {
         Layout.current.title = msg("DSC_FAMILY_TITLE");
@@ -18,30 +20,38 @@ export default class DscFamily implements View {
                     click: () => ViewUtil.go("/dscFamily/create"),
                 }),
             ),
-            el("section",
-                el("hr"),
-                el("header",
-                    el("button", "My Channel"),
-                    el("h2", "Ohlollydayofficial"),
-                    el("a", "Edit"),
-                ),
-                el("article",
-                    el("img", { src: "/images/shared/img/mate-mock.png" }),
-                    el(".content",
-                        el(".icon-container",
-                            el("img", { src: "/images/shared/icn/icn_kakaotalk_color.svg", alt: "kakaotalk" }),
-                            el("img", { src: "/images/shared/icn/icn_twitter_color.svg", alt: "twitter" }),
-                            el("img", { src: "/images/shared/icn/icn_instagram_color.svg", alt: "instagram" }),
-                            el("img", { src: "/images/shared/icn/icn_discord_color.svg", alt: "discord" }),
-                            el("img", { src: "/images/shared/icn/icn_telegram_color.svg", alt: "telegram" }),
-                        ),
-                        el("p", "This is DSC_JOKER. I am continuing my space trip to the meme project Mint Chocolate Club with two writers, Artist JoyJo and Sujincho. I think there will be much more people who don't know what our Mint Chocolate Squad is or where it originated yet. Through this article, I would like to introduce a little bit and share my thoughts on what we want to do in the future."),
-                    ),
-                ),
-            ),
-        ))
+        ));
+        this.load();
     }
 
+    private async load() {
+        const owner = await Wallet.loadAddress();
+        const count = (await DSCFamilyContract.count()).toNumber();
+        for (let id = 0; id < count; id += 1) {
+            const data = await DSCFamilyContract.get(id);
+            if (data !== undefined) {
+                this.container.append(
+                    el("section",
+                        el("hr"),
+                        el("header",
+                            data.owner === owner ? el("button", "My Channel") : undefined,
+                            el("h2", data.name),
+                            data.owner === owner ? el("a", "Edit", {
+                                click: () => ViewUtil.go(`/dscFamily/${id}/update`),
+                            }) : undefined,
+                        ),
+                        el("article",
+                            el("img", { src: data.image }),
+                            el(".content",
+                                el("a", data.link, { href: data.link, target: "_blank" }),
+                                el("p", data.description),
+                            ),
+                        ),
+                    ),
+                );
+            }
+        }
+    }
 
     public changeParams(params: ViewParams, uri: string): void {
     }

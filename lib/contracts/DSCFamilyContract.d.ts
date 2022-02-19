@@ -1,8 +1,9 @@
-import { BigNumberish } from "ethers";
+import { BigNumber, BigNumberish } from "ethers";
 import Contract from "./Contract";
 declare class DSCFamilyContract extends Contract {
     constructor();
     add(data: any): Promise<void>;
+    count(): Promise<BigNumber>;
     get(id: BigNumberish): Promise<any>;
     update(id: BigNumberish, data: any): Promise<void>;
     remove(id: BigNumberish): Promise<void>;
