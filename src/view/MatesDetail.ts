@@ -62,12 +62,12 @@ export default class MatesDetail implements View {
                 ),
                 el("hr"),
                 el("section.name-container",
-                    el("h2", "메이트 이름 짓기 📛🐶😊"),
-                    el("p", "당신의 짝에게 이름을 지어주세요. 아직 짝의 이름이 없다면 기름값만 지불하고 이름을 지어주시면 됩니다. 하지만 변경을 하시려면 10마이크를 내셔야 합니다. 당신은 다른 동료와 같은 이름을 사용할 수 없습니다. 또한 메이트 이름을 삭제하려면 20 믹스가 필요합니다. 그리고 그 친구의 이름이 갤러리에 전시되어 있습니다."),
-                    el("input", { placeholder: "메이트의 이름을 지어주세요" }),
+                    el("h2", msg("MATE_DETAIL_NAME_FORM_TITLE")),
+                    el("p", msg("MATE_DETAIL_NAME_FORM_DESCRIPTION")),
+                    el("input", { placeholder: msg("MATE_DETAIL_NAME_FORM_TITLE") }),
                     el(".checkbox-container",
                         el("input", { type: "checkbox" }),
-                        el("label", "나는 메이트 이름을 변경하려면, 10믹스를 지불해야 하고, 이름을 삭제하려면 20믹스를 지불해야 한다는 사실을 잘 이해하고 있으며 동의합니다. 나는 제출된 이름과 같이 제출된 정보(제출 당시 메이트 소유주의 지갑 주소 등) 공개에 따른 모든 책임을 온전히 홀로 지는 것에 동의합니다. 나는 클레이튼 블록체인에 접속하기 위해 내가 선택한 이 도구와 관련하여 어떤 책임도 타인에게 물을 수 없다는 것에 대해 동의합니다."),
+                        el("label", ""),
                     ),
                     el(".button-wrap",
                         el("button", "제출하기"),
@@ -152,16 +152,17 @@ export default class MatesDetail implements View {
                 }),
 
                 // 메이트 이름짓기
-                el("section",
+                el("hr"),
+                el("section.name-container",
                     el("h2", msg("MATE_DETAIL_NAME_FORM_TITLE")),
                     el("p", msg("MATE_DETAIL_NAME_FORM_DESCRIPTION")
                         .replace(/{mixForChanging}/g, String(parseInt(utils.formatEther(mixForChanging), 10)))
                         .replace(/{mixForDeleting}/g, String(parseInt(utils.formatEther(mixForDeleting), 10)))
                     ),
                     nameInput = el("input", { placeholder: msg("MATE_DETAIL_NAME_FORM_INPUT") }),
-                    el("label.terms",
+                    el(".checkbox-container",
                         nameTermCheckbox = el("input", { type: "checkbox" }),
-                        el("p", msg("MATE_DETAIL_NAME_FORM_TERMS")
+                        el("label", msg("MATE_DETAIL_NAME_FORM_TERMS")
                             .replace(/{mixForChanging}/g, String(parseInt(utils.formatEther(mixForChanging), 10)))
                             .replace(/{mixForDeleting}/g, String(parseInt(utils.formatEther(mixForDeleting), 10)))
                         ),
@@ -203,8 +204,8 @@ export default class MatesDetail implements View {
                             }
                         },
                     }),
-                    el(".remove-button-container",
-                        el("a.remove-name-button", msg("MATE_DETAIL_REMOVE_NAME_BUTTON"), {
+                    el(".button-wrap",
+                        el("a", msg("MATE_DETAIL_REMOVE_NAME_BUTTON"), {
                             click: async () => {
                                 new Confirm(msg("MATE_DETAIL_REMOVE_NAME_CONFIRM"), msg("CONFIRM_BUTTON"), async () => {
                                     const mixNeeded = await NameV2Contract.getMIXForDeleting();
@@ -234,47 +235,44 @@ export default class MatesDetail implements View {
                     ),
                 ),
 
+                el("hr"),
                 // 팔로우 미
-                el("section",
-                    el("h2", msg("MATE_DETAIL_SNS_FORM_INPUT")),
+                el("section.sns-container",
+                    el("h2", msg("MATE_DETAIL_SNS_FORM_TITLE")),
                     el("p", msg("MATE_DETAIL_SNS_FORM_DESCRIPTION")),
                     el(".sns-form",
-                        el("label", msg("MATE_DETAIL_SNS_FORM_TWITTER")),
                         el(".input-container",
-                            "@", twitterInput = el("input"),
+                            el("img", { src: "/images/shared/icn/icn_twitter.svg" }),
+                            el("p", "@"),
+                            twitterInput = el("input", { placeholder: msg("MATE_DETAIL_SNS_FORM_TWITTER") }),
                         ),
-                        el("a.submit-button", msg("MATE_DETAIL_SNS_FORM_TWITTER_SUBMIT"), {
-                            click: async () => {
-                                await FollowMeContract.set(MateContract.address, this.id, 0, twitterInput.domElement.value);
-                                ViewUtil.waitTransactionAndRefresh();
-                            },
-                        }),
                     ),
                     el(".sns-form",
-                        el("label", msg("MATE_DETAIL_SNS_FORM_INSTAGRAM")),
                         el(".input-container",
-                            "@", instagramInput = el("input"),
+                            el("img", { src: "/images/shared/icn/icn_instagram.svg" }),
+                            el("p", "@"),
+                            instagramInput = el("input", { placeholder: msg("MATE_DETAIL_SNS_FORM_INSTAGRAM") }),
                         ),
-                        el("a.submit-button", msg("MATE_DETAIL_SNS_FORM_INSTAGRAM_SUBMIT"), {
-                            click: async () => {
-                                await FollowMeContract.set(MateContract.address, this.id, 1, instagramInput.domElement.value);
-                                ViewUtil.waitTransactionAndRefresh();
-                            },
-                        }),
                     ),
-                    el(".sns-terms",
-                        el("p", "* ", msg("MATE_DETAIL_SNS_FORM_TERMS")),
-                    ),
+                    el("a.submit-button", msg("MATE_DETAIL_SNS_FORM_TWITTER_SUBMIT"), {
+                        click: async () => {
+                            await FollowMeContract.set(MateContract.address, this.id, 0, twitterInput.domElement.value);
+                            await FollowMeContract.set(MateContract.address, this.id, 1, instagramInput.domElement.value);
+                            ViewUtil.waitTransactionAndRefresh();
+                        },
+                    }),
+                    el(".caption", msg("MATE_DETAIL_SNS_FORM_TERMS")),
                 ),
 
+                el("hr"),
                 // 메시지 남기기
-                el("section",
+                el("section.name-container",
                     el("h2", msg("MATE_DETAIL_MESSAGE_FORM_TITLE")),
                     el("p", msg("MATE_DETAIL_MESSAGE_FORM_DESCRIPTION")),
                     messageInput = el("input.message", { placeholder: msg("MATE_DETAIL_MESSAGE_FORM_INPUT") }),
-                    el("label.terms",
+                    el(".checkbox-container",
                         messageTermCheckbox = el("input", { type: "checkbox" }),
-                        el("p", msg("MATE_DETAIL_MESSAGE_FORM_TERMS")),
+                        el("label", msg("MATE_DETAIL_MESSAGE_FORM_TERMS")),
                     ),
                     el("a.submit-button", msg("MATE_DETAIL_MESSAGE_FORM_SUBMIT"), {
                         click: async () => {
