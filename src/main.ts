@@ -50,7 +50,6 @@ import UpdateDscFamily from "./view/UpdateDscFamily";
     SkyRouter.route("member", Member);
     SkyRouter.route("governance", Governance);
     SkyRouter.route("governance/create", CreateGovernance);
-    SkyRouter.route("governance/{id}", GovernanceDetail);
     SkyRouter.route("governance-old/{id}", GovernanceOldDetail);
 
     if (sessionStorage.__spa_path) {

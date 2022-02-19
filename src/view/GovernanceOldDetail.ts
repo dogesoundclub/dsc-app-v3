@@ -68,7 +68,7 @@ export default class GovernanceOldDetail implements View {
                     el("p", "- Wallet Address: 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D")
                 ),
                 el("hr"),
-                el(".mate-container",
+                /*el(".mate-container",
                     el("h3", msg("GOVERNANCE_CREATE_SELECT_TITLE1")),
                     el("p", msg("GOVERNANCE_CREATE_SELECT_TITLE2")),
                     el(".checkbox-container",
@@ -89,7 +89,7 @@ export default class GovernanceOldDetail implements View {
                 ),
                 el(".button-wrap",
                     el("button", msg("VOTE_BUTTON")),
-                ),
+                ),*/
 
                 this.content = el(".content"),
 
