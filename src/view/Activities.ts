@@ -4,8 +4,8 @@ import { View, ViewParams } from "skyrouter";
 import superagent from "superagent";
 import Alert from "../component/shared/dialogue/Alert";
 import DiscordUserInfo from "../DiscordUserInfo";
+import EthereumWallet from "../ethereum/EthereumWallet";
 import Wallet from "../klaytn/Wallet";
-import Store from "../Store";
 import Layout from "./Layout";
 import ViewUtil from "./ViewUtil";
 
@@ -14,7 +14,6 @@ export default class Activities implements View {
     private container: DomNode;
 
     public discordUser: DiscordUserInfo | undefined;
-    private codeStore = new Store("codeStore");
 
     constructor() {
         Layout.current.title = msg("ACTIVITIES_TITLE");
@@ -66,40 +65,33 @@ export default class Activities implements View {
 
     private async checkDiscordLogin() {
 
-        let code = this.codeStore.get<string>("code");
-        if (code === undefined) {
-            code = new URLSearchParams(window.location.search).get("code")!;
-            if (code !== null) {
-                try {
-                    await superagent.get("https://api.dogesound.club/discord/token").query({
-                        code,
-                        redirect_uri: `${window.location.protocol}//${window.location.host}/activities`,
-                    });
-                    this.codeStore.set("code", code, true);
-                } catch (error) {
-                    console.error(error);
-                    code = undefined;
-                }
-            } else {
+        let code: string | undefined = new URLSearchParams(window.location.search).get("code")!;
+        if (code !== null) {
+            try {
+                await superagent.get("https://api.dogesound.club/discord/token").query({
+                    code,
+                    redirect_uri: `${window.location.protocol}//${window.location.host}/activities`,
+                });
+            } catch (error) {
+                console.error(error);
                 code = undefined;
             }
+        } else {
+            code = undefined;
         }
 
-        if (code === undefined) {
-            this.codeStore.delete("code");
-        } else {
+        if (code !== undefined) {
             try {
                 const result = await superagent.get("https://api.dogesound.club/discord/me").query({ code });
                 this.discordUser = result.body;
-                this.checkWalletConnected(code);
+                this.checkMateHolder(code);
             } catch (error) {
                 console.error(error);
-                this.codeStore.delete("code");
             }
         }
     }
 
-    private async checkWalletConnected(code: string) {
+    private async checkMateHolder(code: string) {
         if (await Wallet.connected() !== true) {
             await Wallet.connect();
         }
@@ -120,9 +112,43 @@ export default class Activities implements View {
                     }),
                 });
                 if ((await result.json()).isHolder === true) {
-                    new Alert("홀더 인증 완료");
+                    new Alert("메이트 홀더 인증 완료", "이메이트 홀더 인증하기", () => {
+                        this.checkEMateHolder(code);
+                    });
                 } else {
-                    new Alert("홀더 인증 실패");
+                    new Alert("메이트 홀더 인증 실패", "이메이트 홀더 인증하기", () => {
+                        this.checkEMateHolder(code);
+                    });
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        }
+    }
+
+    private async checkEMateHolder(code: string) {
+        if (await EthereumWallet.connected() !== true) {
+            await EthereumWallet.connect();
+        }
+        const address = await EthereumWallet.loadAddress();
+        if (address !== undefined) {
+
+            const message = "Check Holder";
+            const signedMessage = await EthereumWallet.signMessage(message);
+
+            try {
+                const result = await fetch("https://api.dogesound.club/checkholder/emates", {
+                    method: "POST",
+                    body: JSON.stringify({
+                        code,
+                        signedMessage,
+                        address,
+                    }),
+                });
+                if ((await result.json()).isHolder === true) {
+                    new Alert("이메이트 홀더 인증 완료");
+                } else {
+                    new Alert("이메이트 홀더 인증 실패");
                 }
             } catch (error) {
                 console.error(error);

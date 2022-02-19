@@ -5,12 +5,12 @@ export default class MyMate implements View {
     private wallet;
     private mateList;
     discordUser: DiscordUserInfo | undefined;
-    private codeStore;
     constructor();
     private load;
     private windowResizeHandler;
     private checkDiscordLogin;
-    private checkWalletConnected;
+    private checkMateHolder;
+    private checkEMateHolder;
     changeParams(params: ViewParams, uri: string): void;
     close(): void;
 }

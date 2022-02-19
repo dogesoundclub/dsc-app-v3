@@ -35,7 +35,7 @@ import DscFamily from "./view/DscFamily";
     SkyRouter.route("holder", Holder);
     SkyRouter.route("buyMate", BuyMate);
     SkyRouter.route("mates", Mates);
-    SkyRouter.route("mates/detail/{id}", MatesDetail);
+    SkyRouter.route("mates/{id}", MatesDetail);
     SkyRouter.route("myMate", MyMate);
     SkyRouter.route("activities", Activities);
     SkyRouter.route("dscFamily", DscFamily);

@@ -1,0 +1,1 @@
+{"version":3,"file":"Proposal.d.ts","sourceRoot":"","sources":["../../../src/component/governance/Proposal.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAM,MAAM,gBAAgB,CAAC;AAE7C,OAAqB,EAAE,YAAY,EAAE,MAAM,8BAA8B,CAAC;AAG1E,MAAM,CAAC,OAAO,OAAO,QAAS,SAAQ,OAAO;IAE7B,OAAO,CAAC,UAAU;IAAU,OAAO,CAAC,QAAQ;gBAApC,UAAU,EAAE,MAAM,EAAU,QAAQ,EAAE,YAAY;YAUxD,UAAU;CAkB3B"}

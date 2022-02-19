@@ -1,0 +1,1 @@
+{"version":3,"file":"CandidateList.d.ts","sourceRoot":"","sources":["../../../src/component/dogesounds/CandidateList.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,gBAAgB,CAAC;AAUzC,MAAM,CAAC,OAAO,OAAO,aAAc,SAAQ,OAAO;IAIlC,OAAO,CAAC,KAAK;IAAU,OAAO,CAAC,OAAO,CAAC;IAF5C,QAAQ,EAAE,MAAM,CAAK;gBAER,KAAK,EAAE,MAAM,EAAU,OAAO,CAAC,qBAAS;YAK9C,IAAI;CA6BrB"}

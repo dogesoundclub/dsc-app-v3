@@ -8,6 +8,13 @@ declare const _default: {
         DogeSoundContestV2: string;
         Vote: string;
         Image: string;
+        Mix: string;
+        NameV2: string;
+        Message: string;
+        FollowMe: string;
+        DSCFamily: string;
+        GovernanceV3: string;
+        MatesPool: string;
     };
 };
 export default _default;
