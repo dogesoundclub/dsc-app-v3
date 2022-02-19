@@ -14,6 +14,7 @@ import FullyOn from "./view/FullyOn";
 import Gallery from "./view/Gallery";
 import Governance from "./view/Governance";
 import GovernanceDetail from "./view/GovernanceDetail";
+import GovernanceOldDetail from "./view/GovernanceOldDetail";
 import Holder from "./view/Holder";
 import Home from "./view/Home";
 import Layout from "./view/Layout";
@@ -49,7 +50,8 @@ import UpdateDscFamily from "./view/UpdateDscFamily";
     SkyRouter.route("member", Member);
     SkyRouter.route("governance", Governance);
     SkyRouter.route("governance/create", CreateGovernance);
-    SkyRouter.route("governance/detail/{id}", GovernanceDetail);
+    SkyRouter.route("governance/{id}", GovernanceDetail);
+    SkyRouter.route("governance-old/{id}", GovernanceOldDetail);
 
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);

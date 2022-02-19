@@ -1,10 +1,12 @@
 import { DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
+import ProposalList from "../component/governance/ProposalList";
 import Layout from "./Layout";
 import ViewUtil from "./ViewUtil";
 
 export default class Governance implements View {
+
     private container: DomNode;
 
     constructor() {
@@ -29,22 +31,9 @@ export default class Governance implements View {
                             el("td.dogesound", "DOGESOUND"),
                         ),
                     ),
-                    el("tbody",
-                        el("tr",
-                            el("td.agreement", msg("GOVERNANCE_TABLE_VOTE_DESC1")),
-                            el("td.dogesound", "DIP-19: We would like to enter into a partnership with the rice mill community."),
-                        ),
-                        el("tr",
-                            el("td.opposition", msg("GOVERNANCE_TABLE_VOTE_DESC2")),
-                            el("td.dogesound", "DIP-19: We would like to enter into a partnership with the rice mill community."),
-                        ),
-                        el("tr",
-                            el("td.cancellation", msg("GOVERNANCE_TABLE_VOTE_DESC3")),
-                            el("td.cancellation-dogesound", "DIP-19: We would like to enter into a partnership with the rice mill community."),
-                        ),
-                    ),
+                    new ProposalList(),
                 ),
-                el(".pagination",
+                /*el(".pagination",
                     el("a", "<<"),
                     el("a", "<"),
                     el("a.active", "1"),
@@ -54,7 +43,7 @@ export default class Governance implements View {
                     el("a", "5"),
                     el("a", ">"),
                     el("a", ">>"),
-                ),
+                ),*/
             ),
         ))
     }

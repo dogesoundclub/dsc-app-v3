@@ -23,6 +23,7 @@ declare class DSCGovernanceV3Contract extends Contract {
     getMinProposePeriod(): Promise<BigNumber>;
     getMaxProposePeriod(): Promise<BigNumber>;
     getProposeMateCount(): Promise<BigNumber>;
+    getProposePrice(): Promise<BigNumber>;
     propose(title: string, summary: string, content: string, note: string, votePeriod: BigNumberish, mates: string, mateIds: BigNumberish[]): Promise<void>;
     getProposalCount(): Promise<number>;
     getMateVoted(proposalId: BigNumberish, mates: string, mateId: number): Promise<boolean>;

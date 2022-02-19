@@ -40,6 +40,10 @@ class DSCGovernanceV3Contract extends Contract {
         return BigNumber.from(await this.runMethod("proposeMateCount"));
     }
 
+    public async getProposePrice(): Promise<BigNumber> {
+        return BigNumber.from(await this.runMethod("proposePrice"));
+    }
+
     public async propose(
 
         title: string,

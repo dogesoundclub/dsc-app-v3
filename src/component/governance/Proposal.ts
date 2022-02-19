@@ -9,7 +9,7 @@ export default class Proposal extends DomNode {
         super("li.proposal");
         this.append(
             el("h4", `DIP-${this.proposalId}: ${proposal.title}`, {
-                click: () => ViewUtil.go(`/governance/${proposalId}`),
+                click: () => ViewUtil.go(`/governance-old/${proposalId}`),
             }),
         );
         this.loadResult();
