@@ -19,7 +19,7 @@ export default class Governance implements View {
                 el(".button-wrap",
                     el("button", msg("GOVERNANCE_BUTTON"), {
                         click: () => {
-                            new Alert("이메이트 클레이튼 체인 마이그레이션 이후 해당 기능이 열립니다.", msg("CONFIRM_BUTTON");
+                            new Alert("이메이트 클레이튼 체인 마이그레이션 이후 해당 기능이 열립니다.", msg("CONFIRM_BUTTON"));
                         }
                         // ViewUtil.go("/governance/create"),
                     }),
