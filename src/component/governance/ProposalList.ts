@@ -6,7 +6,7 @@ import Proposal from "./Proposal";
 export default class ProposalList extends DomNode {
 
     constructor() {
-        super("ul.proposal-list");
+        super("tbody.proposal-list");
         this.load();
     }
 

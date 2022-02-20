@@ -21,15 +21,9 @@ export default class MateList extends ScrollableDomNode<number[]> {
             { childTag: "div", baseChildHeight: 176 },
             (ids) => new MateLine(this, ids, this.mateNames, selectable, rarity),
         );
-        if (window.innerWidth >= 800) {
-            this.style({
-                width: 770
-            });
-        } else {
-            this.style({
-                width: "100%"
-            });
-        }
+        this.style({
+            width: "100%"
+        });
     }
 
     public async load(mates: number[], votedMates: number[] = []) {
@@ -42,9 +36,9 @@ export default class MateList extends ScrollableDomNode<number[]> {
 
         let index = 0;
         const mateData: number[][] = [];
-        SkyUtil.repeat(window.innerWidth < 800 ? Math.ceil(mates.length / 5) : Math.ceil(mates.length / 8), () => {
+        SkyUtil.repeat(window.innerWidth < 800 ? Math.ceil(mates.length / 2) : Math.ceil(mates.length / 4), () => {
             const ids: number[] = [];
-            SkyUtil.repeat(window.innerWidth < 800 ? 5 : 8, () => {
+            SkyUtil.repeat(window.innerWidth < 800 ? 2 : 4, () => {
                 ids.push(mates[index]);
                 index += 1;
                 if (index === mates.length) {

@@ -44,7 +44,8 @@
                     line-height  : 14px;
                     margin-top   : 16px;
                     padding      : 14px 20px;
-                    color        : #676767;
+                    font-family  : DungGeunMo;
+                    color        : white;
                 }
 
                 >button {
@@ -91,8 +92,11 @@
             margin-top: 26px;
 
             >.mate-list {
-                margin-left  : 16px;
-                padding-right: 16px;
+                margin-left: 16px;
+
+                @media @phone {
+                    margin-left: 0px;
+                }
             }
         }
     }

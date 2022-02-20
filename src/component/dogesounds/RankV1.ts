@@ -20,9 +20,9 @@ export default class RankV1 extends DomNode {
         const votes = (await DogeSoundContestContract.getVotes(this.round, elected)).toNumber();
 
         this.append(
-            el("td", String(this.round + 1)),
-            el("td", String(votes)),
-            el("td", dogesound),
+            el("td.id", String(this.round + 1)),
+            el("td.votes", String(votes)),
+            el("td.dogesound", dogesound),
         );
     }
 }

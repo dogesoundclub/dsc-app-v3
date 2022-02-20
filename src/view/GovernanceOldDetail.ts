@@ -33,104 +33,104 @@ export default class GovernanceOldDetail implements View {
         let forRadio: DomNode<HTMLInputElement>;
         let againstRadio: DomNode<HTMLInputElement>;
         Layout.current.content.append(this.container = el(".governance-detail-view",
-            el("header",
-                el("h1", msg("GOVERNANCE_TITLE1")),
+            // el("header",
+            //     el("h1", msg("GOVERNANCE_TITLE1")),
+            // ),
+            // el("hr"),
+            // el("section",
+            //     el("article",
+            //         el("header",
+            //             el("h2", "DIP-17: Management of Mate Price Stabilization Fund (tentative name)"),
+            //             el("p", "0 block left until the voting is over."),
+            //             el(".caption-container",
+            //                 el(".status", "Proposal result: Orientation"),
+            //                 el("p", "Agreement 1766"),
+            //                 el("p", "Opposition 521"),
+            //             ),
+            //         ),
+            //         el("hr"),
+            //         el(".content",
+            //             el(".tool-container",
+            //                 el("h3", "Suggestion generation tool:"),
+            //                 el("p", "A fund management proposal to purchase the mate of the largest holder through a block deal."),
+            //             ),
+            //             el(".body-container",
+            //                 el("h3", "Body:"),
+            //                 el("p", "A fund management proposal to purchase the mate of the largest holder through a block deal."),
+            //             ),
+            //             el(".remarks", "Remarks:"),
+            //         ),
+            //     ),
+            //     el("hr"),
+            //     el(".proposer-container",
+            //         el("h3", msg("GOVERNANCE_CREATE_TITLE1")),
+            //         el(".address", "0x5768218dae8c5658d0B1e466c07199393B089078"),
+            //         el("p", "- Wallet Address: 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D")
+            //     ),
+            //     el("hr"),
+            /*el(".mate-container",
+                el("h3", msg("GOVERNANCE_CREATE_SELECT_TITLE1")),
+                el("p", msg("GOVERNANCE_CREATE_SELECT_TITLE2")),
+                el(".checkbox-container",
+                    el("input", { type: "checkbox" }),
+                    el("label", msg("GOVERNANCE_CREATE_SELECT_TITLE3"))
+                ),
             ),
             el("hr"),
-            el("section",
-                el("article",
-                    el("header",
-                        el("h2", "DIP-17: Management of Mate Price Stabilization Fund (tentative name)"),
-                        el("p", "0 block left until the voting is over."),
-                        el(".caption-container",
-                            el(".status", "Proposal result: Orientation"),
-                            el("p", "Agreement 1766"),
-                            el("p", "Opposition 521"),
-                        ),
-                    ),
-                    el("hr"),
-                    el(".content",
-                        el(".tool-container",
-                            el("h3", "Suggestion generation tool:"),
-                            el("p", "A fund management proposal to purchase the mate of the largest holder through a block deal."),
-                        ),
-                        el(".body-container",
-                            el("h3", "Body:"),
-                            el("p", "A fund management proposal to purchase the mate of the largest holder through a block deal."),
-                        ),
-                        el(".remarks", "Remarks:"),
-                    ),
+            el(".submit-container",
+                el(".checkbox-container",
+                    el("input", { type: "checkbox" }),
+                    el("label", msg("GOVERNANCE_TABLE_VOTE_DESC2"))
                 ),
-                el("hr"),
-                el(".proposer-container",
-                    el("h3", msg("GOVERNANCE_CREATE_TITLE1")),
-                    el(".address", "0x5768218dae8c5658d0B1e466c07199393B089078"),
-                    el("p", "- Wallet Address: 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D")
-                ),
-                el("hr"),
-                /*el(".mate-container",
-                    el("h3", msg("GOVERNANCE_CREATE_SELECT_TITLE1")),
-                    el("p", msg("GOVERNANCE_CREATE_SELECT_TITLE2")),
-                    el(".checkbox-container",
-                        el("input", { type: "checkbox" }),
-                        el("label", msg("GOVERNANCE_CREATE_SELECT_TITLE3"))
-                    ),
-                ),
-                el("hr"),
-                el(".submit-container",
-                    el(".checkbox-container",
-                        el("input", { type: "checkbox" }),
-                        el("label", msg("GOVERNANCE_TABLE_VOTE_DESC2"))
-                    ),
-                    el(".checkbox-container",
-                        el("input", { type: "checkbox" }),
-                        el("label", msg("GOVERNANCE_TABLE_VOTE_DESC2"))
-                    ),
-                ),
-                el(".button-wrap",
-                    el("button", msg("VOTE_BUTTON")),
-                ),*/
-
-                this.content = el(".content"),
-
-                this.voteForm = el(".vote-form",
-                    this.wallet = el(".wallet"),
-                    this.ownedMates = el(".owned-mates"),
-                    this.votableMates = el(".votable-mates"),
-                    this.selectedMates = el(".selected-mates", msg("GOVERNANCE_SELECTED_MATES_COUNT").replace(/{count}/, String(0))),
-                    el(".button-container", el("a", `▶ ${msg("GOVERNANCE_MAX_SELECT_BUTTON")}`, {
-                        click: () => this.mateList.maxSelect(30),
-                    })),
-                    el(".button-container", el("a", `▶ ${msg("GOVERNANCE_DESELECT_BUTTON")}`, {
-                        click: () => this.mateList.deselect(),
-                    })),
-                    this.mateList = new MateList(true, false),
-                    el(".select",
-                        el("label.for", el("span.title", msg("GOVERNANCE_PROPOSAL_VOTE_FOR")), forRadio = el("input", {
-                            name: "governance-radio",
-                            type: "radio",
-                        })),
-                        el("label.against", el("span.title", msg("GOVERNANCE_PROPOSAL_VOTE_AGAINST")), againstRadio = el("input", {
-                            name: "governance-radio",
-                            type: "radio",
-                        })),
-                    ),
-                    el("a.vote-button", msg("GOVERNANCE_PROPOSAL_VOTE_BUTTON"), {
-                        click: async () => {
-                            if (this.proposalId !== undefined) {
-                                if (forRadio.domElement.checked === true) {
-                                    await VoteContract.voteFor(this.proposalId, MateContract.address, this.mateList.selectedMateIds);
-                                    ViewUtil.waitTransactionAndRefresh();
-                                }
-                                if (againstRadio.domElement.checked === true) {
-                                    await VoteContract.voteAgainst(this.proposalId, MateContract.address, this.mateList.selectedMateIds);
-                                    ViewUtil.waitTransactionAndRefresh();
-                                }
-                            }
-                        },
-                    }),
+                el(".checkbox-container",
+                    el("input", { type: "checkbox" }),
+                    el("label", msg("GOVERNANCE_TABLE_VOTE_DESC2"))
                 ),
             ),
+            el(".button-wrap",
+                el("button", msg("VOTE_BUTTON")),
+            ),*/
+
+            this.content = el("article"),
+
+            this.voteForm = el(".vote-form",
+                this.wallet = el(".wallet"),
+                this.ownedMates = el(".owned-mates"),
+                this.votableMates = el(".votable-mates"),
+                this.selectedMates = el(".selected-mates", msg("GOVERNANCE_SELECTED_MATES_COUNT").replace(/{count}/, String(0))),
+                el(".button-container", el("a", `▶ ${msg("GOVERNANCE_MAX_SELECT_BUTTON")}`, {
+                    click: () => this.mateList.maxSelect(30),
+                })),
+                el(".button-container", el("a", `▶ ${msg("GOVERNANCE_DESELECT_BUTTON")}`, {
+                    click: () => this.mateList.deselect(),
+                })),
+                this.mateList = new MateList(true, false),
+                el(".select",
+                    el("label.for", el("span.title", msg("GOVERNANCE_PROPOSAL_VOTE_FOR")), forRadio = el("input", {
+                        name: "governance-radio",
+                        type: "radio",
+                    })),
+                    el("label.against", el("span.title", msg("GOVERNANCE_PROPOSAL_VOTE_AGAINST")), againstRadio = el("input", {
+                        name: "governance-radio",
+                        type: "radio",
+                    })),
+                ),
+                el("a.vote-button", msg("GOVERNANCE_PROPOSAL_VOTE_BUTTON"), {
+                    click: async () => {
+                        if (this.proposalId !== undefined) {
+                            if (forRadio.domElement.checked === true) {
+                                await VoteContract.voteFor(this.proposalId, MateContract.address, this.mateList.selectedMateIds);
+                                ViewUtil.waitTransactionAndRefresh();
+                            }
+                            if (againstRadio.domElement.checked === true) {
+                                await VoteContract.voteAgainst(this.proposalId, MateContract.address, this.mateList.selectedMateIds);
+                                ViewUtil.waitTransactionAndRefresh();
+                            }
+                        }
+                    },
+                }),
+            ),
+        ),
         ));
 
         this.load(params.id);
@@ -199,6 +199,7 @@ export default class GovernanceOldDetail implements View {
 
         let content;
         this.content.append(
+            el("hr"),
             el("h2", msg("GOVERNANCE_PROPOSAL_SUMMARY")),
             el("p", proposal.summary),
             el("h2", msg("GOVERNANCE_PROPOSAL_CONTENT")),

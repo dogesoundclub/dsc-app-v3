@@ -12,7 +12,7 @@ export default class MateItem extends DomNode {
 
     constructor(list: MateList, id: number, name: string | undefined, selectable: boolean, showingRarity: boolean) {
         super(`a.mate-item${list.votedMates.includes(id) === true ? ".off" : ""}`);
-        this.append(el("img", { src: `https://storage.googleapis.com/dsc-mate/336/dscMate-${id}.png` }), el("span.id", `#${id}`));
+        this.append(el("img", { src: `https://storage.googleapis.com/dsc-mate/336/dscMate-${id}.png` }), el("span.id", `#${id} ${name}`));
 
         if (showingRarity === true) {
             el("span.score", CommonUtil.numberWithCommas(String((rarity.scores as any)[id]))).appendTo(this);
@@ -38,10 +38,6 @@ export default class MateItem extends DomNode {
                 }).appendTo(this);
                 this.checkbox.domElement.checked = list.selectedMateIds.includes(id);
             }
-        }
-
-        else {
-            // el("span.name", name).appendTo(this);
         }
 
         this.onDom("click", () => {
