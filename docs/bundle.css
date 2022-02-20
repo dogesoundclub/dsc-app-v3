@@ -275,6 +275,9 @@ body {
 @media only screen and (max-width: 719px) {
   .mate-list > .mate-line {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 200px;
+    align-items: center;
+    justify-items: center;
   }
 }
 .mate-list > .mate-line > .mate-item {
