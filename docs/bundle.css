@@ -2765,15 +2765,60 @@ body {
   background-color: #2C2C2C;
   margin: 30px 0px;
 }
-.governance-detail-view > section > article > h2 {
-  font-size: 16px;
+.governance-detail-view > section > article > h1 {
+  font-size: 32px;
+  line-height: 32px;
   margin-bottom: 10px;
+  color: #E73C83;
+}
+.governance-detail-view > section > article > h1 > .result.for {
+  margin-top: 16px;
+  max-width: 210px;
+  font-size: 12px;
+  background: #222222;
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 9px 20px;
+  color: #56F545;
+  border-bottom: 1px solid #333333;
+}
+.governance-detail-view > section > article > h1 > .result.against {
+  margin-top: 16px;
+  max-width: 210px;
+  font-size: 12px;
+  background: #222222;
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 9px 20px;
+  color: #F75A5A;
+  border-bottom: 1px solid #333333;
+}
+.governance-detail-view > section > article > h1 > .result.canceled {
+  margin-top: 16px;
+  max-width: 210px;
+  font-size: 12px;
+  background: #222222;
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 9px 20px;
+  color: #676767;
+  border-bottom: 1px solid #333333;
+}
+.governance-detail-view > section > article > h2 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #E73C83;
 }
 .governance-detail-view > section > article > header {
   padding: 30px;
 }
 .governance-detail-view > section > article > header > h2 {
   font-size: 20px;
+  color: #E73C83;
 }
 .governance-detail-view > section > article > header > p {
   font-size: 14px;
