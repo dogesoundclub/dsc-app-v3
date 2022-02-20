@@ -2158,7 +2158,7 @@ body {
 .contest-view > section > h2 {
   font-size: 32px;
   line-height: 32px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 @media only screen and (max-width: 719px) {
   .contest-view > section > h2 {
@@ -2177,6 +2177,9 @@ body {
   color: #2C2C2C;
   background-color: #2C2C2C;
   margin: 60px 0px;
+}
+.contest-view > section > p {
+  margin-bottom: 20px;
 }
 .contest-view > section > table {
   min-width: 100%;

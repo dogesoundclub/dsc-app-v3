@@ -32,6 +32,7 @@ export default class Contest implements View {
             el("section",
                 el("hr"),
                 el("h2", msg("CONTEST_TITLE2")),
+                el("p", "개소리 투표는 이메이트 클레이튼 체인 마이그레이션 이후 다시 진행됩니다."),
                 new RankList(),
                 /*el(".pagination",
                     el("a", "<<"),
