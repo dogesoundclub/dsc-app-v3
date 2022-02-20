@@ -4,8 +4,8 @@ import { View, ViewParams } from "skyrouter";
 import superagent from "superagent";
 import MateList from "../component/mate/MateList";
 import Layout from "./Layout";
-import MateParts from "./MateParts.json";
-import Mates from "./Mates.json";
+import MateParts from "./mates/MateParts.json";
+import Mates from "./mates/Mates.json";
 
 export default class Gallery implements View {
 

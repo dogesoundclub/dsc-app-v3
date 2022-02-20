@@ -1,0 +1,194 @@
+.governance-view {
+    max-width     : 1156px;
+    margin        : auto;
+    display       : flex;
+    flex-direction: column;
+
+    @media @phone {
+        padding: 20px;
+    }
+
+    >header {
+        margin-top: 60px;
+
+        @media @phone {
+            margin-top: 6px;
+        }
+
+        >h1 {
+            font-size    : 32px;
+            line-height  : 32px;
+            margin-bottom: 10px;
+
+            @media @phone {
+                font-size: 20px;
+            }
+        }
+
+        >p {
+            font-size  : 16px;
+            line-height: 20px;
+        }
+
+        >.button-wrap {
+            display   : flex;
+            margin-top: 30px;
+
+            >button {
+                font-family  : DungGeunMo;
+                font-size    : 16px;
+                background   : #E73C83;
+                color        : white;
+                border       : 1px solid #E73C83;
+                box-sizing   : border-box;
+                border-radius: 8px;
+                padding      : 18px 111px;
+
+                &:hover {
+                    color           : #E73C83;
+                    background-color: white;
+                    border-color    : white;
+                }
+
+                @media @phone {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    >section {
+        >hr {
+            border          : none;
+            height          : 1px;
+            color           : #2C2C2C;
+            background-color: #2C2C2C;
+            margin          : 60px 0px;
+
+            @media @phone {
+                margin: 20px 0px;
+            }
+        }
+
+        >h2 {
+            font-size    : 24px;
+            line-height  : 24px;
+            margin-bottom: 24px;
+
+            @media @phone {
+                font-size: 20px;
+            }
+        }
+
+        >table {
+            min-width: 100%;
+            margin   : auto;
+
+            >thead {
+                background: #292929;
+
+                >tr {
+                    >.dogesound {
+                        width        : 20%;
+                        padding      : 24px 20px 24px;
+                        padding      : 16px;
+                        font-size    : 16px;
+                        border-radius: 10px 0px 0px 0px;
+                    }
+
+                    >.proposal {
+                        width        : 80%;
+                        padding      : 24px 20px 24px;
+                        padding      : 16px;
+                        font-size    : 16px;
+                        border-radius: 0px 10px 0px 0px;
+                    }
+                }
+            }
+
+
+            >tbody {
+                background   : #222222;
+                border-radius: 0px;
+
+                >tr {
+                    text-align: left;
+                    cursor    : pointer;
+
+                    >.result.for {
+                        width        : 20%;
+                        padding      : 24px 20px 24px;
+                        padding      : 16px;
+                        font-size    : 16px;
+                        color        : #56F545;
+                        border-bottom: 1px solid #333333;
+                    }
+
+                    >.result.against {
+                        width        : 20%;
+                        padding      : 24px 20px 24px;
+                        padding      : 16px;
+                        font-size    : 16px;
+                        color        : #F75A5A;
+                        border-bottom: 1px solid #333333;
+                    }
+
+                    >.result.canceled {
+                        width        : 20%;
+                        padding      : 24px 20px 24px;
+                        padding      : 16px;
+                        font-size    : 16px;
+                        color        : #676767;
+                        border-bottom: 1px solid #333333;
+                    }
+
+                    >.cancellation-dogesound {
+                        width        : 80%;
+                        padding      : 24px 20px 24px;
+                        padding      : 16px;
+                        font-size    : 16px;
+                        color        : #676767;
+                        border-bottom: 1px solid #333333;
+                    }
+
+                    >.dogesound {
+                        width        : 80%;
+                        padding      : 24px 20px 24px;
+                        padding      : 16px;
+                        font-size    : 16px;
+                        border-bottom: 1px solid #333333;
+                    }
+                }
+            }
+        }
+
+        >.pagination {
+            display        : flex;
+            justify-content: center;
+            margin-top     : 30px;
+
+            >a {
+                border       : 1px solid #333333;
+                box-sizing   : border-box;
+                border-radius: 2px;
+                padding      : 9px 14px;
+                margin       : 5px;
+
+                &:hover {
+                    border-color: #E73C83;
+                    color       : #E73C83;
+                }
+            }
+        }
+
+        >.status-board {
+            >header {
+                >h2 {
+                    font-size    : 24px;
+                    line-height  : 24px;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+}

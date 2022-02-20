@@ -1,0 +1,51 @@
+.follow-me-view {
+    max-width : 1156px;
+    margin    : auto;
+    margin-top: 60px;
+
+    @media @phone {
+        margin-top: 26px;
+        padding   : 20px;
+    }
+
+    >header {
+        >h1 {
+            font-size  : 32px;
+            line-height: 32px;
+
+            @media @phone {
+                font-size: 20px;
+            }
+        }
+
+        >h2 {
+            font-size    : 18px;
+            line-height  : 20px;
+            color        : #FFFFFF;
+            margin-top   : 10px;
+            margin-bottom: 60px;
+
+            @media @phone {
+                font-size: 14px;
+            }
+        }
+    }
+
+    >section {
+        >section {
+            >img {
+                border-radius: 8px;
+            }
+
+            >article {
+                >.content-container {
+                    display: flex;
+
+                    >img {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
