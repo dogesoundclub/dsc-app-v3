@@ -257,7 +257,7 @@ body {
 .connect-wallet-popup {
   position: relative;
   max-width: 420px;
-  width: 100%;
+  width: 90%;
   margin: auto;
   border-radius: 4px;
   background-color: #000000;
@@ -744,6 +744,7 @@ body {
 }
 .home-view {
   font-family: DungGeunMo;
+  overflow: auto;
 }
 .home-view > header {
   background-image: url("/images/view/home/club.png");
