@@ -4,6 +4,7 @@ export default class Activities implements View {
     private container;
     discordUser: DiscordUserInfo | undefined;
     constructor();
+    private checkHolder;
     private checkDiscordLogin;
     private checkMateHolder;
     private checkEMateHolder;

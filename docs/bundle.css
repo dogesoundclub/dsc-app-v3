@@ -1357,6 +1357,9 @@ body {
     padding: 20px;
   }
 }
+.activities-view.hiding-buttons > section > article > button {
+  display: none;
+}
 .activities-view > header > h1 {
   font-size: 24px;
   line-height: 24px;

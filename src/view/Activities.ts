@@ -3,6 +3,7 @@ import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import superagent from "superagent";
 import Alert from "../component/shared/dialogue/Alert";
+import MateContract from "../contracts/MateContract";
 import DiscordUserInfo from "../DiscordUserInfo";
 import EthereumWallet from "../ethereum/EthereumWallet";
 import Wallet from "../klaytn/Wallet";
@@ -17,7 +18,7 @@ export default class Activities implements View {
 
     constructor() {
         Layout.current.title = msg("ACTIVITIES_TITLE");
-        Layout.current.content.append(this.container = el(".activities-view",
+        Layout.current.content.append(this.container = el(".activities-view.hiding-buttons",
             el("header",
                 el("h1", msg("ACTIVITIES_TITLE")),
                 el("h2", msg("ACTIVITIES_DESC")),
@@ -60,7 +61,19 @@ export default class Activities implements View {
                 ),
             ),
         ));
+
+        this.checkHolder();
         this.checkDiscordLogin();
+    }
+
+    private async checkHolder() {
+        const owner = await Wallet.loadAddress();
+        if (owner !== undefined) {
+            const balance = await MateContract.balanceOf(owner);
+            if (balance.toNumber() > 0) {
+                this.container.deleteClass("hiding-buttons");
+            }
+        }
     }
 
     private async checkDiscordLogin() {

@@ -1,0 +1,1 @@
+{"version":3,"file":"FollowMe.d.ts","sourceRoot":"","sources":["../../../src/view/mates/FollowMe.ts"],"names":[],"mappings":"AAEA,OAAO,EAAE,IAAI,EAAE,UAAU,EAAE,MAAM,WAAW,CAAC;AAG7C,MAAM,CAAC,OAAO,OAAO,QAAS,YAAW,IAAI;IACzC,OAAO,CAAC,SAAS,CAAU;;IA4BpB,YAAY,CAAC,MAAM,EAAE,UAAU,EAAE,GAAG,EAAE,MAAM,GAAG,IAAI;IAGnD,KAAK,IAAI,IAAI;CAGvB"}
