@@ -1068,38 +1068,73 @@ body {
     font-size: 20px;
   }
 }
+.home-view > section > .nft > .mate-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  margin-top: 20px;
+}
+.home-view > section > .nft > .mate-container > img {
+  max-width: 176px;
+  max-height: 176px;
+  border-radius: 4px;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > section > .nft > .mate-container > img {
+    max-width: 155px;
+    max-height: 155px;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .home-view > section > .nft > .mate-container > .pc {
+    display: none;
+  }
+}
 .home-view > section > .nft > section {
-  display: grid;
+  display: flex;
 }
 @media only screen and (max-width: 719px) {
   .home-view > section > .nft > section {
-    display: flex;
     flex-direction: column;
   }
 }
 .home-view > section > .nft > section > .mate-container {
   display: flex;
-  grid-column: 1 / 3;
+  gap: 20px;
   flex-wrap: wrap;
+  flex-grow: 1;
 }
 .home-view > section > .nft > section > .mate-container > img {
   max-width: 176px;
   max-height: 176px;
-  margin-right: 20px;
-  margin-bottom: 20px;
   border-radius: 4px;
 }
+@media only screen and (max-width: 719px) {
+  .home-view > section > .nft > section > .mate-container > img {
+    max-width: 155px;
+    max-height: 155px;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .home-view > section > .nft > section > .mate-container > .pc {
+    display: none;
+  }
+}
 .home-view > section > .nft > section > article {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 568px;
+  min-height: 372px;
   padding: 20px;
   background: #222222;
   border: 1px solid #3D3D3D;
   box-sizing: border-box;
   border-radius: 8px;
-  grid-column: 3 / 5;
-  min-height: 372px;
 }
 @media only screen and (max-width: 719px) {
   .home-view > section > .nft > section > article {
+    min-width: 320px;
     min-height: 400px;
   }
 }
@@ -1176,12 +1211,7 @@ body {
   height: 1px;
   color: #2C2C2C;
   background-color: #2C2C2C;
-  margin: 60px 0px;
-}
-@media only screen and (max-width: 719px) {
-  .home-view > section > .nft > section > article > hr {
-    margin: 20px 0px;
-  }
+  margin: 20px 0px;
 }
 .home-view > section > .mission > .title {
   font-size: 26px;
@@ -1353,6 +1383,17 @@ body {
 .gallery-view > section > .filter {
   min-width: 254px;
   margin-right: 100px;
+}
+.gallery-view > section > .filter > select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("/images/shared/icn/icn_arrow_down.svg") no-repeat 95% 50%;
+}
+.gallery-view > section > .filter > select option {
+  background: red;
+  border: 0;
+  padding: 15px;
 }
 @media only screen and (max-width: 719px) {
   .gallery-view > section > .filter {

@@ -33,6 +33,19 @@
             min-width   : 254px;
             margin-right: 100px;
 
+            >select {
+                -webkit-appearance: none;
+                -moz-appearance   : none;
+                appearance        : none;
+                background        : url("/images/shared/icn/icn_arrow_down.svg") no-repeat 95% 50%;
+
+                option {
+                    background: red;
+                    border    : 0;
+                    padding   : 15px;
+                }
+            }
+
             @media @phone {
                 margin-right: 0px;
             }

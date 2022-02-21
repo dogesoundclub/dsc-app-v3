@@ -53,7 +53,7 @@ JOIN_CLUB_TITLE,Join the Club,Join the Club,Join the Club
 JOIN_CLUB_DESC,이것은 DSC 멤버에게만 열려 있습니다.\n당신의 메이트를 얻으려면 OpenSea에서 확인하세요.,"This is only open to DSC members. 
 To get your Mate, check out on OpenSea.","これはDSCメンバーにだけ公開されています。 
 メイトを手に入れるには、OpenSeaでチェックしてください。"
-JOIN_CLUB_BUTTON,Buy a Mate on Opensea,Buy a Mate on Opensea,Buy a Mate on Opensea
+JOIN_CLUB_BUTTON,▶ Buy a Mate on Opensea,▶ Buy a Mate on Opensea,▶ Buy a Mate on Opensea
 MATE_TITLE,MATES 🐩🐶🤑,MATES 🐩🐶🤑,MATES 🐩🐶🤑
 MATES_TITLE1,DSC MATEES란 무엇입니까?,What is DSC MATES?,DSCMATESとは何ですか。
 MATES_DESC1,"- DSC MATES는 1만 개의 다양한 문자로 구성된 24*24 픽셀 아트입니다.\n- 10개의 얼굴과 80개가 넘는 특징들이 합쳐져 10,000명의 서로 다른 외모를 가진 짝을 만들었다. 아무것도 같지 않다. 특성에 따른 메이트 정보는 본 사이트 갤러리에서 확인할 수 있습니다.\n- 10,000마리의 짝은 모두 같은 조건에서 무작위로 생성되었다. 인위적으로 희귀한 것은 없다.","- DSC MATES are 24*24 pixel art with 10,000 different characters, all with different shapes.
@@ -398,7 +398,7 @@ DOCS_BUTTON,Docs,Docs,Docs
 REGISTER_BUTTON,등록하기,Register,Register
 SUBMIT_BUTTON,제출하기,Submit,Submit
 SAVE_BUTTON,저장하기,Save,Save
-YES_BUTTON,YES,YES,YES
+YES_BUTTON,▶YES,▶YES,▶YES
 NO_BUTTON,NO,NO,NO
 CONFIRM_BUTTON,확인,CONFIRM,CONFIRM
 CANCEL_BUTTON,취소,CANCEL,CANCEL
