@@ -383,6 +383,7 @@ body {
   font-size: 20px;
   line-height: 1em;
   height: 100%;
+  text-align: center;
 }
 .mate-list > .mate-line > .mate-item > img {
   max-width: 176px;
@@ -629,8 +630,11 @@ body {
   box-sizing: border-box;
   border-radius: 4px;
   color: white;
-  padding: 4px 8px;
+  font-size: 16px;
+  padding: 4px 20px;
   height: 38px;
+  text-align: center;
+  text-align-last: center;
 }
 .layout > header {
   max-width: 1156px;
@@ -715,6 +719,9 @@ body {
   align-items: center;
   height: 44px;
   margin: 0px 10px;
+  font-size: 12px;
+  text-decoration: underline;
+  color: white;
 }
 .layout > footer > .provider {
   display: flex;
@@ -881,6 +888,7 @@ body {
   margin-top: 16px;
   font-size: 20px;
   line-height: 20px;
+  margin-bottom: 20px;
   color: #E73C83;
 }
 .home-view > section > .dogesound > .content > .address {
@@ -899,7 +907,7 @@ body {
   color: #E73C83;
 }
 .home-view > section > .dogesound > .content > .warning {
-  margin-top: 16px;
+  margin-top: 10px;
   font-size: 14px;
   line-height: 20px;
   color: #676767;
@@ -1161,7 +1169,7 @@ body {
 .home-view > section > .mission > .title {
   font-size: 26px;
   line-height: 26px;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 }
 .home-view > section > .mission > .content > .title {
   margin-top: 8px;
@@ -1187,7 +1195,7 @@ body {
 .home-view > section > .team > .title {
   font-size: 26px;
   line-height: 26px;
-  margin-bottom: 8px;
+  margin-bottom: 30px;
 }
 @media only screen and (max-width: 719px) {
   .home-view > section > .team > .title {
@@ -1224,7 +1232,7 @@ body {
 .home-view > section > .partnership > .title {
   font-size: 26px;
   line-height: 26px;
-  margin-bottom: 8px;
+  margin-bottom: 30px;
 }
 @media only screen and (max-width: 719px) {
   .home-view > section > .partnership > .content {
@@ -1232,14 +1240,14 @@ body {
   }
 }
 .home-view > section > .partnership > .content > .title {
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   font-size: 20px;
   line-height: 20px;
   color: #E73C83;
 }
 .home-view > section > .partnership > .content > .content {
   display: flex;
+  margin-bottom: 30px;
 }
 .home-view > section > .partnership > .content > .content > img {
   margin-right: 20px;
@@ -1500,6 +1508,7 @@ body {
   padding: 18px 0px;
   text-decoration: none;
   text-align: center;
+  max-width: 326px;
 }
 @media only screen and (max-width: 719px) {
   .activities-view > section > .certification-container > a {
@@ -1622,7 +1631,7 @@ body {
 .fully-on-view > section > article > p {
   margin-top: 4px;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 24px;
 }
 @media only screen and (max-width: 719px) {
   .fully-on-view > section > article > p {
@@ -1827,8 +1836,8 @@ body {
 }
 .mates-view > header > p {
   font-size: 16px;
-  line-height: 20px;
   color: #FFFFFF;
+  line-height: 24px;
 }
 @media only screen and (max-width: 719px) {
   .mates-view > header > p {
@@ -1856,6 +1865,7 @@ body {
   margin-top: 30px;
   font-size: 24px;
   line-height: 24px;
+  margin-bottom: 4px;
   color: #E73C83;
 }
 @media only screen and (max-width: 719px) {
@@ -1866,7 +1876,7 @@ body {
 .mates-view > section > article > p {
   margin-top: 4px;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 24px;
 }
 @media only screen and (max-width: 719px) {
   .mates-view > section > article > p {
@@ -1890,6 +1900,7 @@ body {
   margin-top: 20px;
 }
 .mates-view > section > .button-wrap > button:hover {
+  border-color: white;
   background-color: white;
   color: #E73C83;
 }
@@ -2428,11 +2439,15 @@ body {
   display: flex;
   justify-content: center;
 }
+.buy-mate-view ::after {
+  background: rgba(0, 0, 0, 0.4);
+}
 .buy-mate-view > section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 @media only screen and (max-width: 719px) {
   .buy-mate-view > section {
@@ -2571,6 +2586,7 @@ body {
   padding: 18px 0px;
   text-decoration: none;
   text-align: center;
+  max-width: 326px;
 }
 @media only screen and (max-width: 719px) {
   .my-mate-view > section > .certification-container > a {
@@ -2647,7 +2663,7 @@ body {
 }
 .contest-view > header > p {
   font-size: 16px;
-  line-height: 20px;
+  line-height: 24px;
 }
 @media only screen and (max-width: 719px) {
   .contest-view > header > p {

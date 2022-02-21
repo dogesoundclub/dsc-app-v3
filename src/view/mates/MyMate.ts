@@ -38,10 +38,8 @@ export default class MyMate implements View {
                 ),
             ),
         ));
-        this.windowResizeHandler();
         this.load();
         this.checkDiscordLogin();
-        window.addEventListener("resize", this.windowResizeHandler);
     }
 
     private async load() {
@@ -71,10 +69,6 @@ export default class MyMate implements View {
             this.mateList.load(mates);
         }
     }
-
-    private windowResizeHandler = () => {
-        this.mateList.style({ height: window.innerHeight - 213 });
-    };
 
     private async checkDiscordLogin() {
 

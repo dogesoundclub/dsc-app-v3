@@ -195,7 +195,7 @@ export default class MatesDetail implements View {
                             instagramInput = el("input", { placeholder: msg("MATE_DETAIL_SNS_FORM_INSTAGRAM") }),
                         ),
                     ),
-                    el("a.submit-button", msg("MATE_DETAIL_SNS_FORM_TWITTER_SUBMIT"), {
+                    el("a.submit-button", msg("SUBMIT_BUTTON"), {
                         click: async () => {
                             await FollowMeContract.set(MateContract.address, this.id, 0, twitterInput.domElement.value);
                             await FollowMeContract.set(MateContract.address, this.id, 1, instagramInput.domElement.value);

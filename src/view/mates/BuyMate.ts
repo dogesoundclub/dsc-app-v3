@@ -10,7 +10,7 @@ export default class BuyMate implements View {
         Layout.current.title = msg("JOIN_CLUB_TITLE");
         Layout.current.content.append(this.container = el(".buy-mate-view",
             el("section",
-                el("img", { src: "/images/shared/img/mate-mock.png" }),
+                el("img", { src: "/images/shared/img/dog.png" }),
                 el("h1", msg("JOIN_CLUB_TITLE")),
                 el("p", msg("JOIN_CLUB_DESC")),
                 el("button", msg("JOIN_CLUB_BUTTON"), {
