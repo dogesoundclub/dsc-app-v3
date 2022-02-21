@@ -31,8 +31,8 @@ export default class Layout implements View {
                 new PCMenu(),
                 select = el("select.language-select",
                     el("option", "🇰🇷 KOR", { value: "ko" }),
-                    el("option", "🇺🇸 ENG", { value: "en" }),
-                    el("option", "🇯🇵 JAP", { value: "jp" }),
+                    // el("option", "🇺🇸 ENG", { value: "en" }),
+                    // el("option", "🇯🇵 JAP", { value: "jp" }),
                     {
                         change: () => {
                             BrowserInfo.changeLanguage(select.domElement.value);
