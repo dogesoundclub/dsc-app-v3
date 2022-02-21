@@ -30,7 +30,12 @@
         }
 
         >.filter {
-            min-width: 254px;
+            min-width   : 254px;
+            margin-right: 100px;
+
+            @media @phone {
+                margin-right: 0px;
+            }
 
             >.input-container {
                 position     : relative;
@@ -89,7 +94,7 @@
         }
 
         >article {
-            margin-top: 26px;
+            margin-top: 16px;
 
             >.mate-list {
                 margin-left: 16px;

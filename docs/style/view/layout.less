@@ -31,7 +31,18 @@
             }
         }
 
+        >a {
+            display  : flex;
+            flex-grow: 1;
+
+            @media @phone {
+                flex-grow: 0;
+            }
+        }
+
         >.pc-menu {
+            flex-grow: 2;
+
             @media @phone {
                 display: none;
             }

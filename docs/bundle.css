@@ -393,7 +393,7 @@ body {
 .mate-list > .mate-line > .mate-item > .id {
   margin-top: 8px;
   font-family: DungGeunMo;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   width: 100%;
 }
 .mate-list > .mate-line > .mate-item > .name {
@@ -636,6 +636,11 @@ body {
   text-align: center;
   text-align-last: center;
 }
+@media only screen and (max-width: 719px) {
+  .language-select {
+    padding: 4px 8px;
+  }
+}
 .layout > header {
   max-width: 1156px;
   margin: auto;
@@ -673,6 +678,18 @@ body {
   .layout > header > .left > .menu-button {
     display: block;
   }
+}
+.layout > header > a {
+  display: flex;
+  flex-grow: 1;
+}
+@media only screen and (max-width: 719px) {
+  .layout > header > a {
+    flex-grow: 0;
+  }
+}
+.layout > header > .pc-menu {
+  flex-grow: 2;
 }
 @media only screen and (max-width: 719px) {
   .layout > header > .pc-menu {
@@ -1335,6 +1352,12 @@ body {
 }
 .gallery-view > section > .filter {
   min-width: 254px;
+  margin-right: 100px;
+}
+@media only screen and (max-width: 719px) {
+  .gallery-view > section > .filter {
+    margin-right: 0px;
+  }
 }
 .gallery-view > section > .filter > .input-container {
   position: relative;
@@ -1386,7 +1409,7 @@ body {
   appearance: none;
 }
 .gallery-view > section > article {
-  margin-top: 26px;
+  margin-top: 16px;
 }
 .gallery-view > section > article > .mate-list {
   margin-left: 16px;
@@ -3161,7 +3184,15 @@ body {
   }
 }
 .dsc-family-view > section > article > img {
+  width: 130px;
+  height: 130px;
   border-radius: 8px;
+}
+@media only screen and (max-width: 719px) {
+  .dsc-family-view > section > article > img {
+    width: 100%;
+    height: 100%;
+  }
 }
 .dsc-family-view > section > article > .content {
   margin-left: 20px;

@@ -26,7 +26,7 @@ export default class Layout implements View {
                     }),
                 ),
                 el("a", { click: () => ViewUtil.go("/") },
-                    el("img", { src: "/images/logo.svg", alt: "logo" }),
+                    el("img.logo", { align: "left", src: "/images/logo.svg", alt: "logo" }),
                 ),
                 new PCMenu(),
                 select = el("select.language-select",
