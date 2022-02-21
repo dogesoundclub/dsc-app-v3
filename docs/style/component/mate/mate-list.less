@@ -24,8 +24,8 @@
             height           : 100%;
 
             >img {
-                width        : 176px;
-                height       : 176px;
+                max-width    : 176px;
+                max-height   : 176px;
                 border-radius: 8px;
             }
 
@@ -33,6 +33,7 @@
                 margin-top   : 8px;
                 font-family  : DungGeunMo;
                 margin-bottom: 20px;
+                width        : 100%;
             }
 
             >.name {
@@ -61,9 +62,8 @@
             }
 
             @media only screen and (max-width: 799px) {
-                width    : 64px;
-                height   : 64px;
-                font-size: 14px;
+                text-align: center;
+                font-size : 14px;
             }
 
             &.off {

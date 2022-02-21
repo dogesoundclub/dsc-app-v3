@@ -293,14 +293,15 @@ body {
   height: 100%;
 }
 .mate-list > .mate-line > .mate-item > img {
-  width: 176px;
-  height: 176px;
+  max-width: 176px;
+  max-height: 176px;
   border-radius: 8px;
 }
 .mate-list > .mate-line > .mate-item > .id {
   margin-top: 8px;
   font-family: DungGeunMo;
   margin-bottom: 20px;
+  width: 100%;
 }
 .mate-list > .mate-line > .mate-item > .name {
   top: 0;
@@ -326,8 +327,7 @@ body {
 }
 @media only screen and (max-width: 799px) {
   .mate-list > .mate-line > .mate-item {
-    width: 64px;
-    height: 64px;
+    text-align: center;
     font-size: 14px;
   }
 }
@@ -965,8 +965,8 @@ body {
   flex-wrap: wrap;
 }
 .home-view > section > .nft > section > .mate-container > img {
-  width: 176px;
-  height: 176px;
+  max-width: 176px;
+  max-height: 176px;
   margin-right: 20px;
   margin-bottom: 20px;
   border-radius: 4px;
@@ -1050,8 +1050,8 @@ body {
   margin-top: 16px;
 }
 .home-view > section > .nft > section > article > .image-wrap > img {
-  width: 54px;
-  height: 46px;
+  max-width: 54px;
+  max-height: 46px;
 }
 .home-view > section > .nft > section > article > hr {
   border: none;
