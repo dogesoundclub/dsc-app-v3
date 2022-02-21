@@ -1,0 +1,79 @@
+.user-menu {
+
+    >.connect-wallet,
+    >.wallet-address {
+        display         : block;
+        width           : 100%;
+        text-align      : center;
+        color           : @background;
+        background-color: rgba(177, 156, 118, 1);
+        font-size       : 14px;
+        padding         : 8px 16px;
+        border-radius   : 4px;
+    }
+
+    >.connect-wallet,
+    >.wallet-address:hover {
+        background-color: rgba(177, 156, 118, 1);
+        color           : white;
+    }
+
+    >.wallet-address {
+        position: relative;
+        cursor  : pointer;
+
+        >ul {
+            position        : absolute;
+            left            : 0;
+            top             : 30px;
+            width           : 100px;
+            display         : none;
+            background-color: #222;
+            padding         : 10px 0;
+
+            >li {
+                >a {
+                    display   : block;
+                    text-align: center;
+                    padding   : 10px;
+                    color     : #fff;
+
+                    &:hover {
+                        color: rgba(177, 156, 118, 1);
+                    }
+
+                    &:active {
+                        color: rgba(177, 156, 118, 1);
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            >ul {
+                display: block;
+            }
+        }
+    }
+
+    >ul {
+        margin-top : 10px;
+        margin-left: 10px;
+
+        >li {
+            >a {
+                display: block;
+                padding: 8px 5px;
+                color  : #ccc;
+
+                &:hover {
+                    color: rgba(177, 156, 118, 1);
+                }
+
+                &:active {
+                    color: rgba(177, 156, 118, 1);
+                }
+            }
+        }
+    }
+}

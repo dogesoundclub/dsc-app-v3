@@ -1,0 +1,61 @@
+.pc-menu {
+    >ul {
+        display: flex;
+
+        >li {
+            display    : flex;
+            float      : left;
+            font-weight: 600;
+
+            >a {
+                cursor         : pointer;
+                padding        : 8px 12px 8px 12px;
+                font-size      : 0.875rem;
+                text-decoration: none;
+                color          : white;
+
+                &:hover {
+                    background-color: rgba(177, 156, 118, 0.5);
+                    border-radius   : 4px;
+                }
+
+                &:active {
+                    background-color: rgba(177, 156, 118, 0.7);
+                    border-radius   : 4px;
+                }
+            }
+
+            >ul {
+                position        : absolute;
+                left            : 0;
+                top             : 20px;
+                width           : 100px;
+                display         : none;
+                background-color: #222;
+                padding         : 10px 0;
+
+                >li {
+                    >a {
+                        display   : block;
+                        text-align: center;
+                        padding   : 10px;
+
+                        &:hover {
+                            color: rgba(177, 156, 118, 1);
+                        }
+
+                        &:active {
+                            color: rgba(177, 156, 118, 1);
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                >ul {
+                    display: block;
+                }
+            }
+        }
+    }
+}

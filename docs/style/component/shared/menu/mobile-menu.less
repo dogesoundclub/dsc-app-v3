@@ -1,0 +1,53 @@
+.mobile-menu {
+    position        : fixed;
+    width           : 100%;
+    background-color: black;
+    padding         : 10px;
+
+    >ul {
+        >li {
+            >a {
+                display  : block;
+                padding  : 12px 5px;
+                font-size: 0.825rem;
+
+                &:hover {
+                    color: rgba(177, 156, 118, 1);
+                }
+
+                &:active {
+                    color: rgba(177, 156, 118, 1);
+                }
+            }
+
+            >ul {
+                margin-left: 10px;
+
+                >li {
+                    >a {
+                        display: block;
+                        padding: 8px 5px;
+                        color  : #ccc;
+
+                        &:hover {
+                            color: rgba(177, 156, 118, 1);
+                        }
+
+                        &:active {
+                            color: rgba(177, 156, 118, 1);
+                        }
+                    }
+
+                    &.parent {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    >.user-menu {
+        margin    : auto;
+        margin-top: 16px;
+    }
+}

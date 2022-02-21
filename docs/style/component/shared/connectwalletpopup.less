@@ -1,0 +1,62 @@
+.connect-wallet-popup {
+    position        : relative;
+    max-width       : 420px;
+    width           : 100%;
+    margin          : auto;
+    border-radius   : 4px;
+    background-color: #000000;
+    border          : solid 1px white;
+
+    >h2 {
+        font-size: 24px;
+        padding  : 16px;
+    }
+
+    >p {
+        padding   : 16px;
+        border-top: 1px solid #CCC;
+        color     : #CCC;
+    }
+
+    >.button-container {
+        padding: 16px;
+
+        >a {
+            margin-top      : 10px;
+            display         : flex;
+            justify-content : center;
+            align-items     : center;
+            width           : 100%;
+            background-color: transparent;
+            color           : white;
+            padding         : 8px 16px;
+            font-size       : 14px;
+            border-radius   : 4px;
+            text-decoration : none;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.5);
+                box-shadow      : 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+                color           : white;
+            }
+
+            >img {
+                margin-right: 10px;
+            }
+        }
+
+        >.connect-kaikas-button {
+            background-color: rgb(111, 101, 88);
+            color           : #ffffff;
+        }
+
+        >.connect-klip-button {
+            background-color: rgb(254, 229, 0);
+            color           : #000000;
+        }
+
+        >.cancel-button {
+            border: 1px solid #ffffff;
+        }
+    }
+}

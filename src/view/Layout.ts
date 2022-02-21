@@ -2,8 +2,8 @@ import { BodyNode, DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import BrowserInfo from "../BrowserInfo";
-import MobileMenu from "../ui/menu/MobileMenu";
-import PCMenu from "../ui/menu/PCMenu";
+import MobileMenu from "../component/shared/menu/MobileMenu";
+import PCMenu from "../component/shared/menu/PCMenu";
 import ViewUtil from "./ViewUtil";
 
 export default class Layout implements View {

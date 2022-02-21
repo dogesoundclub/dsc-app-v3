@@ -23,6 +23,7 @@ import Member from "./view/Member";
 import MyMate from "./view/mates/MyMate";
 import Terms from "./view/Terms";
 import UpdateDscFamily from "./view/dscFamily/UpdateDscFamily";
+import Wallet from "./klaytn/Wallet";
 
 (async () => {
     msg.language = BrowserInfo.language;
@@ -63,5 +64,9 @@ import UpdateDscFamily from "./view/dscFamily/UpdateDscFamily";
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);
         sessionStorage.removeItem("__spa_path");
+    }
+
+    if (await Wallet.connected() !== true) {
+        await Wallet.connect();
     }
 })();
