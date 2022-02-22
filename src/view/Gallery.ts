@@ -3,6 +3,7 @@ import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import superagent from "superagent";
 import MateList from "../component/mate/MateList";
+import CollapsibleFilter from "../component/shared/CollapsibleFilter";
 import Layout from "./Layout";
 import MateParts from "./mates/MateParts.json";
 import Mates from "./mates/Mates.json";
@@ -39,23 +40,16 @@ export default class Gallery implements View {
                         el("button", msg("GALLERY_SEARCH_BUTTON")),
                     ),
                     ...Object.entries(MateParts).map(([key, values]) => {
-                        const select = el("select",
-                            {
-                                placeholder: key,
-                                change: (event, select) => {
-                                    const value = (select.domElement as HTMLSelectElement).value;
-                                    Object.assign(this.filter, { [key]: value });
-                                    if (value === "") {
-                                        delete this.filter[key];
-                                    }
-                                    this.loadMates();
-                                },
+                        const select = new CollapsibleFilter(key, values, {
+                            click: (event: any, select: any) => {
+                                const value = (select.domElement as HTMLSelectElement).value;
+                                Object.assign(this.filter, { [key]: value });
+                                if (value === "") {
+                                    delete this.filter[key];
+                                }
+                                this.loadMates();
                             },
-                            el("option", key, { value: "" }),
-                            key === "Face" ? undefined : el("option", "None", { value: "None" }),
-                            ...values.map((value) => el("option", value, { value })),
-                        );
-                        this.selects.push(select as DomNode<HTMLSelectElement>);
+                        });
                         return select;
                     }),
                     el("a.reset-button", msg("GALLERY_RESET_FILTER_BUTTON"), {

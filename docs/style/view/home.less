@@ -16,8 +16,9 @@
             }
 
             >.logo {
-                width : 137px;
-                height: 118px;
+                width    : 100%;
+                max-width: 137px;
+                height   : 118px;
             }
 
             >.intro {
@@ -47,7 +48,8 @@
             }
 
             >button {
-                width        : 200px;
+                width        : 100%;
+                max-width    : 200px;
                 height       : 52px;
                 margin-top   : 30px;
                 background   : #E73C83;
@@ -91,8 +93,8 @@
             }
 
             >.talker {
-                width        : 200px;
-                height       : 200px;
+                max-width    : 200px;
+                max-height   : 200px;
                 margin       : 20px;
                 border-radius: 8px;
             }
@@ -104,7 +106,7 @@
                     display       : flex;
                     align-items   : center;
                     flex-direction: column;
-                    padding       : 10px;
+                    padding       : 20px;
                 }
 
                 >.title {
@@ -124,7 +126,7 @@
                     padding      : 6px 10px 4px 10px;
                     font-size    : 16px;
                     line-height  : 16px;
-                    width        : 310px;
+                    max-width    : 310px;
                     color        : #676767;
                     border       : 1px solid #676767;
                     box-sizing   : border-box;
@@ -220,12 +222,12 @@
                     }
 
                     >img {
-                        min-width : 372px;
-                        min-height: 372px;
+                        max-width : 372px;
+                        max-height: 372px;
 
                         @media @phone {
-                            min-width : 320px;
-                            min-height: 320px;
+                            max-width : 320px;
+                            max-height: 320px;
                         }
                     }
 
@@ -302,9 +304,10 @@
             }
 
             >.warning {
-                margin-top : 12px;
-                font-size  : 16px;
-                line-height: 20px;
+                overflow-wrap: break-word;
+                margin-top   : 12px;
+                font-size    : 16px;
+                line-height  : 20px;
 
                 color: #676767;
             }
@@ -327,6 +330,11 @@
                 flex-wrap : wrap;
                 flex-grow : 1;
                 margin-top: 20px;
+
+                @media @phone {
+                    display              : grid;
+                    grid-template-columns: repeat(2, 1fr);
+                }
 
                 >img {
                     max-width    : 176px;
@@ -359,14 +367,18 @@
                     flex-wrap: wrap;
                     flex-grow: 1;
 
+                    @media @phone {
+                        display              : grid;
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+
                     >img {
                         max-width    : 176px;
                         max-height   : 176px;
                         border-radius: 4px;
 
                         @media @phone {
-                            max-width : 155px;
-                            max-height: 155px;
+                            width: 100%;
                         }
                     }
 
@@ -389,7 +401,7 @@
                     border-radius: 8px;
 
                     @media @phone {
-                        min-width : 320px;
+                        margin-top: 20px;
                         min-height: 400px;
                     }
 
@@ -406,7 +418,7 @@
 
                     >.button-container {
                         display   : flex;
-                        width     : 100%;
+                        max-width : 100%;
                         margin-top: 16px;
                         gap       : 10px;
 

@@ -1,0 +1,44 @@
+.collapsible-filter {
+    >section {
+        min-width   : 254px;
+        margin-right: 100px;
+
+        >.select-container {
+            display        : flex;
+            justify-content: space-between;
+            width          : 100%;
+
+            >.collapsible {
+                text-align      : left;
+                font-family     : DungGeunMo;
+                width           : 100%;
+                background-color: transparent;
+                border          : none;
+                border-bottom   : #E73C83 solid 1px;
+                font-size       : 16px;
+                color           : #E73C83;
+                padding         : 16px 0px;
+                appearance      : none;
+            }
+
+            >img {
+                border-bottom: #E73C83 solid 1px;
+            }
+        }
+
+        >.content {
+            display : none;
+            overflow: hidden;
+
+            >option {
+                padding   : 20px 16px;
+                background: #E73C83;
+                cursor    : pointer;
+
+                &:hover {
+                    background: #C6296A;
+                }
+            }
+        }
+    }
+}

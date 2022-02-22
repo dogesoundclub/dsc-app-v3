@@ -282,7 +282,7 @@ export default class Home implements View {
                     el(".old-sound", msg("HOME_DOGE_SOUND_WINNER_DESC1").replace(/{number}/, String(winnerInfo.round + 1))),
                     el(".sound", `"${winnerInfo.dogesound}"`),
                     el("a.address", winnerInfo.winner, { href: `https://opensea.io/${winnerInfo.winner}`, target: "_blank" }),
-                    el(".warning", msg("HOME_DOGE_SOUND_WINNER_WARNING")),
+                    el("p.warning", msg("HOME_DOGE_SOUND_WINNER_WARNING")),
                 );
                 //this.winner.empty().appendText(`${msg("HOME_WINNER_TITLE").replace(/{round}/, String(winnerInfo.round + 1))} `);
                 //this.winner.append(el("a", winnerInfo.winner, { href: `https://opensea.io/${winnerInfo.winner}`, target: "_blank" }));
