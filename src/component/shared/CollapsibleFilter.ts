@@ -24,8 +24,8 @@ export default class CollapsibleFilter extends DomNode {
                     el("img", { src: "/images/shared/icn/icn_arrow_down.svg" }),
                 ),
                 this.content = el(".content",
-                    ...values.map((value: any) => el("option", value, onClick)),
-                    title === "Face" ? undefined : el("option", "None", { value: "None" }, onClick),
+                    ...values.map((value: string) => el("button", value, { value }, onClick)),
+                    title === "Face" ? undefined : el("button", "None", { value: "None" }, onClick),
                 ),
             ),
         );

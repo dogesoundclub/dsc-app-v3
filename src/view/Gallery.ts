@@ -42,7 +42,7 @@ export default class Gallery implements View {
                     ...Object.entries(MateParts).map(([key, values]) => {
                         const select = new CollapsibleFilter(key, values, {
                             click: (event: any, select: any) => {
-                                const value = (select.domElement as HTMLSelectElement).value;
+                                const value = (select.domElement as HTMLButtonElement).value;
                                 Object.assign(this.filter, { [key]: value });
                                 if (value === "") {
                                     delete this.filter[key];
