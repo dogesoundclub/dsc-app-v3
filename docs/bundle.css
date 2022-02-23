@@ -1358,6 +1358,8 @@ body {
   margin-bottom: 30px;
 }
 .home-view > section > .partnership > .content > .content > img {
+  max-width: 176px;
+  max-height: 176px;
   margin-right: 20px;
 }
 .home-view > section > .contact > .title {
