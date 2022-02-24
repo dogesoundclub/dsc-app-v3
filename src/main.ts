@@ -7,7 +7,7 @@ import BuyMate from "./view/mates/BuyMate";
 import Contest from "./view/contest/Contest";
 import CreateDscFamily from "./view/dscFamily/CreateDscFamily";
 import CreateGovernance from "./view/governance/CreateGovernance";
-import DscFamily from "./view/DscFamily";
+import DscFamily from "./view/dscFamily/DscFamily";
 import Faq from "./view/Faq";
 import FollowMe from "./view/mates/FollowMe";
 import FullyOn from "./view/FullyOn";

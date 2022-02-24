@@ -1,0 +1,68 @@
+.collapsible-select {
+    >section {
+
+        @media @phone {
+            width: 100%;
+        }
+
+        >.popup {
+            position      : fixed;
+            left          : 0;
+            top           : 0;
+            z-index       : 0;
+            width         : 100%;
+            height        : 0%;
+            background    : rgba(0, 0, 0, 0.5);
+            display       : flex;
+            flex-direction: column;
+            overflow-y    : scroll;
+            padding       : 0px 0;
+        }
+
+        >.select-container {
+            display        : flex;
+            justify-content: space-between;
+            width          : 100%;
+
+            >.collapsible {
+                text-align   : left;
+                font-family  : DungGeunMo;
+                width        : 100%;
+                border       : none;
+                font-size    : 16px;
+                background   : #222222;
+                color        : white;
+                padding      : 8px 20px;
+                height       : 52px;
+                border-radius: 8px;
+            }
+        }
+
+        >.content {
+            position     : absolute;
+            display      : none;
+            overflow     : hidden;
+            max-width    : 568px;
+            width        : 100%;
+            border-radius: 8px;
+
+            >section {
+                display         : flex;
+                border-bottom   : solid 1px #333333;
+                background-color: #222222;
+                font-family     : DungGeunMo;
+                color           : white;
+                width           : 100%;
+                font-size       : 16px;
+                padding         : 20px 16px;
+                cursor          : pointer;
+                margin          : 0px;
+                text-align      : left;
+
+                >img {
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+}

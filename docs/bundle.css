@@ -431,6 +431,65 @@ body {
   border: 1px solid #2C2C2C;
   box-sizing: border-box;
 }
+@media only screen and (max-width: 719px) {
+  .collapsible-select > section {
+    width: 100%;
+  }
+}
+.collapsible-select > section > .popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  height: 0%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 0px 0;
+}
+.collapsible-select > section > .select-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.collapsible-select > section > .select-container > .collapsible {
+  text-align: left;
+  font-family: DungGeunMo;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  background: #222222;
+  color: white;
+  padding: 8px 20px;
+  height: 52px;
+  border-radius: 8px;
+}
+.collapsible-select > section > .content {
+  position: absolute;
+  display: none;
+  overflow: hidden;
+  max-width: 568px;
+  width: 100%;
+  border-radius: 8px;
+}
+.collapsible-select > section > .content > section {
+  display: flex;
+  border-bottom: solid 1px #333333;
+  background-color: #222222;
+  font-family: DungGeunMo;
+  color: white;
+  width: 100%;
+  font-size: 16px;
+  padding: 20px 16px;
+  cursor: pointer;
+  margin: 0px;
+  text-align: left;
+}
+.collapsible-select > section > .content > section > img {
+  margin-right: 12px;
+}
 .mate-list > .mate-line {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -3109,9 +3168,9 @@ body {
   line-height: 20px;
 }
 .create-dsc-family-view > section > .introduction-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
 }
 @media only screen and (max-width: 719px) {
   .create-dsc-family-view > section > .introduction-container {
@@ -3120,7 +3179,6 @@ body {
 }
 .create-dsc-family-view > section > .introduction-container > .input-container {
   width: 100%;
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
 }
@@ -3141,15 +3199,6 @@ body {
 .create-dsc-family-view > section > .introduction-container > .input-container > img {
   max-width: 240px;
 }
-.create-dsc-family-view > section > .introduction-container > .input-container > .image-input {
-  font-family: DungGeunMo;
-  background: #222222;
-  border-radius: 8px;
-  padding: 16px 0px 16px 20px;
-  color: white;
-  font-size: 20px;
-  line-height: 20px;
-}
 .create-dsc-family-view > section > .introduction-container > .input-container > textarea {
   font-family: DungGeunMo;
   background: #222222;
@@ -3159,6 +3208,46 @@ body {
   font-size: 20px;
   line-height: 20px;
   min-height: 240px;
+  border: none;
+}
+.create-dsc-family-view > section > .introduction-container > .file-box {
+  display: flex;
+  flex-direction: column;
+}
+.create-dsc-family-view > section > .introduction-container > .file-box > h3 {
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+.create-dsc-family-view > section > .introduction-container > .file-box > label {
+  display: flex;
+  justify-content: center;
+  min-width: 240px;
+  border: 1px dashed #676767;
+  box-sizing: border-box;
+  border-radius: 8px;
+  position: relative;
+}
+.create-dsc-family-view > section > .introduction-container > .file-box > label > .preview {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  border-radius: 4px;
+  background-size: cover;
+  background-position: center;
+  max-width: 240px;
+  max-height: 240px;
+}
+.create-dsc-family-view > section > .introduction-container > .file-box > label > img {
+  position: relative;
+  max-width: 240px;
+  min-height: 240px;
+}
+.create-dsc-family-view > section > .introduction-container > .file-box > label > .image-input {
+  display: none;
 }
 .create-dsc-family-view > section > .button-wrap {
   display: flex;
@@ -3172,8 +3261,8 @@ body {
   margin-top: 30px;
   font-family: DungGeunMo;
   font-size: 16px;
-  color: #E73C83;
-  background-color: transparent;
+  color: white;
+  background: #E73C83;
   border: 1px solid #E73C83;
   box-sizing: border-box;
   border-radius: 8px;
@@ -3182,6 +3271,7 @@ body {
 .create-dsc-family-view > section > .button-wrap > button:hover {
   background-color: white;
   border-color: white;
+  color: #E73C83;
 }
 .dsc-family-view {
   max-width: 1156px;

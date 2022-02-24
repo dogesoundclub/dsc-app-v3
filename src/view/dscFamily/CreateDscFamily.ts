@@ -1,6 +1,8 @@
 import { DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
+import CollapsibleItem from "../../component/shared/CollapsibleItem";
+import CollapsibleSelect from "../../component/shared/CollapsibleSelect";
 import DSCFamilyContract from "../../contracts/DSCFamilyContract";
 import Layout from "../Layout";
 import ViewUtil from "../ViewUtil";
@@ -25,40 +27,51 @@ export default class CreateDscFamily implements View {
             el("section",
                 el("hr"),
                 el(".input-container",
-                    el("label", msg("DSC_FAMILY_DETAIL_INPUT2")),
-                    this.linkInput = el("input", { placeholder: msg("DSC_FAMILY_DETAIL_INPUT2") }),
-                ),
-                el(".input-container",
                     el("label", msg("DSC_FAMILY_DETAIL_TITLE1")),
                     this.nameInput = el("input", { placeholder: msg("DSC_FAMILY_DETAIL_TITLE1") }),
+                ),
+                el(".channel-container",
+                    el(".input-container",
+                        el("label", msg("DSC_FAMILY_DETAIL_TITLE2")),
+                        new CollapsibleSelect("Channel"),
+                    ),
+                    el(".input-container",
+                        el("label", msg("DSC_FAMILY_DETAIL_INPUT2")),
+                        this.linkInput = el("input", { placeholder: msg("DSC_FAMILY_DETAIL_INPUT2") }),
+                    ),
                 ),
                 el(".introduction-container",
                     el(".input-container",
                         el("label", msg("DSC_FAMILY_DETAIL_TITLE3")),
                         this.descriptionInput = el("textarea", { placeholder: msg("DSC_FAMILY_DETAIL_TITLE2") }),
                     ),
-                    el(".input-container",
-                        el("label", "Image"),
-                        preview = el("img"),
-                        el("input.image-input", {
-                            placeholder: msg("DSC_FAMILY_DETAIL_TITLE4"),
-                            type: "file",
-                            change: (event) => {
-                                const file = event.target.files[0];
-                                const reader = new FileReader();
-                                reader.addEventListener("load", async () => {
-                                    const result = await fetch(`https://api.dogesound.club/dscfamily/uploadimage`, {
-                                        method: "POST",
-                                        body: reader.result as string,
-                                    });
-                                    this.image = await result.text();
-                                    preview.domElement.src = this.image;
-                                }, false);
-                                if (file) {
-                                    reader.readAsDataURL(file);
-                                }
-                            },
-                        }),
+                    el(".file-box",
+                        el("h3", "Image"),
+                        el("label",
+                            el("img", { src: "/images/shared/icn/icn_plus.svg", width: "34" }),
+                            preview = el(".preview"),
+                            el("input.image-input", {
+                                placeholder: msg("DSC_FAMILY_DETAIL_TITLE4"),
+                                type: "file",
+                                change: (event) => {
+                                    const file = event.target.files[0];
+                                    const reader = new FileReader();
+                                    reader.addEventListener("load", async () => {
+                                        const result = await fetch(`https://api.dogesound.club/dscfamily/uploadimage`, {
+                                            method: "POST",
+                                            body: reader.result as string,
+                                        });
+                                        this.image = await result.text();
+                                        preview.style({
+                                            backgroundImage: `url(${this.image})`
+                                        });
+                                    }, false);
+                                    if (file) {
+                                        reader.readAsDataURL(file);
+                                    }
+                                },
+                            }),
+                        ),
                     ),
                 ),
                 el(".button-wrap",
