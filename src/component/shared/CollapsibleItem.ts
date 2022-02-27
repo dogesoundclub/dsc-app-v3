@@ -2,6 +2,7 @@ import { DomNode, el } from "@hanul/skynode";
 
 export default class CollapsibleItem extends DomNode {
     private content: DomNode;
+
     constructor(title: string, desc: string) {
         super(".collapsible-item");
         this.append(

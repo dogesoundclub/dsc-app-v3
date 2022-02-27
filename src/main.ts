@@ -24,6 +24,7 @@ import MyMate from "./view/mates/MyMate";
 import Terms from "./view/Terms";
 import UpdateDscFamily from "./view/dscFamily/UpdateDscFamily";
 import Wallet from "./klaytn/Wallet";
+import Bmcs from "./view/Bmcs";
 
 (async () => {
     msg.language = BrowserInfo.language;
@@ -60,6 +61,7 @@ import Wallet from "./klaytn/Wallet";
     SkyRouter.route("terms", Terms);
     SkyRouter.route("faq", Faq);
     SkyRouter.route("member", Member);
+    SkyRouter.route("bmcs", Bmcs);
 
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);
