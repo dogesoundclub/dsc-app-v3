@@ -5,7 +5,6 @@ import superagent from "superagent";
 import Alert from "../component/shared/dialogue/Alert";
 import MateContract from "../contracts/MateContract";
 import DiscordUserInfo from "../DiscordUserInfo";
-import EthereumWallet from "../ethereum/EthereumWallet";
 import Wallet from "../klaytn/Wallet";
 import Layout from "./Layout";
 import ViewUtil from "./ViewUtil";
@@ -115,7 +114,7 @@ export default class Activities implements View {
             const signResult = await Wallet.signMessage(message);
 
             try {
-                const result = await fetch("https://api.dogesound.club/checkholder/mates", {
+                const result = await fetch("https://api.dogesound.club/checkholder", {
                     method: "POST",
                     body: JSON.stringify({
                         code,
@@ -125,43 +124,9 @@ export default class Activities implements View {
                     }),
                 });
                 if ((await result.json()).isHolder === true) {
-                    new Alert("메이트 홀더 인증 완료", "이메이트 홀더 인증하기", () => {
-                        this.checkEMateHolder(code);
-                    });
+                    new Alert("홀더 인증 완료");
                 } else {
-                    new Alert("메이트 홀더 인증 실패", "이메이트 홀더 인증하기", () => {
-                        this.checkEMateHolder(code);
-                    });
-                }
-            } catch (error) {
-                console.error(error);
-            }
-        }
-    }
-
-    private async checkEMateHolder(code: string) {
-        if (await EthereumWallet.connected() !== true) {
-            await EthereumWallet.connect();
-        }
-        const address = await EthereumWallet.loadAddress();
-        if (address !== undefined) {
-
-            const message = "Check Holder";
-            const signedMessage = await EthereumWallet.signMessage(message);
-
-            try {
-                const result = await fetch("https://api.dogesound.club/checkholder/emates", {
-                    method: "POST",
-                    body: JSON.stringify({
-                        code,
-                        signedMessage,
-                        address,
-                    }),
-                });
-                if ((await result.json()).isHolder === true) {
-                    new Alert("이메이트 홀더 인증 완료");
-                } else {
-                    new Alert("이메이트 홀더 인증 실패");
+                    new Alert("홀더 인증 실패");
                 }
             } catch (error) {
                 console.error(error);

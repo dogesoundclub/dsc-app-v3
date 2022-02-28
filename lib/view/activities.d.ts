@@ -7,7 +7,6 @@ export default class Activities implements View {
     private checkHolder;
     private checkDiscordLogin;
     private checkMateHolder;
-    private checkEMateHolder;
     changeParams(params: ViewParams, uri: string): void;
     close(): void;
 }
