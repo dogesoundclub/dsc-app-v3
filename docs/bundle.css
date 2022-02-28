@@ -2055,6 +2055,11 @@ body {
   margin: auto;
   padding-top: 618px;
 }
+@media only screen and (max-width: 719px) {
+  .bmcs-view > header > section {
+    padding: 240px 20px 20px 20px;
+  }
+}
 .bmcs-view > header > section > h1 {
   font-size: 60px;
   line-height: 60px;
@@ -2063,14 +2068,50 @@ body {
   text-stroke: 0.5px #F9D833;
   text-shadow: 3px 3px 3px black;
 }
+@media only screen and (max-width: 719px) {
+  .bmcs-view > header > section > h1 {
+    font-size: 44px;
+    line-height: 44px;
+    margin-bottom: 14px;
+  }
+}
+.bmcs-view > header > section > a {
+  display: block;
+  font-size: 24px;
+  line-height: 24px;
+  color: #131313;
+  background: #FFDF13;
+  border-radius: 8px;
+  margin-top: 30px;
+  padding: 14px 169px;
+  max-width: 422px;
+  text-align: center;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > header > section > a {
+    padding: 14px 0px;
+  }
+}
 .bmcs-view > section {
   max-width: 1156px;
   margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section {
+    padding: 20px;
+  }
 }
 .bmcs-view > section > article > h2 {
   margin-top: 60px;
   margin-bottom: 16px;
   font-size: 32px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > article > h2 {
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
 }
 .bmcs-view > section > hr {
   border: none;
@@ -2081,32 +2122,78 @@ body {
 }
 @media only screen and (max-width: 719px) {
   .bmcs-view > section > hr {
-    margin: 20px 0px;
+    margin: 26px 0px;
   }
 }
 .bmcs-view > section > .biased-mate-container > h2 {
   font-size: 32px;
   margin-bottom: 16px;
 }
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .biased-mate-container > h2 {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+}
 .bmcs-view > section > .biased-mate-container > .content {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 20px;
 }
+.bmcs-view > section > .biased-mate-container > .content > img {
+  max-width: 174px;
+  max-height: 174px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .biased-mate-container > .content > img {
+    max-width: 155px;
+    max-height: 155px;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .biased-mate-container > .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .bmcs-view > section > .vibe-container > h2 {
   font-size: 32px;
   margin-bottom: 8px;
 }
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .vibe-container > h2 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
 .bmcs-view > section > .vibe-container > h3 {
   margin-bottom: 26px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .vibe-container > h3 {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 .bmcs-view > section > .vibe-container > .content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 12px;
 }
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .vibe-container > .content {
+    display: flex;
+    overflow: scroll;
+  }
+}
+.bmcs-view > section > .vibe-container > .content > .card > img {
+  width: 280px;
+  height: 381px;
+}
 .bmcs-view > section > .vibe-container > .content > .card > h4 {
   font-size: 20px;
+  line-height: 28px;
   margin-top: 25px;
   margin-bottom: 8px;
 }
@@ -2116,6 +2203,9 @@ body {
 }
 .bmcs-view > section > .vibe-container > .content > .card:hover {
   color: #F9D833;
+}
+.bmcs-view > section > .vibe-container > .content > .card:hover > img {
+  border: solid 5px #F9D833;
 }
 .bmcs-view > section > .vibe-container > .warning-container {
   margin-top: 30px;
@@ -2128,14 +2218,43 @@ body {
 .bmcs-view > section > .vibe-container > .warning-container > h4 {
   font-size: 20px;
 }
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .vibe-container > .warning-container > h4 {
+    margin-bottom: 14px;
+  }
+}
 .bmcs-view > section > .vibe-container > .warning-container > p {
   color: #868686;
+}
+.bmcs-view > section > .roadmap-container > h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .roadmap-container > h2 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+.bmcs-view > section > .roadmap-container > h3 {
+  margin-bottom: 26px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .roadmap-container > h3 {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 .bmcs-view > section > .roadmap-container > .content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   margin-top: 26px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .roadmap-container > .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .bmcs-view > section > .roadmap-container > .content > .card {
   color: #F9D833;
@@ -2148,9 +2267,20 @@ body {
   font-size: 32px;
   line-height: 32px;
 }
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .roadmap-container > .content > .card > h4 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
 .bmcs-view > section > .roadmap-container > .content > .card > p {
   font-size: 20px;
   line-height: 24px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .roadmap-container > .content > .card > p {
+    font-size: 16px;
+  }
 }
 .bmcs-view > section > .roadmap-container > .content > .card:hover {
   background: rgba(249, 216, 51, 0.1);
@@ -2167,16 +2297,42 @@ body {
   text-align: center;
   margin-top: 20px;
 }
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .roadmap-container > a {
+    padding: 16px 0px;
+  }
+}
+.bmcs-view > section > .partnership-container > h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .partnership-container > h2 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
 .bmcs-view > section > .partnership-container > h3 {
   font-size: 24px;
   line-height: 24px;
   color: #F9D833;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .partnership-container > h3 {
+    display: none;
+  }
 }
 .bmcs-view > section > .partnership-container > .content {
   margin-top: 14px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 20px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .partnership-container > .content {
+    display: flex;
+    overflow: scroll;
+  }
 }
 .mates-view {
   max-width: 1156px;

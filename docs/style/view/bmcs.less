@@ -22,6 +22,10 @@
             margin     : auto;
             padding-top: 618px;
 
+            @media @phone {
+                padding: 240px 20px 20px 20px;
+            }
+
             >h1 {
                 font-size          : 60px;
                 line-height        : 60px;
@@ -29,6 +33,29 @@
                 -webkit-text-stroke: 0.5px #F9D833;
                 text-stroke        : 0.5px #F9D833;
                 text-shadow        : 3px 3px 3px black;
+
+                @media @phone {
+                    font-size    : 44px;
+                    line-height  : 44px;
+                    margin-bottom: 14px;
+                }
+            }
+
+            >a {
+                display      : block;
+                font-size    : 24px;
+                line-height  : 24px;
+                color        : #131313;
+                background   : #FFDF13;
+                border-radius: 8px;
+                margin-top   : 30px;
+                padding      : 14px 169px;
+                max-width    : 422px;
+                text-align   : center;
+
+                @media @phone {
+                    padding: 14px 0px;
+                }
             }
         }
     }
@@ -37,11 +64,21 @@
         max-width: 1156px;
         margin   : auto;
 
+        @media @phone {
+            padding: 20px;
+        }
+
         >article {
             >h2 {
                 margin-top   : 60px;
                 margin-bottom: 16px;
                 font-size    : 32px;
+
+                @media @phone {
+                    font-size    : 20px;
+                    margin-top   : 0px;
+                    margin-bottom: 20px;
+                }
             }
         }
 
@@ -53,7 +90,7 @@
             margin          : 60px 0px;
 
             @media @phone {
-                margin: 20px 0px;
+                margin: 26px 0px;
             }
         }
 
@@ -61,12 +98,33 @@
             >h2 {
                 font-size    : 32px;
                 margin-bottom: 16px;
+
+                @media @phone {
+                    font-size    : 20px;
+                    line-height  : 20px;
+                    margin-top   : 0px;
+                    margin-bottom: 20px;
+                }
             }
 
             >.content {
                 display              : grid;
                 grid-template-columns: repeat(6, 1fr);
                 grid-gap             : 20px;
+
+                >img {
+                    max-width : 174px;
+                    max-height: 174px;
+
+                    @media @phone {
+                        max-width : 155px;
+                        max-height: 155px;
+                    }
+                }
+
+                @media @phone {
+                    grid-template-columns: repeat(2, 1fr);
+                }
             }
         }
 
@@ -74,10 +132,20 @@
             >h2 {
                 font-size    : 32px;
                 margin-bottom: 8px;
+
+                @media @phone {
+                    font-size  : 20px;
+                    line-height: 20px;
+                }
             }
 
             >h3 {
                 margin-bottom: 26px;
+
+                @media @phone {
+                    font-size  : 14px;
+                    line-height: 14px;
+                }
             }
 
             >.content {
@@ -85,9 +153,20 @@
                 grid-template-columns: repeat(4, 1fr);
                 grid-gap             : 12px;
 
+                @media @phone {
+                    display : flex;
+                    overflow: scroll;
+                }
+
                 >.card {
+                    >img {
+                        width : 280px;
+                        height: 381px;
+                    }
+
                     >h4 {
                         font-size    : 20px;
+                        line-height  : 28px;
                         margin-top   : 25px;
                         margin-bottom: 8px;
                     }
@@ -98,7 +177,11 @@
                     }
 
                     &:hover {
-                        color: #F9D833;
+                        >img {
+                            border: solid 5px #F9D833;
+                        }
+
+                        color : #F9D833;
                     }
                 }
             }
@@ -113,6 +196,10 @@
 
                 >h4 {
                     font-size: 20px;
+
+                    @media @phone {
+                        margin-bottom: 14px;
+                    }
                 }
 
                 >p {
@@ -122,12 +209,34 @@
         }
 
         >.roadmap-container {
+            >h2 {
+                font-size    : 32px;
+                margin-bottom: 8px;
+
+                @media @phone {
+                    font-size  : 20px;
+                    line-height: 20px;
+                }
+            }
+
+            >h3 {
+                margin-bottom: 26px;
+
+                @media @phone {
+                    font-size  : 14px;
+                    line-height: 14px;
+                }
+            }
 
             >.content {
                 display              : grid;
                 grid-template-columns: repeat(3, 1fr);
                 grid-gap             : 20px;
                 margin-top           : 26px;
+
+                @media @phone {
+                    grid-template-columns: repeat(1, 1fr);
+                }
 
                 >.card {
                     color        : #F9D833;
@@ -139,11 +248,20 @@
                     >h4 {
                         font-size  : 32px;
                         line-height: 32px;
+
+                        @media @phone {
+                            font-size  : 24px;
+                            line-height: 24px;
+                        }
                     }
 
                     >p {
                         font-size  : 20px;
                         line-height: 24px;
+
+                        @media @phone {
+                            font-size: 16px;
+                        }
                     }
 
                     &:hover {
@@ -163,14 +281,32 @@
                 display      : block;
                 text-align   : center;
                 margin-top   : 20px;
+
+                @media @phone {
+                    padding: 16px 0px;
+                }
             }
         }
 
         >.partnership-container {
+            >h2 {
+                font-size    : 32px;
+                margin-bottom: 8px;
+
+                @media @phone {
+                    font-size  : 20px;
+                    line-height: 20px;
+                }
+            }
+
             >h3 {
                 font-size  : 24px;
                 line-height: 24px;
                 color      : #F9D833;
+
+                @media @phone {
+                    display: none;
+                }
             }
 
             >.content {
@@ -178,6 +314,11 @@
                 display              : grid;
                 grid-template-columns: repeat(6, 1fr);
                 grid-gap             : 20px;
+
+                @media @phone {
+                    display : flex;
+                    overflow: scroll;
+                }
             }
         }
     }
