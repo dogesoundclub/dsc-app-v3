@@ -113,7 +113,7 @@ export default class MyMate implements View {
                     body: JSON.stringify({
                         code,
                         signedMessage: signResult.signedMessage,
-                        klipSignKey: signResult.klipSignKey,
+                        klipAddress: signResult.klipAddress,
                         address,
                     }),
                 });

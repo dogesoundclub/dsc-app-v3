@@ -119,7 +119,7 @@ export default class Activities implements View {
                     body: JSON.stringify({
                         code,
                         signedMessage: signResult.signedMessage,
-                        klipSignKey: signResult.klipSignKey,
+                        klipAddress: signResult.klipAddress,
                         address,
                     }),
                 });
