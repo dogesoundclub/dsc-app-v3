@@ -7,6 +7,7 @@ import BMCSCollapsibleItem from "../component/bmcs/BMCSCollapsibleItem";
 import MobileMenu from "../component/bmcs/menu/MobileMenu";
 import PCMenu from "../component/bmcs/menu/PCMenu";
 import ViewUtil from "./ViewUtil";
+import Pageable from "pageable";
 
 export default class Bmcs implements View {
 
@@ -17,7 +18,7 @@ export default class Bmcs implements View {
         let select: DomNode<HTMLSelectElement>;
 
         BodyNode.append(
-            (this.container = el(".bmcs-view", { id: "fullpage" },
+            (this.container = el(".bmcs-view", { id: "container" },
                 el(".nav",
                     el(".left",
                         el("a.menu-button", el("img", { src: "/images/shared/icn/icn_menu.svg" }), {
@@ -27,7 +28,7 @@ export default class Bmcs implements View {
                             },
                         }),
                     ),
-                    el("a", { click: () => ViewUtil.go("/") },
+                    el("a", { click: () => ViewUtil.go("/bmcs") },
                         el("img.logo", { align: "left", src: "/images/shared/logo/bmcs.svg", alt: "logo" }),
                     ),
                     new PCMenu(),
@@ -42,7 +43,7 @@ export default class Bmcs implements View {
                         },
                     ),
                 ),
-                el("header.section",
+                el("header.section", { "data-anchor": "home" },
                     el(".overlay"),
                     el("section",
                         el("h1", msg("BMCS_TITLE")),
@@ -51,14 +52,14 @@ export default class Bmcs implements View {
                     ),
                 ),
                 el("section",
-                    el("article.section",
+                    el("article.section", { "data-anchor": "keyword" },
                         el("h2", msg("BMCS_KEYWORD_TITLE")),
                         new BMCSCollapsibleItem(msg("BMCS_KEYWORD_TITLE1"), msg("BMCS_KEYWORD_DESC1")),
                         new BMCSCollapsibleItem(msg("BMCS_KEYWORD_TITLE2"), msg("BMCS_KEYWORD_DESC2")),
                         new BMCSCollapsibleItem(msg("BMCS_KEYWORD_TITLE3"), msg("BMCS_KEYWORD_DESC3")),
                     ),
                     el("hr"),
-                    el("article.biased-mate-container section",
+                    el("article.biased-mate-container section", { "data-anchor": "biased-mate" },
                         el("h2", msg("BMCS_MATE_TITLE")),
                         el(".content",
                             el("img", { src: "/images/view/bmcs/mate1.png", alt: "mate" }),
@@ -100,7 +101,7 @@ export default class Bmcs implements View {
                         ),
                     ),
                     el("hr"),
-                    el("article.vibe-container section",
+                    el("article.vibe-container section", { "data-anchor": "vibe" },
                         el("h2", msg("BMCS_VIBE_TITLE")),
                         el("h3", msg("BMCS_VIBE_DESC")),
                         el(".content",
@@ -130,7 +131,7 @@ export default class Bmcs implements View {
                         ),
                     ),
                     el("hr"),
-                    el("article.roadmap-container section",
+                    el("article.roadmap-container section", { "data-anchor": "roadmap" },
                         el("h2", msg("BMCS_ROADMAP_TITLE")),
                         el("h3", msg("BMCS_ROADMAP_DESC")),
                         el(".content",
@@ -190,7 +191,7 @@ export default class Bmcs implements View {
                         el("a", msg("BMCS_ROADMAP_BUTTON")),
                     ),
                     el("hr"),
-                    el("article.faq-container section",
+                    el("article.faq-container section", { "data-anchor": "faq" },
                         el("h2", "FAQ"),
                         new BMCSCollapsibleItem(msg("BMCS_FAQ_TITLE1"), msg("BMCS_FAQ_DESC1")),
                         new BMCSCollapsibleItem(msg("BMCS_FAQ_TITLE2"), msg("BMCS_FAQ_DESC2")),
@@ -198,7 +199,7 @@ export default class Bmcs implements View {
                         new BMCSCollapsibleItem(msg("BMCS_FAQ_TITLE4"), msg("BMCS_FAQ_DESC4")),
                     ),
                     el("hr"),
-                    el("article.partnership-container section",
+                    el("article.partnership-container section", { "data-anchor": "partnership" },
                         el("h2", "PARTNERSHIP"),
                         el("h3", "DSC Lable"),
                         el(".content",
@@ -241,6 +242,11 @@ export default class Bmcs implements View {
             ))
         );
         select.domElement.value = BrowserInfo.language;
+        this.init()
+    }
+
+    private init(): void {
+        new Pageable("#container");
     }
 
     public changeParams(params: ViewParams, uri: string): void {

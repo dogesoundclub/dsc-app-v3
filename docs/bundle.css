@@ -756,6 +756,7 @@ body {
   text-align: center;
   color: white;
   font-size: 20px;
+  text-decoration: none;
 }
 .bmcs-pc-menu > ul > li > a:hover {
   color: #F9D833;
@@ -2208,6 +2209,13 @@ body {
   .bmcs-view > section {
     padding: 20px;
   }
+}
+.bmcs-view > section > article {
+  max-width: 1156px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
 }
 .bmcs-view > section > article > h2 {
   margin-top: 60px;

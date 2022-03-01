@@ -138,7 +138,7 @@ export default class Home implements View {
                 el(".partnership",
                     el(".title", msg("HOME_PARTNERSHIP_TITLE")),
                     el(".content",
-                        el(".title", msg("HOME_PARTNERSHIP_LABLE_TITLE")),
+                        el(".title", msg("HOME_PARTNERSHIP_LABEL_TITLE")),
                         el(".content",
                             el("img", { src: "/images/view/home/partnership/ozys.png" }),
                             el("img", { src: "/images/view/home/partnership/codestates.png" }),

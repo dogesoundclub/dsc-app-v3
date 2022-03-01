@@ -18,14 +18,14 @@ class MenuTreeBuilder {
         const lis: DomNode[] = parent === undefined ? [] : [el("li.parent",
             el(`a${location.pathname === `/${parent.uri}` ? ".on" : ""}`,
                 parent.name,
-                { click: () => parent.click !== undefined ? parent.click() : ViewUtil.go(`/${parent.uri}`) },
+                { click: () => parent.click !== undefined ? parent.click() : ViewUtil.go(`/${parent.uri}`), },
             ),
         )];
         for (const menuItem of menus) {
             const li = el("li",
-                el(`a${location.pathname === `/${menuItem.uri}` ? ".on" : ""}`,
+                el(`a${location.pathname === `/${menuItem.uri}` ? ".on" : ""}`, { href: menuItem.uri },
                     menuItem.name,
-                    { click: () => menuItem.click !== undefined ? menuItem.click() : ViewUtil.go(`/${menuItem.uri}`) },
+                    // { click: () => menuItem.click !== undefined ? menuItem.click() : ViewUtil.go(`/${menuItem.uri}`) },
                 ),
             );
             if (menuItem.children !== undefined) {
