@@ -740,6 +740,59 @@ body {
   background-color: white;
   color: #F9D833;
 }
+.bmcs-pc-menu {
+  top: 0;
+  left: calc(50% - 360px);
+  z-index: 3;
+  width: 720px;
+}
+.bmcs-pc-menu > ul {
+  display: flex;
+  justify-content: center;
+}
+.bmcs-pc-menu > ul > li > a {
+  display: block;
+  padding: 20px 20px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+.bmcs-pc-menu > ul > li > a:hover {
+  color: #F9D833;
+}
+.bmcs-pc-menu > ul > li > a:active {
+  color: #F9D833;
+}
+.bmcs-mobile-menu {
+  position: fixed;
+  width: 100%;
+  background-color: #000000;
+  border: 1px solid #A1A1A1;
+  z-index: 999;
+}
+.bmcs-mobile-menu > ul {
+  padding: 10px;
+}
+.bmcs-mobile-menu > ul > li > a {
+  display: block;
+  padding: 5px;
+  color: #FFDF13;
+  font-size: 18px;
+}
+.bmcs-mobile-menu > ul > li > a:hover {
+  color: white;
+}
+.bmcs-mobile-menu > ul > li > ul {
+  margin-left: 10px;
+}
+.bmcs-mobile-menu > ul > li > ul > li > a {
+  display: block;
+  padding: 5px;
+  color: white;
+}
+.bmcs-mobile-menu > ul > li > ul > li.parent {
+  display: none;
+}
 .pc-menu {
   top: 0;
   left: calc(50% - 360px);
@@ -2033,6 +2086,61 @@ body {
   font-size: 16px;
   line-height: 20px;
 }
+.bmcs-view > .nav {
+  max-width: 1156px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > .nav {
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    background-color: black;
+  }
+}
+.bmcs-view > .nav > .left {
+  display: flex;
+}
+.bmcs-view > .nav > .left:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.bmcs-view > .nav > .left > .menu-button {
+  float: right;
+  display: none;
+  padding: 10px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > .nav > .left > .menu-button {
+    display: block;
+  }
+}
+.bmcs-view > .nav > a {
+  display: flex;
+  flex-grow: 1;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > .nav > a {
+    flex-grow: 0;
+  }
+}
+.bmcs-view > .nav > .bmcs-pc-menu {
+  flex-grow: 2;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > .nav > .bmcs-pc-menu {
+    display: none;
+  }
+}
 .bmcs-view > header {
   position: relative;
   z-index: 1;
@@ -2324,15 +2432,79 @@ body {
 }
 .bmcs-view > section > .partnership-container > .content {
   margin-top: 14px;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 20px;
+  display: flex;
+  gap: 20px;
+  overflow: scroll;
+}
+.bmcs-view > footer {
+  margin-top: 60px;
+}
+.bmcs-view > footer > .sidebar {
+  background-color: #222222;
+}
+.bmcs-view > footer > .sidebar > .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1156px;
+  margin: auto;
+}
+.bmcs-view > footer > .sidebar > .content > .term {
+  display: flex;
+  align-items: center;
+  height: 44px;
+}
+.bmcs-view > footer > .sidebar > .content > .term > a {
+  font-family: Noto Sans KR;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+}
+.bmcs-view > footer > .sidebar > .content > .term > span {
+  color: #474747;
+  margin: 10px 10px;
+}
+.bmcs-view > footer > .sidebar > .content > .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+}
+.bmcs-view > footer > .sidebar > .content > .social > a {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  margin: 0px 10px;
+  font-size: 12px;
+  text-decoration: underline;
+  color: white;
+}
+.bmcs-view > footer > .provider {
+  display: flex;
+  flex-direction: column;
+  max-width: 1156px;
+  margin: auto;
+  margin-top: 30px;
+  padding-bottom: 30px;
 }
 @media only screen and (max-width: 719px) {
-  .bmcs-view > section > .partnership-container > .content {
-    display: flex;
-    overflow: scroll;
+  .bmcs-view > footer > .provider {
+    padding: 20px;
   }
+}
+.bmcs-view > footer > .provider > img {
+  width: 70px;
+  height: 60px;
+}
+.bmcs-view > footer > .provider > p {
+  font-family: Noto Sans KR;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 20px;
+  color: #838383;
 }
 .mates-view {
   max-width: 1156px;

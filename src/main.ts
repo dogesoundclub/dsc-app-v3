@@ -30,7 +30,7 @@ import Bmcs from "./view/Bmcs";
     msg.language = BrowserInfo.language;
     msg.parseCSV((await superagent.get("/msg.csv")).text);
 
-    SkyRouter.route("**", Layout);
+    SkyRouter.route("**", Layout, ["bmcs"]);
     SkyRouter.route("", Home);
 
     SkyRouter.route("followMe", FollowMe);
