@@ -2483,22 +2483,128 @@ body {
   }
 }
 .bmcs-view > section > .roadmap-container > .content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  display: flex;
+  flex-direction: column;
   margin-top: 26px;
 }
+.bmcs-view > section > .roadmap-container > .content > .card-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
 @media only screen and (max-width: 719px) {
-  .bmcs-view > section > .roadmap-container > .content {
+  .bmcs-view > section > .roadmap-container > .content > .card-container {
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
 }
-.bmcs-view > section > .roadmap-container > .content > .card {
+.bmcs-view > section > .roadmap-container > .content > .card-container > .card {
+  margin-top: 20px;
+  position: relative;
   color: #F9D833;
   border: 1px solid #F9D833;
   box-sizing: border-box;
   border-radius: 8px;
   padding: 40px;
+  max-width: 372px;
+  width: 100%;
+}
+.bmcs-view > section > .roadmap-container > .content > .card-container > .card > h4 {
+  font-size: 32px;
+  line-height: 32px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .roadmap-container > .content > .card-container > .card > h4 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+.bmcs-view > section > .roadmap-container > .content > .card-container > .card > p {
+  font-size: 20px;
+  line-height: 24px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .roadmap-container > .content > .card-container > .card > p {
+    font-size: 16px;
+  }
+}
+.bmcs-view > section > .roadmap-container > .content > .card-container > .card > img.right {
+  position: absolute;
+  top: 35%;
+  right: -40px;
+}
+.bmcs-view > section > .roadmap-container > .content > .card-container > .card > img.down {
+  position: absolute;
+  bottom: -40px;
+  right: 45%;
+}
+.bmcs-view > section > .roadmap-container > .content > .card-container > .card:hover {
+  background: rgba(249, 216, 51, 0.1);
+}
+.bmcs-view > section > .roadmap-container > .content > .card-reverse-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: row-reverse;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .roadmap-container > .content > .card-reverse-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .card {
+  margin-top: 20px;
+  position: relative;
+  color: #F9D833;
+  border: 1px solid #F9D833;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 40px;
+  width: 100%;
+  max-width: 372px;
+}
+.bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .card > h4 {
+  font-size: 32px;
+  line-height: 32px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .card > h4 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+.bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .card > p {
+  font-size: 20px;
+  line-height: 24px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .card > p {
+    font-size: 16px;
+  }
+}
+.bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .card > img.left {
+  position: absolute;
+  top: 35%;
+  left: -40px;
+}
+.bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .card > img.down {
+  position: absolute;
+  bottom: -40px;
+  right: 45%;
+}
+.bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .card:hover {
+  background: rgba(249, 216, 51, 0.1);
+}
+.bmcs-view > section > .roadmap-container > .content > .card {
+  margin-top: 20px;
+  position: relative;
+  color: #F9D833;
+  border: 1px solid #F9D833;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 40px;
+  width: 100%;
+  max-width: 372px;
 }
 .bmcs-view > section > .roadmap-container > .content > .card > h4 {
   font-size: 32px;
@@ -2532,6 +2638,7 @@ body {
   width: 100%;
   display: block;
   text-align: center;
+  text-decoration: none;
   margin-top: 20px;
 }
 @media only screen and (max-width: 719px) {
