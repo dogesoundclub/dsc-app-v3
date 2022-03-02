@@ -9,6 +9,8 @@ export default class MintingPopup extends Popup {
     private preSaleStatus: DomNode;
     private firstSaleStatus: DomNode;
     private secondSaleStatus: DomNode;
+    private walletAddress: DomNode;
+    private bar: DomNode;
 
     constructor(
     ) {
@@ -17,7 +19,18 @@ export default class MintingPopup extends Popup {
             this.content = el(".dialogue.bmcs-minting-popup",
                 el("section",
                     el("h3", "NFT Remaining Quantity"),
-                    // el("progress"),
+                    el(".progress-info",
+                        el(".progress-text", "W.L Sale"),
+                        el(".progress-text", "Pre Sale"),
+                        el(".progress-text", "1st Public"),
+                        el(".progress-text", "2st Public"),
+                    ),
+                    el(".progress-container",
+                        el("", "0"),
+                        this.bar = el(".progress"),
+                        el("", "9400"),
+                    ),
+                    el(".amount", "AMOUNT 9400")
                 ),
                 el("hr"),
                 el("section",
@@ -39,16 +52,16 @@ export default class MintingPopup extends Popup {
                     ),
                     el(".amount-container",
                         el(".title", "Amount"),
-                        // el(".input-container",
-                        //     el("button",),
-                        //     el("input", { type: "number", value: 1 }),
-                        //     el("button",),
-                        // ),
+                        el(".input-container",
+                            el("button",),
+                            el("input", { type: "number", value: 1 }),
+                            el("button",),
+                        ),
                     ),
                     el(".button-wrap",
                         el("a", "MINTING"),
                     ),
-                    el(".address", "Wallet Address : "),
+                    this.walletAddress = el(".address", "Wallet Address : "),
                 ),
             ),
         );
