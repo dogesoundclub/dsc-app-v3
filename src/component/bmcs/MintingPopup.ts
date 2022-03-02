@@ -11,6 +11,7 @@ export default class MintingPopup extends Popup {
     private secondSaleStatus: DomNode;
     private walletAddress: DomNode;
     private bar: DomNode;
+    private amountInput: DomNode<HTMLInputElement>;
 
     constructor(
     ) {
@@ -53,9 +54,17 @@ export default class MintingPopup extends Popup {
                     el(".amount-container",
                         el(".title", "Amount"),
                         el(".input-container",
-                            el("button",),
-                            el("input", { type: "number", value: 1 }),
-                            el("button",),
+                            el("button", "-", {
+                                click: () => {
+                                    this.amountInput.domElement.valueAsNumber -= 1;
+                                }
+                            }),
+                            this.amountInput = el("input", { type: "number", value: "1" }),
+                            el("button", "+", {
+                                click: () => {
+                                    this.amountInput.domElement.valueAsNumber += 1;
+                                }
+                            }),
                         ),
                     ),
                     el(".button-wrap",
