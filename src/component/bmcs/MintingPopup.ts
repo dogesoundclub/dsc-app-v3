@@ -68,7 +68,7 @@ export default class MintingPopup extends Popup {
                         ),
                     ),
                     el(".button-wrap",
-                        el("a", "MINTING"),
+                        el("a", "MINT"),
                     ),
                     this.walletAddress = el(".address", "Wallet Address : "),
                 ),

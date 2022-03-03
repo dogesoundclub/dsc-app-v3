@@ -815,7 +815,6 @@ body {
 .dialogue.bmcs-minting-popup > section > .status-container {
   display: flex;
   justify-content: space-around;
-  color: #FFDF13;
 }
 .dialogue.bmcs-minting-popup > section > .status-container > p {
   font-size: 20px;
