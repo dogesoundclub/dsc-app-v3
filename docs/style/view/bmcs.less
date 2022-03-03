@@ -459,6 +459,63 @@
             }
         }
 
+        >.contact-container {
+            margin-top     : 16px;
+            display        : flex;
+            justify-content: space-between;
+
+            @media @phone {
+                flex-direction: column;
+            }
+
+            >h2 {
+                font-size    : 32px;
+                margin-bottom: 16px;
+
+                @media @phone {
+                    font-size  : 20px;
+                    line-height: 20px;
+                }
+            }
+
+            >.content {
+                display              : grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap                  : 20px;
+
+                @media @phone {
+                    grid-template-columns: 100%;
+                }
+
+                >.card {
+                    display        : flex;
+                    background     : #222222;
+                    border-radius  : 8px;
+                    padding        : 20px;
+                    align-items    : center;
+                    text-decoration: none;
+                    color          : white;
+
+                    >img {
+                        padding-right: 14px;
+                    }
+
+                    >.content {
+                        >.title {
+                            font-size  : 18px;
+                            line-height: 18px;
+                        }
+
+                        >.caption {
+                            font-size  : 14px;
+                            line-height: 14px;
+                            color      : #676767;
+                        }
+                    }
+                }
+            }
+        }
+
         >.partnership-container {
             >h2 {
                 font-size    : 32px;

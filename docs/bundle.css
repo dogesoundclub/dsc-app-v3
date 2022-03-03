@@ -807,7 +807,11 @@ body {
 .dialogue.bmcs-minting-popup > section {
   padding: 32px;
 }
-.dialogue.bmcs-minting-popup > section > h3 {
+.dialogue.bmcs-minting-popup > section > header {
+  display: flex;
+  justify-content: space-between;
+}
+.dialogue.bmcs-minting-popup > section > header > h3 {
   font-size: 28px;
   line-height: 28px;
   margin-bottom: 14px;
@@ -2661,6 +2665,57 @@ body {
   .bmcs-view > section > .roadmap-container > a {
     padding: 16px 0px;
   }
+}
+.bmcs-view > section > .contact-container {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .contact-container {
+    flex-direction: column;
+  }
+}
+.bmcs-view > section > .contact-container > h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .contact-container > h2 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+.bmcs-view > section > .contact-container > .content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .contact-container > .content {
+    grid-template-columns: 100%;
+  }
+}
+.bmcs-view > section > .contact-container > .content > .card {
+  display: flex;
+  background: #222222;
+  border-radius: 8px;
+  padding: 20px;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+.bmcs-view > section > .contact-container > .content > .card > img {
+  padding-right: 14px;
+}
+.bmcs-view > section > .contact-container > .content > .card > .content > .title {
+  font-size: 18px;
+  line-height: 18px;
+}
+.bmcs-view > section > .contact-container > .content > .card > .content > .caption {
+  font-size: 14px;
+  line-height: 14px;
+  color: #676767;
 }
 .bmcs-view > section > .partnership-container > h2 {
   font-size: 32px;

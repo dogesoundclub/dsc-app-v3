@@ -19,7 +19,12 @@ export default class MintingPopup extends Popup {
         this.append(
             this.content = el(".dialogue.bmcs-minting-popup",
                 el("section",
-                    el("h3", "NFT Remaining Quantity"),
+                    el("header",
+                        el("h3", "NFT Remaining Quantity"),
+                        el("a", { click: () => { this.delete() } },
+                            el("img", { src: "/images/shared/icn/icn_close.svg" })
+                        ),
+                    ),
                     el(".progress-info",
                         el(".progress-text", "W.L Sale"),
                         el(".progress-text", "Pre Sale"),
