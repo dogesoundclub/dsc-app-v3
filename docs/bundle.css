@@ -2303,7 +2303,7 @@ body {
 .bmcs-view > header > section {
   max-width: 1156px;
   margin: auto;
-  padding-top: 618px;
+  padding-top: 500px;
 }
 @media only screen and (max-width: 719px) {
   .bmcs-view > header > section {
