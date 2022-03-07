@@ -17,7 +17,7 @@ HOME_FEATURES_TITLE3,우리는 음악를 좋아합니다,We love music. Likes,�
 HOME_FEATURES_DESC3,음악은 개소리와 함께 자본에 대한 집착을 환기하는 수단이 됩니다. dsc 개발팀은 DJ SET과 로우파이 비디오를 업로드합니다.,Music is a means of having us refreshed from our obsession with capital along with Kak,音楽は犬の鳴き声とともに資本への執着を喚起する手段になります。 dsc開発チームはDJ SETとロー
 HOME_BUY_MATE_TITLE,BUY MATE,BUY MATE,BUY MATE
 HOME_BUY_MATE_DESC1,메이트는 세계 최대 NFT 거래소인 OPENSA에서 구매할 수 있습니다. 국내 MIX 기반 거래소인 KLUBB에서도 구매할 수 있습니다.,"Mate can be purchased at OPENSA, the world's largest NFT exchange. It can also be purchased at KLUBB, a domestic MIX-based exchange.",メイトは、世界最大のNFT取引所であるOPENSAから購入できます。 韓国MIXベースの取引所KLUBBでも購入できます。
-HOME_BUY_MATE_DESC2,최근에 메이트를 불법 복제한 스캠(사기) 컬렉션이 많습니다. 메이트의 공식 Opensea의 공식 주소는 https://opensea.io/collection/dogesoundclub-mates입니다.주소를 꼭 확인하시고 스캠(사기) 컬렉션에 주의하시기 바랍니다.,"Recently, there are many false NFTs that replicate mates. The official OpenC address is https://opensea.io/collection/dogesoundclub-mates.
+HOME_BUY_MATE_DESC2,최근에 메이트를 불법 복제한 스캠(사기) 컬렉션이 많습니다. 메이트의 공식 Opensea의 공식 주소는 https://opensea.io/collection/dogesoundclub-mates입니다.\n주소를 꼭 확인하시고 스캠(사기) 컬렉션에 주의하시기 바랍니다.,"Recently, there are many false NFTs that replicate mates. The official OpenC address is https://opensea.io/collection/dogesoundclub-mates.
 Please make sure to check the address and be careful about the fraudulent project.","最近では，ペアを複製する偽NFTが多くある OpenCの公式アドレスはhttps://opensea.io/collection/dogesoundclub-matesである.
 住所を必ず確認して不正なプロジェクトにご注意ください。"
 HOME_NFT_TITLE,NFT - DOGESOUNDCLUB MATES 😜😘💻,NFT - DOGESOUNDCLUB MATES 😜😘💻,NFT - DOGESOUNDCLUB MATES 😜😘💻
@@ -425,12 +425,12 @@ MATE_DETAIL_MESSAGE_FORM_TERMS,"일지를 제출한 블록체인은 조작이 �
 MATE_DETAIL_MESSAGE_FORM_SUBMIT,제출하기,SUBMIT,サミット
 MATE_DETAIL_MESSAGE_NOT_READY_ERROR,메시지가 준비되지 않았습니다.,The message is not ready.,メッセージの準備ができていません
 BMCS_TITLE,Welcome to Biased Mate Cycle Shop!,,
-BMCS_DESC,"Biased Mate Cycle Shop가 뭔가요? \nBMCS는 2021년 7월 9일에 발매된 한국 최초의 제너레이티브 NFT, 도지사운드클럽 메이트의 후속 이야기를 세계관으로 두고 있는 PFP 컬렉션입니다. DSC 운영팀은 최근 국내 최초의 제너레이티브 NFT라는 이유로 큰 인기를 얻게 된 메이트들이 인기에 취해 안일해지자, 이들을 일깨우기 위해 4가지의 극약 처방 NFT(물약으로 알려짐. 원제는 BIAS CARDS(를 에어드랍하였습니다. 물약을 메이트가 마시면 전기감전을 느끼게 되고(Biased) 고속 성장을 하여 어른이 되게 됩니다. 이렇게 어른이 된 메이트를 바이어스라고 부릅니다. 성장한 메이트, 바이어스들이 새로운 모험가들을 위한 자전거를 판매하는 상점 Biased Mate Cycle Shop을 연다는 것으로 BMCS의 이야기가 시작됩니다. ",,
+BMCS_DESC,"Biased MAte Cycle Shop가 뭔가요? \n BMCS는 2021년 7월 9일에 발매된 한국 최초의 제너레이티브 NFT, 도지사운드클럽 메이트의 후속 이야기를 세계관으로 두고 있는 PFP 컬렉션입니다. DSC 운영팀은 최근 국내 최초의 제너레이티브 NFT라는 이유로 큰 인기를 얻게 된 메이트들이 인기에 취해 안일해지자, 이들을 일깨우기 위해 4가지의 극약 처방 NFT(물약으로 알려짐. 원제는 BIAS CARDS)를 에어드랍하였습니다. 물약을 메이트가 마시면 전기감전을 느끼게 되고(Biased) 고속 성장을 하여 어른이 되게 됩니다. 이렇게 어른이 된 메이트를 바이어스라고 부릅니다. 성장한 메이트, 바이어스들이 새로운 모험가들을 위한 자전거를 판매하는 상점 Biased Mate Cycle Shop을 연다는 것으로 BMCS의 이야기가 시작됩니다. ",,
 BMCS_KEYWORD_TITLE,BMCS를 이해하는 3개의 주요 키워드,,
 BMCS_KEYWORD_TITLE1,1. 스트릿브랜드,,
 BMCS_KEYWORD_DESC1,"BMCS는 온라인에 국한된 DSC의 web3 컬쳐를 오프라인에 전달하기 위해 기획되었습니다. 운영팀은 Biased Mate Cycle Shop에 대한 상표 출원(출원번호 : 4020220022423)을 완료하였습니다. 의류, 스케이트 보드, 나이트클럽, 와인, 신발, 피규어, 연예오락업, 영화제작업 등 9개의 업종을 대상으로 출원하였습니다. 간단한 온라인 굿즈샵을 시작으로 명품 브랜드와 협업 가능한 수준의 슈프림과 같은 스트릿 브랜드로 점진적으로 발전시켜나갈 것입니다.",,
 BMCS_KEYWORD_TITLE2,2. 메타버스 범용 아바타,,
-BMCS_KEYWORD_DESC2,"BMCS는 브랜드 파워가 온라인, 오프라인 양쪽에서 빌딩되도록 기획되었습니다. 현재 많은 기업들이 메타버스 제작에 참여하고 있습니다. 이로 인해 메타버스 컨텐츠에 대한 수요가 높아지는 것에 발 맞추어 픽셀, 복셀 타입의 아바타를 BMCS NFT에 연동하여 제공합니다. 초기 메타버스 플랫폼들에게 아밭차 컨텐츠를 제공하여 커뮤니티 파워를 공유하고 활용치를 늘려가며, DSC/BMCS 커뮤니티 파워를 확장합니다. 픽셀, 복셀 양식은 다수의 메타버스 플랫폼에서 저비용으로 호환을 가능케하면서도 오랜 사랑을 받고 있는 검증된 디지털 아트 양식입니다. 유행을 타지 않는 것도 장점입니다.",,
+BMCS_KEYWORD_DESC2,"BMCS는 브랜드 파워가 온라인, 오프라인 양쪽에서 빌딩되도록 기획되었습니다. 현재 많은 기업들이 메타버스 제작에 참여하고 있습니다. 이로 인해 메타버스 컨텐츠에 대한 수요가 높아지는 것에 발 맞추어 픽셀, 복셀 타입의 아바타를 BMCS NFT에 연동하여 제공합니다. 초기 메타버스 플랫폼들에게 아바타 컨텐츠를 제공하여 커뮤니티 파워를 공유하고 활용치를 늘려가며, DSC/BMCS 커뮤니티 파워를 확장합니다. 픽셀, 복셀 양식은 다수의 메타버스 플랫폼에서 저비용으로 호환을 가능케하면서도 오랜 사랑을 받고 있는 검증된 디지털 아트 양식입니다. 유행을 타지 않는 것도 장점입니다.",,
 BMCS_KEYWORD_TITLE3,3. 완전 온체인,,
 BMCS_KEYWORD_DESC3,"No IPFS, No API. Just code. 외부 인프라가 아닌 이미지 데이터를 오직 코드를 통해 클레이튼 체인에 완전히 업로드함으로써, BMCS는 최상의 보안 수준을 갖춘 NFT로 제공됩니다.",,
 BMCS_MATE_TITLE,Biased Mate,,
@@ -496,4 +496,4 @@ BMCS_FAQ_DESC2,"바텐더 H-null에게 메이트 NFT와 카드 NFT를 내고, 20
 BMCS_FAQ_TITLE3,AYIAS PIXEL이 뭔가요?,,
 BMCS_FAQ_DESC3,AYIAS는 DSC에서 개발중인 PFP NFT의 픽셀 기반의 자체 메타버스입니다,,
 BMCS_FAQ_TITLE4,BMCS NFT 획득방법 및 총 발행량,,
-BMCS_FAQ_DESC4,판매금의 3%기부 / 2.5% 믹스 커뮤니티 부양,,
+,1. 00000~09999번은 세일을 통해 3월 17일에 획득하실 수 있습니다.\n2. 10000~19999번은 재료(카드) 합성을 통해 4월 18일부터 획득할 수 있습니다.\n최대 발행량은 2만개입니다. ,,
