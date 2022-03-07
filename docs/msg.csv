@@ -16,7 +16,7 @@ HOME_FEATURES_DESC2,특히 새로운 도전들에 대한 이야기를 좋아합�
 HOME_FEATURES_TITLE3,우리는 음악를 좋아합니다,We love music. Likes,私たちは音楽が好きです
 HOME_FEATURES_DESC3,음악은 개소리와 함께 자본에 대한 집착을 환기하는 수단이 됩니다. dsc 개발팀은 DJ SET과 로우파이 비디오를 업로드합니다.,Music is a means of having us refreshed from our obsession with capital along with Kak,音楽は犬の鳴き声とともに資本への執着を喚起する手段になります。 dsc開発チームはDJ SETとロー
 HOME_BUY_MATE_TITLE,BUY MATE,BUY MATE,BUY MATE
-HOME_BUY_MATE_DESC1,메이트는 세계 최대 NFT 거래소인 OPENSA에서 구매할 수 있습니다. 국내 MIX 기반 거래소인 KLUBB에서도 구매할 수 있습니다.,"Mate can be purchased at OPENSA, the world's largest NFT exchange. It can also be purchased at KLUBB, a domestic MIX-based exchange.",メイトは、世界最大のNFT取引所であるOPENSAから購入できます。 韓国MIXベースの取引所KLUBBでも購入できます。
+HOME_BUY_MATE_DESC1,메이트는 세계 최대 NFT 거래소인 OPENSA에서 구매할 수 있습니다. 국내 MIX 기반 거래소인 KLUBS에서도 구매할 수 있습니다.,"Mate can be purchased at OPENSA, the world's largest NFT exchange. It can also be purchased at KLUBS, a domestic MIX-based exchange.",メイトは、世界最大のNFT取引所であるOPENSAから購入できます。 韓国MIXベースの取引所KLUBSでも購入できます。
 HOME_BUY_MATE_DESC2,최근에 메이트를 불법 복제한 스캠(사기) 컬렉션이 많습니다. 메이트의 공식 Opensea의 공식 주소는 https://opensea.io/collection/dogesoundclub-mates입니다.\n주소를 꼭 확인하시고 스캠(사기) 컬렉션에 주의하시기 바랍니다.,"Recently, there are many false NFTs that replicate mates. The official OpenC address is https://opensea.io/collection/dogesoundclub-mates.
 Please make sure to check the address and be careful about the fraudulent project.","最近では，ペアを複製する偽NFTが多くある OpenCの公式アドレスはhttps://opensea.io/collection/dogesoundclub-matesである.
 住所を必ず確認して不正なプロジェクトにご注意ください。"
@@ -103,7 +103,7 @@ MATES_DETAIL_TITLE,MATE {id},MATE {id},MATE {id}
 MY_MATE_TITLE,MY MATE 💕💰💸,MY MATE 💕💰💸,MY MATE 💕💰💸
 MY_MATE_WALLET_ADDRESS,WALLET ADDRESS,WALLET ADDRESS,WALLET ADDRESS
 HOLDER_DISCORD_CERTIFICATION_TITLE,HOLDER CERTIFICATION WITH DISCORD,HOLDER CERTIFICATION WITH DISCORD,不協和音付きホルダー証明書
-HOLDER_DISCORD_CERTIFICATION_DESC,Discord 홀더 인증을 통해 더욱 진솔한 개소리와 고급 정보를 공유하세요,"Mate can be purchased at OPENSEA, the world's largest NFT exchange. It can also be purchased at KLUBB, a domestic MIX-based exchange.",Share more authenticity and advanced information with Discord holder certification.
+HOLDER_DISCORD_CERTIFICATION_DESC,Discord 홀더 인증을 통해 더욱 진솔한 개소리와 고급 정보를 공유하세요,"Mate can be purchased at OPENSEA, the world's largest NFT exchange. It can also be purchased at KLUBS, a domestic MIX-based exchange.",Share more authenticity and advanced information with Discord holder certification.
 HOLDER_DISCORD_CERTIFICATION_BUTTON,Discord 홀더 인증,HOLDER CERTIFICATION WITH DISCORD,Discordホルダー認証を通じてさらに率直な犬の鳴き声と高級情報を共有してください。
 MATE_DETAIL_TITLE,MATE #{id},MATE {id},MATE {id}
 MATE_DETAIL_MIX_ACCOUNT_TITLE,메이트에 쌓여있는 MIX : {amount},The mix on the mate: {count},メイトに溜まっているMIX: {count}
