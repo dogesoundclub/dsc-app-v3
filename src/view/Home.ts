@@ -145,6 +145,8 @@ export default class Home implements View {
                             el("img", { src: "/images/view/home/partnership/clonesNeverDie.png" }),
                             el("img", { src: "/images/view/home/partnership/asiaNftNow.png" }),
                             el("img", { src: "/images/view/home/partnership/nftz.png" }),
+                            el("img", { src: "/images/view/home/partnership/raving.png" }),
+                            el("img", { src: "/images/view/home/partnership/kpct.png" }),
                             el("img", { src: "/images/view/home/partnership/metakongz.png" }),
                         ),
                         el(".title", msg("HOME_PARTNERSHIP_GOVERNANCE_TITLE")),

@@ -1659,11 +1659,6 @@ body {
   line-height: 26px;
   margin-bottom: 30px;
 }
-@media only screen and (max-width: 719px) {
-  .home-view > section > .partnership > .content {
-    overflow: scroll;
-  }
-}
 .home-view > section > .partnership > .content > .title {
   margin-bottom: 14px;
   font-size: 20px;
@@ -1671,6 +1666,7 @@ body {
   color: #E73C83;
 }
 .home-view > section > .partnership > .content > .content {
+  overflow: scroll;
   display: flex;
   margin-bottom: 30px;
 }

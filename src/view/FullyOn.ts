@@ -21,7 +21,7 @@ export default class FullyOn implements View {
             el("section",
                 el("hr"),
                 el("article",
-                    el("img", { src: "/images/view/activities/bg_dsc_family.png" }),
+                    el("img", { src: "/images/view/fully-on/nft_beginner.png" }),
                     el("h2", msg("FULLY_ON_CHAIN_TITLE1")),
                     el("p", msg("FULLY_ON_CHAIN_DESC1")),
                 ),
