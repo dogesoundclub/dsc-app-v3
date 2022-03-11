@@ -573,11 +573,33 @@
             }
 
             >.content {
-                >.title {
+                >.title-container {
+                    display      : flex;
+                    align-items  : center;
                     margin-bottom: 14px;
-                    font-size    : 20px;
-                    line-height  : 20px;
-                    color        : #E73C83;
+
+                    >.title {
+                        font-size  : 20px;
+                        line-height: 20px;
+                        color      : #E73C83;
+                    }
+
+                    >.arrow-container {
+                        margin-left: 10px;
+
+                        >img {
+                            border       : 1px solid #333333;
+                            box-sizing   : border-box;
+                            border-radius: 2px;
+                            padding      : 7px 10px;
+                            margin-right : 7px;
+
+                            &:hover {
+                                background-color: rgba(255, 255, 255, 0.1);
+                                fill            : black;
+                            }
+                        }
+                    }
                 }
 
                 >.content {
