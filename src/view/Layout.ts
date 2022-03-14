@@ -29,6 +29,7 @@ export default class Layout implements View {
                     el("img.logo", { align: "left", src: "/images/logo.svg", alt: "logo" }),
                 ),
                 new PCMenu(),
+                el("a.bmcs", { click: () => ViewUtil.go("bmcs") }, "Go to BMCS >"),
                 select = el("select.language-select",
                     el("option", "🇰🇷 KOREAN", { value: "ko" }),
                     // el("option", "🇺🇸 ENG", { value: "en" }),
