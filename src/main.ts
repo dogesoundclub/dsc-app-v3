@@ -24,13 +24,19 @@ import MyMate from "./view/mates/MyMate";
 import Terms from "./view/Terms";
 import UpdateDscFamily from "./view/dscFamily/UpdateDscFamily";
 import Wallet from "./klaytn/Wallet";
+
+// BMCS
 import Bmcs from "./view/Bmcs";
+
+// E-Mate
+import EmateLayout from "./view/eMate/Layout";
+import EmateHome from "./view/eMate/Home";
 
 (async () => {
     msg.language = BrowserInfo.language;
     msg.parseCSV((await superagent.get("/msg.csv")).text);
 
-    SkyRouter.route("**", Layout, ["bmcs"]);
+    SkyRouter.route("**", Layout, ["bmcs", "e-mate"]);
     SkyRouter.route("", Home);
 
     SkyRouter.route("followMe", FollowMe);
@@ -61,7 +67,13 @@ import Bmcs from "./view/Bmcs";
     SkyRouter.route("terms", Terms);
     SkyRouter.route("faq", Faq);
     SkyRouter.route("member", Member);
+
+    // BMCS
     SkyRouter.route("bmcs", Bmcs);
+
+    // E-MATE
+    // SkyRouter.route("**", EmateLayout, ["bmcs",]);
+    // SkyRouter.route("e-mate", EmateHome);
 
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);

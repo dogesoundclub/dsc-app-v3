@@ -1,0 +1,155 @@
+.emate-home-view {
+    overflow: auto;
+
+    >header {
+        background-image: url("/images/view/emate/home/bg.png");
+        background-size : cover;
+        height          : 800px;
+
+        >.content {
+            max-width  : 1156px;
+            margin     : auto;
+            padding-top: 495px;
+
+            @media @phone {
+                padding: 183px 20px 20px 20px;
+            }
+
+            >.intro {
+                font-weight: 400;
+                font-size  : 64px;
+                line-height: 57px;
+                color      : white;
+
+                @media @phone {
+                    font-size: 34px;
+                }
+            }
+
+            >.description {
+                font-weight: 400;
+                font-size  : 28px;
+                line-height: 26px;
+                margin-top : 6px;
+
+                @media @phone {
+                    font-size: 16px;
+                }
+            }
+
+            >button {
+                width        : 100%;
+                max-width    : 326px;
+                height       : 60px;
+                margin-top   : 30px;
+                background   : #56F545;
+                border-radius: 8px;
+                font-weight  : 400;
+                font-size    : 26px;
+                line-height  : 23px;
+                font-family  : "Cutewritten";
+            }
+        }
+    }
+
+    >section {
+        max-width: 1156px;
+        margin   : auto;
+
+        @media @phone {
+            padding: 20px;
+        }
+
+        >hr {
+            border          : none;
+            height          : 1px;
+            color           : #2C2C2C;
+            background-color: #2C2C2C;
+            margin          : 60px 0px;
+
+            @media @phone {
+                margin: 20px 0px;
+            }
+        }
+
+        >.buy-emate-container {
+            display        : flex;
+            flex-direction : column;
+            justify-content: center;
+
+            >img {
+                margin-top: 150px;
+            }
+
+            >.card-view {
+                background   : #131313;
+                border       : 1px solid #56F545;
+                box-sizing   : border-box;
+                border-radius: 8px;
+                padding      : 30px;
+
+                >h2 {
+                    font-weight: 400;
+                    font-size  : 34px;
+                    line-height: 30px;
+                    color      : #56F545;
+                }
+
+                >p {
+                    font-weight: 400;
+                    font-size  : 20px;
+                    line-height: 24px;
+                    color      : #56F545;
+                }
+
+                >a {
+                    text-decoration: none;
+                    max-width      : 326px;
+                    display        : block;
+                    padding        : 18px 128px;
+                    font-weight    : 400;
+                    font-size      : 22px;
+                    line-height    : 19px;
+                    color          : #56F545;
+                    border         : 1px solid #56F545;
+                    box-sizing     : border-box;
+                    border-radius  : 8px;
+                    margin-top     : 14px;
+                }
+            }
+
+            >.warning {
+                margin-top : 14px;
+                font-weight: 400;
+                font-size  : 20px;
+                line-height: 22px;
+                color      : #676767;
+            }
+        }
+
+        >.story-container {
+            >h2 {
+                font-weight: 400;
+                font-size  : 40px;
+                line-height: 35px;
+
+                /* green */
+
+                color: #56F545;
+            }
+
+            >p {
+                margin-top : 6px;
+                font-weight: 400;
+                font-size  : 20px;
+                line-height: 24px;
+            }
+
+            >.content {
+                margin-top     : 20px;
+                display        : flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
