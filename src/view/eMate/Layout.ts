@@ -2,8 +2,8 @@ import { BodyNode, DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import BrowserInfo from "../../BrowserInfo";
-import MobileMenu from "../../component/shared/menu/MobileMenu";
-import PCMenu from "../../component/shared/menu/PCMenu";
+import MobileMenu from "../../component/emate/menu/MobileMenu";
+import PCMenu from "../../component/emate/menu/PCMenu";
 import ViewUtil from "../ViewUtil";
 
 export default class EmateLayout implements View {

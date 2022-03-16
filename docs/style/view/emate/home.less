@@ -151,5 +151,206 @@
                 justify-content: space-between;
             }
         }
+
+        >.roadmap-container {
+
+            >h2 {
+                font-weight: 400;
+                font-size  : 40px;
+                line-height: 35px;
+                color      : #56F545;
+            }
+
+            >p {
+                margin-top : 6px;
+                font-weight: 400;
+                font-size  : 20px;
+                line-height: 24px;
+            }
+
+            >.content {
+                display              : grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap             : 20px;
+
+                >.card-view {
+                    display       : flex;
+                    flex-direction: column;
+                    position      : relative;
+                    align-items   : center;
+                    margin        : auto;
+                    margin-top    : 110px;
+
+                    >.date {
+                        position       : absolute;
+                        top            : -70px;
+                        background     : #131313;
+                        border         : 1px solid #56F545;
+                        box-sizing     : border-box;
+                        border-radius  : 100%;
+                        width          : 140px;
+                        height         : 140px;
+                        text-align     : center;
+                        align-items    : center;
+                        justify-content: center;
+                        display        : flex;
+                    }
+
+                    &:hover {
+                        background: rgba(86, 245, 69, 0.1);
+                        color     : #56F545;
+                    }
+
+                    >.content {
+                        border       : 1px solid #56F545;
+                        box-sizing   : border-box;
+                        border-radius: 8px;
+                        padding      : 20px;
+                        background   : #131313;
+
+                        >.title {
+                            margin-top : 70px;
+                            font-weight: 400;
+                            font-size  : 26px;
+                            line-height: 24px;
+                        }
+
+                        >.step {
+                            margin-top : 6px;
+                            font-weight: 400;
+                            font-size  : 30px;
+                            line-height: 27px;
+                        }
+
+                        >p {
+                            margin-top : 17px;
+                            font-weight: 400;
+                            font-size  : 20px;
+                            line-height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+
+        >.collection-container {
+            >h2 {
+                font-weight: 400;
+                font-size  : 40px;
+                line-height: 35px;
+            }
+
+            >section {
+                display        : flex;
+                justify-content: space-between;
+
+                >article {
+                    display       : flex;
+                    flex-direction: column;
+                    font-weight   : 400;
+                    font-size     : 16px;
+                    line-height   : 24px;
+                    background    : #222222;
+                    border        : 1px solid #3D3D3D;
+                    box-sizing    : border-box;
+                    border-radius : 8px;
+                    padding       : 20px;
+
+                    >hr {
+                        background: #2C2C2C;
+                        border    : none;
+                        height    : 1px;
+                        color     : #2C2C2C;
+                        padding   : 20px 0px;
+                    }
+
+                    >.button-container {
+                        display        : flex;
+                        justify-content: space-between;
+                        padding-top    : 34px;
+
+                        >a {
+                            max-width      : 259px;
+                            height         : 52px;
+                            padding        : 17px;
+                            display        : block;
+                            border         : 1px solid #56F545;
+                            box-sizing     : border-box;
+                            border-radius  : 8px;
+                            font-weight    : 400;
+                            font-size      : 20px;
+                            line-height    : 18px;
+                            color          : #56F545;
+                            text-decoration: none;
+                        }
+                    }
+
+                    >.open-sea-button-container {
+                        display        : flex;
+                        justify-content: space-between;
+                        padding-top    : 14px;
+
+                        >a {
+                            text-align     : center;
+                            width          : 100%;
+                            height         : 52px;
+                            padding        : 17px;
+                            display        : block;
+                            border         : 1px solid #56F545;
+                            box-sizing     : border-box;
+                            border-radius  : 8px;
+                            font-weight    : 400;
+                            font-size      : 20px;
+                            line-height    : 18px;
+                            color          : #56F545;
+                            text-decoration: none;
+                        }
+                    }
+
+                    >p {
+                        font-weight: 400;
+                        font-size  : 16px;
+                        line-height: 24px;
+                    }
+
+                    >.caption {
+                        font-weight: 400;
+                        font-size  : 14px;
+                        line-height: 12px;
+                        color      : #676767;
+                    }
+
+                    >.image-wrap {
+                        display        : flex;
+                        justify-content: center;
+                        margin-top     : 16px;
+
+                        >img {
+                            max-width : 54px;
+                            max-height: 46px;
+                        }
+                    }
+                }
+            }
+        }
+
+        >.faq-container {
+            margin-top: 123px;
+
+            >h2 {
+                font-weight: 400;
+                font-size  : 40px;
+                line-height: 35px;
+            }
+
+            >section {
+                background   : #131313;
+                border       : 1px solid #56F545;
+                box-sizing   : border-box;
+                border-radius: 8px;
+                padding      : 20px;
+                margin-top   : 16px;
+            }
+        }
     }
 }

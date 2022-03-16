@@ -72,8 +72,11 @@ import EmateHome from "./view/eMate/Home";
     SkyRouter.route("bmcs", Bmcs);
 
     // E-MATE
-    // SkyRouter.route("**", EmateLayout, ["bmcs",]);
-    // SkyRouter.route("e-mate", EmateHome);
+    SkyRouter.route("**", EmateLayout, ["bmcs", "", "followMe", "holder", "buyMate", "activities",
+        "gallery", "mates", "myMate", "dscFamily", "dscFamily/create", "dscFamily/{id}/update",
+        "governance", "governance/create", "governance-old/{id}", "contest", "fullyOn",
+        "terms", "faq"]);
+    SkyRouter.route("e-mate", EmateHome);
 
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);
