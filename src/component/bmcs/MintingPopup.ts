@@ -10,8 +10,12 @@ export default class MintingPopup extends Popup {
     private firstSaleStatus: DomNode;
     private secondSaleStatus: DomNode;
     private walletAddress: DomNode;
-    private bar: DomNode;
+    private wlBar: DomNode;
+    private preBar: DomNode;
+    private firstBar: DomNode;
+    private secondBar: DomNode;
     private amountInput: DomNode<HTMLInputElement>;
+    private status: string;
 
     constructor(
     ) {
@@ -33,7 +37,12 @@ export default class MintingPopup extends Popup {
                     ),
                     el(".progress-container",
                         el("", "0"),
-                        this.bar = el(".progress"),
+                        el("section",
+                            this.wlBar = el(".progress.start"),
+                            this.preBar = el(".progress.pre"),
+                            this.firstBar = el(".progress.first"),
+                            this.secondBar = el(".progress.end"),
+                        ),
                         el("", "9400"),
                     ),
                     el(".amount", "AMOUNT 9400")
@@ -61,13 +70,13 @@ export default class MintingPopup extends Popup {
                         el(".input-container",
                             el("button", "-", {
                                 click: () => {
-                                    this.amountInput.domElement.valueAsNumber -= 1;
+                                    this.subMintAmount();
                                 }
                             }),
-                            this.amountInput = el("input", { type: "number", value: "1" }),
+                            this.amountInput = el("input", { type: "number", value: "1", readonly: "" }),
                             el("button", "+", {
                                 click: () => {
-                                    this.amountInput.domElement.valueAsNumber += 1;
+                                    this.addMintAmount();
                                 }
                             }),
                         ),
@@ -85,6 +94,72 @@ export default class MintingPopup extends Popup {
     private init(): void {
         this.notSaleStatus.style({
             color: "#FFDF13",
-        })
+        });
+
+        this.loadStatus();
+    }
+
+    private loadStatus() {
+        this.status = "public";
+
+        if (this.status === "whitelist") {
+            this.amountInput.domElement.max = "5";
+        } else if (this.status === "public") {
+            this.amountInput.domElement.max = "10";
+        }
+    }
+
+    private addMintAmount() {
+        if (this.status === "whitelist") {
+            if (this.amountInput.domElement.value >= "5") {
+                this.amountInput.domElement.valueAsNumber += 0;
+            } else if (this.amountInput.domElement.value === "1") {
+                this.amountInput.domElement.valueAsNumber += 2;
+            } else if (this.amountInput.domElement.value === "3") {
+                this.amountInput.domElement.valueAsNumber += 2;
+            } else {
+                this.amountInput.domElement.valueAsNumber += 1;
+            }
+        } else {
+            if (this.amountInput.domElement.value === "1") {
+                this.amountInput.domElement.valueAsNumber += 2;
+            } else if (this.amountInput.domElement.value === "3") {
+                this.amountInput.domElement.valueAsNumber += 2;
+            } else if (this.amountInput.domElement.value === "5") {
+                this.amountInput.domElement.valueAsNumber += 5;
+            } else if (this.amountInput.domElement.value >= "10") {
+                this.amountInput.domElement.valueAsNumber += 0;
+            } else {
+                this.amountInput.domElement.valueAsNumber += 1;
+            }
+        }
+    }
+
+    private subMintAmount() {
+        if (this.status === "whitelist") {
+            if (this.amountInput.domElement.value <= "1") {
+                this.amountInput.domElement.valueAsNumber -= 0;
+            } else if (this.amountInput.domElement.value === "1") {
+                this.amountInput.domElement.valueAsNumber -= 1;
+            } else if (this.amountInput.domElement.value === "3") {
+                this.amountInput.domElement.valueAsNumber -= 2;
+            } else if (this.amountInput.domElement.value === "5") {
+                this.amountInput.domElement.valueAsNumber -= 2;
+            }
+        } else {
+            if (this.amountInput.domElement.value <= "1") {
+                this.amountInput.domElement.valueAsNumber -= 0;
+            } else if (this.amountInput.domElement.value === "1") {
+                this.amountInput.domElement.valueAsNumber -= 1;
+            } else if (this.amountInput.domElement.value === "3") {
+                this.amountInput.domElement.valueAsNumber -= 2;
+            } else if (this.amountInput.domElement.value === "5") {
+                this.amountInput.domElement.valueAsNumber -= 2;
+            } else if (this.amountInput.domElement.value === "10") {
+                this.amountInput.domElement.valueAsNumber -= 5;
+            } else {
+                this.amountInput.domElement.valueAsNumber -= 1;
+            }
+        }
     }
 }

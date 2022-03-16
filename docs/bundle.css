@@ -1411,12 +1411,31 @@ body {
   color: #FFDF13;
   align-items: center;
 }
-.dialogue.bmcs-minting-popup > section > .progress-container > .progress {
+.dialogue.bmcs-minting-popup > section > .progress-container > section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   margin: 0px 20px;
+}
+.dialogue.bmcs-minting-popup > section > .progress-container > section > .progress {
   padding: 1px;
   width: 100%;
   border: 1px solid #FFDF13;
-  border-radius: 8px;
+  height: 32px;
+  margin: 0.5px;
+}
+.dialogue.bmcs-minting-popup > section > .progress-container > section > .progress.start {
+  padding: 1px;
+  width: 100%;
+  border: 1px solid #FFDF13;
+  border-radius: 10px 0px 0px 10px;
+  height: 32px;
+}
+.dialogue.bmcs-minting-popup > section > .progress-container > section > .progress.end {
+  padding: 1px;
+  width: 100%;
+  border: 1px solid #FFDF13;
+  border-radius: 0px 10px 10px 0px;
   height: 32px;
 }
 .dialogue.bmcs-minting-popup > section > .amount {
