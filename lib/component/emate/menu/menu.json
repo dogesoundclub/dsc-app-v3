@@ -1,0 +1,19 @@
+{
+    "menu": [{
+            "uri": "buyMate",
+            "name": "BUY E-MATE"
+        },
+        {
+            "uri": "gallery",
+            "name": "GALLERY"
+        },
+        {
+            "uri": "maker",
+            "name": "MAKER"
+        },
+        {
+            "uri": "members",
+            "name": "MEMBERS"
+        }
+    ]
+}

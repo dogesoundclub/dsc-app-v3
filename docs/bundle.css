@@ -1424,19 +1424,30 @@ body {
   height: 32px;
   margin: 0.5px;
 }
-.dialogue.bmcs-minting-popup > section > .progress-container > section > .progress.start {
+.dialogue.bmcs-minting-popup > section > .progress-container > section > .progress > .bar {
+  background-color: #FFDF13;
+  width: 0;
+  height: 28px;
+}
+.dialogue.bmcs-minting-popup > section > .progress-container > section > .progress.presale {
   padding: 1px;
   width: 100%;
   border: 1px solid #FFDF13;
   border-radius: 10px 0px 0px 10px;
   height: 32px;
 }
-.dialogue.bmcs-minting-popup > section > .progress-container > section > .progress.end {
+.dialogue.bmcs-minting-popup > section > .progress-container > section > .progress.presale > .bar {
+  border-radius: 10px 0px 0px 10px;
+}
+.dialogue.bmcs-minting-popup > section > .progress-container > section > .progress.ticket {
   padding: 1px;
   width: 100%;
   border: 1px solid #FFDF13;
   border-radius: 0px 10px 10px 0px;
   height: 32px;
+}
+.dialogue.bmcs-minting-popup > section > .progress-container > section > .progress.ticket > .bar {
+  border-radius: 0px 10px 10px 0px;
 }
 .dialogue.bmcs-minting-popup > section > .amount {
   display: flex;

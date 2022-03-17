@@ -57,23 +57,37 @@
                     border : 1px solid #FFDF13;
                     height : 32px;
                     margin : 0.5px;
+
+                    >.bar {
+                        background-color: #FFDF13;
+                        width           : 0;
+                        height          : 28px;
+                    }
                 }
 
-                >.progress.start {
+                >.progress.presale {
                     padding      : 1px;
                     width        : 100%;
                     border       : 1px solid #FFDF13;
                     border-radius: 10px 0px 0px 10px;
                     height       : 32px;
+
+                    >.bar {
+                        border-radius: 10px 0px 0px 10px;
+                    }
                 }
 
 
-                >.progress.end {
+                >.progress.ticket {
                     padding      : 1px;
                     width        : 100%;
                     border       : 1px solid #FFDF13;
                     border-radius: 0px 10px 10px 0px;
                     height       : 32px;
+
+                    >.bar {
+                        border-radius: 0px 10px 10px 0px;
+                    }
                 }
             }
         }
