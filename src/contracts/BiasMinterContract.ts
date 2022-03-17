@@ -107,7 +107,7 @@ class BiasMinterContract extends Contract {
                 ) {
                     new Alert("화이트리스트 대상이 아닙니다.");
                 } else if (
-                    step === 3 &&
+                    step === 4 &&
                     await this.ticketWhitelist(address) !== true
                 ) {
                     new Alert("화이트리스트 대상이 아닙니다.");
