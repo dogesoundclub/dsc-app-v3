@@ -95,7 +95,7 @@ export default class Bmcs implements View {
                         ),
                     ),
                     el("hr"),
-                    el("article.vibe-container section #biasedMate",
+                    el("article.vibe-container section #biasedCard",
                         el("h2", msg("BMCS_VIBE_TITLE")),
                         el("h3", msg("BMCS_VIBE_DESC")),
                         el(".content",
