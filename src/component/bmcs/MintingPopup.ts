@@ -14,6 +14,7 @@ export default class MintingPopup extends Popup {
     private preBar: DomNode;
     private firstBar: DomNode;
     private secondBar: DomNode;
+    private price: DomNode;
     private amountInput: DomNode<HTMLInputElement>;
     private status: string;
 
@@ -60,7 +61,7 @@ export default class MintingPopup extends Popup {
                         el(".title", "Price"),
                         el(".klay-container",
                             el("img"),
-                            el("p", "300"),
+                            this.price = el("p", "300"),
                             el("p", "Klay"),
                         ),
                         el("p", "Per Transaction : 5개")
@@ -100,12 +101,17 @@ export default class MintingPopup extends Popup {
     }
 
     private loadStatus() {
-        this.status = "public";
+        this.status = "whitelist";
 
         if (this.status === "whitelist") {
             this.amountInput.domElement.max = "5";
-        } else if (this.status === "public") {
+            this.price.empty().appendText("330");
+        } else if (this.status === "firstPublic") {
             this.amountInput.domElement.max = "10";
+            this.price.empty().appendText("350");
+        } else if (this.status === "secondPublic") {
+            this.amountInput.domElement.max = "10";
+            this.price.empty().appendText("380");
         }
     }
 
