@@ -45,7 +45,7 @@ export default class MintingPopup extends Popup {
                         el(".progress-text", "확정권 Sale"),
                     ),
                     el(".progress-container",
-                        el("", "0"),
+                        el("p", "0"),
                         el("section",
                             el(".progress.presale",
                                 this.presaleBar = el(".bar"),
@@ -60,7 +60,7 @@ export default class MintingPopup extends Popup {
                                 this.ticketBar = el(".bar"),
                             ),
                         ),
-                        el("", "9400"),
+                        el("p", "9400"),
                     ),
                     this.amountDisplay = el(".amount", "AMOUNT ...")
                 ),

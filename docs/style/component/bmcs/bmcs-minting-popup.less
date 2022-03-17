@@ -8,8 +8,16 @@
     box-sizing   : border-box;
     border-radius: 10px;
 
+    @media @phone {
+        padding: 20px;
+    }
+
     >section {
         padding: 32px;
+
+        @media @phone {
+            padding: 30px 20px;
+        }
 
         >header {
             display        : flex;
@@ -19,6 +27,12 @@
                 font-size    : 28px;
                 line-height  : 28px;
                 margin-bottom: 14px;
+
+                @media @phone {
+                    font-weight: 400;
+                    font-size  : 20px;
+                    line-height: 20px;
+                }
             }
         }
 
@@ -29,6 +43,12 @@
             >p {
                 font-size  : 20px;
                 line-height: 20px;
+
+                @media @phone {
+                    font-weight: 400;
+                    font-size  : 14px;
+                    line-height: 14px;
+                }
             }
         }
 
@@ -36,6 +56,10 @@
             color          : #FFDF13;
             display        : flex;
             justify-content: space-around;
+
+            @media @phone {
+                display: none;
+            }
         }
 
         >.progress-container {
@@ -44,6 +68,12 @@
             line-height: 32px;
             color      : #FFDF13;
             align-items: center;
+
+            @media @phone {
+                font-weight: 400;
+                font-size  : 14px;
+                line-height: 14px;
+            }
 
             >section {
                 display        : flex;
@@ -96,6 +126,13 @@
             display        : flex;
             justify-content: flex-end;
             margin-right   : 84px;
+
+            @media @phone {
+                margin-right: 0px;
+                font-weight : 400;
+                font-size   : 14px;
+                line-height : 24px;
+            }
         }
 
         >.price-container {
@@ -110,6 +147,12 @@
                 font-size  : 20px;
                 line-height: 20px;
                 color      : #FFDF13;
+
+                @media @phone {
+                    font-weight: 400;
+                    font-size  : 26px;
+                    line-height: 26px;
+                }
             }
 
             >.klay-container {
@@ -124,6 +167,11 @@
             >p {
                 font-size  : 16px;
                 line-height: 24px;
+
+                @media @phone {
+                    font-size  : 14px;
+                    line-height: 24px;
+                }
             }
         }
 
@@ -150,6 +198,10 @@
                     text-align      : center;
                     font-size       : 34px;
                     font-family     : Dunggeunmo;
+
+                    @media @phone {
+                        width: 50%;
+                    }
                 }
 
                 >button {
@@ -197,5 +249,9 @@
         color           : #FFDF13;
         background-color: #FFDF13;
         margin          : 75px 0px 45px 0px;
+
+        @media @phone {
+            margin: 0px 0px;
+        }
     }
 }

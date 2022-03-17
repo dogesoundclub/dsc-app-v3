@@ -1379,8 +1379,18 @@ body {
   box-sizing: border-box;
   border-radius: 10px;
 }
+@media only screen and (max-width: 719px) {
+  .dialogue.bmcs-minting-popup {
+    padding: 20px;
+  }
+}
 .dialogue.bmcs-minting-popup > section {
   padding: 32px;
+}
+@media only screen and (max-width: 719px) {
+  .dialogue.bmcs-minting-popup > section {
+    padding: 30px 20px;
+  }
 }
 .dialogue.bmcs-minting-popup > section > header {
   display: flex;
@@ -1391,6 +1401,13 @@ body {
   line-height: 28px;
   margin-bottom: 14px;
 }
+@media only screen and (max-width: 719px) {
+  .dialogue.bmcs-minting-popup > section > header > h3 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
 .dialogue.bmcs-minting-popup > section > .status-container {
   display: flex;
   justify-content: space-around;
@@ -1399,10 +1416,22 @@ body {
   font-size: 20px;
   line-height: 20px;
 }
+@media only screen and (max-width: 719px) {
+  .dialogue.bmcs-minting-popup > section > .status-container > p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
 .dialogue.bmcs-minting-popup > section > .progress-info {
   color: #FFDF13;
   display: flex;
   justify-content: space-around;
+}
+@media only screen and (max-width: 719px) {
+  .dialogue.bmcs-minting-popup > section > .progress-info {
+    display: none;
+  }
 }
 .dialogue.bmcs-minting-popup > section > .progress-container {
   display: flex;
@@ -1410,6 +1439,13 @@ body {
   line-height: 32px;
   color: #FFDF13;
   align-items: center;
+}
+@media only screen and (max-width: 719px) {
+  .dialogue.bmcs-minting-popup > section > .progress-container {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 .dialogue.bmcs-minting-popup > section > .progress-container > section {
   display: flex;
@@ -1454,6 +1490,14 @@ body {
   justify-content: flex-end;
   margin-right: 84px;
 }
+@media only screen and (max-width: 719px) {
+  .dialogue.bmcs-minting-popup > section > .amount {
+    margin-right: 0px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
 .dialogue.bmcs-minting-popup > section > .price-container {
   display: flex;
   flex-direction: column;
@@ -1467,6 +1511,13 @@ body {
   line-height: 20px;
   color: #FFDF13;
 }
+@media only screen and (max-width: 719px) {
+  .dialogue.bmcs-minting-popup > section > .price-container > .title {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 26px;
+  }
+}
 .dialogue.bmcs-minting-popup > section > .price-container > .klay-container {
   display: flex;
   gap: 12px;
@@ -1478,6 +1529,12 @@ body {
 .dialogue.bmcs-minting-popup > section > .price-container > p {
   font-size: 16px;
   line-height: 24px;
+}
+@media only screen and (max-width: 719px) {
+  .dialogue.bmcs-minting-popup > section > .price-container > p {
+    font-size: 14px;
+    line-height: 24px;
+  }
 }
 .dialogue.bmcs-minting-popup > section > .amount-container {
   margin-bottom: 46px;
@@ -1500,6 +1557,11 @@ body {
   text-align: center;
   font-size: 34px;
   font-family: Dunggeunmo;
+}
+@media only screen and (max-width: 719px) {
+  .dialogue.bmcs-minting-popup > section > .amount-container > .input-container > input {
+    width: 50%;
+  }
 }
 .dialogue.bmcs-minting-popup > section > .amount-container > .input-container > button {
   border: 1px solid #FFFFFF;
@@ -1539,6 +1601,11 @@ body {
   color: #FFDF13;
   background-color: #FFDF13;
   margin: 75px 0px 45px 0px;
+}
+@media only screen and (max-width: 719px) {
+  .dialogue.bmcs-minting-popup > hr {
+    margin: 0px 0px;
+  }
 }
 .pc-menu {
   top: 0;
@@ -3074,8 +3141,8 @@ body {
   }
 }
 .bmcs-view > section > .vibe-container > .content > .card > img {
-  width: 280px;
-  height: 381px;
+  max-width: 280px;
+  max-height: 381px;
 }
 .bmcs-view > section > .vibe-container > .content > .card > h4 {
   font-size: 20px;
@@ -3177,6 +3244,11 @@ body {
     font-size: 16px;
   }
 }
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .roadmap-container > .content > .card-container > .card > img {
+    display: none;
+  }
+}
 .bmcs-view > section > .roadmap-container > .content > .card-container > .card > img.right {
   position: absolute;
   top: 35%;
@@ -3229,6 +3301,11 @@ body {
 @media only screen and (max-width: 719px) {
   .bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .card > p {
     font-size: 16px;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .card > img {
+    display: none;
   }
 }
 .bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .card > img.left {
