@@ -1381,7 +1381,7 @@ body {
 }
 @media only screen and (max-width: 719px) {
   .dialogue.bmcs-minting-popup {
-    padding: 20px;
+    max-width: 90%;
   }
 }
 .dialogue.bmcs-minting-popup > section {
