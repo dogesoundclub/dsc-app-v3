@@ -6,7 +6,7 @@ import Contract from "./Contract";
 class BiasContract extends Contract {
 
     constructor() {
-        super("0x6988BA6587841C406214E0ce73fF888A08b09Af0", BiasArtifact.abi);
+        super("0xDeDd727ab86bce5D416F9163B2448860BbDE86d4", BiasArtifact.abi);
     }
 
     public async ownerOf(mateId: BigNumberish): Promise<string> {

@@ -8,7 +8,7 @@ import Contract from "./Contract";
 class BiasMinterContract extends Contract {
 
     constructor() {
-        super("0x57F683176B833e04880844c2dFdD94Bd5974CaD6", BiasMinterArtifact.abi);
+        super("0x320d5525059E0916F310e87619C5dc91081B49f9", BiasMinterArtifact.abi);
     }
 
     public async step(): Promise<BigNumber> {
