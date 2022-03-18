@@ -123,7 +123,12 @@ export default class Activities implements View {
                         address,
                     }),
                 });
-                if ((await result.json()).isHolder === true) {
+                const d = (await result.json());
+                if (
+                    d.mate === true ||
+                    d.emate === true ||
+                    d.bmcs === true
+                ) {
                     new Alert("홀더 인증 완료");
                 } else {
                     new Alert("홀더 인증 실패");
