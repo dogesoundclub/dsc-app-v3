@@ -1410,11 +1410,12 @@ body {
 }
 .dialogue.bmcs-minting-popup > section > .status-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 .dialogue.bmcs-minting-popup > section > .status-container > p {
   font-size: 20px;
   line-height: 20px;
+  color: #999999;
 }
 @media only screen and (max-width: 719px) {
   .dialogue.bmcs-minting-popup > section > .status-container > p {
@@ -1422,6 +1423,9 @@ body {
     font-size: 14px;
     line-height: 14px;
   }
+}
+.dialogue.bmcs-minting-popup > section > .status-container > .not {
+  margin-right: 50px;
 }
 .dialogue.bmcs-minting-popup > section > .progress-info {
   color: #FFDF13;
@@ -1499,6 +1503,11 @@ body {
 }
 .dialogue.bmcs-minting-popup > section > .price-container > .content {
   margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 .dialogue.bmcs-minting-popup > section > .price-container > .content > .title {
   font-size: 20px;
@@ -1529,6 +1538,13 @@ body {
     font-size: 14px;
     line-height: 24px;
   }
+}
+.dialogue.bmcs-minting-popup > section > .price-container > hr {
+  width: 1px;
+  height: 80px;
+  background: #FFDF13;
+  margin: 0px 50px;
+  border: none;
 }
 .dialogue.bmcs-minting-popup > section > .amount-container {
   margin-bottom: 46px;
@@ -1594,7 +1610,7 @@ body {
   height: 1px;
   color: #FFDF13;
   background-color: #FFDF13;
-  margin: 75px 0px 45px 0px;
+  margin: 36px 0px 45px 0px;
 }
 @media only screen and (max-width: 719px) {
   .dialogue.bmcs-minting-popup > hr {

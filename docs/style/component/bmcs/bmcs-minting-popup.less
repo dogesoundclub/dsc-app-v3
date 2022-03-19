@@ -38,17 +38,23 @@
 
         >.status-container {
             display        : flex;
-            justify-content: space-around;
+            justify-content: center;
 
             >p {
                 font-size  : 20px;
                 line-height: 20px;
+                color      : rgba(153, 153, 153, 1);
+
 
                 @media @phone {
                     font-weight: 400;
                     font-size  : 14px;
                     line-height: 14px;
                 }
+            }
+
+            >.not {
+                margin-right: 50px;
             }
         }
 
@@ -133,7 +139,12 @@
             align-items    : center;
 
             >.content {
-                margin-left: 16px;
+                margin-left    : 16px;
+                display        : flex;
+                flex-direction : column;
+                justify-content: center;
+                align-items    : center;
+                margin-top     : 30px;
 
                 >.title {
                     font-size  : 20px;
@@ -165,6 +176,14 @@
                         line-height: 24px;
                     }
                 }
+            }
+
+            >hr {
+                width     : 1px;
+                height    : 80px;
+                background: #FFDF13;
+                margin    : 0px 50px;
+                border    : none;
             }
         }
 
@@ -241,7 +260,7 @@
         height          : 1px;
         color           : #FFDF13;
         background-color: #FFDF13;
-        margin          : 75px 0px 45px 0px;
+        margin          : 36px 0px 45px 0px;
 
         @media @phone {
             margin: 0px 0px;

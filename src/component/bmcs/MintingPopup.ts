@@ -24,7 +24,7 @@ export default class MintingPopup extends Popup {
             this.content = el(".dialogue.bmcs-minting-popup",
                 el("section",
                     el("header",
-                        el("h3", "NFT Remaining Quantity"),
+                        el("h3", "Sale Progress"),
                         el("a", { click: () => { this.delete() } },
                             el("img", { src: "/images/shared/icn/icn_close.svg" })
                         ),
@@ -42,22 +42,29 @@ export default class MintingPopup extends Popup {
                 ),
                 el("hr"),
                 el("section",
+                    el(".status-container",
+                        el("p.not", "Not on Sale"),
+                        el("p", "On Sale"),
+                    ),
                     el(".price-container",
                         el(".content",
                             el(".title", "WL Price"),
                             el(".klay-container",
-                                el("img"),
+                                el("img", { src: "/images/shared/icn/icn_klay.svg", alt: "Klaytn" }),
                                 this.WLprice = el("p", "..."),
                                 el("p", "Klay"),
                             ),
+                            el("p", "Per Transaction : Unlimited")
                         ),
+                        el("hr"),
                         el(".content",
                             el(".title", "None WL Price"),
                             el(".klay-container",
-                                el("img"),
+                                el("img", { src: "/images/shared/icn/icn_klay.svg", alt: "Klaytn" }),
                                 this.price = el("p", "..."),
                                 el("p", "Klay"),
                             ),
+                            el("p", "Per Transaction : Unlimited")
                         ),
                     ),
                     el(".amount-container",
@@ -109,7 +116,7 @@ export default class MintingPopup extends Popup {
     }
 
     private subMintAmount() {
-        this.amountInput.domElement.valueAsNumber -= 1;
+        this.amountInput.domElement.valueAsNumber += 1;
     }
 
     // private connectHandler() {
