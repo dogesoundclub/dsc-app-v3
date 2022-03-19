@@ -116,7 +116,11 @@ export default class MintingPopup extends Popup {
     }
 
     private subMintAmount() {
-        this.amountInput.domElement.valueAsNumber -= 1;
+        if (this.amountInput.domElement.valueAsNumber === 0) {
+            this.amountInput.domElement.valueAsNumber -= 0;
+        } else {
+            this.amountInput.domElement.valueAsNumber -= 1;
+        }
     }
 
     // private connectHandler() {
