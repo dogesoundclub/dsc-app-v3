@@ -82,28 +82,18 @@
                 margin         : 0px 20px;
 
                 >.progress {
-                    padding: 1px;
-                    width  : 100%;
-                    border : 1px solid #FFDF13;
-                    height : 32px;
-                    margin : 0.5px;
+                    padding      : 1px;
+                    width        : 100%;
+                    border       : 1px solid #FFDF13;
+                    height       : 32px;
+                    margin       : 0.5px;
+                    border-radius: 10px;
 
                     >.bar {
                         background-color: #FFDF13;
                         width           : 0;
                         height          : 28px;
-                    }
-                }
-
-                >.progress.presale {
-                    padding      : 1px;
-                    width        : 100%;
-                    border       : 1px solid #FFDF13;
-                    border-radius: 10px 0px 0px 10px;
-                    height       : 32px;
-
-                    >.bar {
-                        border-radius: 10px 0px 0px 10px;
+                        border-radius   : 10px;
                     }
                 }
 
@@ -136,41 +126,44 @@
         }
 
         >.price-container {
-            display       : flex;
-            flex-direction: column;
-            margin-top    : 50px;
-            margin-top    : 30px;
-            text-align    : center;
-            align-items   : center;
+            display        : flex;
+            justify-content: center;
+            margin-top     : 30px;
+            text-align     : center;
+            align-items    : center;
 
-            >.title {
-                font-size  : 20px;
-                line-height: 20px;
-                color      : #FFDF13;
+            >.content {
+                margin-left: 16px;
 
-                @media @phone {
-                    font-weight: 400;
-                    font-size  : 26px;
-                    line-height: 26px;
+                >.title {
+                    font-size  : 20px;
+                    line-height: 20px;
+                    color      : #FFDF13;
+
+                    @media @phone {
+                        font-weight: 400;
+                        font-size  : 26px;
+                        line-height: 26px;
+                    }
                 }
-            }
 
-            >.klay-container {
-                display      : flex;
-                gap          : 12px;
-                font-size    : 32px;
-                line-height  : 32px;
-                margin-top   : 5px;
-                margin-bottom: 4px;
-            }
+                >.klay-container {
+                    display      : flex;
+                    gap          : 12px;
+                    font-size    : 32px;
+                    line-height  : 32px;
+                    margin-top   : 5px;
+                    margin-bottom: 4px;
+                }
 
-            >p {
-                font-size  : 16px;
-                line-height: 24px;
-
-                @media @phone {
-                    font-size  : 14px;
+                >p {
+                    font-size  : 16px;
                     line-height: 24px;
+
+                    @media @phone {
+                        font-size  : 14px;
+                        line-height: 24px;
+                    }
                 }
             }
         }

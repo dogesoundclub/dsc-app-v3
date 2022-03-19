@@ -1459,21 +1459,13 @@ body {
   border: 1px solid #FFDF13;
   height: 32px;
   margin: 0.5px;
+  border-radius: 10px;
 }
 .dialogue.bmcs-minting-popup > section > .progress-container > section > .progress > .bar {
   background-color: #FFDF13;
   width: 0;
   height: 28px;
-}
-.dialogue.bmcs-minting-popup > section > .progress-container > section > .progress.presale {
-  padding: 1px;
-  width: 100%;
-  border: 1px solid #FFDF13;
-  border-radius: 10px 0px 0px 10px;
-  height: 32px;
-}
-.dialogue.bmcs-minting-popup > section > .progress-container > section > .progress.presale > .bar {
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 10px;
 }
 .dialogue.bmcs-minting-popup > section > .progress-container > section > .progress.ticket {
   padding: 1px;
@@ -1500,25 +1492,27 @@ body {
 }
 .dialogue.bmcs-minting-popup > section > .price-container {
   display: flex;
-  flex-direction: column;
-  margin-top: 50px;
+  justify-content: center;
   margin-top: 30px;
   text-align: center;
   align-items: center;
 }
-.dialogue.bmcs-minting-popup > section > .price-container > .title {
+.dialogue.bmcs-minting-popup > section > .price-container > .content {
+  margin-left: 16px;
+}
+.dialogue.bmcs-minting-popup > section > .price-container > .content > .title {
   font-size: 20px;
   line-height: 20px;
   color: #FFDF13;
 }
 @media only screen and (max-width: 719px) {
-  .dialogue.bmcs-minting-popup > section > .price-container > .title {
+  .dialogue.bmcs-minting-popup > section > .price-container > .content > .title {
     font-weight: 400;
     font-size: 26px;
     line-height: 26px;
   }
 }
-.dialogue.bmcs-minting-popup > section > .price-container > .klay-container {
+.dialogue.bmcs-minting-popup > section > .price-container > .content > .klay-container {
   display: flex;
   gap: 12px;
   font-size: 32px;
@@ -1526,12 +1520,12 @@ body {
   margin-top: 5px;
   margin-bottom: 4px;
 }
-.dialogue.bmcs-minting-popup > section > .price-container > p {
+.dialogue.bmcs-minting-popup > section > .price-container > .content > p {
   font-size: 16px;
   line-height: 24px;
 }
 @media only screen and (max-width: 719px) {
-  .dialogue.bmcs-minting-popup > section > .price-container > p {
+  .dialogue.bmcs-minting-popup > section > .price-container > .content > p {
     font-size: 14px;
     line-height: 24px;
   }
