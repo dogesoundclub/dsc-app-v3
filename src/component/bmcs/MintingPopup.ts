@@ -116,7 +116,7 @@ export default class MintingPopup extends Popup {
     }
 
     private subMintAmount() {
-        this.amountInput.domElement.valueAsNumber += 1;
+        this.amountInput.domElement.valueAsNumber -= 1;
     }
 
     // private connectHandler() {
