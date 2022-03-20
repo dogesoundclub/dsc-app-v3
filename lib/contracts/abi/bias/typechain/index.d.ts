@@ -1,5 +1,6 @@
 export type { Bias } from "./Bias";
 export type { BiasMinter } from "./BiasMinter";
+export type { BiasMinterV2 } from "./BiasMinterV2";
 export type { ITransferListener } from "./ITransferListener";
 export type { MinterRole } from "./MinterRole";
 export type { PauserRole } from "./PauserRole";
@@ -70,6 +71,7 @@ export type { KIP7Token } from "./KIP7Token";
 export type { KIP7TokenFull } from "./KIP7TokenFull";
 export { Bias__factory } from "./factories/Bias__factory";
 export { BiasMinter__factory } from "./factories/BiasMinter__factory";
+export { BiasMinterV2__factory } from "./factories/BiasMinterV2__factory";
 export { ITransferListener__factory } from "./factories/ITransferListener__factory";
 export { MinterRole__factory } from "./factories/MinterRole__factory";
 export { PauserRole__factory } from "./factories/PauserRole__factory";

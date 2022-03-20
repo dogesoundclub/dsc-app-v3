@@ -1,0 +1,100 @@
+{
+    "Face": [
+        "Male",
+        "Tiger",
+        "Monkey",
+        "Robot",
+        "Female",
+        "Rabbit"
+    ],
+    "Face Detail A": [
+        "Spots",
+        "Orange Stripes",
+        "Mouth Spot",
+        "Green Cyclops Eye"
+    ],
+    "Face Detail B": [
+        "Red Lip",
+        "Smile",
+        "Frightened Mouth",
+        "Purple Lip",
+        "Clown Mouth"
+    ],
+    "Neck": [
+        "Choker",
+        "Silver Chain",
+        "Gold Chain",
+        "Red Scarf"
+    ],
+    "Mouth": [
+        "Medical Mask"
+    ],
+    "Eyes": [
+        "Ski Goggle",
+        "Orange Eyebrow",
+        "Nerd Glasses",
+        "Normal Glasses",
+        "Shade Glasses",
+        "Horned Rim Glasses",
+        "VR Rainbow LED",
+        "Blue Clown Eyes",
+        "Red Clown Eyes",
+        "I dont know Eyes",
+        "VR Jade LED"
+    ],
+    "Forehead": [
+        "Red Victory Band",
+        "2 Color Band"
+    ],
+    "Headwear": [
+        "Parted Pink",
+        "Normal Black Hair",
+        "Mohawk",
+        "Green Layers",
+        "Purple Cap with a Headset",
+        "Retro Cap",
+        "Red Alarm",
+        "Green hair in Purple Cap",
+        "Red Beanie",
+        "Blue Bandana",
+        "Tiara",
+        "Orange Side",
+        "Pig Tails",
+        "Blone in Ushanka",
+        "Bucket Hat",
+        "Doge Hat",
+        "Blone with an Wing",
+        "Pink Rabbit",
+        "Mens Normal Blonde",
+        "Metal Purple",
+        "Not Arranged Green ",
+        "Police Cap",
+        "Hoodie",
+        "Monk",
+        "Peak Spike",
+        "90s Brown Hair",
+        "Metal Blue",
+        "Green with Edge Curl",
+        "Rainbow Festival",
+        "Witch Short",
+        "00s School Girl",
+        "Short Peak Cap",
+        "Headset with LED"
+    ],
+    "Headwear Detail": [
+        "Goggle on forehead"
+    ],
+    "Ears": [
+        "Gold Earring",
+        "Green Cross Earring",
+        "Red Cross Earring",
+        "Jade Earring"
+    ],
+    "Items": [
+        "Cigarette",
+        "Candy Stick",
+        "Whistle",
+        "LED Gas Mask",
+        "Normal Gas Mask"
+    ]
+}

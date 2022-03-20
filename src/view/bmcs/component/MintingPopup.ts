@@ -1,5 +1,5 @@
 import { DomNode, el, Popup } from "@hanul/skynode";
-import BiasMinterContract from "../../../contracts/BiasMinterContract";
+import BiasMinterV2Contract from "../../../contracts/BiasMinterV2Contract";
 import Wallet from "../../../klaytn/Wallet";
 
 export default class MintingPopup extends Popup {
@@ -16,7 +16,8 @@ export default class MintingPopup extends Popup {
     private price: DomNode;
     private amountInput: DomNode<HTMLInputElement>;
 
-    private step = 0;
+    private notOnSale: DomNode;
+    private onSale: DomNode;
 
     constructor() {
         super(".popup-background");
@@ -36,15 +37,15 @@ export default class MintingPopup extends Popup {
                                 this.saleBar = el(".bar"),
                             ),
                         ),
-                        el("p", "9400"),
+                        el("p", "8068"),
                     ),
                     this.amountDisplay = el(".amount", "AMOUNT ...")
                 ),
                 el("hr"),
                 el("section",
                     el(".status-container",
-                        el("p.not", "Not on Sale"),
-                        el("p", "On Sale"),
+                        this.notOnSale = el("p.not", "Not on Sale"),
+                        this.onSale = el("p", "On Sale"),
                     ),
                     el(".price-container",
                         el(".content",
@@ -86,7 +87,7 @@ export default class MintingPopup extends Popup {
                     el(".button-wrap",
                         el("a", "MINT", {
                             click: async () => {
-                                await BiasMinterContract.mint(this.amountInput.domElement.valueAsNumber);
+                                await BiasMinterV2Contract.mint(this.amountInput.domElement.valueAsNumber);
                             },
                         }),
                     ),
@@ -96,16 +97,20 @@ export default class MintingPopup extends Popup {
         );
 
         this.loadStatus();
-        // Wallet.on("connect", this.connectHandler);
-        // this.interval = setInterval(() => this.progress(), 1000);
-        // this.progress();
+        Wallet.on("connect", this.connectHandler);
+        this.interval = setInterval(() => this.progress(), 1000);
+        this.progress();
     }
 
     private async loadStatus() {
-        this.step = (await BiasMinterContract.step()).toNumber();
-
-        this.saleBar.style({ color: "#fff" });
-
+        const step = (await BiasMinterV2Contract.step()).toNumber();
+        if (step === 0) {
+            this.notOnSale.style({ color: "#FFDF13" });
+            this.onSale.style({ color: "#999999" });
+        } else {
+            this.notOnSale.style({ color: "#999999" });
+            this.onSale.style({ color: "#FFDF13" });
+        }
         this.amountInput.domElement.max = "1";
         this.price.empty().appendText("185");
         this.WLprice.empty().appendText("165");
@@ -123,47 +128,32 @@ export default class MintingPopup extends Popup {
         }
     }
 
-    // private connectHandler() {
-    //     this.loadAddress();
-    // }
+    private connectHandler() {
+        this.loadAddress();
+    }
 
-    // private async loadAddress() {
-    //     const address = await Wallet.loadAddress();
-    //     if (address !== undefined) {
-    //         this.walletAddress.empty().appendText("Wallet Address : " + address);
-    //     }
-    // }
+    private async loadAddress() {
+        const address = await Wallet.loadAddress();
+        if (address !== undefined) {
+            this.walletAddress.empty().appendText("Wallet Address : " + address);
+        }
+    }
 
-    // private async progress() {
-    //     this.loadStatus();
-    //     this.loadAddress();
+    private async progress() {
+        this.loadStatus();
+        this.loadAddress();
 
-    //     const currentId = (await BiasMinterContract.currentId()).toNumber();
-    //     this.amountDisplay.empty().appendText("AMOUNT " + String(currentId - 600));
+        const currentId = (await BiasMinterV2Contract.currentId()).toNumber();
+        this.amountDisplay.empty().appendText("AMOUNT " + String(currentId - 1932));
 
-    //     const presaleLimit = 4000;
-    //     const presaleRemains = (await BiasMinterContract.presaleCount()).toNumber();
-    //     const presaleD = presaleLimit - presaleRemains > presaleLimit ? presaleLimit : presaleLimit - presaleRemains;
-    //     this.presaleBar.style({ width: `${presaleD / presaleLimit * 100}%` });
-
-    //     const public1Limit = 2570;
-    //     const public1Remains = (await BiasMinterContract.public1Count()).toNumber();
-    //     const public1D = public1Limit - public1Remains > public1Limit ? public1Limit : public1Limit - public1Remains;
-    //     this.public1Bar.style({ width: `${public1D / public1Limit * 100}%` });
-
-    //     const public2Limit = 2600;
-    //     const public2Remains = (await BiasMinterContract.public2Count()).toNumber();
-    //     const public2D = public2Limit - public2Remains > public2Limit ? public2Limit : public2Limit - public2Remains;
-    //     this.public2Bar.style({ width: `${public2D / public2Limit * 100}%` });
-
-    //     const ticketLimit = 230;
-    //     const ticketRemains = (await BiasMinterContract.ticketCount()).toNumber();
-    //     const ticketD = ticketLimit - ticketRemains > ticketLimit ? ticketLimit : ticketLimit - ticketRemains;
-    //     this.ticketBar.style({ width: `${ticketD / ticketLimit * 100}%` });
-    // }
+        const limit = 8068;
+        const remains = (await BiasMinterV2Contract.amount()).toNumber();
+        const d = limit - remains > limit ? limit : limit - remains;
+        this.saleBar.style({ width: `${d / limit * 100}%` });
+    }
 
     public delete(): void {
-        // Wallet.off("connect", this.connectHandler);
+        Wallet.off("connect", this.connectHandler);
         clearInterval(this.interval);
         super.delete();
     }

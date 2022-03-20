@@ -26,13 +26,21 @@ interface BiasMinterInterface extends ethers.utils.Interface {
     "presalePrice()": FunctionFragment;
     "feeTo()": FunctionFragment;
     "bias()": FunctionFragment;
+    "setPresaleLimitPerTransaction(uint256)": FunctionFragment;
+    "setPublic1Count(uint256)": FunctionFragment;
     "ticketPrice()": FunctionFragment;
+    "setTicketPrice(uint256)": FunctionFragment;
+    "setPublicLimitPerTransaction(uint256)": FunctionFragment;
+    "setPresalePrice(uint256)": FunctionFragment;
     "presaleLimitPerTransaction()": FunctionFragment;
     "public1Price()": FunctionFragment;
+    "setPublic1Price(uint256)": FunctionFragment;
     "renounceOwnership()": FunctionFragment;
+    "setPresaleCount(uint256)": FunctionFragment;
     "owner()": FunctionFragment;
     "isOwner()": FunctionFragment;
     "public2Price()": FunctionFragment;
+    "setTicketCount(uint256)": FunctionFragment;
     "setCurrentId(uint256)": FunctionFragment;
     "mint(uint256)": FunctionFragment;
     "ticketWhitelist(address)": FunctionFragment;
@@ -43,12 +51,14 @@ interface BiasMinterInterface extends ethers.utils.Interface {
     "addTicketWhitelist(address[])": FunctionFragment;
     "currentId()": FunctionFragment;
     "step()": FunctionFragment;
+    "setPublic2Count(uint256)": FunctionFragment;
     "presaleWhitelist(address)": FunctionFragment;
     "addPresaleWhitelist(address[])": FunctionFragment;
     "transferOwnership(address)": FunctionFragment;
     "setFeeTo(address)": FunctionFragment;
     "publicLimitPerTransaction()": FunctionFragment;
     "setStep(uint256)": FunctionFragment;
+    "setPublic2Price(uint256)": FunctionFragment;
   };
 
   encodeFunctionData(
@@ -58,8 +68,28 @@ interface BiasMinterInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: "feeTo", values?: undefined): string;
   encodeFunctionData(functionFragment: "bias", values?: undefined): string;
   encodeFunctionData(
+    functionFragment: "setPresaleLimitPerTransaction",
+    values: [BigNumberish]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "setPublic1Count",
+    values: [BigNumberish]
+  ): string;
+  encodeFunctionData(
     functionFragment: "ticketPrice",
     values?: undefined
+  ): string;
+  encodeFunctionData(
+    functionFragment: "setTicketPrice",
+    values: [BigNumberish]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "setPublicLimitPerTransaction",
+    values: [BigNumberish]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "setPresalePrice",
+    values: [BigNumberish]
   ): string;
   encodeFunctionData(
     functionFragment: "presaleLimitPerTransaction",
@@ -70,14 +100,26 @@ interface BiasMinterInterface extends ethers.utils.Interface {
     values?: undefined
   ): string;
   encodeFunctionData(
+    functionFragment: "setPublic1Price",
+    values: [BigNumberish]
+  ): string;
+  encodeFunctionData(
     functionFragment: "renounceOwnership",
     values?: undefined
+  ): string;
+  encodeFunctionData(
+    functionFragment: "setPresaleCount",
+    values: [BigNumberish]
   ): string;
   encodeFunctionData(functionFragment: "owner", values?: undefined): string;
   encodeFunctionData(functionFragment: "isOwner", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "public2Price",
     values?: undefined
+  ): string;
+  encodeFunctionData(
+    functionFragment: "setTicketCount",
+    values: [BigNumberish]
   ): string;
   encodeFunctionData(
     functionFragment: "setCurrentId",
@@ -111,6 +153,10 @@ interface BiasMinterInterface extends ethers.utils.Interface {
   encodeFunctionData(functionFragment: "currentId", values?: undefined): string;
   encodeFunctionData(functionFragment: "step", values?: undefined): string;
   encodeFunctionData(
+    functionFragment: "setPublic2Count",
+    values: [BigNumberish]
+  ): string;
+  encodeFunctionData(
     functionFragment: "presaleWhitelist",
     values: [string]
   ): string;
@@ -131,6 +177,10 @@ interface BiasMinterInterface extends ethers.utils.Interface {
     functionFragment: "setStep",
     values: [BigNumberish]
   ): string;
+  encodeFunctionData(
+    functionFragment: "setPublic2Price",
+    values: [BigNumberish]
+  ): string;
 
   decodeFunctionResult(
     functionFragment: "presalePrice",
@@ -139,7 +189,27 @@ interface BiasMinterInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: "feeTo", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "bias", data: BytesLike): Result;
   decodeFunctionResult(
+    functionFragment: "setPresaleLimitPerTransaction",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "setPublic1Count",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
     functionFragment: "ticketPrice",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "setTicketPrice",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "setPublicLimitPerTransaction",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "setPresalePrice",
     data: BytesLike
   ): Result;
   decodeFunctionResult(
@@ -151,13 +221,25 @@ interface BiasMinterInterface extends ethers.utils.Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(
+    functionFragment: "setPublic1Price",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
     functionFragment: "renounceOwnership",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "setPresaleCount",
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "isOwner", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "public2Price",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "setTicketCount",
     data: BytesLike
   ): Result;
   decodeFunctionResult(
@@ -192,6 +274,10 @@ interface BiasMinterInterface extends ethers.utils.Interface {
   decodeFunctionResult(functionFragment: "currentId", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "step", data: BytesLike): Result;
   decodeFunctionResult(
+    functionFragment: "setPublic2Count",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
     functionFragment: "presaleWhitelist",
     data: BytesLike
   ): Result;
@@ -209,6 +295,10 @@ interface BiasMinterInterface extends ethers.utils.Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "setStep", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "setPublic2Price",
+    data: BytesLike
+  ): Result;
 
   events: {
     "OwnershipTransferred(address,address)": EventFragment;
@@ -243,9 +333,59 @@ export class BiasMinter extends Contract {
 
     "bias()"(overrides?: CallOverrides): Promise<[string]>;
 
+    setPresaleLimitPerTransaction(
+      limit: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
+
+    "setPresaleLimitPerTransaction(uint256)"(
+      limit: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
+
+    setPublic1Count(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
+
+    "setPublic1Count(uint256)"(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
+
     ticketPrice(overrides?: CallOverrides): Promise<[BigNumber]>;
 
     "ticketPrice()"(overrides?: CallOverrides): Promise<[BigNumber]>;
+
+    setTicketPrice(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
+
+    "setTicketPrice(uint256)"(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
+
+    setPublicLimitPerTransaction(
+      limit: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
+
+    "setPublicLimitPerTransaction(uint256)"(
+      limit: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
+
+    setPresalePrice(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
+
+    "setPresalePrice(uint256)"(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
 
     presaleLimitPerTransaction(overrides?: CallOverrides): Promise<[BigNumber]>;
 
@@ -257,9 +397,29 @@ export class BiasMinter extends Contract {
 
     "public1Price()"(overrides?: CallOverrides): Promise<[BigNumber]>;
 
+    setPublic1Price(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
+
+    "setPublic1Price(uint256)"(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
+
     renounceOwnership(overrides?: Overrides): Promise<ContractTransaction>;
 
     "renounceOwnership()"(overrides?: Overrides): Promise<ContractTransaction>;
+
+    setPresaleCount(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
+
+    "setPresaleCount(uint256)"(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
 
     owner(overrides?: CallOverrides): Promise<[string]>;
 
@@ -272,6 +432,16 @@ export class BiasMinter extends Contract {
     public2Price(overrides?: CallOverrides): Promise<[BigNumber]>;
 
     "public2Price()"(overrides?: CallOverrides): Promise<[BigNumber]>;
+
+    setTicketCount(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
+
+    "setTicketCount(uint256)"(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
 
     setCurrentId(
       _currentId: BigNumberish,
@@ -337,6 +507,16 @@ export class BiasMinter extends Contract {
 
     "step()"(overrides?: CallOverrides): Promise<[BigNumber]>;
 
+    setPublic2Count(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
+
+    "setPublic2Count(uint256)"(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
+
     presaleWhitelist(
       arg0: string,
       overrides?: CallOverrides
@@ -392,6 +572,16 @@ export class BiasMinter extends Contract {
       _step: BigNumberish,
       overrides?: Overrides
     ): Promise<ContractTransaction>;
+
+    setPublic2Price(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
+
+    "setPublic2Price(uint256)"(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
   };
 
   presalePrice(overrides?: CallOverrides): Promise<BigNumber>;
@@ -406,9 +596,59 @@ export class BiasMinter extends Contract {
 
   "bias()"(overrides?: CallOverrides): Promise<string>;
 
+  setPresaleLimitPerTransaction(
+    limit: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
+  "setPresaleLimitPerTransaction(uint256)"(
+    limit: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
+  setPublic1Count(
+    count: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
+  "setPublic1Count(uint256)"(
+    count: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
   ticketPrice(overrides?: CallOverrides): Promise<BigNumber>;
 
   "ticketPrice()"(overrides?: CallOverrides): Promise<BigNumber>;
+
+  setTicketPrice(
+    price: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
+  "setTicketPrice(uint256)"(
+    price: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
+  setPublicLimitPerTransaction(
+    limit: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
+  "setPublicLimitPerTransaction(uint256)"(
+    limit: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
+  setPresalePrice(
+    price: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
+  "setPresalePrice(uint256)"(
+    price: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
 
   presaleLimitPerTransaction(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -418,9 +658,29 @@ export class BiasMinter extends Contract {
 
   "public1Price()"(overrides?: CallOverrides): Promise<BigNumber>;
 
+  setPublic1Price(
+    price: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
+  "setPublic1Price(uint256)"(
+    price: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
   renounceOwnership(overrides?: Overrides): Promise<ContractTransaction>;
 
   "renounceOwnership()"(overrides?: Overrides): Promise<ContractTransaction>;
+
+  setPresaleCount(
+    count: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
+  "setPresaleCount(uint256)"(
+    count: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
 
   owner(overrides?: CallOverrides): Promise<string>;
 
@@ -433,6 +693,16 @@ export class BiasMinter extends Contract {
   public2Price(overrides?: CallOverrides): Promise<BigNumber>;
 
   "public2Price()"(overrides?: CallOverrides): Promise<BigNumber>;
+
+  setTicketCount(
+    count: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
+  "setTicketCount(uint256)"(
+    count: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
 
   setCurrentId(
     _currentId: BigNumberish,
@@ -495,6 +765,16 @@ export class BiasMinter extends Contract {
 
   "step()"(overrides?: CallOverrides): Promise<BigNumber>;
 
+  setPublic2Count(
+    count: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
+  "setPublic2Count(uint256)"(
+    count: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
   presaleWhitelist(arg0: string, overrides?: CallOverrides): Promise<boolean>;
 
   "presaleWhitelist(address)"(
@@ -543,6 +823,16 @@ export class BiasMinter extends Contract {
     overrides?: Overrides
   ): Promise<ContractTransaction>;
 
+  setPublic2Price(
+    price: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
+  "setPublic2Price(uint256)"(
+    price: BigNumberish,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
   callStatic: {
     presalePrice(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -556,9 +846,59 @@ export class BiasMinter extends Contract {
 
     "bias()"(overrides?: CallOverrides): Promise<string>;
 
+    setPresaleLimitPerTransaction(
+      limit: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    "setPresaleLimitPerTransaction(uint256)"(
+      limit: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    setPublic1Count(
+      count: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    "setPublic1Count(uint256)"(
+      count: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
     ticketPrice(overrides?: CallOverrides): Promise<BigNumber>;
 
     "ticketPrice()"(overrides?: CallOverrides): Promise<BigNumber>;
+
+    setTicketPrice(
+      price: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    "setTicketPrice(uint256)"(
+      price: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    setPublicLimitPerTransaction(
+      limit: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    "setPublicLimitPerTransaction(uint256)"(
+      limit: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    setPresalePrice(
+      price: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    "setPresalePrice(uint256)"(
+      price: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
 
     presaleLimitPerTransaction(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -570,9 +910,29 @@ export class BiasMinter extends Contract {
 
     "public1Price()"(overrides?: CallOverrides): Promise<BigNumber>;
 
+    setPublic1Price(
+      price: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    "setPublic1Price(uint256)"(
+      price: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
     renounceOwnership(overrides?: CallOverrides): Promise<void>;
 
     "renounceOwnership()"(overrides?: CallOverrides): Promise<void>;
+
+    setPresaleCount(
+      count: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    "setPresaleCount(uint256)"(
+      count: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
 
     owner(overrides?: CallOverrides): Promise<string>;
 
@@ -585,6 +945,16 @@ export class BiasMinter extends Contract {
     public2Price(overrides?: CallOverrides): Promise<BigNumber>;
 
     "public2Price()"(overrides?: CallOverrides): Promise<BigNumber>;
+
+    setTicketCount(
+      count: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    "setTicketCount(uint256)"(
+      count: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
 
     setCurrentId(
       _currentId: BigNumberish,
@@ -644,6 +1014,16 @@ export class BiasMinter extends Contract {
 
     "step()"(overrides?: CallOverrides): Promise<BigNumber>;
 
+    setPublic2Count(
+      count: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    "setPublic2Count(uint256)"(
+      count: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
     presaleWhitelist(arg0: string, overrides?: CallOverrides): Promise<boolean>;
 
     "presaleWhitelist(address)"(
@@ -690,6 +1070,16 @@ export class BiasMinter extends Contract {
       _step: BigNumberish,
       overrides?: CallOverrides
     ): Promise<void>;
+
+    setPublic2Price(
+      price: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    "setPublic2Price(uint256)"(
+      price: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<void>;
   };
 
   filters: {
@@ -712,9 +1102,59 @@ export class BiasMinter extends Contract {
 
     "bias()"(overrides?: CallOverrides): Promise<BigNumber>;
 
+    setPresaleLimitPerTransaction(
+      limit: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
+
+    "setPresaleLimitPerTransaction(uint256)"(
+      limit: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
+
+    setPublic1Count(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
+
+    "setPublic1Count(uint256)"(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
+
     ticketPrice(overrides?: CallOverrides): Promise<BigNumber>;
 
     "ticketPrice()"(overrides?: CallOverrides): Promise<BigNumber>;
+
+    setTicketPrice(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
+
+    "setTicketPrice(uint256)"(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
+
+    setPublicLimitPerTransaction(
+      limit: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
+
+    "setPublicLimitPerTransaction(uint256)"(
+      limit: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
+
+    setPresalePrice(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
+
+    "setPresalePrice(uint256)"(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
 
     presaleLimitPerTransaction(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -726,9 +1166,29 @@ export class BiasMinter extends Contract {
 
     "public1Price()"(overrides?: CallOverrides): Promise<BigNumber>;
 
+    setPublic1Price(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
+
+    "setPublic1Price(uint256)"(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
+
     renounceOwnership(overrides?: Overrides): Promise<BigNumber>;
 
     "renounceOwnership()"(overrides?: Overrides): Promise<BigNumber>;
+
+    setPresaleCount(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
+
+    "setPresaleCount(uint256)"(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
 
     owner(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -741,6 +1201,16 @@ export class BiasMinter extends Contract {
     public2Price(overrides?: CallOverrides): Promise<BigNumber>;
 
     "public2Price()"(overrides?: CallOverrides): Promise<BigNumber>;
+
+    setTicketCount(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
+
+    "setTicketCount(uint256)"(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
 
     setCurrentId(
       _currentId: BigNumberish,
@@ -803,6 +1273,16 @@ export class BiasMinter extends Contract {
 
     "step()"(overrides?: CallOverrides): Promise<BigNumber>;
 
+    setPublic2Count(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
+
+    "setPublic2Count(uint256)"(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
+
     presaleWhitelist(
       arg0: string,
       overrides?: CallOverrides
@@ -852,6 +1332,16 @@ export class BiasMinter extends Contract {
       _step: BigNumberish,
       overrides?: Overrides
     ): Promise<BigNumber>;
+
+    setPublic2Price(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
+
+    "setPublic2Price(uint256)"(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
   };
 
   populateTransaction: {
@@ -867,9 +1357,59 @@ export class BiasMinter extends Contract {
 
     "bias()"(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
+    setPresaleLimitPerTransaction(
+      limit: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
+    "setPresaleLimitPerTransaction(uint256)"(
+      limit: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
+    setPublic1Count(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
+    "setPublic1Count(uint256)"(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
     ticketPrice(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     "ticketPrice()"(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    setTicketPrice(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
+    "setTicketPrice(uint256)"(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
+    setPublicLimitPerTransaction(
+      limit: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
+    "setPublicLimitPerTransaction(uint256)"(
+      limit: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
+    setPresalePrice(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
+    "setPresalePrice(uint256)"(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
 
     presaleLimitPerTransaction(
       overrides?: CallOverrides
@@ -883,9 +1423,29 @@ export class BiasMinter extends Contract {
 
     "public1Price()"(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
+    setPublic1Price(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
+    "setPublic1Price(uint256)"(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
     renounceOwnership(overrides?: Overrides): Promise<PopulatedTransaction>;
 
     "renounceOwnership()"(overrides?: Overrides): Promise<PopulatedTransaction>;
+
+    setPresaleCount(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
+    "setPresaleCount(uint256)"(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
 
     owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
@@ -898,6 +1458,16 @@ export class BiasMinter extends Contract {
     public2Price(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     "public2Price()"(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    setTicketCount(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
+    "setTicketCount(uint256)"(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
 
     setCurrentId(
       _currentId: BigNumberish,
@@ -963,6 +1533,16 @@ export class BiasMinter extends Contract {
 
     "step()"(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
+    setPublic2Count(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
+    "setPublic2Count(uint256)"(
+      count: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
     presaleWhitelist(
       arg0: string,
       overrides?: CallOverrides
@@ -1018,6 +1598,16 @@ export class BiasMinter extends Contract {
 
     "setStep(uint256)"(
       _step: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
+    setPublic2Price(
+      price: BigNumberish,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
+    "setPublic2Price(uint256)"(
+      price: BigNumberish,
       overrides?: Overrides
     ): Promise<PopulatedTransaction>;
   };

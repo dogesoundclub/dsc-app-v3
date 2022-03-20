@@ -1,0 +1,1 @@
+{"version":3,"file":"CollapsibleItem.d.ts","sourceRoot":"","sources":["../../../../src/view/mate/component/CollapsibleItem.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAM,MAAM,gBAAgB,CAAC;AAE7C,MAAM,CAAC,OAAO,OAAO,eAAgB,SAAQ,OAAO;IAChD,OAAO,CAAC,OAAO,CAAU;gBAEb,KAAK,EAAE,MAAM,EAAE,IAAI,EAAE,MAAM;CAwB1C"}

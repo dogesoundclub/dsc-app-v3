@@ -1,5 +1,5 @@
 import { DomNode, el } from "@hanul/skynode";
-import BrowserInfo from "../../../BrowserInfo";
+import BrowserInfo from "../../BrowserInfo";
 
 export default class LanguageSelect extends DomNode {
 

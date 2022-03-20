@@ -1,0 +1,1 @@
+{"version":3,"file":"BMCSAlert.d.ts","sourceRoot":"","sources":["../../../../src/view/bmcs/component/BMCSAlert.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAM,KAAK,EAAE,MAAM,gBAAgB,CAAC;AAGpD,MAAM,CAAC,OAAO,OAAO,SAAU,SAAQ,KAAK;IAEjC,OAAO,EAAE,OAAO,CAAC;gBAGpB,KAAK,EAAE,MAAM,EACb,OAAO,EAAE,MAAM,EACf,YAAY,CAAC,EAAE,MAAM,EACrB,OAAO,CAAC,EAAE,MAAM,IAAI;CAsB3B"}

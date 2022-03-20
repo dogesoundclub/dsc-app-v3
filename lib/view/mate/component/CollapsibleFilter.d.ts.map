@@ -1,0 +1,1 @@
+{"version":3,"file":"CollapsibleFilter.d.ts","sourceRoot":"","sources":["../../../../src/view/mate/component/CollapsibleFilter.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAM,MAAM,gBAAgB,CAAC;AAE7C,MAAM,CAAC,OAAO,OAAO,iBAAkB,SAAQ,OAAO;IAClD,OAAO,CAAC,OAAO,CAAU;gBACb,KAAK,EAAE,MAAM,EAAE,MAAM,EAAE,GAAG,EAAE,OAAO,EAAE,GAAG;CA4BvD"}

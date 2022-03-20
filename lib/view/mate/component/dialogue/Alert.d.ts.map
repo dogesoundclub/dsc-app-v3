@@ -1,0 +1,1 @@
+{"version":3,"file":"Alert.d.ts","sourceRoot":"","sources":["../../../../../src/view/mate/component/dialogue/Alert.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAM,KAAK,EAAE,MAAM,gBAAgB,CAAC;AAGpD,MAAM,CAAC,OAAO,OAAO,KAAM,SAAQ,KAAK;IAE7B,OAAO,EAAE,OAAO,CAAC;gBAGpB,OAAO,EAAE,MAAM,EACf,YAAY,CAAC,EAAE,MAAM,EACrB,OAAO,CAAC,EAAE,MAAM,IAAI;CAmB3B"}
