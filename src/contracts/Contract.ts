@@ -1,6 +1,6 @@
 import { BigNumber } from "@ethersproject/bignumber";
 import EventContainer from "eventcontainer";
-import ConnectWalletPopup from "../component/shared/ConnectWalletPopup";
+import ConnectWalletPopup from "../view/shared/ConnectWalletPopup";
 import Config from "../Config";
 import ExtWallet from "../klaytn/ExtWallet";
 import Klaytn from "../klaytn/Klaytn";

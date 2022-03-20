@@ -1,5 +1,5 @@
 import { BigNumber } from "ethers";
-import Alert from "../component/shared/dialogue/Alert";
+import Alert from "../view/shared/Alert";
 import Klaytn from "../klaytn/Klaytn";
 import Wallet from "../klaytn/Wallet";
 import BiasMinterArtifact from "./abi/bias/artifacts/contracts/BiasMinter.sol/BiasMinter.json";

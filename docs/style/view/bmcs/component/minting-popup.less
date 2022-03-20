@@ -1,0 +1,269 @@
+.dialogue.bmcs-minting-popup {
+    position     : relative;
+    max-width    : 1156px;
+    width        : 100%;
+    margin       : auto;
+    background   : rgba(19, 19, 19, 0.6);
+    border       : 1px solid #333333;
+    box-sizing   : border-box;
+    border-radius: 10px;
+
+    @media @phone {
+        max-width: 90%;
+    }
+
+    >section {
+        padding: 32px;
+
+        @media @phone {
+            padding: 30px 20px;
+        }
+
+        >header {
+            display        : flex;
+            justify-content: space-between;
+
+            >h3 {
+                font-size    : 28px;
+                line-height  : 28px;
+                margin-bottom: 14px;
+
+                @media @phone {
+                    font-weight: 400;
+                    font-size  : 20px;
+                    line-height: 20px;
+                }
+            }
+        }
+
+        >.status-container {
+            display        : flex;
+            justify-content: center;
+
+            >p {
+                font-size  : 20px;
+                line-height: 20px;
+                color      : rgba(153, 153, 153, 1);
+
+
+                @media @phone {
+                    font-weight: 400;
+                    font-size  : 14px;
+                    line-height: 14px;
+                }
+            }
+
+            >.not {
+                margin-right: 50px;
+            }
+        }
+
+        >.progress-info {
+            color          : #FFDF13;
+            display        : flex;
+            justify-content: space-around;
+
+            @media @phone {
+                display: none;
+            }
+        }
+
+        >.progress-container {
+            display    : flex;
+            font-size  : 32px;
+            line-height: 32px;
+            color      : #FFDF13;
+            align-items: center;
+
+            @media @phone {
+                font-weight: 400;
+                font-size  : 14px;
+                line-height: 14px;
+            }
+
+            >section {
+                display        : flex;
+                justify-content: space-between;
+                width          : 100%;
+                margin         : 0px 20px;
+
+                >.progress {
+                    padding      : 1px;
+                    width        : 100%;
+                    border       : 1px solid #FFDF13;
+                    height       : 32px;
+                    margin       : 0.5px;
+                    border-radius: 10px;
+
+                    >.bar {
+                        background-color: #FFDF13;
+                        width           : 0;
+                        height          : 28px;
+                        border-radius   : 10px;
+                    }
+                }
+
+
+                >.progress.ticket {
+                    padding      : 1px;
+                    width        : 100%;
+                    border       : 1px solid #FFDF13;
+                    border-radius: 0px 10px 10px 0px;
+                    height       : 32px;
+
+                    >.bar {
+                        border-radius: 0px 10px 10px 0px;
+                    }
+                }
+            }
+        }
+
+        >.amount {
+            display        : flex;
+            justify-content: flex-end;
+            margin-right   : 84px;
+
+            @media @phone {
+                margin-right: 0px;
+                font-weight : 400;
+                font-size   : 14px;
+                line-height : 24px;
+            }
+        }
+
+        >.price-container {
+            display        : flex;
+            justify-content: center;
+            margin-top     : 30px;
+            text-align     : center;
+            align-items    : center;
+
+            >.content {
+                margin-left    : 16px;
+                display        : flex;
+                flex-direction : column;
+                justify-content: center;
+                align-items    : center;
+                margin-top     : 30px;
+
+                >.title {
+                    font-size  : 20px;
+                    line-height: 20px;
+                    color      : #FFDF13;
+
+                    @media @phone {
+                        font-weight: 400;
+                        font-size  : 26px;
+                        line-height: 26px;
+                    }
+                }
+
+                >.klay-container {
+                    display      : flex;
+                    gap          : 12px;
+                    font-size    : 32px;
+                    line-height  : 32px;
+                    margin-top   : 5px;
+                    margin-bottom: 4px;
+                }
+
+                >p {
+                    font-size  : 16px;
+                    line-height: 24px;
+
+                    @media @phone {
+                        font-size  : 14px;
+                        line-height: 24px;
+                    }
+                }
+            }
+
+            >hr {
+                width     : 1px;
+                height    : 80px;
+                background: #FFDF13;
+                margin    : 0px 50px;
+                border    : none;
+            }
+        }
+
+        >.amount-container {
+            margin-bottom  : 46px;
+            display        : flex;
+            flex-direction : column;
+            justify-items  : center;
+            justify-content: center;
+            text-align     : center;
+            margin-top     : 30px;
+
+            >.title {
+                font-size    : 20px;
+                line-height  : 20px;
+                color        : #FFDF13;
+                margin-bottom: 15px;
+            }
+
+            >.input-container {
+                >input {
+                    background-color: transparent;
+                    color           : #FFDF13;
+                    text-align      : center;
+                    font-size       : 34px;
+                    font-family     : NeoDunggeunmo;
+
+                    @media @phone {
+                        width: 50%;
+                    }
+                }
+
+                >button {
+                    border          : 1px solid #FFFFFF;
+                    box-sizing      : border-box;
+                    border-radius   : 8px;
+                    background-color: transparent;
+                    color           : white;
+                    font-size       : 24px;
+                    padding         : 6px 12px;
+                }
+            }
+        }
+
+        >.button-wrap {
+            display        : flex;
+            justify-items  : center;
+            justify-content: center;
+
+            >a {
+                width        : 100%;
+                display      : block;
+                text-align   : center;
+                background   : #FFDF13;
+                border-radius: 8px;
+                font-size    : 20px;
+                line-height  : 20px;
+                color        : #131313;
+                padding      : 16px 0px;
+                max-width    : 480px;
+            }
+        }
+
+        >.address {
+            margin-top : 20px;
+            text-align : center;
+            font-size  : 16px;
+            line-height: 24px;
+        }
+    }
+
+    >hr {
+        border          : none;
+        height          : 1px;
+        color           : #FFDF13;
+        background-color: #FFDF13;
+        margin          : 36px 0px 45px 0px;
+
+        @media @phone {
+            margin: 0px 0px;
+        }
+    }
+}

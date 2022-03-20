@@ -2,72 +2,68 @@
 @import "font.less";
 
 body {
-    font-family     : DungGeunMo;
+    font-family     : NeoDunggeunmo;
     background-color: rgba(19, 19, 19, 1);
     color           : #FFFFFF;
-    line-height     : 1.5em;
+    line-height     : 24px;
 }
 
+/** mate */
+
 // component
-@import "component/shared/dialogue/alert.less";
-@import "component/shared/dialogue/confirm.less";
-@import "component/shared/connectwalletpopup.less";
-@import "component/shared/klipqrpopup.less";
-@import "component/shared/popup.less";
-@import "component/shared/collapsible-filter.less";
-@import "component/shared/collapsible-item.less";
-@import "component/shared/collapsible-select.less";
+@import "view/mate/component/dialogue/alert.less";
+@import "view/mate/component/dialogue/confirm.less";
+@import "view/mate/component/menu/pc-menu.less";
+@import "view/mate/component/menu/mobile-menu.less";
+@import "view/mate/component/collapsible-filter.less";
+@import "view/mate/component/collapsible-item.less";
+@import "view/mate/component/collapsible-select.less";
+@import "view/mate/component/mate-list.less";
+@import "view/mate/component/mate-message-list.less";
+@import "view/mate/component/dogesounds-rank-list.less";
 
-@import "component/mate/mate-list.less";
-@import "component/mate/mate-message-list.less";
-
-@import "component/dogesounds-rank-list.less";
-
-// E-MATE
-@import "view/emate/layout.less";
-@import "view/emate/home.less";
-@import "component/emate/pc-menu.less";
-@import "component/emate/mobile-menu.less";
-
-
-@import "component/emate/collapsible-filter.less";
-@import "component/emate/collapsible-item.less";
-
-// BMCS
-@import "component/bmcs/bmcs-collapsible-item.less";
-@import "component/bmcs/bmcs-alert.less";
-@import "component/bmcs/bmcs-pc-menu.less";
-@import "component/bmcs/bmcs-mobile-menu.less";
-@import "component/bmcs/bmcs-minting-popup.less";
-
-// ui
-@import "ui/menu/pc-menu.less";
-@import "ui/menu/mobile-menu.less";
-@import "ui/menu/language-select.less";
 
 // view
-@import "view/layout.less";
-@import "view/home.less";
-@import "view/gallery.less";
-@import "view/holder.less";
-@import "view/activities.less";
-@import "view/fully-on.less";
-@import "view/terms.less";
-@import "view/faq.less";
-@import "view/member.less";
-@import "view/bmcs.less";
+@import "view/mate/view/layout.less";
+@import "view/mate/view/home.less";
+@import "view/mate/view/activities.less";
+@import "view/mate/view/gallery.less";
 
-@import "view/mate/mates.less";
-@import "view/mate/mates-detail.less";
-@import "view/mate/buy-mate.less";
-@import "view/mate/my-mate.less";
-@import "view/mate/follow-me.less";
+@import "view/mate/view/mate/follow-me.less";
+@import "view/mate/view/mate/buy-mate.less";
+@import "view/mate/view/mate/mates.less";
+@import "view/mate/view/mate/mates-detail.less";
+@import "view/mate/view/mate/my-mate.less";
+@import "view/mate/view/dsc-family/dsc-family.less";
+@import "view/mate/view/dsc-family/create-dsc-family.less";
 
-@import "view/contest/contest.less";
+@import "view/mate/view/governance/governance.less";
+@import "view/mate/view/governance/create-governance.less";
+@import "view/mate/view/governance/governance-detail.less";
 
-@import "view/dsc-family/create-dsc-family.less";
-@import "view/dsc-family/dsc-family.less";
+@import "view/mate/view/contest/contest.less";
 
-@import "view/governance/governance.less";
-@import "view/governance/create-governance.less";
-@import "view/governance/governance-detail.less";
+@import "view/mate/view/fully-on.less";
+@import "view/mate/view/terms.less";
+@import "view/mate/view/faq.less";
+@import "view/mate/view/member.less";
+
+/** e-mate */
+
+/** bmcs */
+
+// component
+@import "view/bmcs/component/alert.less";
+@import "view/bmcs/component/collapsible-item.less";
+@import "view/bmcs/component/minting-popup.less";
+@import "view/bmcs/component/mobile-menu.less";
+@import "view/bmcs/component/pc-menu.less";
+
+// view
+@import "view/bmcs/view/home.less";
+
+/** shared */
+@import "view/shared/popup.less";
+@import "view/shared/connectwalletpopup.less";
+@import "view/shared/klipqrpopup.less";
+@import "view/shared/language-select.less";

@@ -1,0 +1,75 @@
+.mate-list {
+    >.mate-line {
+        display              : grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap                  : 20px;
+
+        @media @phone {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows   : 200px;
+            align-items          : center;
+            justify-items        : center;
+        }
+
+        >.mate-item {
+            display          : flex;
+            flex-direction   : column;
+            justify-content  : center;
+            align-items      : center;
+            position         : relative;
+            background-size  : contain;
+            background-repeat: no-repeat;
+            font-size        : 20px;
+            line-height      : 1em;
+            height           : 100%;
+            text-align       : center;
+
+            >img {
+                max-width    : 176px;
+                max-height   : 176px;
+                border-radius: 8px;
+            }
+
+            >.id {
+                margin-top   : 8px;
+                font-family  : NeoDunggeunmo;
+                margin-bottom: 18px;
+                width        : 100%;
+            }
+
+            >.name {
+                top        : 0;
+                width      : 100%;
+                text-align : center;
+                font-family: NeoDunggeunmo;
+                color      : #FF00F6;
+            }
+
+            >.score {
+                position   : absolute;
+                top        : 0;
+                width      : 100%;
+                text-align : right;
+                font-family: NeoDunggeunmo;
+                color      : #006400;
+            }
+
+            >input {
+                position: absolute;
+                top     : 0;
+                left    : 0;
+                width   : 22px;
+                height  : 22px;
+            }
+
+            @media only screen and (max-width: 799px) {
+                text-align: center;
+                font-size : 14px;
+            }
+
+            &.off {
+                opacity: 0.5;
+            }
+        }
+    }
+}

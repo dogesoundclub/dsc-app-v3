@@ -1,0 +1,680 @@
+.home-view {
+    font-family: NeoDunggeunmo;
+    overflow   : auto;
+
+    >header {
+        background-image: url("/images/view/mate/home/club.png");
+        height          : 800px;
+
+        >.content {
+            max-width  : 1156px;
+            margin     : auto;
+            padding-top: 355px;
+
+            @media @phone {
+                padding: 183px 20px 20px 20px;
+            }
+
+            >.logo {
+                width    : 100%;
+                max-width: 137px;
+                height   : 118px;
+            }
+
+            >.intro {
+                margin-top : 30px;
+                font-style : normal;
+                font-weight: normal;
+                font-size  : 60px;
+                line-height: 60px;
+                color      : white;
+                text-shadow: #E73C83 3px 3px;
+
+                @media @phone {
+                    font-size: 34px;
+                }
+            }
+
+            >.description {
+                font-style : normal;
+                font-weight: normal;
+                font-size  : 20px;
+                line-height: 28px;
+                margin-top : 9px;
+
+                @media @phone {
+                    font-size: 16px;
+                }
+            }
+
+            >button {
+                width        : 100%;
+                max-width    : 200px;
+                height       : 52px;
+                margin-top   : 30px;
+                background   : #E73C83;
+                border-radius: 8px;
+                font-family  : NeoDunggeunmo;
+                font-size    : 24px;
+                line-height  : 24px;
+                color        : white;
+
+                &:hover {
+                    background-color: white;
+                    color           : #E73C83;
+                    border-color    : white;
+                }
+            }
+        }
+    }
+
+    >section {
+        max-width: 1156px;
+        margin   : auto;
+
+        @media @phone {
+            padding: 20px;
+        }
+
+        >.dogesound {
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+            margin-top     : 60px;
+            background     : #222222;
+            border         : 1px solid #3D3D3D;
+            box-sizing     : border-box;
+            border-radius  : 8px;
+
+            @media @phone {
+                justify-items : center;
+                flex-direction: column;
+                text-align    : center;
+            }
+
+            >.talker {
+                max-width    : 200px;
+                max-height   : 200px;
+                margin       : 20px;
+                border-radius: 8px;
+            }
+
+            >.content {
+                padding-right: 20px;
+
+                @media @phone {
+                    display       : flex;
+                    align-items   : center;
+                    flex-direction: column;
+                    padding       : 20px;
+                }
+
+                >.title {
+                    font-style : normal;
+                    font-weight: normal;
+                    font-size  : 24px;
+                    line-height: 24px;
+                    color      : #FFFFFF;
+
+                    @media @phone {
+                        font-size: 20px;
+                    }
+                }
+
+                >.old-sound {
+                    margin-top   : 16px;
+                    padding      : 6px 10px 4px 10px;
+                    font-size    : 16px;
+                    line-height  : 16px;
+                    max-width    : 310px;
+                    color        : #676767;
+                    border       : 1px solid #676767;
+                    box-sizing   : border-box;
+                    border-radius: 4px;
+
+                    @media @phone {
+                        font-size: 16px;
+                    }
+                }
+
+                >.sound {
+                    margin-top   : 16px;
+                    font-size    : 20px;
+                    line-height  : 20px;
+                    margin-bottom: 20px;
+                    color        : #E73C83;
+                }
+
+                >.address {
+                    margin-top          : 16px;
+                    font-size           : 16px;
+                    line-height         : 16px;
+                    text-decoration-line: underline;
+                    color               : #FFFFFF;
+
+                    @media @phone {
+                        font-size: 13px;
+                    }
+
+                    &:hover {
+                        color: #E73C83;
+                    }
+                }
+
+                >.warning {
+                    margin-top : 10px;
+                    font-size  : 14px;
+                    line-height: 20px;
+                    color      : #676767;
+
+                    @media @phone {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+        >hr {
+            border          : none;
+            height          : 1px;
+            color           : #2C2C2C;
+            background-color: #2C2C2C;
+            margin          : 60px 0px;
+
+            @media @phone {
+                margin: 20px 0px;
+            }
+        }
+
+        >.feature {
+
+            >.title {
+                font-size  : 26px;
+                line-height: 26px;
+
+                @media @phone {
+                    font-size: 20px;
+                }
+            }
+
+            >.content {
+                margin-top     : 16px;
+                display        : flex;
+                justify-content: space-between;
+
+                @media @phone {
+                    flex-direction: column;
+                }
+
+                >.card {
+                    margin-right: 16px;
+
+                    @media @phone {
+                        margin-top  : 26px;
+                        font-size   : 20px;
+                        margin-right: 0px;
+                    }
+
+
+                    @media @phone {
+                        display       : flex;
+                        flex-direction: column;
+                    }
+
+                    >img {
+                        max-width : 372px;
+                        max-height: 372px;
+
+                        @media @phone {
+                            max-width : 320px;
+                            max-height: 320px;
+                        }
+                    }
+
+                    >.title {
+                        margin-top : 8px;
+                        font-size  : 20px;
+                        line-height: 20px;
+                        color      : #E73C83;
+                    }
+
+                    >.content {
+                        margin-top : 8px;
+                        font-size  : 16px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+
+        >.buy-mate {
+            >.card {
+                display      : flex;
+                background   : #E73C83;
+                border-radius: 8px;
+
+                @media @phone {
+                    flex-direction: column;
+                }
+
+                >.content {
+                    padding: 30px;
+
+                    @media @phone {
+                        padding: 20px;
+                    }
+
+                    >.title {
+                        font-size  : 24px;
+                        line-height: 24px;
+                    }
+
+                    >.content {
+                        padding-top: 10px;
+                        font-size  : 16px;
+                        line-height: 24px;
+                    }
+                }
+
+                >.button-wrap {
+                    display       : flex;
+                    flex-direction: column;
+                    padding       : 15px 30px 30px 30px;
+
+                    >a {
+                        display        : flex;
+                        justify-content: center;
+                        font-family    : NeoDunggeunmo;
+                        font-size      : 24px;
+                        line-height    : 24px;
+                        color          : #E73C83;
+                        background     : #131313;
+                        border-radius  : 8px;
+                        padding        : 15px 100px;
+                        margin-top     : 15px;
+                        text-decoration: none;
+
+                        &:hover {
+                            background-color: white;
+                            color           : #E73C83;
+                            border-color    : white;
+                        }
+                    }
+                }
+            }
+
+            >.warning {
+                overflow-wrap: break-word;
+                margin-top   : 12px;
+                font-size    : 16px;
+                line-height  : 20px;
+
+                color: #676767;
+            }
+        }
+
+        >.nft {
+            >.title {
+                font-size    : 26px;
+                line-height  : 26px;
+                margin-bottom: 16px;
+
+                @media @phone {
+                    font-size: 20px;
+                }
+            }
+
+            >.mate-container {
+                display   : flex;
+                gap       : 20px;
+                flex-wrap : wrap;
+                flex-grow : 1;
+                margin-top: 20px;
+
+                @media @phone {
+                    display              : grid;
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                >img {
+                    max-width    : 176px;
+                    max-height   : 176px;
+                    border-radius: 4px;
+
+                    @media @phone {
+                        max-width : 155px;
+                        max-height: 155px;
+                    }
+                }
+
+                >.pc {
+                    @media @phone {
+                        display: none;
+                    }
+                }
+            }
+
+            >section {
+                display: flex;
+
+                @media @phone {
+                    flex-direction: column;
+                }
+
+                >.mate-container {
+                    display  : flex;
+                    gap      : 20px;
+                    flex-wrap: wrap;
+                    flex-grow: 1;
+
+                    @media @phone {
+                        display              : grid;
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+
+                    >img {
+                        max-width    : 176px;
+                        max-height   : 176px;
+                        border-radius: 4px;
+
+                        @media @phone {
+                            width: 100%;
+                        }
+                    }
+
+                    >.pc {
+                        @media @phone {
+                            display: none;
+                        }
+                    }
+                }
+
+                >article {
+                    flex-grow    : 1;
+                    width        : 100%;
+                    max-width    : 568px;
+                    min-height   : 372px;
+                    padding      : 20px;
+                    background   : #222222;
+                    border       : 1px solid #3D3D3D;
+                    box-sizing   : border-box;
+                    border-radius: 8px;
+
+                    @media @phone {
+                        margin-top: 20px;
+                        min-height: 400px;
+                    }
+
+                    >p {
+                        font-size  : 16px;
+                        line-height: 20px;
+                    }
+
+                    >.caption {
+                        font-size  : 16px;
+                        line-height: 16px;
+                        color      : #676767;
+                    }
+
+                    >.button-container {
+                        display   : flex;
+                        max-width : 100%;
+                        margin-top: 16px;
+                        gap       : 10px;
+
+                        @media @phone {
+                            flex-direction: column;
+                        }
+
+                        >a {
+                            display         : block;
+                            font-family     : NeoDunggeunmo;
+                            width           : 100%;
+                            font-size       : 16px;
+                            line-height     : 16px;
+                            background-color: transparent;
+                            color           : #E73C83;
+                            border          : 1px solid #E73C83;
+                            box-sizing      : border-box;
+                            border-radius   : 8px;
+                            padding-top     : 18px;
+                            padding-bottom  : 18px;
+                            text-decoration : none;
+                            text-align      : center;
+
+                            &:hover {
+                                color : white;
+                                border: 1px solid white;
+                            }
+                        }
+                    }
+
+                    >a {
+                        display         : block;
+                        width           : 100%;
+                        font-size       : 16px;
+                        line-height     : 16px;
+                        background-color: transparent;
+                        color           : #E73C83;
+                        border          : 1px solid #E73C83;
+                        box-sizing      : border-box;
+                        border-radius   : 8px;
+                        padding-top     : 18px;
+                        padding-bottom  : 18px;
+                        text-decoration : none;
+                        text-align      : center;
+
+
+                        &:hover {
+                            color : white;
+                            border: 1px solid white;
+                        }
+                    }
+
+                    >.image-wrap {
+                        display        : flex;
+                        justify-content: center;
+                        margin-top     : 16px;
+
+                        >img {
+                            max-width : 54px;
+                            max-height: 46px;
+                        }
+                    }
+
+                    >hr {
+                        border          : none;
+                        height          : 1px;
+                        color           : #2C2C2C;
+                        background-color: #2C2C2C;
+                        margin          : 20px 0px;
+                    }
+                }
+            }
+        }
+
+        >.mission {
+            >.title {
+                font-size    : 26px;
+                line-height  : 26px;
+                margin-bottom: 20px;
+            }
+
+            >.content {
+                >.title {
+                    margin-top : 8px;
+                    font-size  : 20px;
+                    line-height: 20px;
+                    color      : #E73C83;
+
+                    @media @phone {
+                        font-size: 18px;
+                    }
+                }
+
+                >.content {
+                    margin-top : 8px;
+                    font-size  : 16px;
+                    line-height: 24px;
+
+                    @media @phone {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        >.team {
+            >.title {
+                font-size    : 26px;
+                line-height  : 26px;
+                margin-bottom: 30px;
+
+                @media @phone {
+                    font-size: 20px;
+                }
+            }
+
+            >.content {
+                display: flex;
+
+                @media @phone {
+                    flex-direction: column;
+                }
+
+                >.card {
+                    margin-right: 40px;
+
+                    @media @phone {
+                        margin-top: 14px;
+                    }
+
+                    >.title {
+                        margin-top : 8px;
+                        font-size  : 20px;
+                        line-height: 20px;
+                        color      : #E73C83;
+                    }
+
+                    >.content {
+                        margin-top : 8px;
+                        font-size  : 16px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+
+        >.partnership {
+            >.title {
+                font-size    : 26px;
+                line-height  : 26px;
+                margin-bottom: 30px;
+            }
+
+            >.content {
+                >.title-container {
+                    display      : flex;
+                    align-items  : center;
+                    margin-bottom: 14px;
+
+                    >.title {
+                        font-size  : 20px;
+                        line-height: 20px;
+                        color      : #E73C83;
+                    }
+
+                    >.arrow-container {
+                        margin-left: 10px;
+
+                        >img {
+                            border       : 1px solid #333333;
+                            box-sizing   : border-box;
+                            border-radius: 2px;
+                            padding      : 7px 10px;
+                            margin-right : 7px;
+
+                            &:hover {
+                                background-color: rgba(255, 255, 255, 0.1);
+                                fill            : black;
+                            }
+                        }
+                    }
+                }
+
+                >.content {
+                    overflow     : scroll;
+                    display      : flex;
+                    margin-bottom: 30px;
+
+                    >img {
+                        max-width   : 176px;
+                        max-height  : 176px;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+
+        >.contact {
+            >.title {
+                font-size    : 26px;
+                line-height  : 26px;
+                margin-bottom: 16px;
+            }
+
+            @media @phone {
+                font-size: 20px;
+            }
+
+            >.content {
+                display              : grid;
+                grid-template-columns: 33.33% 33.33% 33.33%;
+                gap                  : 20px;
+
+                @media @phone {
+                    grid-template-columns: 100%;
+                }
+
+                >.card {
+                    display        : flex;
+                    background     : #222222;
+                    border-radius  : 8px;
+                    padding        : 20px;
+                    align-items    : center;
+                    text-decoration: none;
+                    color          : white;
+
+                    >img {
+                        padding-right: 14px;
+                    }
+
+                    >.content {
+                        >.title {
+                            font-size  : 18px;
+                            line-height: 18px;
+                        }
+
+                        >.caption {
+                            font-size  : 14px;
+                            line-height: 14px;
+                            color      : #676767;
+                        }
+                    }
+                }
+            }
+        }
+
+        >.tweets {
+            >.title {
+                font-size    : 26px;
+                line-height  : 26px;
+                margin-bottom: 16px;
+
+                @media @phone {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@ import { BigNumber, BigNumberish } from "@ethersproject/bignumber";
 import { utils } from "ethers";
 import EventContainer from "eventcontainer";
 import QRCode from "qrcode";
-import KlipQRPopup from "../component/shared/KlipQRPopup";
+import KlipQRPopup from "../view/shared/KlipQRPopup";
 import Store from "../Store";
 
 const klipSDK = require("klip-sdk");

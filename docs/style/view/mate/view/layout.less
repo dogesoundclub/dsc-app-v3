@@ -1,0 +1,149 @@
+.layout {
+
+    >header {
+        max-width      : 1156px;
+        margin         : auto;
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        padding-top    : 10px;
+        padding-bottom : 10px;
+
+        @media @phone {
+            padding         : 20px;
+            position        : sticky;
+            top             : 0;
+            background-color: black;
+        }
+
+        >.left {
+            display: flex;
+            .float-wrapper();
+
+            >.menu-button {
+                float  : right;
+                display: none;
+                padding: 10px;
+
+                @media @phone {
+                    display: block;
+                }
+            }
+        }
+
+        >a {
+            display  : flex;
+            flex-grow: 1;
+
+            @media @phone {
+                flex-grow: 0;
+            }
+        }
+
+        >.bmcs {
+            font-style : normal;
+            font-weight: 400;
+            font-size  : 16px;
+            line-height: 16px;
+            color      : #F9D833;
+
+            &:hover {
+                color: #E73C83;
+            }
+
+            @media @phone {
+                display: none;
+            }
+        }
+
+        >.pc-menu {
+            flex-grow: 2;
+
+            @media @phone {
+                display: none;
+            }
+        }
+    }
+
+    >footer {
+        margin-top: 60px;
+
+        >.sidebar {
+            background-color: #222222;
+
+            >.content {
+                display        : flex;
+                align-items    : center;
+                justify-content: space-between;
+                max-width      : 1156px;
+                margin         : auto;
+
+                >.term {
+                    display    : flex;
+                    align-items: center;
+                    height     : 44px;
+
+                    >a {
+                        font-family: Noto Sans KR;
+                        font-style : normal;
+                        font-weight: normal;
+                        font-size  : 12px;
+                        line-height: 20px;
+                    }
+
+                    >span {
+                        color : #474747;
+                        margin: 10px 10px;
+                    }
+                }
+
+                >.social {
+                    display        : flex;
+                    align-items    : center;
+                    justify-content: center;
+                    height         : 44px;
+
+                    >a {
+                        display        : flex;
+                        align-items    : center;
+                        height         : 44px;
+                        margin         : 0px 10px;
+                        font-size      : 12px;
+                        text-decoration: underline;
+                        color          : white;
+                    }
+                }
+            }
+        }
+
+        >.provider {
+            display       : flex;
+            flex-direction: column;
+            max-width     : 1156px;
+            margin        : auto;
+            margin-top    : 30px;
+            padding-bottom: 30px;
+
+            @media @phone {
+                padding: 20px;
+            }
+
+            >img {
+                width : 70px;
+                height: 60px;
+            }
+
+            >p {
+                font-family: Noto Sans KR;
+                font-style : normal;
+                font-weight: normal;
+                font-size  : 12px;
+                line-height: 20px;
+                margin-top : 20px;
+
+
+                color: #838383;
+            }
+        }
+    }
+}

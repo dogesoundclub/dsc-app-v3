@@ -1,0 +1,642 @@
+.bmcs-view {
+    >.nav {
+        max-width      : 1156px;
+        margin         : auto;
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        padding-top    : 10px;
+        padding-bottom : 10px;
+
+        @media @phone {
+            padding         : 20px;
+            position        : sticky;
+            top             : 0;
+            background-color: black;
+        }
+
+        >.left {
+            display: flex;
+            .float-wrapper();
+
+            >.menu-button {
+                float  : right;
+                display: none;
+                padding: 10px;
+
+                @media @phone {
+                    display: block;
+                }
+            }
+        }
+
+        >a {
+            display  : flex;
+            flex-grow: 1;
+
+            @media @phone {
+                flex-grow: 0;
+            }
+        }
+
+        >.bmcs-pc-menu {
+            flex-grow: 2;
+
+            @media @phone {
+                display: none;
+            }
+        }
+    }
+
+    >header {
+        position: relative;
+        z-index : 1;
+        height  : 950px;
+
+        >.overlay {
+            position  : absolute;
+            z-index   : -1;
+            top       : 0;
+            bottom    : 0;
+            left      : 0;
+            right     : 0;
+            background: url("/images/view/bmcs/home/bg.png") center center;
+            opacity   : .4;
+            width     : 100%;
+            height    : 950px;
+        }
+
+        >section {
+            max-width  : 1156px;
+            margin     : auto;
+            padding-top: 500px;
+
+            @media @phone {
+                padding: 240px 20px 20px 20px;
+            }
+
+            >h1 {
+                font-size          : 60px;
+                line-height        : 60px;
+                color              : #FFFFFF;
+                -webkit-text-stroke: 0.5px #F9D833;
+                text-stroke        : 0.5px #F9D833;
+                text-shadow        : 3px 3px 3px black;
+
+                @media @phone {
+                    font-size    : 44px;
+                    line-height  : 44px;
+                    margin-bottom: 14px;
+                }
+            }
+
+            >a {
+                display      : block;
+                font-size    : 24px;
+                line-height  : 24px;
+                color        : #131313;
+                background   : #FFDF13;
+                border-radius: 8px;
+                margin-top   : 30px;
+                padding      : 14px 169px;
+                max-width    : 422px;
+                text-align   : center;
+
+                @media @phone {
+                    padding: 14px 0px;
+                }
+            }
+        }
+    }
+
+    >section {
+        max-width: 1156px;
+        margin   : auto;
+
+        @media @phone {
+            padding: 20px;
+        }
+
+        >article {
+            max-width      : 1156px;
+            display        : flex;
+            flex-direction : column;
+            justify-content: center;
+            justify-items  : center;
+
+            >h2 {
+                margin-top   : 60px;
+                margin-bottom: 16px;
+                font-size    : 32px;
+
+                @media @phone {
+                    font-size    : 20px;
+                    margin-top   : 0px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        >hr {
+            border          : none;
+            height          : 1px;
+            color           : #2C2C2C;
+            background-color: #2C2C2C;
+            margin          : 60px 0px;
+
+            @media @phone {
+                margin: 26px 0px;
+            }
+        }
+
+        >.biased-mate-container {
+            >h2 {
+                font-size    : 32px;
+                margin-bottom: 16px;
+
+                @media @phone {
+                    font-size    : 20px;
+                    line-height  : 20px;
+                    margin-top   : 0px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            >.content {
+                display              : grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-gap             : 20px;
+
+                >img {
+                    max-width : 174px;
+                    max-height: 174px;
+
+                    @media @phone {
+                        max-width : 155px;
+                        max-height: 155px;
+                    }
+                }
+
+                @media @phone {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+
+        >.vibe-container {
+            >h2 {
+                font-size    : 32px;
+                margin-bottom: 8px;
+
+                @media @phone {
+                    font-size  : 20px;
+                    line-height: 20px;
+                }
+            }
+
+            >h3 {
+                margin-bottom: 26px;
+
+                @media @phone {
+                    font-size  : 14px;
+                    line-height: 14px;
+                }
+            }
+
+            >.content {
+                display              : grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap             : 12px;
+
+                @media @phone {
+                    display : flex;
+                    overflow: scroll;
+                }
+
+                >.card {
+                    >img {
+                        max-width : 280px;
+                        max-height: 381px;
+                    }
+
+                    >h4 {
+                        font-size    : 20px;
+                        line-height  : 28px;
+                        margin-top   : 25px;
+                        margin-bottom: 8px;
+                    }
+
+                    >p {
+                        font-size  : 16px;
+                        line-height: 24px;
+                    }
+
+                    &:hover {
+                        >img {
+                            border: solid 5px #F9D833;
+                        }
+
+                        color : #F9D833;
+                    }
+                }
+            }
+
+            >.warning-container {
+                margin-top   : 30px;
+                background   : #222222;
+                border       : 1px solid #131313;
+                box-sizing   : border-box;
+                border-radius: 8px;
+                padding      : 30px;
+
+                >h4 {
+                    font-size: 20px;
+
+                    @media @phone {
+                        margin-bottom: 14px;
+                    }
+                }
+
+                >p {
+                    color: #868686;
+                }
+            }
+        }
+
+        >.roadmap-container {
+            >h2 {
+                font-size    : 32px;
+                margin-bottom: 8px;
+
+                @media @phone {
+                    font-size  : 20px;
+                    line-height: 20px;
+                }
+            }
+
+            >h3 {
+                margin-bottom: 26px;
+
+                @media @phone {
+                    font-size  : 14px;
+                    line-height: 14px;
+                }
+            }
+
+            >.content {
+                display       : flex;
+                flex-direction: column;
+                margin-top    : 26px;
+
+                >.card-container {
+                    display       : flex;
+                    gap           : 20px;
+                    flex-direction: row;
+
+                    @media @phone {
+                        display              : grid;
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+
+                    >.card {
+                        margin-top   : 20px;
+                        position     : relative;
+                        color        : #F9D833;
+                        border       : 1px solid #F9D833;
+                        box-sizing   : border-box;
+                        border-radius: 8px;
+                        padding      : 40px;
+                        max-width    : 372px;
+                        width        : 100%;
+
+                        >h4 {
+                            font-size  : 32px;
+                            line-height: 32px;
+
+                            @media @phone {
+                                font-size  : 24px;
+                                line-height: 24px;
+                            }
+                        }
+
+                        >p {
+                            font-size  : 20px;
+                            line-height: 24px;
+
+                            @media @phone {
+                                font-size: 16px;
+                            }
+                        }
+
+                        >img {
+                            @media @phone {
+                                display: none;
+                            }
+                        }
+
+                        >img.right {
+                            position: absolute;
+                            top     : 35%;
+                            right   : -40px;
+                        }
+
+                        >img.down {
+                            position: absolute;
+                            bottom  : -40px;
+                            right   : 45%;
+                        }
+
+                        &:hover {
+                            background: rgba(249, 216, 51, 0.1);
+                        }
+                    }
+                }
+
+                >.card-reverse-container {
+                    display       : flex;
+                    gap           : 20px;
+                    flex-direction: row-reverse;
+
+                    @media @phone {
+                        display              : grid;
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+
+                    >.card {
+                        margin-top   : 20px;
+                        position     : relative;
+                        color        : #F9D833;
+                        border       : 1px solid #F9D833;
+                        box-sizing   : border-box;
+                        border-radius: 8px;
+                        padding      : 40px;
+                        width        : 100%;
+                        max-width    : 372px;
+
+                        >h4 {
+                            font-size  : 32px;
+                            line-height: 32px;
+
+                            @media @phone {
+                                font-size  : 24px;
+                                line-height: 24px;
+                            }
+                        }
+
+                        >p {
+                            font-size  : 20px;
+                            line-height: 24px;
+
+                            @media @phone {
+                                font-size: 16px;
+                            }
+                        }
+
+                        >img {
+                            @media @phone {
+                                display: none;
+                            }
+                        }
+
+                        >img.left {
+                            position: absolute;
+                            top     : 35%;
+                            left    : -40px;
+                        }
+
+                        >img.down {
+                            position: absolute;
+                            bottom  : -40px;
+                            right   : 45%;
+                        }
+
+                        &:hover {
+                            background: rgba(249, 216, 51, 0.1);
+                        }
+                    }
+                }
+
+                >.card {
+                    margin-top   : 20px;
+                    position     : relative;
+                    color        : #F9D833;
+                    border       : 1px solid #F9D833;
+                    box-sizing   : border-box;
+                    border-radius: 8px;
+                    padding      : 40px;
+                    width        : 100%;
+                    max-width    : 372px;
+
+                    >h4 {
+                        font-size  : 32px;
+                        line-height: 32px;
+
+                        @media @phone {
+                            font-size  : 24px;
+                            line-height: 24px;
+                        }
+                    }
+
+                    >p {
+                        font-size  : 20px;
+                        line-height: 24px;
+
+                        @media @phone {
+                            font-size: 16px;
+                        }
+                    }
+
+                    &:hover {
+                        background: rgba(249, 216, 51, 0.1);
+                    }
+                }
+            }
+
+            >a {
+                background     : #F9D833;
+                border         : 1px solid #F9D833;
+                box-sizing     : border-box;
+                border-radius  : 8px;
+                color          : black;
+                padding        : 22px 0px;
+                width          : 100%;
+                display        : block;
+                text-align     : center;
+                text-decoration: none;
+                margin-top     : 20px;
+
+                @media @phone {
+                    padding: 16px 0px;
+                }
+            }
+        }
+
+        >.contact-container {
+            margin-top     : 16px;
+            display        : flex;
+            justify-content: space-between;
+
+            @media @phone {
+                flex-direction: column;
+            }
+
+            >h2 {
+                font-size    : 32px;
+                margin-bottom: 16px;
+
+                @media @phone {
+                    font-size  : 20px;
+                    line-height: 20px;
+                }
+            }
+
+            >.content {
+                display              : grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap                  : 20px;
+
+                @media @phone {
+                    grid-template-columns: 100%;
+                }
+
+                >.card {
+                    display        : flex;
+                    background     : #222222;
+                    border-radius  : 8px;
+                    padding        : 20px;
+                    align-items    : center;
+                    text-decoration: none;
+                    color          : white;
+
+                    >img {
+                        padding-right: 14px;
+                    }
+
+                    >.content {
+                        >.title {
+                            font-size  : 18px;
+                            line-height: 18px;
+                        }
+
+                        >.caption {
+                            font-size  : 14px;
+                            line-height: 14px;
+                            color      : #676767;
+                        }
+                    }
+                }
+            }
+        }
+
+        >.partnership-container {
+            >h2 {
+                font-size    : 32px;
+                margin-bottom: 8px;
+
+                @media @phone {
+                    font-size  : 20px;
+                    line-height: 20px;
+                }
+            }
+
+            >h3 {
+                font-size  : 24px;
+                line-height: 24px;
+                color      : #F9D833;
+
+                @media @phone {
+                    display: none;
+                }
+            }
+
+            >.content {
+                margin-top: 14px;
+                display   : flex;
+                gap       : 20px;
+                overflow  : scroll;
+            }
+        }
+    }
+
+    >footer {
+        margin-top: 60px;
+
+        >.sidebar {
+            background-color: #222222;
+
+            >.content {
+                display        : flex;
+                align-items    : center;
+                justify-content: space-between;
+                max-width      : 1156px;
+                margin         : auto;
+
+                >.term {
+                    display    : flex;
+                    align-items: center;
+                    height     : 44px;
+
+                    >a {
+                        font-family: Noto Sans KR;
+                        font-style : normal;
+                        font-weight: normal;
+                        font-size  : 12px;
+                        line-height: 20px;
+                    }
+
+                    >span {
+                        color : #474747;
+                        margin: 10px 10px;
+                    }
+                }
+
+                >.social {
+                    display        : flex;
+                    align-items    : center;
+                    justify-content: center;
+                    height         : 44px;
+
+                    >a {
+                        display        : flex;
+                        align-items    : center;
+                        height         : 44px;
+                        margin         : 0px 10px;
+                        font-size      : 12px;
+                        text-decoration: underline;
+                        color          : white;
+                    }
+                }
+            }
+        }
+
+        >.provider {
+            display       : flex;
+            flex-direction: column;
+            max-width     : 1156px;
+            margin        : auto;
+            margin-top    : 30px;
+            padding-bottom: 30px;
+
+            @media @phone {
+                padding: 20px;
+            }
+
+            >img {
+                width : 70px;
+                height: 60px;
+            }
+
+            >p {
+                font-family: Noto Sans KR;
+                font-style : normal;
+                font-weight: normal;
+                font-size  : 12px;
+                line-height: 20px;
+                margin-top : 20px;
+
+
+                color: #838383;
+            }
+        }
+    }
+}

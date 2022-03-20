@@ -45,14 +45,24 @@ btn: button
 
 3. folder
 
+Domain-Driven Design
+
 ```
 shared
 - icn
 - img
 - bg
-component
 - ...
 view
+- bmcs
+-- view
+-- component
+- eMate
+-- view
+-- component
+- mate
+-- view
+-- component
 - ...
 favicon
 ```
