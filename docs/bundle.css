@@ -4098,6 +4098,45 @@ body {
     line-height: 24px;
   }
 }
+.dialogue.bmcs-minting-popup > section > .price-container > .content.disable {
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  color: #676767;
+}
+.dialogue.bmcs-minting-popup > section > .price-container > .content.disable > .title {
+  font-size: 20px;
+  line-height: 20px;
+  color: #676767;
+}
+@media only screen and (max-width: 719px) {
+  .dialogue.bmcs-minting-popup > section > .price-container > .content.disable > .title {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 26px;
+  }
+}
+.dialogue.bmcs-minting-popup > section > .price-container > .content.disable > .klay-container {
+  display: flex;
+  gap: 12px;
+  font-size: 32px;
+  line-height: 32px;
+  margin-top: 5px;
+  margin-bottom: 4px;
+}
+.dialogue.bmcs-minting-popup > section > .price-container > .content.disable > p {
+  font-size: 16px;
+  line-height: 24px;
+}
+@media only screen and (max-width: 719px) {
+  .dialogue.bmcs-minting-popup > section > .price-container > .content.disable > p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
 .dialogue.bmcs-minting-popup > section > .price-container > hr {
   width: 1px;
   height: 80px;
@@ -4113,6 +4152,9 @@ body {
   justify-content: center;
   text-align: center;
   margin-top: 30px;
+}
+.dialogue.bmcs-minting-popup > section > .amount-container > .caption {
+  margin-bottom: 30px;
 }
 .dialogue.bmcs-minting-popup > section > .amount-container > .title {
   font-size: 20px;

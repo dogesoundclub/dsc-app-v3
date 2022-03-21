@@ -3,14 +3,13 @@ import { SkyRouter } from "skyrouter";
 import superagent from "superagent";
 import BrowserInfo from "./BrowserInfo";
 import Wallet from "./klaytn/Wallet";
-import Bmcs from "./view/bmcs/view/Bmcs";
+
+// mate
 import Activities from "./view/mate/view/Activities";
 import Contest from "./view/mate/view/contest/Contest";
 import CreateDscFamily from "./view/mate/view/dscFamily/CreateDscFamily";
 import DscFamily from "./view/mate/view/dscFamily/DscFamily";
 import UpdateDscFamily from "./view/mate/view/dscFamily/UpdateDscFamily";
-import EmateHome from "./view/mate/view/eMate/Home";
-import EmateLayout from "./view/mate/view/eMate/Layout";
 import Faq from "./view/mate/view/Faq";
 import FullyOn from "./view/mate/view/FullyOn";
 import Gallery from "./view/mate/view/Gallery";
@@ -28,18 +27,19 @@ import MyMate from "./view/mate/view/mates/MyMate";
 import Member from "./view/mate/view/Member";
 import Terms from "./view/mate/view/Terms";
 
-// mate
-
 // e-mate
 
 // bmcs
+import Bmcs from "./view/bmcs/view/Bmcs";
+import BmcsGallery from "./view/bmcs/view/Gallery";
+import BmcsLayout from "./view/bmcs/view/Layout";
 
 (async () => {
     msg.language = BrowserInfo.language;
     msg.parseCSV((await superagent.get("/msg.csv")).text);
 
     // mate
-    SkyRouter.route("**", Layout, ["bmcs", "emate"]);
+    SkyRouter.route("**", Layout, ["bmcs", "bmcs/gallery"]);
     SkyRouter.route("", Home);
 
     SkyRouter.route("followMe", FollowMe);
@@ -67,16 +67,15 @@ import Terms from "./view/mate/view/Terms";
     SkyRouter.route("faq", Faq);
     SkyRouter.route("member", Member);
 
-    // e-mate
-    SkyRouter.route("**", EmateLayout, ["bmcs", "", "followMe", "holder", "buyMate", "activities",
-        "gallery", "mates", "myMate", "dscFamily", "dscFamily/create", "dscFamily/{id}/update",
-        "governance", "governance/create", "governance-old/{id}", "contest", "fullyOn",
-        "terms", "faq"]);
+    // // e-mate
+    // SkyRouter.route(["e-mate"], EmateLayout);
 
-    SkyRouter.route("e-mate", EmateHome);
+    // SkyRouter.route("e-mate", EmateHome);
 
     // bmcs
+    SkyRouter.route(["bmcs", "bmcs/gallery"], BmcsLayout);
     SkyRouter.route("bmcs", Bmcs);
+    SkyRouter.route("bmcs/gallery", BmcsGallery);
 
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);

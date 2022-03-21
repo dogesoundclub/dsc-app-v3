@@ -58,7 +58,7 @@ export default class MintingPopup extends Popup {
                             el("p", "Per Transaction : Unlimited")
                         ),
                         el("hr"),
-                        el(".content",
+                        el(".content.disable",
                             el(".title", "None WL Price"),
                             el(".klay-container",
                                 el("img", { src: "/images/shared/icn/icn_klay.svg", alt: "Klaytn" }),
@@ -69,6 +69,7 @@ export default class MintingPopup extends Popup {
                         ),
                     ),
                     el(".amount-container",
+                        el("p.caption", "You are not whitelisted"),
                         el(".title", "Amount"),
                         el(".input-container",
                             el("button", "-", {

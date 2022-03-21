@@ -1,19 +1,22 @@
-import { BodyNode, DomNode } from "@hanul/skynode";
+import { BodyNode, DomNode, el } from "@hanul/skynode";
 import { View, ViewParams } from "skyrouter";
+import BmcsLayout from "./Layout";
 
-export default class Gallery implements View {
+export default class BmcsGallery implements View {
 
-    // private container: DomNode;
+    private container: DomNode;
 
     constructor() {
-        BodyNode.append(
-        )
+        BmcsLayout.current.title = "BMCS GALLERY";
+        BmcsLayout.current.content.append(
+            this.container = el(".bmcs-gallery-view",
+            ))
     }
 
     public changeParams(params: ViewParams, uri: string): void {
     }
 
     public close(): void {
-        // this.container.delete();
+        this.container.delete();
     }
 }
