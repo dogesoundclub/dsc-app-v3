@@ -4937,6 +4937,185 @@ body {
   margin-top: 20px;
   color: #838383;
 }
+.cycle-of-craft-view {
+  max-width: 1156px;
+  margin: auto;
+  display: flex;
+  margin-top: 60px;
+}
+@media only screen and (max-width: 719px) {
+  .cycle-of-craft-view {
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 20px;
+  }
+}
+.cycle-of-craft-view > aside {
+  width: 100%;
+  max-width: 274px;
+  margin-right: 118px;
+}
+@media only screen and (max-width: 719px) {
+  .cycle-of-craft-view > aside {
+    max-width: none;
+  }
+}
+.cycle-of-craft-view > aside > h1 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 32px;
+}
+.cycle-of-craft-view > aside > .block-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  background: #222222;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 16px;
+}
+.cycle-of-craft-view > aside > .block-container > .content > .title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #676767;
+}
+.cycle-of-craft-view > aside > .block-container > .content > p {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+.cycle-of-craft-view > aside > .block-container > hr {
+  width: 100%;
+  height: 1px;
+  background: #393939;
+  border: none;
+  margin: 20px 0px;
+}
+.cycle-of-craft-view > aside > .claim-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  background: #131313;
+  border: 1px solid #F9D833;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.cycle-of-craft-view > aside > .claim-container > .title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #F9D833;
+}
+.cycle-of-craft-view > aside > .claim-container > .account {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: #F9D833;
+  margin: 10px 0px;
+}
+.cycle-of-craft-view > aside > .claim-container > a {
+  padding: 14px 0px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #131313;
+  background: #F9D833;
+  border-radius: 8px;
+}
+.cycle-of-craft-view > article {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin-top: 48px;
+}
+@media only screen and (max-width: 719px) {
+  .cycle-of-craft-view > article {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.cycle-of-craft-view > article > .card {
+  display: flex;
+  padding: 14px;
+  background: #131313;
+  border: 1px solid #393939;
+  box-sizing: border-box;
+  border-radius: 8px;
+  text-align: center;
+  max-height: 278px;
+  justify-content: center;
+}
+.cycle-of-craft-view > article > .card > .info-container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 12px;
+}
+@media only screen and (max-width: 719px) {
+  .cycle-of-craft-view > article > .card > .info-container > img {
+    width: 144px;
+  }
+}
+.cycle-of-craft-view > article > .card > .info-container > .title {
+  margin-top: 10px;
+}
+.cycle-of-craft-view > article > .card > .info-container > a {
+  margin-top: 10px;
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  background: #F9D833;
+  border-radius: 8px;
+  padding: 10px 0px;
+  color: black;
+}
+.cycle-of-craft-view > article > .card > .progress-container {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 719px) {
+  .cycle-of-craft-view > article > .card > .progress-container > img {
+    width: 144px;
+  }
+}
+.cycle-of-craft-view > article > .card > .progress-container > .progress {
+  margin-top: 15px;
+  padding: 1px;
+  width: 100%;
+  height: 5px;
+  background: #393939;
+  border-radius: 2px;
+}
+.cycle-of-craft-view > article > .card > .progress-container > .progress > .bar {
+  background-color: #FFDF13;
+  width: 0;
+  height: 5px;
+  border-radius: 4px;
+}
+.cycle-of-craft-view > article > .card > .progress-container > .content {
+  margin-top: 24px;
+}
+.cycle-of-craft-view > article > .card > .progress-container > .content > .title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: #676767;
+}
+.cycle-of-craft-view > article > .card > .progress-container > .content > p {
+  margin-top: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+}
 /** shared */
 .popup-background {
   position: fixed;
