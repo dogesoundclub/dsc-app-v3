@@ -15,7 +15,7 @@ export default class BmcsLayout implements View {
     constructor() {
         BmcsLayout.current = this;
         let select: DomNode<HTMLSelectElement>;
-        BodyNode.append(this.container = el(".layout",
+        BodyNode.append(this.container = el(".bmcs-layout",
             el("header",
                 el(".left",
                     el("a.menu-button", el("img", { src: "/images/shared/icn/icn_menu.svg" }), {
@@ -29,7 +29,6 @@ export default class BmcsLayout implements View {
                     el("img.logo", { align: "left", src: "/images/shared/logo/bmcs.svg", alt: "logo" }),
                 ),
                 new PCMenu(),
-                el("a.bmcs", { click: () => ViewUtil.go("bmcs") }, "Go to BMCS >"),
                 select = el("select.language-select",
                     el("option", "🇰🇷 KOREAN", { value: "ko" }),
                     // el("option", "🇺🇸 ENG", { value: "en" }),
