@@ -10,6 +10,9 @@ export default class MintingPopup extends Popup {
     private amountInput;
     private notOnSale;
     private onSale;
+    private wlPanel;
+    private publicPanel;
+    private wlCaption;
     constructor();
     private loadStatus;
     private addMintAmount;

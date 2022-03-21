@@ -19,6 +19,10 @@ export default class MintingPopup extends Popup {
     private notOnSale: DomNode;
     private onSale: DomNode;
 
+    private wlPanel: DomNode;
+    private publicPanel: DomNode;
+    private wlCaption: DomNode;
+
     constructor() {
         super(".popup-background");
         this.append(
@@ -48,7 +52,7 @@ export default class MintingPopup extends Popup {
                         this.onSale = el("p", "On Sale"),
                     ),
                     el(".price-container",
-                        el(".content",
+                        this.wlPanel = el(".content.disable",
                             el(".title", "WL Price"),
                             el(".klay-container",
                                 el("img", { src: "/images/shared/icn/icn_klay.svg", alt: "Klaytn" }),
@@ -58,7 +62,7 @@ export default class MintingPopup extends Popup {
                             el("p", "Per Transaction : Unlimited")
                         ),
                         el("hr"),
-                        el(".content.disable",
+                        this.publicPanel = el(".content.disable",
                             el(".title", "None WL Price"),
                             el(".klay-container",
                                 el("img", { src: "/images/shared/icn/icn_klay.svg", alt: "Klaytn" }),
@@ -69,7 +73,7 @@ export default class MintingPopup extends Popup {
                         ),
                     ),
                     el(".amount-container",
-                        el("p.caption", "You are not whitelisted"),
+                        this.wlCaption = el("p.caption", "..."),
                         el(".title", "Amount"),
                         el(".input-container",
                             el("button", "-", {
@@ -137,6 +141,16 @@ export default class MintingPopup extends Popup {
         const address = await Wallet.loadAddress();
         if (address !== undefined) {
             this.walletAddress.empty().appendText("Wallet Address : " + address);
+
+            if (await BiasMinterV2Contract.discountList(address) === true) {
+                this.wlPanel.deleteClass("disable");
+                this.publicPanel.addClass("disable");
+                this.wlCaption.empty().appendText("You are whitelisted");
+            } else {
+                this.wlPanel.addClass("disable");
+                this.publicPanel.deleteClass("disable");
+                this.wlCaption.empty().appendText("You are not whitelisted");
+            }
         }
     }
 
