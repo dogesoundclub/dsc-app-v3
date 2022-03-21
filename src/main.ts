@@ -33,13 +33,14 @@ import Terms from "./view/mate/view/Terms";
 import Bmcs from "./view/bmcs/view/Bmcs";
 import BmcsGallery from "./view/bmcs/view/Gallery";
 import BmcsLayout from "./view/bmcs/view/Layout";
+import CycleOfCraft from "./view/bmcs/view/CycleOfCraft";
 
 (async () => {
     msg.language = BrowserInfo.language;
     msg.parseCSV((await superagent.get("/msg.csv")).text);
 
     // mate
-    SkyRouter.route("**", Layout, ["bmcs", "bmcs/gallery"]);
+    SkyRouter.route("**", Layout, ["bmcs", "bmcs/gallery", "bmcs/cycle-of-craft"]);
     SkyRouter.route("", Home);
 
     SkyRouter.route("followMe", FollowMe);
@@ -73,9 +74,10 @@ import BmcsLayout from "./view/bmcs/view/Layout";
     // SkyRouter.route("e-mate", EmateHome);
 
     // bmcs
-    SkyRouter.route(["bmcs", "bmcs/gallery"], BmcsLayout);
+    SkyRouter.route(["bmcs", "bmcs/gallery", "bmcs/cycle-of-craft"], BmcsLayout);
     SkyRouter.route("bmcs", Bmcs);
     SkyRouter.route("bmcs/gallery", BmcsGallery);
+    SkyRouter.route("bmcs/cycle-of-craft", CycleOfCraft);
 
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);
