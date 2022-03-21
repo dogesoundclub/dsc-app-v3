@@ -42,7 +42,7 @@ export default class MintingPopup extends Popup {
                                 this.saleBar = el(".bar"),
                             ),
                         ),
-                        el("p", "8056"),
+                        el("p", "10000"),
                     ),
                     this.amountDisplay = el(".amount", "AMOUNT ...")
                 ),
@@ -160,10 +160,10 @@ export default class MintingPopup extends Popup {
         this.loadAddress();
 
         const currentId = (await BiasMinterV2Contract.currentId()).toNumber();
-        this.amount.empty().appendText(String(currentId - 1944));
-        this.amountDisplay.empty().appendText("AMOUNT " + String(currentId - 1944));
+        this.amount.empty().appendText(String(currentId));
+        this.amountDisplay.empty().appendText("AMOUNT " + String(currentId));
 
-        const limit = 8056;
+        const limit = 10000;
         const remains = (await BiasMinterV2Contract.amount()).toNumber();
         const d = limit - remains > limit ? limit : limit - remains;
         this.saleBar.style({ width: `${d / limit * 100}%` });
