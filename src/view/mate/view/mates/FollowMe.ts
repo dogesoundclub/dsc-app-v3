@@ -15,7 +15,7 @@ export default class FollowMe implements View {
             ),
             el("section",
                 el("section",
-                    el("img", { src: "/images/shared/img/mate-mock.png" }),
+                    el("img", { src: "/images/shared/img/img_mate-mock.png" }),
                     el("article",
                         el(".content-container",
                             el("img", { src: "/images/shared/icn/icn_twitter.svg" }),

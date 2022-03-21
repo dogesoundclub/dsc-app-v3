@@ -13,7 +13,7 @@ export default class Holder implements View {
         Layout.current.title = msg("HOLDER_DISCORD_CERTIFICATION_BUTTON");
         Layout.current.content.append(this.container = el(".holder-view",
             el("section",
-                el("img", { src: "/images/shared/img/mate-mock.png" }),
+                el("img", { src: "/images/shared/img/img_mate-mock.png" }),
                 el("h1", msg("HOLDER_TITLE1")),
                 el(".button-container",
                     el("a", msg("YES_BUTTON"), { click: () => Wallet.connect() }),
