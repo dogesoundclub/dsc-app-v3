@@ -11,7 +11,7 @@ export default class Bmcs implements View {
     private container: DomNode;
 
     constructor() {
-        BmcsLayout.current.title = msg("Home");
+        BmcsLayout.current.title = "Home";
         BmcsLayout.current.content.append(
             (this.container = el(".bmcs-view",
                 el("header.section",
