@@ -4,6 +4,7 @@ export default class MintingPopup extends Popup {
     private interval;
     private walletAddress;
     private saleBar;
+    private amount;
     private amountDisplay;
     private WLprice;
     private price;

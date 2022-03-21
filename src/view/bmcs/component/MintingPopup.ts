@@ -11,6 +11,7 @@ export default class MintingPopup extends Popup {
 
     private saleBar: DomNode;
 
+    private amount: DomNode;
     private amountDisplay: DomNode;
     private WLprice: DomNode;
     private price: DomNode;
@@ -35,13 +36,13 @@ export default class MintingPopup extends Popup {
                         ),
                     ),
                     el(".progress-container",
-                        el("p", "0"),
+                        this.amount = el("p", "0"),
                         el("section",
                             el(".progress",
                                 this.saleBar = el(".bar"),
                             ),
                         ),
-                        el("p", "8068"),
+                        el("p", "8056"),
                     ),
                     this.amountDisplay = el(".amount", "AMOUNT ...")
                 ),
@@ -159,9 +160,10 @@ export default class MintingPopup extends Popup {
         this.loadAddress();
 
         const currentId = (await BiasMinterV2Contract.currentId()).toNumber();
-        this.amountDisplay.empty().appendText("AMOUNT " + String(currentId - 1932));
+        this.amount.empty().appendText(String(currentId - 1944));
+        this.amountDisplay.empty().appendText("AMOUNT " + String(currentId - 1944));
 
-        const limit = 8068;
+        const limit = 8056;
         const remains = (await BiasMinterV2Contract.amount()).toNumber();
         const d = limit - remains > limit ? limit : limit - remains;
         this.saleBar.style({ width: `${d / limit * 100}%` });

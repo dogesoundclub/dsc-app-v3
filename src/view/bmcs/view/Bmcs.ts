@@ -178,7 +178,6 @@ export default class Bmcs implements View {
                     el("hr"),
                     el("article.faq-container section #faq",
                         el("h2", "FAQ"),
-                        new BMCSCollapsibleItem(msg("BMCS_FAQ_TITLE1"), msg("BMCS_FAQ_DESC1")),
                         new BMCSCollapsibleItem(msg("BMCS_FAQ_TITLE2"), msg("BMCS_FAQ_DESC2")),
                         new BMCSCollapsibleItem(msg("BMCS_FAQ_TITLE3"), msg("BMCS_FAQ_DESC3")),
                         new BMCSCollapsibleItem(msg("BMCS_FAQ_TITLE4"), msg("BMCS_FAQ_DESC4")),
