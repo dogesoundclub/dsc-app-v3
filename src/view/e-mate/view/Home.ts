@@ -3,14 +3,14 @@ import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import Layout from "./Layout";
 import ViewUtil from "../../ViewUtil";
-import EmateCollapsibleItem from "../../mate/component/CollapsibleItem";
+import EmateCollapsibleItem from "../component/EmateCollapsibleItem";
 
 export default class EmateHome implements View {
 
     private container: DomNode;
 
     constructor() {
-        Layout.current.title = msg("BAPP_TITLE");
+        Layout.current.title = "HOME";
         Layout.current.content.append(this.container = el(".emate-home-view",
             el("header",
                 el(".content",
@@ -21,7 +21,7 @@ export default class EmateHome implements View {
             ),
             el("section",
                 el(".buy-emate-container",
-                    el("img", { src: "/images/view/emate/home/buy-emate.png", alt: "buy-emate" }),
+                    el("img", { src: "/images/view/e-mate/home/buy-emate.png", alt: "buy-emate" }),
                     el(".card-view",
                         el("h2", "BUY E-MATE"),
                         el("p", "Mate can be purchased at OPENSA, the world's largest NFT exchange. It can also be purchased at KLUBB, a domestic MIX-based exchange."),
@@ -34,9 +34,9 @@ export default class EmateHome implements View {
                     el("h2", "Story of Rocket Geeks"),
                     el("p", "Recently, there are many false NFTs that replicate mates. The official OpenC address is https://opensea.io/collection/dogesoundclub-mates.Please make sure to check the address and be careful about the fraudulent project. Recently, there are many false NFTs that replicate mates. The official OpenC address is https://opensea.io/collection/dogesoundclub-mates. Please make sure to check the address and be careful about the fraudulent project."),
                     el(".content",
-                        el("img", { src: "/images/view/emate/home/story1.png", alt: "story1" }),
-                        el("img", { src: "/images/view/emate/home/story2.png", alt: "story2" }),
-                        el("img", { src: "/images/view/emate/home/story3.png", alt: "story3" }),
+                        el("img", { src: "/images/view/e-mate/home/story1.png", alt: "story1" }),
+                        el("img", { src: "/images/view/e-mate/home/story2.png", alt: "story2" }),
+                        el("img", { src: "/images/view/e-mate/home/story3.png", alt: "story3" }),
                     ),
                 ),
                 el("hr"),
@@ -99,7 +99,7 @@ export default class EmateHome implements View {
                     el("h2", "Collection"),
                     el("section",
                         el(".mate-container",
-                            el("img", { src: "/images/view/emate/home/collection.png" }),
+                            el("img", { src: "/images/view/e-mate/home/collection.png" }),
                         ),
                         el("article",
                             el("p", "DSC MATES are 10,000 computer program generated 24*24 pixel art\ncharacters. They are issued as NFTs, making it easy to trade ownership of them."),

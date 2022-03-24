@@ -1,0 +1,201 @@
+.craft-of-drill-view {
+    max-width : 1156px;
+    margin    : auto;
+    display   : flex;
+    margin-top: 60px;
+
+    @media @phone {
+        flex-direction: column;
+        padding       : 20px;
+        margin-top    : 20px;
+    }
+
+    >aside {
+        width       : 100%;
+        max-width   : 274px;
+        margin-right: 118px;
+
+        @media @phone {
+            max-width: none;
+        }
+
+        >h1 {
+            font-weight: 400;
+            font-size  : 32px;
+            line-height: 32px;
+        }
+
+        >.block-container {
+            display       : flex;
+            flex-direction: column;
+            align-items   : flex-end;
+            text-align    : right;
+            background    : #222222;
+            border-radius : 8px;
+            padding       : 20px;
+            margin-top    : 16px;
+
+            >.content {
+                >.title {
+                    font-weight: 400;
+                    font-size  : 14px;
+                    line-height: 14px;
+                    color      : #676767;
+                }
+
+                >p {
+                    margin-top : 10px;
+                    font-weight: 400;
+                    font-size  : 20px;
+                    line-height: 20px;
+                    color      : #FFFFFF;
+                }
+            }
+
+            >hr {
+                width     : 100%;
+                height    : 1px;
+                background: #393939;
+                border    : none;
+                margin    : 20px 0px;
+            }
+        }
+
+        >.claim-container {
+            display       : flex;
+            flex-direction: column;
+            align-items   : flex-end;
+            text-align    : right;
+            background    : #131313;
+            border        : 1px solid #56F545;
+            box-sizing    : border-box;
+            border-radius : 8px;
+            padding       : 20px;
+            margin-top    : 20px;
+
+            >.title {
+                font-weight: 400;
+                font-size  : 14px;
+                line-height: 14px;
+                color      : #56F545;
+            }
+
+            >.account {
+                font-weight: 400;
+                font-size  : 20px;
+                line-height: 20px;
+                color      : #56F545;
+                margin     : 10px 0px;
+            }
+
+            >a {
+                padding      : 14px 0px;
+                width        : 100%;
+                display      : block;
+                text-align   : center;
+                font-weight  : 400;
+                font-size    : 14px;
+                line-height  : 14px;
+                color        : #131313;
+                background   : #56F545;
+                border-radius: 8px;
+            }
+        }
+    }
+
+    >article {
+        display              : grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap             : 20px;
+        margin-top           : 48px;
+
+        @media @phone {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        >.card {
+            display        : flex;
+            padding        : 14px;
+            background     : #131313;
+            border         : 1px solid #393939;
+            box-sizing     : border-box;
+            border-radius  : 8px;
+            text-align     : center;
+            max-height     : 278px;
+            justify-content: center;
+
+            >.info-container {
+                display       : flex;
+                flex-direction: column;
+                margin-right  : 12px;
+
+                >img {
+                    @media @phone {
+                        width: 144px;
+                    }
+                }
+
+                >.title {
+                    margin-top: 10px;
+                }
+
+                >a {
+                    margin-top   : 10px;
+                    display      : block;
+                    font-weight  : 400;
+                    font-size    : 14px;
+                    line-height  : 14px;
+                    background   : #56F545;
+                    border-radius: 8px;
+                    padding      : 10px 0px;
+                    color        : black;
+                }
+            }
+
+            >.progress-container {
+                display       : flex;
+                flex-direction: column;
+
+                >img {
+                    @media @phone {
+                        width: 144px;
+                    }
+                }
+
+                >.progress {
+                    margin-top   : 15px;
+                    padding      : 1px;
+                    width        : 100%;
+                    height       : 5px;
+                    background   : #393939;
+                    border-radius: 2px;
+
+                    >.bar {
+                        background-color: #FFDF13;
+                        width           : 0;
+                        height          : 5px;
+                        border-radius   : 4px;
+                    }
+                }
+
+                >.content {
+                    margin-top: 24px;
+
+                    >.title {
+                        font-weight: 400;
+                        font-size  : 12px;
+                        line-height: 12px;
+                        color      : #676767;
+                    }
+
+                    >p {
+                        margin-top : 4px;
+                        font-weight: 400;
+                        font-size  : 16px;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

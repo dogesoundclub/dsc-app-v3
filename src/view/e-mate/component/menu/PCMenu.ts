@@ -6,7 +6,7 @@ import MenuTreeBuilder from "./MenuTreeBuilder";
 export default class PCMenu extends DomNode {
 
     constructor() {
-        super(".pc-menu");
+        super(".emate-pc-menu");
 
         (menu.menu[1] as any).click = () => {
             ViewUtil.go("/");

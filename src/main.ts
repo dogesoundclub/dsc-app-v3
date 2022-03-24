@@ -27,20 +27,28 @@ import MyMate from "./view/mate/view/mates/MyMate";
 import Member from "./view/mate/view/Member";
 import Terms from "./view/mate/view/Terms";
 
-// e-mate
-
 // bmcs
 import Bmcs from "./view/bmcs/view/Bmcs";
 import BmcsGallery from "./view/bmcs/view/Gallery";
 import BmcsLayout from "./view/bmcs/view/Layout";
 import CycleOfCraft from "./view/bmcs/view/CycleOfCraft";
 
+// e-mate
+import EmateLayout from "./view/e-mate/view/Layout";
+import EmateHome from "./view/e-mate/view/Home";
+import EmateGallery from "./view/e-mate/view/Gallery";
+import MyEmate from "./view/e-mate/view/mates/MyMate";
+import CraftOfDrill from "./view/e-mate/view/CraftOfDrill";
+
 (async () => {
     msg.language = BrowserInfo.language;
     msg.parseCSV((await superagent.get("/msg.csv")).text);
 
     // mate
-    SkyRouter.route("**", Layout, ["bmcs", "bmcs/gallery", "bmcs/cycle-of-craft"]);
+    SkyRouter.route("**", Layout, [
+        "bmcs", "bmcs/gallery", "bmcs/cycle-of-craft",
+        "e-mate", "e-mate/gallery", "e-mate/my", "e-mate/craft-of-drill"
+    ]);
     SkyRouter.route("", Home);
 
     SkyRouter.route("followMe", FollowMe);
@@ -68,10 +76,13 @@ import CycleOfCraft from "./view/bmcs/view/CycleOfCraft";
     SkyRouter.route("faq", Faq);
     SkyRouter.route("member", Member);
 
-    // // e-mate
-    // SkyRouter.route(["e-mate"], EmateLayout);
+    // e-mate
+    SkyRouter.route(["e-mate", "e-mate/gallery", "e-mate/my", "e-mate/craft-of-drill"], EmateLayout);
 
-    // SkyRouter.route("e-mate", EmateHome);
+    SkyRouter.route("e-mate", EmateHome);
+    SkyRouter.route("e-mate/gallery", EmateGallery);
+    SkyRouter.route("e-mate/my", MyEmate);
+    SkyRouter.route("e-mate/craft-of-drill", CraftOfDrill);
 
     // bmcs
     SkyRouter.route(["bmcs", "bmcs/gallery", "bmcs/cycle-of-craft"], BmcsLayout);

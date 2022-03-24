@@ -73,7 +73,7 @@ export default class EmateLayout implements View {
     }
 
     public set title(title: string) {
-        document.title = ` - ${title}`;
+        document.title = `${title} - E-MATE`;
     }
 
     public changeParams(params: ViewParams, uri: string): void { }
