@@ -1,0 +1,108 @@
+.bmcs-gallery-view {
+    max-width : 1156px;
+    margin    : auto;
+    margin-top: 60px;
+
+    @media @phone {
+        margin-top: 26px;
+        padding   : 20px;
+    }
+
+    >header {
+        >h1 {
+            font-size  : 32px;
+            line-height: 32px;
+
+
+            @media @phone {
+                font-size: 20px;
+            }
+        }
+    }
+
+    >section {
+        display: flex;
+        width  : 254px;
+
+        @media @phone {
+            width         : 100%;
+            flex-direction: column;
+        }
+
+        >.filter {
+            min-width   : 254px;
+            margin-right: 100px;
+
+            @media @phone {
+                margin-right: 0px;
+            }
+
+            >.input-container {
+                position     : relative;
+                margin-bottom: 16px;
+
+                >input {
+                    width        : 100%;
+                    background   : #222222;
+                    border-radius: 8px;
+                    font-size    : 14px;
+                    line-height  : 14px;
+                    margin-top   : 16px;
+                    padding      : 14px 20px;
+                    font-family  : NeoDunggeunmo;
+                    color        : white;
+                }
+
+                >button {
+                    background   : #F9D833;
+                    border-radius: 8px;
+                    padding      : 10px 21px 9px 21px;
+                    color        : black;
+                    position     : absolute;
+                    top          : 20px;
+                    right        : 8px;
+                }
+            }
+
+            >.reset-button {
+                text-align   : center;
+                display      : block;
+                width        : 100%;
+                background   : #F9D833;
+                border-radius: 8px;
+                color        : black;
+                padding      : 16px 0px;
+                margin-top   : 20px;
+
+                &:hover {
+                    background-color: white;
+                    color           : black;
+                }
+            }
+
+            >select {
+                font-family     : NeoDunggeunmo;
+                width           : 100%;
+                background-color: transparent;
+                border          : none;
+                border-bottom   : #F9D833 solid 1px;
+                font-size       : 16px;
+                color           : #F9D833;
+                padding         : 16px 0px;
+                appearance      : none;
+            }
+        }
+
+        >article {
+            margin-top: 16px;
+
+            >.mate-list {
+                margin-left: 16px;
+
+                @media @phone {
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+}

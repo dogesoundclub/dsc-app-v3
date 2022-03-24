@@ -3,7 +3,7 @@ import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import superagent from "superagent";
 import MateList from "../component/mate/MateList";
-import CollapsibleFilter from "../component//CollapsibleFilter";
+import CollapsibleFilter from "../component/CollapsibleFilter";
 import Layout from "./Layout";
 import MateParts from "./mates/MateParts.json";
 import Mates from "./mates/Mates.json";

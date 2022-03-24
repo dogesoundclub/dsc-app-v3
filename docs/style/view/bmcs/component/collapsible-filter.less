@@ -1,0 +1,56 @@
+.bmcs-collapsible-filter {
+    >section {
+        min-width   : 254px;
+        margin-right: 100px;
+
+        @media @phone {
+            width: 100%;
+        }
+
+        >.select-container {
+            display        : flex;
+            justify-content: space-between;
+            width          : 100%;
+
+            >.collapsible {
+                text-align      : left;
+                font-family     : NeoDunggeunmo;
+                width           : 100%;
+                background-color: transparent;
+                border          : none;
+                border-bottom   : #F9D833 solid 1px;
+                font-size       : 16px;
+                color           : #F9D833;
+                padding         : 16px 0px;
+                appearance      : none;
+                height          : 48px;
+            }
+
+            >img {
+                border-bottom: #F9D833 solid 1px;
+            }
+        }
+
+        >.content {
+            display : none;
+            overflow: hidden;
+
+            >button {
+                font-family: NeoDunggeunmo;
+                color      : black;
+                width      : 100%;
+                font-size  : 16px;
+                padding    : 20px 16px;
+                background : #F9D833;
+                cursor     : pointer;
+                margin     : 0px;
+                text-align : left;
+
+                &:hover {
+                    color     : white;
+                    background: #CAA901;
+                }
+            }
+        }
+    }
+}
