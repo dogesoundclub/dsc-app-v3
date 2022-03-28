@@ -1,10 +1,18 @@
-import { BodyNode, DomNode, el } from "@hanul/skynode";
+import { DomNode, el } from "@hanul/skynode";
 import { View, ViewParams } from "skyrouter";
+import BiasContract from "../../../contracts/BiasContract";
+import CycleContract from "../../../contracts/CycleContract";
+import Klaytn from "../../../klaytn/Klaytn";
+import Wallet from "../../../klaytn/Wallet";
+import Alert from "../../shared/Alert";
+import CycleOfCraftCard from "../component/CycleOfCraftCard";
 import BmcsLayout from "./Layout";
 
 export default class CycleOfCraft implements View {
 
     private container: DomNode;
+    private totalClaimableCount: DomNode;
+    private list: DomNode;
 
     constructor() {
         BmcsLayout.current.title = "CycleOfCraft";
@@ -14,50 +22,52 @@ export default class CycleOfCraft implements View {
                     el("h1", "CYCLE OF CRAFT"),
                     el(".claim-container",
                         el(".title", "Accumulated Engines"),
-                        el(".account", "6 EA"),
-                        el("a", "모든 엔진 수령하기"),
+                        this.totalClaimableCount = el(".account", "... EA"),
+                        el("a", "모든 엔진 수령하기", {
+                            click: () => {
+                                new Alert("엔진 받기가 아직 활성화되지 않았습니다.");
+                            },
+                        }),
                     ),
                 ),
-                el("article",
-                    el(".card",
-                        el(".info-container",
-                            el("img", { src: "/images/view/bmcs/cycle-of-craft/bmcs-mock.png", alt: "bmcs" }),
-                            el(".title", "#12 Andrew John"),
-                            el("a", "엔진 받기"),
-                        ),
-                        el(".progress-container",
-                            el("img", { src: "/images/view/bmcs/cycle-of-craft/loading.png", alt: "loading" }),
-                            el(".progress",
-                                el(".bar"),
-                            ),
-                            el(".content",
-                                el(".title", "휙득까지 남은 Block"),
-                                el("p", "1,296,000"),
-                            ),
-                        ),
-                    ),
-                    el(".card",
-                        el(".info-container",
-                            el("img", { src: "/images/view/bmcs/cycle-of-craft/bmcs-mock.png", alt: "bmcs" }),
-                            el(".title", "#12 Andrew John"),
-                            el("a", "엔진 받기"),
-                        ),
-                        el(".progress-container",
-                            el("img", { src: "/images/view/bmcs/cycle-of-craft/loading.png", alt: "loading" }),
-                            el(".progress",
-                                el(".bar"),
-                            ),
-                            el(".content",
-                                el(".title", "휙득까지 남은 Block"),
-                                el("p", "1,296,000"),
-                            ),
-                        ),
-                    ),
-                ),
-            ))
+                this.list = el("article"),
+            ),
+        );
+        this.load();
     }
 
     public changeParams(params: ViewParams, uri: string): void {
+    }
+
+    private async load() {
+
+        if (await Wallet.connected() !== true) {
+            await Wallet.connect();
+        }
+        const walletAddress = await Wallet.loadAddress();
+        if (walletAddress !== undefined) {
+
+            const currentBlock = await Klaytn.loadBlockNumber();
+            const balance = (await BiasContract.balanceOf(walletAddress)).toNumber();
+
+            let totalClaimableCount = 0;
+
+            const promises: Promise<void>[] = [];
+            for (let i = 0; i < balance; i += 1) {
+                const promise = async (index: number) => {
+                    const biasId = await BiasContract.tokenOfOwnerByIndex(walletAddress, index);
+                    const startBlocks = await CycleContract.startBlocks(biasId);
+                    const level = await CycleContract.levels(biasId);
+                    const claimableCount = await CycleContract.claimableCount(biasId);
+                    totalClaimableCount += claimableCount.toNumber();
+                    new CycleOfCraftCard("bmcs", biasId.toNumber(), currentBlock, startBlocks.toNumber(), level.toNumber(), claimableCount.toNumber()).appendTo(this.list);
+                };
+                promises.push(promise(i));
+            }
+            await Promise.all(promises);
+
+            this.totalClaimableCount.empty().appendText(`${totalClaimableCount} EA`);
+        }
     }
 
     public close(): void {

@@ -8,6 +8,14 @@ class CycleContract extends Contract {
         super("0x7cB36e323AEfE379F6F59694496f5a5AbcE8758d", CycleArtifact.abi);
     }
 
+    public async startBlocks(id: BigNumberish): Promise<BigNumber> {
+        return BigNumber.from(await this.runMethod("startBlocks", id));
+    }
+
+    public async levels(id: BigNumberish): Promise<BigNumber> {
+        return BigNumber.from(await this.runMethod("levels", id));
+    }
+
     public async claimableCount(id: BigNumberish): Promise<BigNumber> {
         return BigNumber.from(await this.runMethod("claimableCount", id));
     }
