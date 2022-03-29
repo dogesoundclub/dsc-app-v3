@@ -3863,6 +3863,57 @@ body {
   font-size: 16px;
   line-height: 20px;
 }
+.holder-view {
+  background-image: url("/images/view/mate/home/club.png");
+  height: 800px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.holder-view > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.holder-view > section > img {
+  width: 176px;
+  height: 176px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 719px) {
+  .holder-view > section > img {
+    margin-bottom: 20px;
+  }
+}
+.holder-view > section > h1 {
+  font-size: 42px;
+  line-height: 42px;
+  text-align: center;
+}
+@media only screen and (max-width: 719px) {
+  .holder-view > section > h1 {
+    font-size: 24px;
+  }
+}
+.holder-view > section > .button-container {
+  margin-top: 14px;
+  text-align: center;
+}
+.holder-view > section > .button-container > a {
+  font-size: 42px;
+  line-height: 42px;
+  padding: 35px;
+}
+@media only screen and (max-width: 719px) {
+  .holder-view > section > .button-container > a {
+    font-size: 32px;
+  }
+}
+.holder-view > section > .button-container > a:hover {
+  color: #E73C83;
+}
 /** e-mate */
 .emate-pc-menu {
   top: 0;
