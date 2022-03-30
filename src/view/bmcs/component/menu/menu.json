@@ -22,6 +22,10 @@
         {
             "uri": "bmcs#partnership",
             "name": "Partnership"
+        },
+        {
+            "uri": "bmcs/cycle-of-craft",
+            "name": "Crafting"
         }
     ]
 }
