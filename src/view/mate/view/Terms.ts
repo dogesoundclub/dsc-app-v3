@@ -32,9 +32,6 @@ export default class Terms implements View {
                 el("p", msg("TERMS_DESC8")),
                 el("h2", msg("TERMS_TITLE9")),
                 el("p", msg("TERMS_DESC9")),
-                el("h2", msg("TERMS_TITLE10")),
-                el("p", msg("TERMS_DESC10")),
-                el(".caption", msg("TERMS_DESC11")),
             ),
         ))
     }

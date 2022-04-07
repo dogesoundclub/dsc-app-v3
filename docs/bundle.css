@@ -3787,6 +3787,7 @@ body {
 .terms-view > header > h1 {
   font-size: 32px;
   line-height: 32px;
+  margin: 32px 0px;
 }
 @media only screen and (max-width: 719px) {
   .terms-view > header > h1 {
@@ -3795,7 +3796,7 @@ body {
   }
 }
 .terms-view > article > h2 {
-  margin-top: 34px;
+  margin-top: 40px;
   font-size: 24px;
   line-height: 24px;
 }
@@ -3806,8 +3807,9 @@ body {
   }
 }
 .terms-view > article > p {
+  margin-top: 16px;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 28px;
 }
 @media only screen and (max-width: 719px) {
   .terms-view > article > p {
