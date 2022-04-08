@@ -47,7 +47,7 @@ export default class EmateLayout implements View {
                 el(".sidebar",
                     el(".content",
                         el(".term",
-                            // el("a", "서비스이용약관"),
+                            // el("a", { href: "/terms" }, "서비스이용약관"),
                             // el("span", "|"),
                             // el("a", "개인정보처리방침"),
                             // el("span", "|"),

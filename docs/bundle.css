@@ -726,6 +726,8 @@ body {
   font-weight: normal;
   font-size: 12px;
   line-height: 20px;
+  color: white;
+  text-decoration: none;
 }
 .layout > footer > .sidebar > .content > .term > span {
   color: #474747;
