@@ -2,19 +2,20 @@
     >header {
         position: relative;
         z-index : 1;
-        height  : 950px;
+        height  : 100vh;
 
         >.overlay {
-            position  : absolute;
-            z-index   : -1;
-            top       : 0;
-            bottom    : 0;
-            left      : 0;
-            right     : 0;
-            background: url("/images/view/bmcs/home/bg.png") center center;
-            opacity   : .4;
-            width     : 100%;
-            height    : 950px;
+            position       : absolute;
+            z-index        : -1;
+            top            : 0;
+            bottom         : 0;
+            left           : 0;
+            right          : 0;
+            background     : url("/images/view/bmcs/home/bg.png") center no-repeat;
+            background-size: cover;
+            opacity        : .4;
+            width          : 100%;
+            height         : 100vh;
         }
 
         >section {
@@ -41,20 +42,49 @@
                 }
             }
 
-            >a {
-                display      : block;
-                font-size    : 24px;
-                line-height  : 24px;
-                color        : #131313;
-                background   : #FFDF13;
-                border-radius: 8px;
-                margin-top   : 30px;
-                padding      : 14px 169px;
-                max-width    : 422px;
-                text-align   : center;
+            >.button-container {
+                display: flex;
+                gap    : 10px;
+
+                >a {
+                    max-width    : 250px;
+                    width        : 100%;
+                    display      : block;
+                    font-size    : 22px;
+                    line-height  : 22px;
+                    color        : #131313;
+                    background   : #FFDF13;
+                    border-radius: 8px;
+                    margin-top   : 30px;
+                    padding      : 16px 0px;
+                    max-width    : 422px;
+                    text-align   : center;
+
+                    @media @phone {
+                        padding: 14px 0px;
+                    }
+                }
+
+                >.outline {
+                    font-weight  : 400;
+                    font-size    : 20px;
+                    line-height  : 20px;
+                    color        : #FFDF13;
+                    background   : rgba(19, 19, 19, 0.2);
+                    border       : 1px solid #FFDF13;
+                    box-sizing   : border-box;
+                    border-radius: 8px;
+                }
+            }
+
+            >.scroll-container {
+                display        : flex;
+                justify-content: center;
+                width          : 100%;
+                margin-top     : 100px;
 
                 @media @phone {
-                    padding: 14px 0px;
+                    display: none;
                 }
             }
         }
