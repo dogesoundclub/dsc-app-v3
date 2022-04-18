@@ -1,0 +1,53 @@
+.bmcs-synthesis-mate-item {
+    max-width: 110px;
+
+    >img {
+        width : 110px;
+        height: 110px;
+
+        &:hover {
+            border    : 3px solid #FFFFFF;
+            box-sizing: border-box;
+        }
+    }
+
+    >.checkbox-container {
+        display        : flex;
+        justify-content: center;
+        align-items    : flex-end;
+        align-content  : center;
+
+        input[type=checkbox] {
+            display: none;
+        }
+
+        >input[type=checkbox]+label {
+            display: block;
+            cursor : pointer;
+        }
+
+        input[type=checkbox]+label:before {
+            content       : "\2714";
+            margin-bottom : 4px;
+            display       : inline-block;
+            width         : 16px;
+            height        : 16px;
+            border        : 2px solid #FFF;
+            border-radius : 2px;
+            margin-right  : 6px;
+            vertical-align: sub;
+            color         : transparent;
+            transition    : .2s;
+        }
+
+        input[type=checkbox]+label:active:before {
+            transform: scale(0);
+        }
+
+        input[type=checkbox]:checked+label:before {
+            background-color: #F9D833;
+            border-color    : #F9D833;
+            color           : #131313;
+        }
+    }
+}

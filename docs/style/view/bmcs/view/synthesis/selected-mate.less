@@ -1,0 +1,115 @@
+.synthesis-select-mate-view {
+    background     : url("/images/view/bmcs/home/bg-overlay.png") center no-repeat;
+    background-size: cover;
+    padding        : 96px 0px;
+
+    @media @phone {
+        padding: 8px;
+    }
+
+    >section {
+        width     : 100%;
+        max-width : 568px;
+        margin    : auto;
+        width     : 100%;
+        background: rgba(19, 19, 19, 0.6);
+        border    : 1px solid #FFDF13;
+        box-sizing: border-box;
+        padding   : 57px 66px;
+
+        >h2 {
+            font-weight  : 400;
+            font-size    : 20px;
+            line-height  : 20px;
+            color        : #F9D833;
+            margin-bottom: 40px;
+        }
+
+        >.synthesis-container {
+            display        : flex;
+            justify-content: space-between;
+            align-items    : center;
+
+            @media @phone {
+                flex-direction: column;
+            }
+
+
+            >.mate-container {
+                display       : flex;
+                flex-direction: column;
+                text-align    : center;
+
+                >.mate {
+                    width     : 176px;
+                    height    : 176px;
+                    border    : 3px solid #FFFFFF;
+                    box-sizing: border-box;
+                }
+
+                >p {
+                    margin-top: 12px;
+                }
+            }
+
+            >img {
+                padding: 14px 0px;
+            }
+
+            >.card-container {
+                display       : flex;
+                flex-direction: column;
+                text-align    : center;
+
+                >.card {
+                    width        : 176px;
+                    height       : 238px;
+                    border       : 3px solid #F9D833;
+                    box-sizing   : border-box;
+                    border-radius: 8px;
+                }
+
+                >p {
+                    margin-top: 12px;
+                }
+            }
+        }
+
+        >.warning {
+            margin-top   : 40px;
+            font-size    : 14px;
+            line-height  : 19px;
+            text-align   : center;
+            border       : 1px solid #F9D833;
+            box-sizing   : border-box;
+            border-radius: 8px;
+            padding      : 20px;
+            color        : #F9D833;
+        }
+
+        >.button-container {
+            display   : flex;
+            gap       : 12px;
+            margin-top: 40px;
+
+            >a {
+                display      : block;
+                text-align   : center;
+                width        : 100%;
+                max-width    : 212px;
+                background   : #FFDF13;
+                border-radius: 8px;
+                color        : #131313;
+                padding      : 18px 0px;
+            }
+
+            >.outline {
+                color           : #F9D833;
+                border          : 1px solid #F9D833;
+                box-sizing      : border-box;
+                border-radius   : 8px;
+                background-color: transparent;
+            }
+        }
+    }
+}
