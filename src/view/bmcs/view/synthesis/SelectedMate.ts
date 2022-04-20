@@ -37,7 +37,7 @@ export default class SelectedMate implements View {
                             el("p", `${cardName} 카드 1개`),
                         ),
                     ),
-                    el(".warning", "* BIAS 카드 합성을 통해 생성될 BIAS PFP-NFT는 합성시에\n400 MIX가 스테이킹 됩니다. 스테이킹된 믹스는\n6개월 후 400 MIX를 그대로 돌려받으실 수 있습니다"),
+                    el(".warning", "BIAS를 민팅하기 위해, 메이트 1유닛, 바이어스 카드 1장, 400믹스를 사용합니다. \n\n이 중 카드 1장은 소모되며, 다시 찾을 수 없습니다. 메이트는 소모되지 않습니다. 400믹스는 6개월동안 락업되며, 합성한 BMCS를 가지고 있어야만 되찾을 수 있습니다.\n\nBIAS를 합성하시겠습니까?"),
                     el(".button-container",
                         el("a.outline", "돌아가기"),
                         el("a", "합성", {
