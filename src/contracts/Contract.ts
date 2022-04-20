@@ -60,10 +60,6 @@ export default abstract class Contract extends EventContainer {
         return this.runWalletMethodWithGas(methodName, 20000000, ...params);
     }
 
-    protected async runWalletMethodWithLargeGas(methodName: string, ...params: any[]) {
-        return this.runWalletMethodWithGas(methodName, 20000000, ...params);
-    }
-
     protected async runWalletMethodWithValue(value: BigNumber, methodName: string, ...params: any[]) {
         if (ExtWallet.installed === true) {
             const from = await Wallet.loadAddress();
