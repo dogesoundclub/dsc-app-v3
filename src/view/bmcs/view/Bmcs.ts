@@ -2,6 +2,7 @@ import { DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import Alert from "../../shared/Alert";
+import ViewUtil from "../../ViewUtil";
 import BMCSAlert from "../component/BMCSAlert";
 import BMCSCollapsibleItem from "../component/BMCSCollapsibleItem";
 import MintingPopup from "../component/MintingPopup";
@@ -22,7 +23,7 @@ export default class Bmcs implements View {
                         el("p", msg("BMCS_DESC")),
                         el(".button-container",
                             el("a", "MINT", { click: () => { new MintingPopup() } }),
-                            el("a.outline", "SYNTHESIS", { click: () => { new BMCSAlert("준비중입니다.", "합성을 통한 BMCS 획득은 4월 20일 오후 9시부터 가능합니다.") } }),
+                            el("a.outline", "SYNTHESIS", { click: () => { ViewUtil.go("bmcs/preparation") } }),
                         ),
                         el(".scroll-container",
                             el("img", { src: "/images/shared/icn/icn_scroll.svg", alt: "scroll" }),

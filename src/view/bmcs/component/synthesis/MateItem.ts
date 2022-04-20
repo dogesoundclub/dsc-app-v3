@@ -2,15 +2,25 @@ import { DomNode, el } from "@hanul/skynode";
 
 export default class MateItem extends DomNode {
 
-    constructor(id: number) {
+    private checkbox: DomNode<HTMLInputElement>;
+
+    constructor(public id: number) {
         super(".bmcs-synthesis-mate-item");
         this.append(
-            el("img", { src: "/images/shared/img/img_mate-mock.png", alt: "mate-mock" }),
+            el("img", { src: `https://storage.googleapis.com/dsc-mate/336/dscMate-${id}.png`, alt: "mate-mock" }),
             el(".checkbox-container",
-                el("input", { type: "checkbox", id: `mate${id}` }),
+                this.checkbox = el("input", { type: "checkbox", id: `mate${id}` }, {
+                    change: () => {
+                        this.fireEvent(this.checkbox.domElement.checked === true ? "selected" : "deselected");
+                    },
+                }),
                 el("label", { for: `mate${id}` }),
                 el("p", `#${id}`),
             ),
         );
+    }
+
+    public deselect() {
+        this.checkbox.domElement.checked = false;
     }
 }

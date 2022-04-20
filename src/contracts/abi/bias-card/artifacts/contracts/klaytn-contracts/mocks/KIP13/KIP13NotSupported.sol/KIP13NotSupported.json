@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "KIP13NotSupported",
+  "sourceName": "contracts/klaytn-contracts/mocks/KIP13/KIP13NotSupported.sol",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a72305820d62335bba46e66f0b4f3986f054fd5bdf3fa90a721c8c6576c220fed19b7f5430029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a72305820d62335bba46e66f0b4f3986f054fd5bdf3fa90a721c8c6576c220fed19b7f5430029",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

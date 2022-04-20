@@ -1,0 +1,1 @@
+{"version":3,"file":"CardItem.d.ts","sourceRoot":"","sources":["../../../../../src/view/bmcs/component/synthesis/CardItem.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAM,MAAM,gBAAgB,CAAC;AAE7C,MAAM,CAAC,OAAO,OAAO,YAAa,SAAQ,OAAO;IAI1B,EAAE,EAAE,MAAM;IAF7B,OAAO,CAAC,QAAQ,CAA4B;gBAEzB,EAAE,EAAE,MAAM;IAgBtB,QAAQ;CAGlB"}

@@ -8,6 +8,8 @@ declare class BiasContract extends Contract {
     transfer(to: string, mateId: BigNumberish): Promise<void>;
     isApprovedForAll(owner: string, operator: string): Promise<boolean>;
     setApprovalForAll(operator: string, approved: boolean): Promise<void>;
+    tokenURI(id: BigNumberish): Promise<string>;
+    exists(id: BigNumberish): Promise<boolean>;
 }
 declare const _default: BiasContract;
 export default _default;

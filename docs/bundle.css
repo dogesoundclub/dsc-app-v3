@@ -6741,11 +6741,15 @@ body {
 }
 .synthesis-done-view > section > img {
   width: 300px;
-  height: 350px;
+  height: 300px;
   margin-top: 20px;
   margin-bottom: 30px;
 }
-.synthesis-done-view > section > a {
+.synthesis-done-view > section > a.opensea {
+  color: #F9D833;
+}
+.synthesis-done-view > section > a.confirm {
+  margin-top: 10px;
   max-width: 300px;
   width: 100%;
   color: #131313;

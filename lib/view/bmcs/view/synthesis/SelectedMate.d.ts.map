@@ -1,0 +1,1 @@
+{"version":3,"file":"SelectedMate.d.ts","sourceRoot":"","sources":["../../../../../src/view/bmcs/view/synthesis/SelectedMate.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,IAAI,EAAE,UAAU,EAAE,MAAM,WAAW,CAAC;AAK7C,MAAM,CAAC,OAAO,OAAO,YAAa,YAAW,IAAI;IAE7C,OAAO,CAAC,SAAS,CAAU;gBAEf,MAAM,EAAE,UAAU;IA6CvB,YAAY,CAAC,MAAM,EAAE,UAAU,EAAE,GAAG,EAAE,MAAM,GAAG,IAAI;IAGnD,KAAK,IAAI,IAAI;CAGvB"}

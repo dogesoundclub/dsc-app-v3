@@ -28,6 +28,20 @@
         {
           "name": "id",
           "type": "uint256"
+        }
+      ],
+      "name": "clear",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "id",
+          "type": "uint256"
         },
         {
           "name": "count",
@@ -62,6 +76,18 @@
         }
       ],
       "name": "SetStartEngineId",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "transferListener",
+          "type": "address"
+        }
+      ],
+      "name": "SetTransferListener",
       "type": "event"
     },
     {
