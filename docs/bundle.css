@@ -6538,7 +6538,7 @@ body {
 }
 @media only screen and (max-width: 719px) {
   .synthesis-preparation-view > section {
-    padding: 40px 0px;
+    padding: 40px 8px;
   }
 }
 .synthesis-preparation-view > section > h2 {
@@ -6556,8 +6556,9 @@ body {
 }
 .synthesis-preparation-view > section > .mate-container {
   display: flex;
+  overflow-x: auto;
   gap: 20px;
-  min-height: 140px;
+  min-height: 160px;
 }
 .synthesis-preparation-view > section > .card-container {
   display: flex;
