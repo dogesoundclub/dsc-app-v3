@@ -6556,7 +6556,7 @@ body {
 }
 .synthesis-preparation-view > section > .mate-container {
   display: flex;
-  overflow-x: auto;
+  overflow: hidden;
   gap: 20px;
   min-height: 160px;
 }
@@ -6564,7 +6564,7 @@ body {
   display: flex;
   gap: 20px;
   min-height: 300px;
-  overflow: auto;
+  overflow: hidden;
 }
 .synthesis-preparation-view > section > .button-wrap {
   display: flex;
