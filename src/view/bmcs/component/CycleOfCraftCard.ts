@@ -9,12 +9,11 @@ import ViewUtil from "../../ViewUtil";
 
 export default class CycleOfCraftCard extends DomNode {
 
-    constructor(id: number, metadata: any, currentBlock: number, startBlock: number, claimableCount: number) {
+    constructor(id: number, metadata: any, currentBlock: number, startBlock: number, level: number, claimableCount: number) {
         super(".cycle-of-craft-card");
 
-        const level = metadata.attributes.find((a: any) => a.trait_type === "Level")?.value;
-
         if (startBlock === 0) {
+            level = metadata.attributes.find((a: any) => a.trait_type === "Level")?.value;
             this.append(
                 el(".info-container",
                     el("img", { src: metadata.image, alt: "bmcs" }),
