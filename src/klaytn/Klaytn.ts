@@ -19,7 +19,7 @@ class Klaytn {
         return BigNumber.from(await this.caver.klay.getBalance(address));
     }
 
-    public async loadBlockNumber() {
+    public async loadBlockNumber(): Promise<number> {
         return await this.caver.klay.getBlockNumber();
     }
 }

@@ -6,6 +6,7 @@ declare class CycleContract extends Contract {
     levels(id: BigNumberish): Promise<BigNumber>;
     claimableCount(id: BigNumberish): Promise<BigNumber>;
     claim(id: BigNumberish, count: BigNumberish): Promise<void>;
+    setLevel(id: BigNumberish, startBlock: BigNumberish, level: BigNumberish, signature: string): Promise<void>;
 }
 declare const _default: CycleContract;
 export default _default;

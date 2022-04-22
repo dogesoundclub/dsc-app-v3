@@ -51,6 +51,7 @@ interface ICycleInterface extends ethers.utils.Interface {
     "SetLevelToSpeed(uint256,uint256)": EventFragment;
     "SetPointPerEngine(uint256)": EventFragment;
     "SetEngineLimit(uint256)": EventFragment;
+    "SetSigner(address)": EventFragment;
   };
 
   getEvent(nameOrSignatureOrTopic: "SetEngine"): EventFragment;
@@ -59,6 +60,7 @@ interface ICycleInterface extends ethers.utils.Interface {
   getEvent(nameOrSignatureOrTopic: "SetLevelToSpeed"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "SetPointPerEngine"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "SetEngineLimit"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "SetSigner"): EventFragment;
 }
 
 export class ICycle extends Contract {
@@ -180,6 +182,8 @@ export class ICycle extends Contract {
     SetPointPerEngine(pointPerEngine: null): EventFilter;
 
     SetEngineLimit(engineLimit: null): EventFilter;
+
+    SetSigner(signer: string | null): EventFilter;
   };
 
   estimateGas: {

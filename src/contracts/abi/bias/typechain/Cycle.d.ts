@@ -26,14 +26,17 @@ interface CycleInterface extends ethers.utils.Interface {
     "bias()": FunctionFragment;
     "setEngine(address)": FunctionFragment;
     "setTransferListener(address)": FunctionFragment;
+    "signer()": FunctionFragment;
     "addManager(address)": FunctionFragment;
     "setLevelToSpeed(uint256,uint256)": FunctionFragment;
     "transferListener()": FunctionFragment;
+    "setSigner(address)": FunctionFragment;
     "setLevels(uint256[],uint256[],uint256[])": FunctionFragment;
     "renounceOwnership()": FunctionFragment;
     "engineLimit()": FunctionFragment;
     "owner()": FunctionFragment;
     "isOwner()": FunctionFragment;
+    "setLevel(uint256,uint256,uint256,bytes)": FunctionFragment;
     "setPointPerEngine(uint256)": FunctionFragment;
     "setEngineLimit(uint256)": FunctionFragment;
     "startEngineId()": FunctionFragment;
@@ -61,6 +64,7 @@ interface CycleInterface extends ethers.utils.Interface {
     functionFragment: "setTransferListener",
     values: [string]
   ): string;
+  encodeFunctionData(functionFragment: "signer", values?: undefined): string;
   encodeFunctionData(functionFragment: "addManager", values: [string]): string;
   encodeFunctionData(
     functionFragment: "setLevelToSpeed",
@@ -70,6 +74,7 @@ interface CycleInterface extends ethers.utils.Interface {
     functionFragment: "transferListener",
     values?: undefined
   ): string;
+  encodeFunctionData(functionFragment: "setSigner", values: [string]): string;
   encodeFunctionData(
     functionFragment: "setLevels",
     values: [BigNumberish[], BigNumberish[], BigNumberish[]]
@@ -84,6 +89,10 @@ interface CycleInterface extends ethers.utils.Interface {
   ): string;
   encodeFunctionData(functionFragment: "owner", values?: undefined): string;
   encodeFunctionData(functionFragment: "isOwner", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "setLevel",
+    values: [BigNumberish, BigNumberish, BigNumberish, BytesLike]
+  ): string;
   encodeFunctionData(
     functionFragment: "setPointPerEngine",
     values: [BigNumberish]
@@ -146,6 +155,7 @@ interface CycleInterface extends ethers.utils.Interface {
     functionFragment: "setTransferListener",
     data: BytesLike
   ): Result;
+  decodeFunctionResult(functionFragment: "signer", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "addManager", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "setLevelToSpeed",
@@ -155,6 +165,7 @@ interface CycleInterface extends ethers.utils.Interface {
     functionFragment: "transferListener",
     data: BytesLike
   ): Result;
+  decodeFunctionResult(functionFragment: "setSigner", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "setLevels", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "renounceOwnership",
@@ -166,6 +177,7 @@ interface CycleInterface extends ethers.utils.Interface {
   ): Result;
   decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "isOwner", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "setLevel", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "setPointPerEngine",
     data: BytesLike
@@ -219,6 +231,7 @@ interface CycleInterface extends ethers.utils.Interface {
     "SetLevelToSpeed(uint256,uint256)": EventFragment;
     "SetPointPerEngine(uint256)": EventFragment;
     "SetEngineLimit(uint256)": EventFragment;
+    "SetSigner(address)": EventFragment;
     "OwnershipTransferred(address,address)": EventFragment;
   };
 
@@ -228,6 +241,7 @@ interface CycleInterface extends ethers.utils.Interface {
   getEvent(nameOrSignatureOrTopic: "SetLevelToSpeed"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "SetPointPerEngine"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "SetEngineLimit"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "SetSigner"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "OwnershipTransferred"): EventFragment;
 }
 
@@ -273,6 +287,10 @@ export class Cycle extends Contract {
       overrides?: Overrides
     ): Promise<ContractTransaction>;
 
+    signer(overrides?: CallOverrides): Promise<[string]>;
+
+    "signer()"(overrides?: CallOverrides): Promise<[string]>;
+
     addManager(
       manager: string,
       overrides?: Overrides
@@ -298,6 +316,16 @@ export class Cycle extends Contract {
     transferListener(overrides?: CallOverrides): Promise<[string]>;
 
     "transferListener()"(overrides?: CallOverrides): Promise<[string]>;
+
+    setSigner(
+      _signer: string,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
+
+    "setSigner(address)"(
+      _signer: string,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
 
     setLevels(
       ids: BigNumberish[],
@@ -328,6 +356,22 @@ export class Cycle extends Contract {
     isOwner(overrides?: CallOverrides): Promise<[boolean]>;
 
     "isOwner()"(overrides?: CallOverrides): Promise<[boolean]>;
+
+    setLevel(
+      id: BigNumberish,
+      startBlock: BigNumberish,
+      level: BigNumberish,
+      signature: BytesLike,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
+
+    "setLevel(uint256,uint256,uint256,bytes)"(
+      id: BigNumberish,
+      startBlock: BigNumberish,
+      level: BigNumberish,
+      signature: BytesLike,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
 
     setPointPerEngine(
       _pointPerEngine: BigNumberish,
@@ -518,6 +562,16 @@ export class Cycle extends Contract {
 
   "transferListener()"(overrides?: CallOverrides): Promise<string>;
 
+  setSigner(
+    _signer: string,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
+  "setSigner(address)"(
+    _signer: string,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
   setLevels(
     ids: BigNumberish[],
     _startBlocks: BigNumberish[],
@@ -547,6 +601,22 @@ export class Cycle extends Contract {
   isOwner(overrides?: CallOverrides): Promise<boolean>;
 
   "isOwner()"(overrides?: CallOverrides): Promise<boolean>;
+
+  setLevel(
+    id: BigNumberish,
+    startBlock: BigNumberish,
+    level: BigNumberish,
+    signature: BytesLike,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
+  "setLevel(uint256,uint256,uint256,bytes)"(
+    id: BigNumberish,
+    startBlock: BigNumberish,
+    level: BigNumberish,
+    signature: BytesLike,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
 
   setPointPerEngine(
     _pointPerEngine: BigNumberish,
@@ -705,6 +775,10 @@ export class Cycle extends Contract {
       overrides?: CallOverrides
     ): Promise<void>;
 
+    signer(overrides?: CallOverrides): Promise<string>;
+
+    "signer()"(overrides?: CallOverrides): Promise<string>;
+
     addManager(manager: string, overrides?: CallOverrides): Promise<void>;
 
     "addManager(address)"(
@@ -727,6 +801,13 @@ export class Cycle extends Contract {
     transferListener(overrides?: CallOverrides): Promise<string>;
 
     "transferListener()"(overrides?: CallOverrides): Promise<string>;
+
+    setSigner(_signer: string, overrides?: CallOverrides): Promise<void>;
+
+    "setSigner(address)"(
+      _signer: string,
+      overrides?: CallOverrides
+    ): Promise<void>;
 
     setLevels(
       ids: BigNumberish[],
@@ -757,6 +838,22 @@ export class Cycle extends Contract {
     isOwner(overrides?: CallOverrides): Promise<boolean>;
 
     "isOwner()"(overrides?: CallOverrides): Promise<boolean>;
+
+    setLevel(
+      id: BigNumberish,
+      startBlock: BigNumberish,
+      level: BigNumberish,
+      signature: BytesLike,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
+    "setLevel(uint256,uint256,uint256,bytes)"(
+      id: BigNumberish,
+      startBlock: BigNumberish,
+      level: BigNumberish,
+      signature: BytesLike,
+      overrides?: CallOverrides
+    ): Promise<void>;
 
     setPointPerEngine(
       _pointPerEngine: BigNumberish,
@@ -900,6 +997,8 @@ export class Cycle extends Contract {
 
     SetEngineLimit(engineLimit: null): EventFilter;
 
+    SetSigner(signer: string | null): EventFilter;
+
     OwnershipTransferred(
       previousOwner: string | null,
       newOwner: string | null
@@ -932,6 +1031,10 @@ export class Cycle extends Contract {
       overrides?: Overrides
     ): Promise<BigNumber>;
 
+    signer(overrides?: CallOverrides): Promise<BigNumber>;
+
+    "signer()"(overrides?: CallOverrides): Promise<BigNumber>;
+
     addManager(manager: string, overrides?: Overrides): Promise<BigNumber>;
 
     "addManager(address)"(
@@ -954,6 +1057,13 @@ export class Cycle extends Contract {
     transferListener(overrides?: CallOverrides): Promise<BigNumber>;
 
     "transferListener()"(overrides?: CallOverrides): Promise<BigNumber>;
+
+    setSigner(_signer: string, overrides?: Overrides): Promise<BigNumber>;
+
+    "setSigner(address)"(
+      _signer: string,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
 
     setLevels(
       ids: BigNumberish[],
@@ -984,6 +1094,22 @@ export class Cycle extends Contract {
     isOwner(overrides?: CallOverrides): Promise<BigNumber>;
 
     "isOwner()"(overrides?: CallOverrides): Promise<BigNumber>;
+
+    setLevel(
+      id: BigNumberish,
+      startBlock: BigNumberish,
+      level: BigNumberish,
+      signature: BytesLike,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
+
+    "setLevel(uint256,uint256,uint256,bytes)"(
+      id: BigNumberish,
+      startBlock: BigNumberish,
+      level: BigNumberish,
+      signature: BytesLike,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
 
     setPointPerEngine(
       _pointPerEngine: BigNumberish,
@@ -1145,6 +1271,10 @@ export class Cycle extends Contract {
       overrides?: Overrides
     ): Promise<PopulatedTransaction>;
 
+    signer(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    "signer()"(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
     addManager(
       manager: string,
       overrides?: Overrides
@@ -1171,6 +1301,16 @@ export class Cycle extends Contract {
 
     "transferListener()"(
       overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    setSigner(
+      _signer: string,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
+    "setSigner(address)"(
+      _signer: string,
+      overrides?: Overrides
     ): Promise<PopulatedTransaction>;
 
     setLevels(
@@ -1202,6 +1342,22 @@ export class Cycle extends Contract {
     isOwner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     "isOwner()"(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    setLevel(
+      id: BigNumberish,
+      startBlock: BigNumberish,
+      level: BigNumberish,
+      signature: BytesLike,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
+    "setLevel(uint256,uint256,uint256,bytes)"(
+      id: BigNumberish,
+      startBlock: BigNumberish,
+      level: BigNumberish,
+      signature: BytesLike,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
 
     setPointPerEngine(
       _pointPerEngine: BigNumberish,

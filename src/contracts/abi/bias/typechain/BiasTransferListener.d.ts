@@ -23,6 +23,7 @@ import { FunctionFragment, EventFragment, Result } from "@ethersproject/abi";
 interface BiasTransferListenerInterface extends ethers.utils.Interface {
   functions: {
     "renounceOwnership()": FunctionFragment;
+    "setCycle(address)": FunctionFragment;
     "owner()": FunctionFragment;
     "isOwner()": FunctionFragment;
     "transfer(address,address,uint256)": FunctionFragment;
@@ -33,6 +34,7 @@ interface BiasTransferListenerInterface extends ethers.utils.Interface {
     functionFragment: "renounceOwnership",
     values?: undefined
   ): string;
+  encodeFunctionData(functionFragment: "setCycle", values: [string]): string;
   encodeFunctionData(functionFragment: "owner", values?: undefined): string;
   encodeFunctionData(functionFragment: "isOwner", values?: undefined): string;
   encodeFunctionData(
@@ -48,6 +50,7 @@ interface BiasTransferListenerInterface extends ethers.utils.Interface {
     functionFragment: "renounceOwnership",
     data: BytesLike
   ): Result;
+  decodeFunctionResult(functionFragment: "setCycle", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "isOwner", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "transfer", data: BytesLike): Result;
@@ -57,9 +60,11 @@ interface BiasTransferListenerInterface extends ethers.utils.Interface {
   ): Result;
 
   events: {
+    "SetCycle(address)": EventFragment;
     "OwnershipTransferred(address,address)": EventFragment;
   };
 
+  getEvent(nameOrSignatureOrTopic: "SetCycle"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "OwnershipTransferred"): EventFragment;
 }
 
@@ -80,6 +85,16 @@ export class BiasTransferListener extends Contract {
     renounceOwnership(overrides?: Overrides): Promise<ContractTransaction>;
 
     "renounceOwnership()"(overrides?: Overrides): Promise<ContractTransaction>;
+
+    setCycle(
+      _cycle: string,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
+
+    "setCycle(address)"(
+      _cycle: string,
+      overrides?: Overrides
+    ): Promise<ContractTransaction>;
 
     owner(overrides?: CallOverrides): Promise<[string]>;
 
@@ -118,6 +133,13 @@ export class BiasTransferListener extends Contract {
 
   "renounceOwnership()"(overrides?: Overrides): Promise<ContractTransaction>;
 
+  setCycle(_cycle: string, overrides?: Overrides): Promise<ContractTransaction>;
+
+  "setCycle(address)"(
+    _cycle: string,
+    overrides?: Overrides
+  ): Promise<ContractTransaction>;
+
   owner(overrides?: CallOverrides): Promise<string>;
 
   "owner()"(overrides?: CallOverrides): Promise<string>;
@@ -155,6 +177,13 @@ export class BiasTransferListener extends Contract {
 
     "renounceOwnership()"(overrides?: CallOverrides): Promise<void>;
 
+    setCycle(_cycle: string, overrides?: CallOverrides): Promise<void>;
+
+    "setCycle(address)"(
+      _cycle: string,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
     owner(overrides?: CallOverrides): Promise<string>;
 
     "owner()"(overrides?: CallOverrides): Promise<string>;
@@ -189,6 +218,8 @@ export class BiasTransferListener extends Contract {
   };
 
   filters: {
+    SetCycle(cycle: string | null): EventFilter;
+
     OwnershipTransferred(
       previousOwner: string | null,
       newOwner: string | null
@@ -199,6 +230,13 @@ export class BiasTransferListener extends Contract {
     renounceOwnership(overrides?: Overrides): Promise<BigNumber>;
 
     "renounceOwnership()"(overrides?: Overrides): Promise<BigNumber>;
+
+    setCycle(_cycle: string, overrides?: Overrides): Promise<BigNumber>;
+
+    "setCycle(address)"(
+      _cycle: string,
+      overrides?: Overrides
+    ): Promise<BigNumber>;
 
     owner(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -237,6 +275,16 @@ export class BiasTransferListener extends Contract {
     renounceOwnership(overrides?: Overrides): Promise<PopulatedTransaction>;
 
     "renounceOwnership()"(overrides?: Overrides): Promise<PopulatedTransaction>;
+
+    setCycle(
+      _cycle: string,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
+
+    "setCycle(address)"(
+      _cycle: string,
+      overrides?: Overrides
+    ): Promise<PopulatedTransaction>;
 
     owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 

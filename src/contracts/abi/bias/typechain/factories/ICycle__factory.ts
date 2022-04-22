@@ -142,4 +142,16 @@ const _abi = [
     name: "SetEngineLimit",
     type: "event",
   },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        name: "signer",
+        type: "address",
+      },
+    ],
+    name: "SetSigner",
+    type: "event",
+  },
 ];

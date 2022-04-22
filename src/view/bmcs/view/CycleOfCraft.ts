@@ -57,10 +57,12 @@ export default class CycleOfCraft implements View {
                 const promise = async (index: number) => {
                     const biasId = await BiasContract.tokenOfOwnerByIndex(walletAddress, index);
                     const startBlocks = await CycleContract.startBlocks(biasId);
-                    const level = await CycleContract.levels(biasId);
                     const claimableCount = await CycleContract.claimableCount(biasId);
                     totalClaimableCount += claimableCount.toNumber();
-                    new CycleOfCraftCard("bmcs", biasId.toNumber(), currentBlock, startBlocks.toNumber(), level.toNumber(), claimableCount.toNumber()).appendTo(this.list);
+
+                    const uri = await BiasContract.tokenURI(biasId);
+                    const json = await (await fetch(uri)).json();
+                    new CycleOfCraftCard(biasId.toNumber(), json, currentBlock, startBlocks.toNumber(), claimableCount.toNumber()).appendTo(this.list);
                 };
                 promises.push(promise(i));
             }

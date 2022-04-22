@@ -5,7 +5,7 @@ import Contract from "./Contract";
 class CycleContract extends Contract {
 
     constructor() {
-        super("0x7cB36e323AEfE379F6F59694496f5a5AbcE8758d", CycleArtifact.abi);
+        super("0x704FFeCBa65a0642B5338141951CF712dCEB9676", CycleArtifact.abi);
     }
 
     public async startBlocks(id: BigNumberish): Promise<BigNumber> {
@@ -22,6 +22,10 @@ class CycleContract extends Contract {
 
     public async claim(id: BigNumberish, count: BigNumberish) {
         await this.runWalletMethod("claim", id, count);
+    }
+
+    public async setLevel(id: BigNumberish, startBlock: BigNumberish, level: BigNumberish, signature: string) {
+        await this.runWalletMethod("setLevel", id, startBlock, level, signature);
     }
 }
 
