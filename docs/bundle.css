@@ -6555,10 +6555,11 @@ body {
   margin: 40px 0px;
 }
 .synthesis-preparation-view > section > .mate-container {
+  height: 314px;
+  overflow: scroll;
   display: flex;
-  overflow: hidden;
+  flex-wrap: wrap;
   gap: 20px;
-  min-height: 160px;
 }
 .synthesis-preparation-view > section > .card-container {
   display: flex;

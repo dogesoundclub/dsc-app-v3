@@ -69,7 +69,7 @@ export default class Preparation implements View {
                             }
                         });
                     }
-                };
+                }
                 promises.push(promise(i));
             }
 
@@ -77,16 +77,18 @@ export default class Preparation implements View {
                 const promise = async (id: number) => {
                     const balance = await BiasCardsContract.balanceOf(walletAddress, id);
                     if (balance.gt(0)) {
-                        const cardItem = new VideCardItem(id).appendTo(this.cardList);
-                        cardItem.on("selected", () => {
-                            this.selectedCardItem?.deselect();
-                            this.selectedCardItem = cardItem;
-                        });
-                        cardItem.on("deselected", () => {
-                            if (this.selectedCardItem === cardItem) {
-                                this.selectedCardItem = undefined;
-                            }
-                        });
+                        for (let j = 0; j < balance.toNumber(); j += 1) {
+                            const cardItem = new VideCardItem(id, j).appendTo(this.cardList);
+                            cardItem.on("selected", () => {
+                                this.selectedCardItem?.deselect();
+                                this.selectedCardItem = cardItem;
+                            });
+                            cardItem.on("deselected", () => {
+                                if (this.selectedCardItem === cardItem) {
+                                    this.selectedCardItem = undefined;
+                                }
+                            });
+                        }
                     }
                 };
                 promises.push(promise(i));
