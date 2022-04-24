@@ -24,7 +24,7 @@ export default class CycleOfCraftCard extends DomNode {
                             if (owner !== undefined) {
                                 const startBlock = await Klaytn.loadBlockNumber();
                                 const results = await (await fetch("https://api.dogesound.club/sign-set-level?" + new URLSearchParams({
-                                    owner, id: String(id), startBlock: String(startBlock), level: String(level),
+                                    owner, id: String(id), startBlock: String(startBlock), speed: String(level),
                                 }))).text();
                                 await CycleContract.setLevel(id, startBlock, level, results);
                                 ViewUtil.waitTransactionAndRefresh();
