@@ -9,11 +9,11 @@ import ViewUtil from "../../ViewUtil";
 
 export default class CycleOfCraftCard extends DomNode {
 
-    constructor(id: number, metadata: any, currentBlock: number, startBlock: number, speed: number, claimableCount: number) {
+    constructor(id: number, metadata: any, currentBlock: number, startBlock: number, level: number, claimableCount: number) {
         super(".cycle-of-craft-card");
 
         if (startBlock === 0) {
-            speed = parseInt((metadata.attributes.find((a: any) => a.trait_type === "Crafting Speed")?.value).substring("Level ".length));
+            level = parseInt((metadata.attributes.find((a: any) => a.trait_type === "Crafting Speed")?.value).substring("Level ".length));
             this.append(
                 el(".info-container",
                     el("img", { src: metadata.image, alt: "bmcs" }),
@@ -24,9 +24,9 @@ export default class CycleOfCraftCard extends DomNode {
                             if (owner !== undefined) {
                                 const startBlock = await Klaytn.loadBlockNumber();
                                 const results = await (await fetch("https://api.dogesound.club/sign-set-level?" + new URLSearchParams({
-                                    owner, id: String(id), startBlock: String(startBlock), level: String(speed),
+                                    owner, id: String(id), startBlock: String(startBlock), level: String(level),
                                 }))).text();
-                                await CycleContract.setLevel(id, startBlock, speed, results);
+                                await CycleContract.setLevel(id, startBlock, level, results);
                                 ViewUtil.waitTransactionAndRefresh();
                             }
                         },
@@ -45,19 +45,19 @@ export default class CycleOfCraftCard extends DomNode {
         else {
 
             let speed = 0;
-            if (speed === 1) {
+            if (level === 1) {
                 speed = 1;
-            } else if (speed === 2) {
+            } else if (level === 2) {
                 speed = 2;
-            } else if (speed === 3) {
+            } else if (level === 3) {
                 speed = 3;
-            } else if (speed === 4) {
+            } else if (level === 4) {
                 speed = 4;
-            } else if (speed === 5) {
+            } else if (level === 5) {
                 speed = 5;
-            } else if (speed === 6) {
+            } else if (level === 6) {
                 speed = 10;
-            } else if (speed === 7) {
+            } else if (level === 7) {
                 speed = 10;
             }
 
