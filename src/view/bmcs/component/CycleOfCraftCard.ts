@@ -13,7 +13,7 @@ export default class CycleOfCraftCard extends DomNode {
         super(".cycle-of-craft-card");
 
         if (startBlock === 0) {
-            speed = metadata.attributes.find((a: any) => a.trait_type === "Crafting Speed")?.value;
+            speed = parseInt((metadata.attributes.find((a: any) => a.trait_type === "Crafting Speed")?.value).substring("Level ".length));
             this.append(
                 el(".info-container",
                     el("img", { src: metadata.image, alt: "bmcs" }),
