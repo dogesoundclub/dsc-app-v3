@@ -49,9 +49,8 @@ export default class Layout implements View {
                     el(".content",
                         el(".term",
                             el("a", { href: "/terms" }, "서비스이용약관"),
-                            // el("span", "|"),
+                            el("a", "support@ayias.io"),
                             // el("a", "개인정보처리방침"),
-                            // el("span", "|"),
                             // el("a", "회사소개"),
                         ),
                         el(".social",
@@ -64,9 +63,8 @@ export default class Layout implements View {
                     ),
                 ),
                 el(".provider",
-                    el("img", { src: "/images/shared/logo/dsc.svg" }),
-                    el("p", msg("FOOTER_DESC")),
-                    el("p", "Copyright @2021 DSCLabel Inc. ALL RIGHTS RESERVED.")
+                    el("h6", "AYIYAS PTE, Ltd"),
+                    el("p", "Copyright @2022 AYIAS PTE. LTD. ALL RIGHTS RESERVED.")
                 ),
             ),
         ));

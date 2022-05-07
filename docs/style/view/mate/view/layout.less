@@ -71,9 +71,9 @@
 
     >footer {
         margin-top: 60px;
+        background: #000000;
 
         >.sidebar {
-            background-color: #222222;
 
             >.content {
                 display        : flex;
@@ -83,18 +83,22 @@
                 margin         : auto;
 
                 >.term {
+                    margin-top : 20px;
                     display    : flex;
                     align-items: center;
                     height     : 44px;
 
                     >a {
-                        font-family    : Noto Sans KR;
-                        font-style     : normal;
-                        font-weight    : normal;
-                        font-size      : 12px;
-                        line-height    : 20px;
-                        color          : white;
+                        display        : block;
                         text-decoration: none;
+                        font-weight    : 400;
+                        font-size      : 12px;
+                        line-height    : 17px;
+                        color          : #676767;
+                        border         : 1px solid #676767;
+                        border-radius  : 4px;
+                        padding        : 4px 10px;
+                        margin-right   : 8px;
                     }
 
                     >span {
@@ -124,7 +128,7 @@
 
         >.provider {
             display       : flex;
-            flex-direction: column;
+            align-items   : center;
             max-width     : 1156px;
             margin        : auto;
             margin-top    : 30px;
@@ -134,9 +138,13 @@
                 padding: 20px;
             }
 
-            >img {
-                width : 70px;
-                height: 60px;
+            >h6 {
+                font-family : 'Noto Sans KR';
+                font-style  : normal;
+                font-weight : 400;
+                font-size   : 12px;
+                line-height : 20px;
+                margin-right: 10px;
             }
 
             >p {
@@ -145,10 +153,7 @@
                 font-weight: normal;
                 font-size  : 12px;
                 line-height: 20px;
-                margin-top : 20px;
-
-
-                color: #838383;
+                color      : #838383;
             }
         }
     }

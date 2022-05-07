@@ -704,9 +704,7 @@ body {
 }
 .layout > footer {
   margin-top: 60px;
-}
-.layout > footer > .sidebar {
-  background-color: #222222;
+  background: #000000;
 }
 .layout > footer > .sidebar > .content {
   display: flex;
@@ -716,18 +714,22 @@ body {
   margin: auto;
 }
 .layout > footer > .sidebar > .content > .term {
+  margin-top: 20px;
   display: flex;
   align-items: center;
   height: 44px;
 }
 .layout > footer > .sidebar > .content > .term > a {
-  font-family: Noto Sans KR;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 20px;
-  color: white;
+  display: block;
   text-decoration: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  color: #676767;
+  border: 1px solid #676767;
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin-right: 8px;
 }
 .layout > footer > .sidebar > .content > .term > span {
   color: #474747;
@@ -750,7 +752,7 @@ body {
 }
 .layout > footer > .provider {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   max-width: 1156px;
   margin: auto;
   margin-top: 30px;
@@ -761,9 +763,13 @@ body {
     padding: 20px;
   }
 }
-.layout > footer > .provider > img {
-  width: 70px;
-  height: 60px;
+.layout > footer > .provider > h6 {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  margin-right: 10px;
 }
 .layout > footer > .provider > p {
   font-family: Noto Sans KR;
@@ -771,7 +777,6 @@ body {
   font-weight: normal;
   font-size: 12px;
   line-height: 20px;
-  margin-top: 20px;
   color: #838383;
 }
 .home-view {
@@ -4157,9 +4162,7 @@ body {
 }
 .emate-layout > footer {
   margin-top: 60px;
-}
-.emate-layout > footer > .sidebar {
-  background-color: #222222;
+  background: #000000;
 }
 .emate-layout > footer > .sidebar > .content {
   display: flex;
@@ -4169,16 +4172,22 @@ body {
   margin: auto;
 }
 .emate-layout > footer > .sidebar > .content > .term {
+  margin-top: 20px;
   display: flex;
   align-items: center;
   height: 44px;
 }
 .emate-layout > footer > .sidebar > .content > .term > a {
-  font-family: Noto Sans KR;
-  font-style: normal;
-  font-weight: normal;
+  display: block;
+  text-decoration: none;
+  font-weight: 400;
   font-size: 12px;
-  line-height: 20px;
+  line-height: 17px;
+  color: #676767;
+  border: 1px solid #676767;
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin-right: 8px;
 }
 .emate-layout > footer > .sidebar > .content > .term > span {
   color: #474747;
@@ -4201,7 +4210,7 @@ body {
 }
 .emate-layout > footer > .provider {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   max-width: 1156px;
   margin: auto;
   margin-top: 30px;
@@ -4212,9 +4221,13 @@ body {
     padding: 20px;
   }
 }
-.emate-layout > footer > .provider > img {
-  width: 70px;
-  height: 60px;
+.emate-layout > footer > .provider > h6 {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  margin-right: 10px;
 }
 .emate-layout > footer > .provider > p {
   font-family: Noto Sans KR;
@@ -4222,7 +4235,6 @@ body {
   font-weight: normal;
   font-size: 12px;
   line-height: 20px;
-  margin-top: 20px;
   color: #838383;
 }
 .emate-home-view {
@@ -5676,9 +5688,7 @@ body {
 }
 .bmcs-layout > footer {
   margin-top: 60px;
-}
-.bmcs-layout > footer > .sidebar {
-  background-color: #222222;
+  background: #000000;
 }
 .bmcs-layout > footer > .sidebar > .content {
   display: flex;
@@ -5688,16 +5698,22 @@ body {
   margin: auto;
 }
 .bmcs-layout > footer > .sidebar > .content > .term {
+  margin-top: 20px;
   display: flex;
   align-items: center;
   height: 44px;
 }
 .bmcs-layout > footer > .sidebar > .content > .term > a {
-  font-family: Noto Sans KR;
-  font-style: normal;
-  font-weight: normal;
+  display: block;
+  text-decoration: none;
+  font-weight: 400;
   font-size: 12px;
-  line-height: 20px;
+  line-height: 17px;
+  color: #676767;
+  border: 1px solid #676767;
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin-right: 8px;
 }
 .bmcs-layout > footer > .sidebar > .content > .term > span {
   color: #474747;
@@ -5720,7 +5736,7 @@ body {
 }
 .bmcs-layout > footer > .provider {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   max-width: 1156px;
   margin: auto;
   margin-top: 30px;
@@ -5731,9 +5747,13 @@ body {
     padding: 20px;
   }
 }
-.bmcs-layout > footer > .provider > img {
-  width: 70px;
-  height: 60px;
+.bmcs-layout > footer > .provider > h6 {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  margin-right: 10px;
 }
 .bmcs-layout > footer > .provider > p {
   font-family: Noto Sans KR;
@@ -5741,7 +5761,6 @@ body {
   font-weight: normal;
   font-size: 12px;
   line-height: 20px;
-  margin-top: 20px;
   color: #838383;
 }
 .bmcs-view > header {
