@@ -63,7 +63,7 @@ export default class Layout implements View {
                     ),
                 ),
                 el(".provider",
-                    el("h6", "AYIYAS PTE, Ltd"),
+                    el("h6", "AYIAS PTE, Ltd"),
                     el("p", "Copyright @2022 AYIAS PTE. LTD. ALL RIGHTS RESERVED.")
                 ),
             ),
