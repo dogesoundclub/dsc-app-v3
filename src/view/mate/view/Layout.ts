@@ -54,7 +54,6 @@ export default class Layout implements View {
                             // el("a", "회사소개"),
                         ),
                         el(".social",
-                            el("img", { src: "/images/shared/icn/icn_linktree.svg" }),
                             el("a", "링크트리 바로가기", {
                                 href: "https://linktr.ee/dogesoundclub",
                                 target: "_blank",
@@ -63,7 +62,7 @@ export default class Layout implements View {
                     ),
                 ),
                 el(".provider",
-                    el("h6", "AYIAS PTE, Ltd"),
+                    el("h6", "AYIAS PTE. LTD."),
                     el("p", "Copyright @2022 AYIAS PTE. LTD. ALL RIGHTS RESERVED.")
                 ),
             ),

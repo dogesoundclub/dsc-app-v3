@@ -177,6 +177,10 @@ input {
   font-family: "Cutewritten";
   src: url("../fonts/cutewritten.woff2") format("woff2");
 }
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto-regular.woff2") format("woff2");
+}
 body {
   font-family: NeoDunggeunmo;
   background-color: #131313;
@@ -705,6 +709,7 @@ body {
 .layout > footer {
   margin-top: 60px;
   background: #000000;
+  font-family: 'Roboto', sans-serif;
 }
 .layout > footer > .sidebar > .content {
   display: flex;
@@ -742,13 +747,16 @@ body {
   height: 44px;
 }
 .layout > footer > .sidebar > .content > .social > a {
-  display: flex;
-  align-items: center;
-  height: 44px;
-  margin: 0px 10px;
+  display: block;
+  text-decoration: none;
+  font-weight: 400;
   font-size: 12px;
-  text-decoration: underline;
-  color: white;
+  line-height: 17px;
+  color: #676767;
+  border: 1px solid #676767;
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin-right: 8px;
 }
 .layout > footer > .provider {
   display: flex;
@@ -764,7 +772,6 @@ body {
   }
 }
 .layout > footer > .provider > h6 {
-  font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -772,7 +779,6 @@ body {
   margin-right: 10px;
 }
 .layout > footer > .provider > p {
-  font-family: Noto Sans KR;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -4163,6 +4169,7 @@ body {
 .emate-layout > footer {
   margin-top: 60px;
   background: #000000;
+  font-family: 'Roboto', sans-serif;
 }
 .emate-layout > footer > .sidebar > .content {
   display: flex;
@@ -4200,13 +4207,16 @@ body {
   height: 44px;
 }
 .emate-layout > footer > .sidebar > .content > .social > a {
-  display: flex;
-  align-items: center;
-  height: 44px;
-  margin: 0px 10px;
+  display: block;
+  text-decoration: none;
+  font-weight: 400;
   font-size: 12px;
-  text-decoration: underline;
-  color: white;
+  line-height: 17px;
+  color: #676767;
+  border: 1px solid #676767;
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin-right: 8px;
 }
 .emate-layout > footer > .provider {
   display: flex;
@@ -4222,7 +4232,6 @@ body {
   }
 }
 .emate-layout > footer > .provider > h6 {
-  font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -4230,7 +4239,6 @@ body {
   margin-right: 10px;
 }
 .emate-layout > footer > .provider > p {
-  font-family: Noto Sans KR;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -5689,6 +5697,7 @@ body {
 .bmcs-layout > footer {
   margin-top: 60px;
   background: #000000;
+  font-family: 'Roboto', sans-serif;
 }
 .bmcs-layout > footer > .sidebar > .content {
   display: flex;
@@ -5726,13 +5735,16 @@ body {
   height: 44px;
 }
 .bmcs-layout > footer > .sidebar > .content > .social > a {
-  display: flex;
-  align-items: center;
-  height: 44px;
-  margin: 0px 10px;
+  display: block;
+  text-decoration: none;
+  font-weight: 400;
   font-size: 12px;
-  text-decoration: underline;
-  color: white;
+  line-height: 17px;
+  color: #676767;
+  border: 1px solid #676767;
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin-right: 8px;
 }
 .bmcs-layout > footer > .provider {
   display: flex;
@@ -5748,7 +5760,6 @@ body {
   }
 }
 .bmcs-layout > footer > .provider > h6 {
-  font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -5756,7 +5767,6 @@ body {
   margin-right: 10px;
 }
 .bmcs-layout > footer > .provider > p {
-  font-family: Noto Sans KR;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
