@@ -102,6 +102,8 @@ export default class UpdateDscFamily implements View {
     }
 
     public close(): void {
-        this.container.delete();
+        if (this.container.deleted !== true) {
+            this.container.delete();
+        }
     }
 }

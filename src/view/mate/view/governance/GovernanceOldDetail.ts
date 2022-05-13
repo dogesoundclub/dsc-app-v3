@@ -292,6 +292,8 @@ export default class GovernanceOldDetail implements View {
         if (this.timerInterval !== undefined) {
             clearInterval(this.timerInterval);
         }
-        this.container.delete();
+        if (this.container.deleted !== true) {
+            this.container.delete();
+        }
     }
 }

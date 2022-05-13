@@ -233,6 +233,8 @@ export default class CreateGovernance implements View {
 
     public close(): void {
         Wallet.off("connect", this.connectHandler);
-        this.container.delete();
+        if (this.container.deleted !== true) {
+            this.container.delete();
+        }
     }
 }

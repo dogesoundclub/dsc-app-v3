@@ -119,6 +119,8 @@ export default class Gallery implements View {
 
     public close(): void {
         window.removeEventListener("resize", this.windowResizeHandler);
-        this.container.delete();
+        if (this.container.deleted !== true) {
+            this.container.delete();
+        }
     }
 }

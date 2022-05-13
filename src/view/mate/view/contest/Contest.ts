@@ -141,6 +141,8 @@ export default class Contest implements View {
         if (this.remainsInterval !== undefined) {
             clearInterval(this.remainsInterval);
         }
-        this.container.delete();
+        if (this.container.deleted !== true) {
+            this.container.delete();
+        }
     }
 }
