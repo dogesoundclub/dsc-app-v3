@@ -1,3 +1,9 @@
+@keyframes play {
+    100% {
+        background-position: -1900px;
+    }
+}
+
 .mates-detail-view {
     max-width : 1156px;
     margin    : auto;
@@ -423,7 +429,8 @@
                         height         : 250px;
 
                         >.mates {
-                            height: 105px;
+                            transform      : scale(4);
+                            image-rendering: pixelated;
                         }
                     }
 

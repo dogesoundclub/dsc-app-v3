@@ -1843,6 +1843,11 @@ body {
   background-color: white;
   color: #E73C83;
 }
+@keyframes play {
+  100% {
+    background-position: -1900px;
+  }
+}
 .mates-detail-view {
   max-width: 1156px;
   margin: auto;
@@ -2222,7 +2227,8 @@ body {
   height: 250px;
 }
 .mates-detail-view > section > .lockable-container > .content > .lock-container > .lock-wrap > .mates {
-  height: 105px;
+  transform: scale(4);
+  image-rendering: pixelated;
 }
 .mates-detail-view > section > .lockable-container > .content > .lock-container > p {
   margin-top: 14px;

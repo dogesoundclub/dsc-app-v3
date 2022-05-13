@@ -25,7 +25,7 @@ export default class MatesDetail implements View {
     private nameDisplay: DomNode;
     private mixDisplay: DomNode;
     private snsDisplay: DomNode;
-    private lockableMateDisplay: DomNode<HTMLImageElement>;
+    private lockableMateDisplay: DomNode;
 
     constructor(params: ViewParams) {
         this.id = parseInt(params.id, 10);
@@ -54,8 +54,8 @@ export default class MatesDetail implements View {
                     el("p", "당신이 소유한 AYIAS Contents입니다."),
                     el(".content",
                         el(".lock-container",
-                            el(".lock-wrap",
-                                this.lockableMateDisplay = el("img.mates", { src: "/images/shared/icn/icn_lock.svg", alt: "lock" }),
+                            this.lockableMateDisplay = el(".lock-wrap",
+                                el("img.mates", { src: "/images/shared/icn/icn_lock.svg", alt: "lock" }),
                             ),
                             el("p", "AYIAS VOXEL 1"),
                         ),
@@ -258,7 +258,24 @@ export default class MatesDetail implements View {
     }
 
     private async setLockableMate() {
-        this.lockableMateDisplay.domElement.src = `https://storage.googleapis.com/dsc-mate/character/Mates_${this.id + 10000}.png`;
+        this.lockableMateDisplay.empty();
+        const mates = el(".mates").appendTo(this.lockableMateDisplay);
+        const l = 27;
+        const t = 6;
+        const w = 22;
+        const h = 32;
+        mates.style({
+            backgroundImage: `url(https://storage.googleapis.com/dsc-mate/character/Mates_${this.id + 10000}.png)`,
+            width: w,
+            height: h,
+        });
+        const frames = [
+            [l, t, w, h], [l + w, t, w, h], [l + w * 2, t, w, h],
+            [l, t + h, w, h], [l + w, t + h, w, h], [l + w * 2, t + h, w, h],
+            [l, t + h * 2, w, h], [l + w, t + h * 2, w, h], [l + w * 2, t + h * 2, w, h],
+        ];
+        const sprite = new (window as any).Sprite(mates.domElement, frames);
+        sprite.play({ fps: 3 });
     }
 
     private async loadSNS() {
