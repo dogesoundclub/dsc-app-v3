@@ -25,6 +25,7 @@ export default class MatesDetail implements View {
     private nameDisplay: DomNode;
     private mixDisplay: DomNode;
     private snsDisplay: DomNode;
+    private lockableMateDisplay: DomNode<HTMLImageElement>;
 
     constructor(params: ViewParams) {
         this.id = parseInt(params.id, 10);
@@ -54,7 +55,7 @@ export default class MatesDetail implements View {
                     el(".content",
                         el(".lock-container",
                             el(".lock-wrap",
-                                el("img", { src: "/images/shared/icn/icn_lock.svg", alt: "lock" }),
+                                this.lockableMateDisplay = el("img.mates", { src: "/images/shared/icn/icn_lock.svg", alt: "lock" }),
                             ),
                             el("p", "AYIAS VOXEL 1"),
                         ),
@@ -80,7 +81,6 @@ export default class MatesDetail implements View {
     }
 
     private async load() {
-
         const claimable = await MatesPoolContract.claimableOf(this.id);
         this.mixDisplay.empty().appendText(CommonUtil.numberWithCommas(utils.formatEther(claimable)));
 
@@ -257,6 +257,10 @@ export default class MatesDetail implements View {
         }
     }
 
+    private async setLockableMate() {
+        this.lockableMateDisplay.domElement.src = `https://storage.googleapis.com/dsc-mate/character/Mates_${this.id + 10000}.png`;
+    }
+
     private async loadSNS() {
 
         const twitter = await FollowMeContract.followMe(MateContract.address, this.id, 0);
@@ -275,6 +279,8 @@ export default class MatesDetail implements View {
                 ),
             );
         }
+
+        this.setLockableMate();
     }
 
     public changeParams(params: ViewParams, uri: string): void {
