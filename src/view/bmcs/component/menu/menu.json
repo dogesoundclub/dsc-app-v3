@@ -1,31 +1,16 @@
 {
-    "menu": [{
-            "uri": "/bmcs#keyword",
-            "name": "키워드"
-        },
+    "menu": [
         {
             "uri": "/bmcs#biasedMate",
-            "name": "Biased Mate"
+            "name": "BIAS"
         },
         {
-            "uri": "/bmcs#biasCards",
-            "name": "Bias Cards"
-        },
-        {
-            "uri": "/bmcs#roadmap",
-            "name": "Roadmap"
-        },
-        {
-            "uri": "/bmcs#faq",
-            "name": "FAQ"
-        },
-        {
-            "uri": "/bmcs#partnership",
-            "name": "Partnership"
+            "uri": "/bmcs/gallery",
+            "name": "GALLERY"
         },
         {
             "uri": "/bmcs/cycle-of-craft",
-            "name": "Crafting"
+            "name": "CRAFT"
         }
     ]
 }
