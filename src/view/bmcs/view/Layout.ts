@@ -61,8 +61,8 @@ export default class BmcsLayout implements View {
                     ),
                 ),
                 el(".provider",
-                    el("h6", "AYIAS PTE. LTD."),
-                    el("p", "Copyright @2022 AYIAS PTE. LTD. ALL RIGHTS RESERVED.")
+                    el("h6", "DSC LABEL Inc."),
+                    el("p", "Copyright @2022 DSC LABEL Inc. ALL RIGHTS RESERVED.")
                 ),
             ),
         ));
