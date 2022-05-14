@@ -6,7 +6,7 @@ import BmcsLayout from "./Layout";
 import CollapsibleFilter from "../component/BMCSCollapsibleFilter";
 import MateParts from "../../mate/view/mates/MateParts.json";
 import Mates from "../../mate/view/mates/Mates.json";
-import MateList from "../../mate/component/mate/MateList";
+import MateList from "../component/mate/MateList";
 
 export default class BmcsGallery implements View {
 

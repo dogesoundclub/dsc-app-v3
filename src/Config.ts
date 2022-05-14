@@ -20,6 +20,8 @@ export default {
         DSCFamily: "0xF75338d3132e2457df4912e6f9b8B505F5ED1670",
         GovernanceV3: "0x4C886ec19370212c67d26a16A7065598C6152927",
         MatesPool: "0x6f49D139359D0c7Bf44Df4520494A6ABB39434dD",
+        EMatesPool: "",
+        BiasPool: "",
     } : {
         // Mainnet
         Mate: "0xe47e90c58f8336a2f24bcd9bcb530e2e02e1e8ae",
@@ -35,5 +37,7 @@ export default {
         DSCFamily: "0x270235979743d6496621B73f0fEA48b66a81Ab0C",
         GovernanceV3: "0xBdcA781a022edb23AF3fFA41b08CCb6Ca79c0F70",
         MatesPool: "0xbc9C42267037786f42831d4f36D629A3888c9b4a",
+        EMatesPool: "0x4316feE26c85c7a19063dA597b4DdF1476d0C986",
+        BiasPool: "0x83BD2Fa1806b36bC7B0747e37482544Bed56529e",
     },
 };

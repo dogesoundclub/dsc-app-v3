@@ -55,7 +55,7 @@ export default class MatesDetail implements View {
                     el(".content",
                         el(".lock-container",
                             this.lockableMateDisplay = el(".lock-wrap",
-                                el("img.mates", { src: "/images/shared/icn/icn_lock.svg", alt: "lock" }),
+                                el("img", { src: "/images/shared/icn/icn_lock.svg", alt: "lock" }),
                             ),
                             el("p", "AYIAS VOXEL 1"),
                         ),
@@ -261,7 +261,7 @@ export default class MatesDetail implements View {
         this.lockableMateDisplay.empty();
         const mates = el(".mates").appendTo(this.lockableMateDisplay);
         const l = 27;
-        const t = 6;
+        const t = 5;
         const w = 22;
         const h = 32;
         mates.style({

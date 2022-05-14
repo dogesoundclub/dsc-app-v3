@@ -5501,6 +5501,7 @@ body {
 .cycle-of-craft-card > .info-container > img {
   width: 100%;
   border-radius: 6px;
+  cursor: pointer;
 }
 @media only screen and (max-width: 719px) {
   .cycle-of-craft-card > .info-container > img {

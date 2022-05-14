@@ -23,9 +23,9 @@ class MenuTreeBuilder {
         )];
         for (const menuItem of menus) {
             const li = el("li",
-                el(`a${location.pathname === `/${menuItem.uri}` ? ".on" : ""}`, { href: menuItem.uri },
+                el(`a${location.pathname === `/${menuItem.uri}` ? ".on" : ""}`,
                     menuItem.name,
-                    // { click: () => menuItem.click !== undefined ? menuItem.click() : ViewUtil.go(`/${menuItem.uri}`) },
+                    { click: () => menuItem.click !== undefined ? menuItem.click() : ViewUtil.go(`/${menuItem.uri}`) },
                 ),
             );
             if (menuItem.children !== undefined) {

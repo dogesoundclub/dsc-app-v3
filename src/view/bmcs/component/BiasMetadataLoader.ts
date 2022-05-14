@@ -25,6 +25,17 @@ class BiasMetadataLoader {
             return clone;
         }
     }
+
+    public findType(id: number, name: string) {
+        const types = Object.keys(metadatas);
+        for (const type of types) {
+            const ms = (metadatas as any)[type] === undefined ? [] : (metadatas as any)[type];
+            const metadata = ms.find((m: any) => m.tokenId === id && m.name === name);
+            if (metadata !== undefined) {
+                return type;
+            }
+        }
+    }
 }
 
 export default new BiasMetadataLoader();

@@ -1,15 +1,11 @@
 {
     "menu": [
         {
-            "uri": "/bmcs#biasedMate",
+            "uri": "bmcs",
             "name": "BIAS"
         },
         {
-            "uri": "/bmcs/gallery",
-            "name": "GALLERY"
-        },
-        {
-            "uri": "/bmcs/cycle-of-craft",
+            "uri": "bmcs/cycle-of-craft",
             "name": "CRAFT"
         }
     ]

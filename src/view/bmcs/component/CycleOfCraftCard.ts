@@ -16,7 +16,7 @@ export default class CycleOfCraftCard extends DomNode {
             level = parseInt((metadata.attributes.find((a: any) => a.trait_type === "Crafting Speed")?.value).substring("Level ".length));
             this.append(
                 el(".info-container",
-                    el("img", { src: metadata.image, alt: "bmcs" }),
+                    el("img", { src: metadata.image, alt: "bmcs" }, { click: () => ViewUtil.go(`/bmcs/mates/${id}`) }),
                     el(".title", metadata.name),
                     el("a", "채굴 시작", {
                         click: async () => {
@@ -67,7 +67,7 @@ export default class CycleOfCraftCard extends DomNode {
             let bar;
             this.append(
                 el(".info-container",
-                    el("img", { src: metadata.image, alt: "bmcs" }),
+                    el("img", { src: metadata.image, alt: "bmcs" }, { click: () => ViewUtil.go(`/bmcs/mates/${id}`) }),
                     el(".title", metadata.name),
                     el("a", "엔진 받기", {
                         click: () => {
