@@ -1,7 +1,7 @@
 {
     "menu": [
         {
-            "uri": "bmcs",
+            "uri": "bmcs#biasedMate",
             "name": "BIAS"
         },
         {

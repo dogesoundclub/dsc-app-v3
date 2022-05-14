@@ -25,7 +25,7 @@ export default class BmcsLayout implements View {
                         },
                     }),
                 ),
-                el("a", { click: () => ViewUtil.go("/") },
+                el("a", { click: () => ViewUtil.go("/bmcs") },
                     el("img.logo", { align: "left", src: "/images/shared/logo/bmcs.svg", alt: "logo" }),
                 ),
                 new PCMenu(),
