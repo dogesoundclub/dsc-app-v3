@@ -1,26 +1,26 @@
 {
     "menu": [{
-            "uri": "bmcs#keyword",
+            "uri": "/bmcs#keyword",
             "name": "키워드"
         },
         {
-            "uri": "bmcs#biasedMate",
+            "uri": "/bmcs#biasedMate",
             "name": "Biased Mate"
         },
         {
-            "uri": "bmcs#biasCards",
+            "uri": "/bmcs#biasCards",
             "name": "Bias Cards"
         },
         {
-            "uri": "bmcs#roadmap",
+            "uri": "/bmcs#roadmap",
             "name": "Roadmap"
         },
         {
-            "uri": "bmcs#faq",
+            "uri": "/bmcs#faq",
             "name": "FAQ"
         },
         {
-            "uri": "bmcs#partnership",
+            "uri": "/bmcs#partnership",
             "name": "Partnership"
         },
         {
