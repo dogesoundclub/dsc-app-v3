@@ -25,6 +25,12 @@ export default class SelectedMate implements View {
         BmcsLayout.current.content.append(
             this.container = el(".synthesis-select-mate-view",
                 el("section",
+                    el("header",
+                        el("h3", "Sale Progress"),
+                        el("a", { click: () => { ViewUtil.go("/bmcs"); } },
+                            el("img", { src: "/images/shared/icn/icn_close.svg" })
+                        ),
+                    ),
                     el("h2", "선택하신 메이트와 카드가 합성됩니다"),
                     el(".synthesis-container",
                         el(".mate-container",

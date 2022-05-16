@@ -293,7 +293,7 @@ body {
   border: 1px solid #A1A1A1;
 }
 .mobile-menu > ul {
-  padding: 10px;
+  padding: 10px 10px 0px 10px;
 }
 .mobile-menu > ul > li > a {
   display: block;
@@ -314,6 +314,12 @@ body {
 }
 .mobile-menu > ul > li > ul > li.parent {
   display: none;
+}
+.mobile-menu > .bmcs {
+  margin-left: 10px;
+  display: block;
+  padding: 5px;
+  color: #FFDF13;
 }
 .collapsible-filter > section {
   min-width: 254px;
@@ -792,6 +798,13 @@ body {
 .home-view > header {
   background-image: url("/images/view/mate/home/club.png");
   height: 800px;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > header {
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+  }
 }
 .home-view > header > .content {
   max-width: 1156px;
@@ -6681,6 +6694,60 @@ body {
 .bmcs-view > section > .roadmap-container > .content > .card-container > .card:hover {
   background: rgba(249, 216, 51, 0.1);
 }
+.bmcs-view > section > .roadmap-container > .content > .card-container > .complete-card {
+  margin-top: 20px;
+  position: relative;
+  color: #F9D833;
+  background: rgba(249, 216, 51, 0.1);
+  border: 1px solid #F9D833;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 40px;
+  max-width: 372px;
+  width: 100%;
+}
+.bmcs-view > section > .roadmap-container > .content > .card-container > .complete-card > .complete {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.bmcs-view > section > .roadmap-container > .content > .card-container > .complete-card > h4 {
+  font-size: 32px;
+  line-height: 32px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .roadmap-container > .content > .card-container > .complete-card > h4 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+.bmcs-view > section > .roadmap-container > .content > .card-container > .complete-card > p {
+  font-size: 20px;
+  line-height: 24px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .roadmap-container > .content > .card-container > .complete-card > p {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .roadmap-container > .content > .card-container > .complete-card > img {
+    display: none;
+  }
+}
+.bmcs-view > section > .roadmap-container > .content > .card-container > .complete-card > img.right {
+  position: absolute;
+  top: 35%;
+  right: -40px;
+}
+.bmcs-view > section > .roadmap-container > .content > .card-container > .complete-card > img.down {
+  position: absolute;
+  bottom: -40px;
+  right: 45%;
+}
+.bmcs-view > section > .roadmap-container > .content > .card-container > .complete-card:hover {
+  background: rgba(249, 216, 51, 0.1);
+}
 .bmcs-view > section > .roadmap-container > .content > .card-reverse-container {
   display: flex;
   gap: 20px;
@@ -7148,6 +7215,12 @@ body {
   background-size: cover;
   padding: 96px 0px;
 }
+.synthesis-preparation-view ::-webkit-scrollbar {
+  width: 14px;
+}
+.synthesis-preparation-view ::-webkit-scrollbar-thumb {
+  background: #F9D833;
+}
 @media only screen and (max-width: 719px) {
   .synthesis-preparation-view {
     padding: 8px;
@@ -7167,12 +7240,31 @@ body {
     padding: 40px 8px;
   }
 }
-.synthesis-preparation-view > section > h2 {
+.synthesis-preparation-view > section > header {
+  display: flex;
+  justify-content: space-between;
+}
+.synthesis-preparation-view > section > header > .title {
+  display: flex;
+}
+.synthesis-preparation-view > section > header > .title > h2 {
   text-align: left;
   font-weight: 400;
   font-size: 18px;
-  line-height: 18px;
   margin-bottom: 16px;
+}
+@media only screen and (max-width: 719px) {
+  .synthesis-preparation-view > section > header > .title > h2 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+.synthesis-preparation-view > section > header > .title > p {
+  font-weight: 400;
+  font-size: 18px;
+  color: #F9D833;
+  margin-left: 10px;
 }
 .synthesis-preparation-view > section > hr {
   height: 1px;
@@ -7186,6 +7278,28 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+}
+.synthesis-preparation-view > section > .card-title {
+  display: flex;
+}
+.synthesis-preparation-view > section > .card-title > h2 {
+  text-align: left;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+@media only screen and (max-width: 719px) {
+  .synthesis-preparation-view > section > .card-title > h2 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+.synthesis-preparation-view > section > .card-title > p {
+  font-weight: 400;
+  font-size: 18px;
+  color: #F9D833;
+  margin-left: 10px;
 }
 .synthesis-preparation-view > section > .card-container {
   height: 314px;
@@ -7229,6 +7343,22 @@ body {
   border: 1px solid #FFDF13;
   box-sizing: border-box;
   padding: 57px 66px;
+}
+.synthesis-select-mate-view > section > header {
+  display: flex;
+  justify-content: space-between;
+}
+.synthesis-select-mate-view > section > header > h3 {
+  font-size: 28px;
+  line-height: 28px;
+  margin-bottom: 14px;
+}
+@media only screen and (max-width: 719px) {
+  .synthesis-select-mate-view > section > header > h3 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 .synthesis-select-mate-view > section > h2 {
   font-weight: 400;
@@ -7327,11 +7457,22 @@ body {
 .synthesis-progress-view > section {
   text-align: center;
 }
-.synthesis-progress-view > section > h2 {
+.synthesis-progress-view > section > header {
+  display: flex;
+  justify-content: space-between;
+}
+.synthesis-progress-view > section > header > h2 {
   font-size: 24px;
   line-height: 24px;
   color: #F9D833;
   margin-top: 30px;
+}
+@media only screen and (max-width: 719px) {
+  .synthesis-progress-view > section > header > h2 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 .synthesis-progress-view > section > p {
   font-size: 16px;

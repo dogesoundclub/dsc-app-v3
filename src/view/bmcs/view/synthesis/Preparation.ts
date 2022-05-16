@@ -14,6 +14,8 @@ export default class Preparation implements View {
     private container: DomNode;
     private mateList: DomNode;
     private cardList: DomNode;
+    private mateBalance: DomNode;
+    private cardBalance: DomNode;
 
     private selectedMateItem: MateItem | undefined;
     private selectedCardItem: VideCardItem | undefined;
@@ -23,10 +25,25 @@ export default class Preparation implements View {
         BmcsLayout.current.content.append(
             this.container = el(".synthesis-preparation-view",
                 el("section",
-                    el("h2", "합성가능 메이트"),
+                    el("header",
+                        el(".title",
+                            el("h2", "합성가능 메이트"),
+                            this.mateBalance = el("p"),
+                        ),
+                        el("a", {
+                            click: () => {
+                                ViewUtil.go("/bmcs");
+                            }
+                        },
+                            el("img", { src: "/images/shared/icn/icn_close.svg" })
+                        ),
+                    ),
                     this.mateList = el(".mate-container"),
                     el("hr"),
-                    el("h2", "보유한 카드"),
+                    el(".card-title",
+                        el("h2", "보유한 카드"),
+                        this.cardBalance = el("p"),
+                    ),
                     this.cardList = el(".card-container"),
                     el(".button-wrap",
                         el("a", "합성하기", {
@@ -51,6 +68,7 @@ export default class Preparation implements View {
         if (walletAddress !== undefined) {
 
             const balance = (await MateContract.balanceOf(walletAddress)).toNumber();
+            this.mateBalance.appendText(balance.toString());
 
             const promises: Promise<void>[] = [];
             for (let i = 0; i < balance; i += 1) {
@@ -73,28 +91,30 @@ export default class Preparation implements View {
                 promises.push(promise(i));
             }
 
+            let cardCount = 0;
             for (let i = 0; i < 4; i += 1) {
                 const promise = async (id: number) => {
+
                     const balance = await BiasCardsContract.balanceOf(walletAddress, id);
+                    cardCount += balance.toNumber();
+
                     if (balance.gt(0)) {
-                        for (let j = 0; j < balance.toNumber(); j += 1) {
-                            const cardItem = new VideCardItem(id, j).appendTo(this.cardList);
-                            cardItem.on("selected", () => {
-                                this.selectedCardItem?.deselect();
-                                this.selectedCardItem = cardItem;
-                            });
-                            cardItem.on("deselected", () => {
-                                if (this.selectedCardItem === cardItem) {
-                                    this.selectedCardItem = undefined;
-                                }
-                            });
-                        }
+                        const cardItem = new VideCardItem(id, balance.toNumber()).appendTo(this.cardList);
+                        cardItem.on("selected", () => {
+                            this.selectedCardItem?.deselect();
+                            this.selectedCardItem = cardItem;
+                        });
+                        cardItem.on("deselected", () => {
+                            if (this.selectedCardItem === cardItem) {
+                                this.selectedCardItem = undefined;
+                            }
+                        });
                     }
                 };
                 promises.push(promise(i));
             }
-
             await Promise.all(promises);
+            this.cardBalance.appendText(cardCount.toString());
         }
     }
 

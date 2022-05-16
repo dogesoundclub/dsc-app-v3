@@ -17,6 +17,23 @@
         box-sizing: border-box;
         padding   : 57px 66px;
 
+        >header {
+            display        : flex;
+            justify-content: space-between;
+
+            >h3 {
+                font-size    : 28px;
+                line-height  : 28px;
+                margin-bottom: 14px;
+
+                @media @phone {
+                    font-weight: 400;
+                    font-size  : 20px;
+                    line-height: 20px;
+                }
+            }
+        }
+
         >h2 {
             font-weight  : 400;
             font-size    : 20px;

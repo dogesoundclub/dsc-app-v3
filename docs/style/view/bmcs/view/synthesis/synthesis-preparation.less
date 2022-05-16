@@ -3,6 +3,14 @@
     background-size: cover;
     padding        : 96px 0px;
 
+    ::-webkit-scrollbar {
+        width: 14px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #F9D833;
+    }
+
     @media @phone {
         padding: 8px;
     }
@@ -21,12 +29,33 @@
             padding: 40px 8px;
         }
 
-        >h2 {
-            text-align   : left;
-            font-weight  : 400;
-            font-size    : 18px;
-            line-height  : 18px;
-            margin-bottom: 16px;
+        >header {
+            display        : flex;
+            justify-content: space-between;
+
+            >.title {
+                display: flex;
+
+                >h2 {
+                    text-align   : left;
+                    font-weight  : 400;
+                    font-size    : 18px;
+                    margin-bottom: 16px;
+
+                    @media @phone {
+                        font-weight: 400;
+                        font-size  : 20px;
+                        line-height: 20px;
+                    }
+                }
+
+                >p {
+                    font-weight: 400;
+                    font-size  : 18px;
+                    color      : #F9D833;
+                    margin-left: 10px;
+                }
+            }
         }
 
         >hr {
@@ -42,6 +71,30 @@
             display  : flex;
             flex-wrap: wrap;
             gap      : 20px;
+        }
+
+        >.card-title {
+            display: flex;
+
+            >h2 {
+                text-align   : left;
+                font-weight  : 400;
+                font-size    : 18px;
+                margin-bottom: 16px;
+
+                @media @phone {
+                    font-weight: 400;
+                    font-size  : 20px;
+                    line-height: 20px;
+                }
+            }
+
+            >p {
+                font-weight: 400;
+                font-size  : 18px;
+                color      : #F9D833;
+                margin-left: 10px;
+            }
         }
 
         >.card-container {
