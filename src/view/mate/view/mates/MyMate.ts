@@ -8,12 +8,14 @@ import MateContract from "../../../../contracts/MateContract";
 import DiscordUserInfo from "../../../../DiscordUserInfo";
 import Wallet from "../../../../klaytn/Wallet";
 import Layout from "../Layout";
+import Loading from "../../component/loading/Loading";
 
 export default class MyMate implements View {
 
     private container: DomNode;
     private wallet: DomNode;
     private mateList: MateList;
+    private loading: Loading | undefined;
 
     public discordUser: DiscordUserInfo | undefined;
 
@@ -26,6 +28,7 @@ export default class MyMate implements View {
                 this.wallet = el("p"),
             ),
             el("section",
+                this.loading = new Loading(),
                 this.mateList = new MateList(false, false),
                 el("hr"),
                 el(".certification-container",
@@ -67,6 +70,8 @@ export default class MyMate implements View {
 
             this.mateList.load(mates);
         }
+        this.loading?.delete();
+        this.loading = undefined;
     }
 
     private async checkDiscordLogin() {

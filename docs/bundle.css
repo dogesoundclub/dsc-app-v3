@@ -2494,6 +2494,9 @@ body {
   text-decoration: none;
   color: white;
 }
+.my-mate-view > section > .mate-list {
+  height: 800px;
+}
 .my-mate-view > section > article > img {
   border-radius: 8px;
   margin-right: 20px;
