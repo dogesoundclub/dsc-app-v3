@@ -1,6 +1,7 @@
 import { DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
+import PageSelect from "../../mate/component/PageSelect";
 import Alert from "../../shared/Alert";
 import ViewUtil from "../../ViewUtil";
 import BMCSAlert from "../component/BMCSAlert";
@@ -17,6 +18,9 @@ export default class Bmcs implements View {
         BmcsLayout.current.content.append(
             (this.container = el(".bmcs-view",
                 el("header.section",
+                    el(".page-wrap",
+                        new PageSelect("CH2 : 생존한 메이트들, BMCS"),
+                    ),
                     el(".overlay"),
                     el("section",
                         el("h1", msg("BMCS_TITLE")),

@@ -1,10 +1,10 @@
 import { BodyNode, DomNode, el } from "@hanul/skynode";
-import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import BrowserInfo from "../../../BrowserInfo";
 import MobileMenu from "../component/menu/MobileMenu";
 import PCMenu from "../component/menu/PCMenu";
 import ViewUtil from "../../ViewUtil";
+import PageSelect from "../../mate/component/PageSelect";
 
 export default class BmcsLayout implements View {
 
@@ -29,6 +29,7 @@ export default class BmcsLayout implements View {
                     el("img.logo", { align: "left", src: "/images/shared/logo/bmcs.svg", alt: "logo" }),
                 ),
                 new PCMenu(),
+                new PageSelect("CH2 : 생존한 메이트들, BMCS"),
                 select = el("select.language-select",
                     el("option", "🇰🇷 KOREAN", { value: "ko" }),
                     // el("option", "🇺🇸 ENG", { value: "en" }),

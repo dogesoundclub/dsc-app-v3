@@ -5,6 +5,7 @@ import BrowserInfo from "../../../BrowserInfo";
 import MobileMenu from "../component/menu/MobileMenu";
 import PCMenu from "../component/menu/PCMenu";
 import ViewUtil from "../../ViewUtil";
+import PageSelect from "../component/PageSelect";
 
 export default class Layout implements View {
 
@@ -29,11 +30,7 @@ export default class Layout implements View {
                     el("img.logo", { align: "left", src: "/images/shared/logo/dsc.svg", alt: "logo" }),
                 ),
                 new PCMenu(),
-                el("a.bmcs", {
-                    click: () => {
-                        ViewUtil.go("/bmcs");
-                    }
-                }, "Go to BMCS >"),
+                new PageSelect("CH1 : 도지사운드클럽"),
                 select = el("select.language-select",
                     el("option", "🇰🇷 KOREAN", { value: "ko" }),
                     // el("option", "🇺🇸 ENG", { value: "en" }),

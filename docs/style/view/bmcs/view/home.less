@@ -4,6 +4,19 @@
         z-index : 1;
         height  : 100vh;
 
+        >.page-wrap {
+            display: none;
+
+            @media @phone {
+                display: block;
+                padding: 20px 20px 20px 20px;
+
+                >.select {
+                    display: block;
+                }
+            }
+        }
+
         >.overlay {
             position       : absolute;
             z-index        : -1;
@@ -24,7 +37,7 @@
             padding-top: 20%;
 
             @media @phone {
-                padding: 240px 20px 20px 20px;
+                padding: 100px 20px 20px 20px;
             }
 
             >h1 {

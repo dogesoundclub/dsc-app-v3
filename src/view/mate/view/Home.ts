@@ -4,6 +4,7 @@ import { View, ViewParams } from "skyrouter";
 import superagent from "superagent";
 import Layout from "./Layout";
 import ViewUtil from "../../ViewUtil";
+import PageSelect from "../component/PageSelect";
 
 export default class Home implements View {
 
@@ -14,6 +15,9 @@ export default class Home implements View {
         Layout.current.title = msg("BAPP_TITLE");
         Layout.current.content.append(this.container = el(".home-view",
             el("header",
+                el(".page-wrap",
+                    new PageSelect("CH1 : 도지사운드클럽"),
+                ),
                 el(".content",
                     el("img.logo", { src: "/images/shared/logo/dsc.svg" }),
                     el(".intro", msg("HOME_TITLE")),
