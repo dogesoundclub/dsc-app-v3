@@ -5,7 +5,7 @@ import Contract from "./Contract";
 class CycleContract extends Contract {
 
     constructor() {
-        super("0x704FFeCBa65a0642B5338141951CF712dCEB9676", CycleArtifact.abi);
+        super("0xd1e7e2fF9570A7CEAfF4FD3907c561576816cD28", CycleArtifact.abi);
     }
 
     public async startBlocks(id: BigNumberish): Promise<BigNumber> {
