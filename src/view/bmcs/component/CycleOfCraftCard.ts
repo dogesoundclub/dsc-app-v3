@@ -61,7 +61,7 @@ export default class CycleOfCraftCard extends DomNode {
                 speed = 10;
             }
 
-            const pointPerEngine = 30 * 86400;
+            const pointPerEngine = 60 * 86400;
             const acc = (currentBlock - startBlock) * speed % pointPerEngine;
 
             let bar;
