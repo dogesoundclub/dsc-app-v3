@@ -5,6 +5,7 @@ import MobileMenu from "../component/menu/MobileMenu";
 import PCMenu from "../component/menu/PCMenu";
 import ViewUtil from "../../ViewUtil";
 import PageSelect from "../../mate/component/PageSelect";
+import msg from "msg.js";
 
 export default class BmcsLayout implements View {
 
@@ -48,12 +49,14 @@ export default class BmcsLayout implements View {
                 el(".sidebar",
                     el(".content",
                         el(".term",
-                            el("a", { href: "/terms" }, "서비스이용약관"),
-                            el("a", "support@ayias.io"),
+                            // el("a", "서비스이용약관"),
+                            // el("span", "|"),
                             // el("a", "개인정보처리방침"),
+                            // el("span", "|"),
                             // el("a", "회사소개"),
                         ),
                         el(".social",
+                            el("img", { src: "/images/shared/icn/icn_linktree.svg" }),
                             el("a", "링크트리 바로가기", {
                                 href: "https://linktr.ee/dogesoundclub",
                                 target: "_blank",
@@ -62,8 +65,9 @@ export default class BmcsLayout implements View {
                     ),
                 ),
                 el(".provider",
-                    el("h6", "DSC LABEL Inc."),
-                    el("p", "Copyright @2022 DSC LABEL Inc. ALL RIGHTS RESERVED.")
+                    el("img", { src: "/images/shared/logo/dsc.svg" }),
+                    el("p", msg("FOOTER_DESC")),
+                    el("p", "Copyright @2021 DSCLabel Inc. ALL RIGHTS RESERVED.")
                 ),
             ),
         ));
