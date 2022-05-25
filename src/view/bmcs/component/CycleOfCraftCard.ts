@@ -12,7 +12,7 @@ export default class CycleOfCraftCard extends DomNode {
     constructor(id: number, metadata: any, currentBlock: number, startBlock: number, level: number, claimableCount: number) {
         super(".cycle-of-craft-card");
 
-        if (startBlock === 0) {
+        if (startBlock === 0 || level === 0) {
             level = parseInt((metadata.attributes.find((a: any) => a.trait_type === "Crafting Speed")?.value.substring("Level ".length)));
             this.append(
                 el(".info-container",
