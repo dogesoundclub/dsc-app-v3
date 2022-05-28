@@ -5,7 +5,6 @@ import BiasContract from "../../../../contracts/BiasContract";
 import MateContract from "../../../../contracts/MateContract";
 import Wallet from "../../../../klaytn/Wallet";
 import ViewUtil from "../../../ViewUtil";
-import Alert from "../../../shared/Alert";
 import VideCardItem from "../../component/synthesis/CardItem";
 import MateItem from "../../component/synthesis/MateItem";
 import BmcsLayout from "../Layout";
@@ -50,8 +49,7 @@ export default class Preparation implements View {
                         el("a", "합성하기", {
                             click: () => {
                                 if (this.selectedMateItem !== undefined && this.selectedCardItem !== undefined) {
-                                    // ViewUtil.go(`/bmcs/selected-mate/${this.selectedMateItem.id}/${this.selectedCardItem.id}`);
-                                    new Alert("합성 기능이 중단되었습니다."); 
+                                    ViewUtil.go(`/bmcs/selected-mate/${this.selectedMateItem.id}/${this.selectedCardItem.id}`);
                                 }
                             },
                         }),
@@ -70,7 +68,7 @@ export default class Preparation implements View {
         if (walletAddress !== undefined) {
 
             const balance = (await MateContract.balanceOf(walletAddress)).toNumber();
-            let synthesizableBalance = balance;
+            this.mateBalance.appendText(balance.toString());
 
             const promises: Promise<void>[] = [];
             for (let i = 0; i < balance; i += 1) {
@@ -88,17 +86,10 @@ export default class Preparation implements View {
                                 this.selectedMateItem = undefined;
                             }
                         });
-                    } else {
-                        console.log("else", i, synthesizableBalance);
-                        synthesizableBalance--;
                     }
                 }
-                
                 promises.push(promise(i));
             }
-            
-            
-            
 
             let cardCount = 0;
             for (let i = 0; i < 4; i += 1) {
@@ -123,10 +114,6 @@ export default class Preparation implements View {
                 promises.push(promise(i));
             }
             await Promise.all(promises);
-            if (synthesizableBalance < 0) {
-                synthesizableBalance = 0;
-            }
-            this.mateBalance.appendText(synthesizableBalance.toString());
             this.cardBalance.appendText(cardCount.toString());
         }
     }

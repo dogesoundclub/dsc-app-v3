@@ -27,10 +27,7 @@ export default class Bmcs implements View {
                         el("p", msg("BMCS_DESC")),
                         el(".button-container",
                             el("a", "MINT", { click: () => { new MintingPopup() } }),
-                            el("a.outline", "SYNTHESIS", { click: () => { 
-                                // ViewUtil.go("/bmcs/preparation")
-                                new Alert("합성 기능이 중단되었습니다."); 
-                            } }),
+                            el("a.outline", "SYNTHESIS", { click: () => { ViewUtil.go("/bmcs/preparation") } }),
                         ),
                         el(".scroll-container",
                             el("img", { src: "/images/shared/icn/icn_scroll.svg", alt: "scroll" }),

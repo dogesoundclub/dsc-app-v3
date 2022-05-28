@@ -6413,7 +6413,7 @@ body {
 @media only screen and (max-width: 719px) {
   .bmcs-view > header > .page-wrap {
     display: block;
-    padding: 20px;
+    padding: 20px 20px 20px 20px;
   }
   .bmcs-view > header > .page-wrap > .select {
     display: block;
@@ -6439,7 +6439,7 @@ body {
 }
 @media only screen and (max-width: 719px) {
   .bmcs-view > header > section {
-    padding: 20px;
+    padding: 100px 20px 20px 20px;
   }
 }
 .bmcs-view > header > section > h1 {
