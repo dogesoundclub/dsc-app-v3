@@ -18,7 +18,7 @@ export default class CycleOfCraftCard extends DomNode {
                 el(".info-container",
                     el("img", { src: metadata.image, alt: "bmcs" }, { click: () => ViewUtil.go(`/bmcs/mates/${id}`) }),
                     el(".title", metadata.name),
-                    el("a", "채굴 시작", {
+                    el("a", "제작 진행률 확인", {
                         click: async () => {
                             const owner = await Wallet.loadAddress();
                             if (owner !== undefined) {
@@ -36,7 +36,7 @@ export default class CycleOfCraftCard extends DomNode {
                     el("img", { src: "/images/view/bmcs/cycle-of-craft/loading.png", alt: "loading" }),
                     el(".progress"),
                     el(".content",
-                        el("p", "합성된 BMCS는 채굴 시작 트랜잭션이 필요합니다."),
+                        el("p", "새로 얻은 BMCS는 제작 진행률 트랜잭션이 필요합니다."),
                     ),
                 ),
             );
