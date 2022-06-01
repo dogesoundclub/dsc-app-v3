@@ -921,7 +921,11 @@ body {
     padding: 20px;
   }
 }
-.home-view > section > .dogesound > .content > .title {
+.home-view > section > .dogesound > .content > header {
+  display: flex;
+  justify-content: space-between;
+}
+.home-view > section > .dogesound > .content > header > .title {
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -929,8 +933,34 @@ body {
   color: #FFFFFF;
 }
 @media only screen and (max-width: 719px) {
-  .home-view > section > .dogesound > .content > .title {
+  .home-view > section > .dogesound > .content > header > .title {
     font-size: 20px;
+  }
+}
+.home-view > section > .dogesound > .content > header > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'NeoDunggeunmo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #E73C83;
+  background: rgba(231, 60, 131, 0.12);
+  border: 1px solid #E73C83;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+.home-view > section > .dogesound > .content > header > a:hover {
+  background: #E73C83;
+  border: 1px solid #E73C83;
+  border-radius: 4px;
+  color: #FFFFFF;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > section > .dogesound > .content > header > a {
+    display: none;
   }
 }
 .home-view > section > .dogesound > .content > .old-sound {
@@ -980,6 +1010,34 @@ body {
 @media only screen and (max-width: 719px) {
   .home-view > section > .dogesound > .content > .warning {
     font-size: 13px;
+  }
+}
+.home-view > section > .dogesound > .content > .mobile-mint-button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-family: 'NeoDunggeunmo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #E73C83;
+  background: rgba(231, 60, 131, 0.12);
+  border: 1px solid #E73C83;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin-top: 24px;
+  width: 100%;
+}
+.home-view > section > .dogesound > .content > .mobile-mint-button:hover {
+  background: #E73C83;
+  border: 1px solid #E73C83;
+  border-radius: 4px;
+  color: #FFFFFF;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > section > .dogesound > .content > .mobile-mint-button {
+    display: flex;
   }
 }
 .home-view > section > hr {

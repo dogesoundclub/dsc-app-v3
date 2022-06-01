@@ -5,6 +5,7 @@ import superagent from "superagent";
 import Layout from "./Layout";
 import ViewUtil from "../../ViewUtil";
 import PageSelect from "../component/PageSelect";
+import Alert from "../component/dialogue/Alert";
 
 export default class Home implements View {
 
@@ -302,11 +303,23 @@ export default class Home implements View {
 
             if (this.container.deleted !== true) {
                 this.dogesound.append(
-                    el(".title", msg("HOME_DOGE_SOUND_WINNER_TITLE").replace(/{number}/, String(winnerInfo.round + 1))),
+                    el("header",
+                        el(".title", msg("HOME_DOGE_SOUND_WINNER_TITLE").replace(/{number}/, String(winnerInfo.round + 1))),
+                        el("a.mint-button", msg("HOME_DOGE_SOUND_WINNER_MINT_BUTTON"), {
+                            click: () => {
+                                new Alert(msg("HOME_DOGE_SOUND_WINNER_POPUP"))
+                            }
+                        }),
+                    ),
                     el(".old-sound", msg("HOME_DOGE_SOUND_WINNER_DESC1").replace(/{number}/, String(winnerInfo.round + 1))),
                     el(".sound", `"${winnerInfo.dogesound}"`),
                     el("a.address", winnerInfo.winner, { href: `https://opensea.io/${winnerInfo.winner}`, target: "_blank" }),
                     el("p.warning", msg("HOME_DOGE_SOUND_WINNER_WARNING")),
+                    el("a.mobile-mint-button", msg("HOME_DOGE_SOUND_WINNER_MINT_BUTTON"), {
+                        click: () => {
+                            new Alert(msg("HOME_DOGE_SOUND_WINNER_POPUP"))
+                        }
+                    }),
                 );
                 //this.winner.empty().appendText(`${msg("HOME_WINNER_TITLE").replace(/{round}/, String(winnerInfo.round + 1))} `);
                 //this.winner.append(el("a", winnerInfo.winner, { href: `https://opensea.io/${winnerInfo.winner}`, target: "_blank" }));

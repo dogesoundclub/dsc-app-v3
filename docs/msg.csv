@@ -5,9 +5,11 @@ HOME_TITLE,Welcome to Doge Sound Club!,Welcome to Doge Sound Club!,Welcome to Do
 HOME_DESC,도지사운드클럽은 NFT를 이용한 거버넌스로 운영되는 NFT 수집가들의 사교 모임입니다.\nMATES를 이용해서 클럽에 가입하고 투표할 수 있습니다.,"Doge Sound Club is a social gathering of NFT collectors
 operated by NFT governance. \nYou can use MATES to join the club and vote.","都知事サウンドクラブは、NFTを利用したガバナンスによって運営されるNFTコレクターによる社交の集まりです。\n
 MATESを利用してクラブに加入し、投票することができます。"
+HOME_DOGE_SOUND_WINNER_MINT_BUTTON,우승자 NFT 민팅하기,NFT Minting for Winner
 HOME_DOGE_SOUND_WINNER_TITLE,제 {number}회 개소리 우승자 🐶🐕👻,{number}th Doge Sound Winner 🐶🐕👻,第{number}回犬猿の優勝者 🐶🐕👻
 HOME_DOGE_SOUND_WINNER_DESC1,Announcing the {number}th best Doge Sound!,Announcing the {number}th best Doge Sound!,Announcing the {number}th best Doge Sound!
 HOME_DOGE_SOUND_WINNER_WARNING,* 주의 : 위는 탈중앙화된 방식으로 DSC 홀더들에게 최다 득표를 받은 문구가 자동으로 표시된 것입니다. DSC 개발팀의 뜻과 무관할 수 있습니다.,"* Note: The text that received the most votes from DSC holders is automatically displayed. The voting is in a decentralized way. Thus, It may be irrelevant to the will of the DSC development team.",*注:上は脱中央化された方式でDSCホルダーらに最多得票を受けた文句が自動的に表示されたものです。DSC開発チームの意思と無関係することができます。
+HOME_DOGE_SOUND_WINNER_POPUP,경연 우승자만이 우승작을 NFT로\n 민팅할 수 있습니다,Only the winner can mint the winning piece with NFT
 HOME_FEATURES_TITLE,도지사운드클럽 특징 👻😻🐕,DOGE SOUND CLUB FEATURES 👻😻🐕,ドッジサウンドクラブの特徴 👻😻🐕
 HOME_FEATURES_TITLE1,우리는 개소리에 진심인 자들입니다,We are serious about Kak talk,私たちは犬の鳴き声に本気なのです。
 HOME_FEATURES_DESC1,약 4주마다 스마트 컨트랙트를 이용해 최고의 도지사운드(개소리)를 선정합니다.,"Every two weeks, we use a smart contract to select the Kak talk. Every two weeks, we use a",2週間ごとにスマートコントラクトを利用して最高の都知事サウンド(犬の鳴き声)を選定します。
