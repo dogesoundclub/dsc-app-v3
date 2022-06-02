@@ -317,6 +317,7 @@ export default class Home implements View {
                                     const results = await (await fetch("https://api.dogesound.club/sign-mint-dogesound-winner?" + new URLSearchParams({
                                         winner: winnerInfo.winner, round: winnerInfo.round, dogesound: winnerInfo.dogesound,
                                     }))).text();
+                                    console.log(results);
                                     if (walletAddress.toLowerCase() === winnerInfo.winner.toLowerCase()) {
                                         await DogeSoundMinterContract.mintWinnerNFT(winnerInfo.round, winnerInfo.dogesound, results);
                                     } else {
