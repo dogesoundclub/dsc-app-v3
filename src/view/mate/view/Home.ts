@@ -2,10 +2,12 @@ import { DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import superagent from "superagent";
-import Layout from "./Layout";
+import DogeSoundContestV2Contract from "../../../contracts/DogeSoundContestV2Contract";
+import Wallet from "../../../klaytn/Wallet";
 import ViewUtil from "../../ViewUtil";
-import PageSelect from "../component/PageSelect";
 import Alert from "../component/dialogue/Alert";
+import PageSelect from "../component/PageSelect";
+import Layout from "./Layout";
 
 export default class Home implements View {
 
@@ -306,9 +308,19 @@ export default class Home implements View {
                     el("header",
                         el(".title", msg("HOME_DOGE_SOUND_WINNER_TITLE").replace(/{number}/, String(winnerInfo.round + 1))),
                         el("a.mint-button", msg("HOME_DOGE_SOUND_WINNER_MINT_BUTTON"), {
-                            click: () => {
-                                new Alert(msg("HOME_DOGE_SOUND_WINNER_POPUP"))
-                            }
+                            click: async () => {
+                                if (await Wallet.connected() !== true) {
+                                    await Wallet.connect();
+                                }
+                                const walletAddress = await Wallet.loadAddress();
+                                if (walletAddress !== undefined) {
+                                    if (walletAddress === winnerInfo.winner) {
+                                        await DogeSoundContestV2Contract.mintWinnerNFT(winnerInfo.round);
+                                    } else {
+                                        new Alert(msg("HOME_DOGE_SOUND_WINNER_POPUP"));
+                                    }
+                                }
+                            },
                         }),
                     ),
                     el(".old-sound", msg("HOME_DOGE_SOUND_WINNER_DESC1").replace(/{number}/, String(winnerInfo.round + 1))),
@@ -316,9 +328,19 @@ export default class Home implements View {
                     el("a.address", winnerInfo.winner, { href: `https://opensea.io/${winnerInfo.winner}`, target: "_blank" }),
                     el("p.warning", msg("HOME_DOGE_SOUND_WINNER_WARNING")),
                     el("a.mobile-mint-button", msg("HOME_DOGE_SOUND_WINNER_MINT_BUTTON"), {
-                        click: () => {
-                            new Alert(msg("HOME_DOGE_SOUND_WINNER_POPUP"))
-                        }
+                        click: async () => {
+                            if (await Wallet.connected() !== true) {
+                                await Wallet.connect();
+                            }
+                            const walletAddress = await Wallet.loadAddress();
+                            if (walletAddress !== undefined) {
+                                if (walletAddress === winnerInfo.winner) {
+                                    await DogeSoundContestV2Contract.mintWinnerNFT(winnerInfo.round);
+                                } else {
+                                    new Alert(msg("HOME_DOGE_SOUND_WINNER_POPUP"));
+                                }
+                            }
+                        },
                     }),
                 );
                 //this.winner.empty().appendText(`${msg("HOME_WINNER_TITLE").replace(/{round}/, String(winnerInfo.round + 1))} `);

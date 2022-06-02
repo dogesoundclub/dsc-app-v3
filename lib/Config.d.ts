@@ -15,6 +15,8 @@ declare const _default: {
         DSCFamily: string;
         GovernanceV3: string;
         MatesPool: string;
+        EMatesPool: string;
+        BiasPool: string;
     };
 };
 export default _default;

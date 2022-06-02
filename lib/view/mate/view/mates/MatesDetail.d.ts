@@ -5,8 +5,10 @@ export default class MatesDetail implements View {
     private nameDisplay;
     private mixDisplay;
     private snsDisplay;
+    private lockableMateDisplay;
     constructor(params: ViewParams);
     private load;
+    private setLockableMate;
     private loadSNS;
     changeParams(params: ViewParams, uri: string): void;
     close(): void;

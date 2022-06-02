@@ -1,31 +1,12 @@
 {
-    "menu": [{
-            "uri": "bmcs#keyword",
-            "name": "키워드"
-        },
+    "menu": [
         {
             "uri": "bmcs#biasedMate",
-            "name": "Biased Mate"
-        },
-        {
-            "uri": "bmcs#biasCards",
-            "name": "Bias Cards"
-        },
-        {
-            "uri": "bmcs#roadmap",
-            "name": "Roadmap"
-        },
-        {
-            "uri": "bmcs#faq",
-            "name": "FAQ"
-        },
-        {
-            "uri": "bmcs#partnership",
-            "name": "Partnership"
+            "name": "BIAS"
         },
         {
             "uri": "bmcs/cycle-of-craft",
-            "name": "Crafting"
+            "name": "CRAFT"
         }
     ]
 }

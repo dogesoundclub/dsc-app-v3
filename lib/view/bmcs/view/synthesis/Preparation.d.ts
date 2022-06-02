@@ -3,6 +3,8 @@ export default class Preparation implements View {
     private container;
     private mateList;
     private cardList;
+    private mateBalance;
+    private cardBalance;
     private selectedMateItem;
     private selectedCardItem;
     constructor();

@@ -4,6 +4,7 @@ export default class MyMate implements View {
     private container;
     private wallet;
     private mateList;
+    private loading;
     discordUser: DiscordUserInfo | undefined;
     constructor();
     private load;
