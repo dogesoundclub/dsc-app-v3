@@ -314,7 +314,7 @@ export default class Home implements View {
                                 }
                                 const walletAddress = await Wallet.loadAddress();
                                 if (walletAddress !== undefined) {
-                                    if (walletAddress === winnerInfo.winner) {
+                                    if (walletAddress.toLowerCase() === winnerInfo.winner.toLowerCase()) {
                                         await DogeSoundContestV2Contract.mintWinnerNFT(winnerInfo.round);
                                     } else {
                                         new Alert(msg("HOME_DOGE_SOUND_WINNER_POPUP"));
@@ -334,7 +334,7 @@ export default class Home implements View {
                             }
                             const walletAddress = await Wallet.loadAddress();
                             if (walletAddress !== undefined) {
-                                if (walletAddress === winnerInfo.winner) {
+                                if (walletAddress.toLowerCase() === winnerInfo.winner.toLowerCase()) {
                                     await DogeSoundContestV2Contract.mintWinnerNFT(winnerInfo.round);
                                 } else {
                                     new Alert(msg("HOME_DOGE_SOUND_WINNER_POPUP"));
