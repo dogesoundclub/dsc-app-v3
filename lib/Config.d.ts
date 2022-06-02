@@ -17,6 +17,7 @@ declare const _default: {
         MatesPool: string;
         EMatesPool: string;
         BiasPool: string;
+        DogeSoundMinter: string;
     };
 };
 export default _default;

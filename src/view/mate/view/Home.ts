@@ -2,7 +2,7 @@ import { DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import superagent from "superagent";
-import DogeSoundContestV2Contract from "../../../contracts/DogeSoundContestV2Contract";
+import DogeSoundMinterContract from "../../../contracts/DogeSoundMinterContract";
 import Wallet from "../../../klaytn/Wallet";
 import ViewUtil from "../../ViewUtil";
 import Alert from "../component/dialogue/Alert";
@@ -314,8 +314,11 @@ export default class Home implements View {
                                 }
                                 const walletAddress = await Wallet.loadAddress();
                                 if (walletAddress !== undefined) {
+                                    const results = await (await fetch("https://api.dogesound.club/sign-mint-dogesound-winner?" + new URLSearchParams({
+                                        winner: winnerInfo.winner, round: winnerInfo.round, dogesound: winnerInfo.dogesound,
+                                    }))).text();
                                     if (walletAddress.toLowerCase() === winnerInfo.winner.toLowerCase()) {
-                                        await DogeSoundContestV2Contract.mintWinnerNFT(winnerInfo.round);
+                                        await DogeSoundMinterContract.mintWinnerNFT(winnerInfo.round, winnerInfo.dogesound, results);
                                     } else {
                                         new Alert(msg("HOME_DOGE_SOUND_WINNER_POPUP"));
                                     }
@@ -334,8 +337,11 @@ export default class Home implements View {
                             }
                             const walletAddress = await Wallet.loadAddress();
                             if (walletAddress !== undefined) {
+                                const results = await (await fetch("https://api.dogesound.club/sign-mint-dogesound-winner?" + new URLSearchParams({
+                                    winner: winnerInfo.winner, round: winnerInfo.round, dogesound: winnerInfo.dogesound,
+                                }))).text();
                                 if (walletAddress.toLowerCase() === winnerInfo.winner.toLowerCase()) {
-                                    await DogeSoundContestV2Contract.mintWinnerNFT(winnerInfo.round);
+                                    await DogeSoundMinterContract.mintWinnerNFT(winnerInfo.round, winnerInfo.dogesound, results);
                                 } else {
                                     new Alert(msg("HOME_DOGE_SOUND_WINNER_POPUP"));
                                 }

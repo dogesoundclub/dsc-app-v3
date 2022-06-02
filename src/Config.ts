@@ -22,6 +22,7 @@ export default {
         MatesPool: "0x6f49D139359D0c7Bf44Df4520494A6ABB39434dD",
         EMatesPool: "",
         BiasPool: "",
+        DogeSoundMinter: "",
     } : {
         // Mainnet
         Mate: "0xe47e90c58f8336a2f24bcd9bcb530e2e02e1e8ae",
@@ -39,5 +40,6 @@ export default {
         MatesPool: "0xbc9C42267037786f42831d4f36D629A3888c9b4a",
         EMatesPool: "0x4316feE26c85c7a19063dA597b4DdF1476d0C986",
         BiasPool: "0x83BD2Fa1806b36bC7B0747e37482544Bed56529e",
+        DogeSoundMinter: "0x9b21a0D48035d88416BCd762A41767ac369477e1",
     },
 };
