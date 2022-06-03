@@ -4,14 +4,14 @@ import BiasContract from "../../../contracts/BiasContract";
 import CycleContract from "../../../contracts/CycleContract";
 import Klaytn from "../../../klaytn/Klaytn";
 import Wallet from "../../../klaytn/Wallet";
-import Alert from "../../shared/Alert";
 import CycleOfCraftCard from "../component/CycleOfCraftCard";
 import BmcsLayout from "./Layout";
 
 export default class CycleOfCraft implements View {
 
     private container: DomNode;
-    private totalClaimableCount: DomNode;
+    private totalClaimableCount: number = 0;
+    private totalClaimableCountDisplay: DomNode;
     private list: DomNode;
 
     constructor() {
@@ -22,12 +22,7 @@ export default class CycleOfCraft implements View {
                     el("h1", "CYCLE OF CRAFT"),
                     el(".claim-container",
                         el(".title", "Accumulated Engines"),
-                        this.totalClaimableCount = el(".account", "... EA"),
-                        el("a", "모든 엔진 수령하기", {
-                            click: () => {
-                                new Alert("엔진 받기가 아직 활성화되지 않았습니다.");
-                            },
-                        }),
+                        this.totalClaimableCountDisplay = el(".account", "... EA"),
                     ),
                 ),
                 this.list = el("article"),
@@ -50,7 +45,7 @@ export default class CycleOfCraft implements View {
             const currentBlock = await Klaytn.loadBlockNumber();
             const balance = (await BiasContract.balanceOf(walletAddress)).toNumber();
 
-            let totalClaimableCount = 0;
+            this.totalClaimableCount = 0;
 
             const promises: Promise<void>[] = [];
             for (let i = 0; i < balance; i += 1) {
@@ -59,7 +54,7 @@ export default class CycleOfCraft implements View {
                     const startBlocks = await CycleContract.startBlocks(biasId);
                     const level = await CycleContract.levels(biasId);
                     const claimableCount = await CycleContract.claimableCount(biasId);
-                    totalClaimableCount += claimableCount.toNumber();
+                    this.totalClaimableCount += claimableCount.toNumber();
 
                     const uri = await BiasContract.tokenURI(biasId);
                     const json = await (await fetch(uri)).json();
@@ -69,7 +64,7 @@ export default class CycleOfCraft implements View {
             }
             await Promise.all(promises);
 
-            this.totalClaimableCount.empty().appendText(`${totalClaimableCount} EA`);
+            this.totalClaimableCountDisplay.empty().appendText(`${this.totalClaimableCount} EA`);
         }
     }
 

@@ -70,8 +70,13 @@ export default class CycleOfCraftCard extends DomNode {
                     el("img", { src: metadata.image, alt: "bmcs" }, { click: () => ViewUtil.go(`/bmcs/mates/${id}`) }),
                     el(".title", metadata.name),
                     el("a", "엔진 받기", {
-                        click: () => {
-                            new Alert("엔진 받기가 아직 활성화되지 않았습니다.");
+                        click: async () => {
+                            if (claimableCount === 0) {
+                                new Alert("아직 받을 수 있는 엔진이 없습니다.");
+                            } else {
+                                await CycleContract.claim(id, claimableCount);
+                                ViewUtil.waitTransactionAndRefresh();
+                            }
                         },
                     }),
                 ),
