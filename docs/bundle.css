@@ -6896,6 +6896,60 @@ body {
 .bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .card:hover {
   background: rgba(249, 216, 51, 0.1);
 }
+.bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .complete-card {
+  margin-top: 20px;
+  position: relative;
+  color: #F9D833;
+  background: rgba(249, 216, 51, 0.1);
+  border: 1px solid #F9D833;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 40px;
+  max-width: 372px;
+  width: 100%;
+}
+.bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .complete-card > .complete {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .complete-card > h4 {
+  font-size: 32px;
+  line-height: 32px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .complete-card > h4 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+.bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .complete-card > p {
+  font-size: 20px;
+  line-height: 24px;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .complete-card > p {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .complete-card > img {
+    display: none;
+  }
+}
+.bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .complete-card > img.right {
+  position: absolute;
+  top: 35%;
+  right: -40px;
+}
+.bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .complete-card > img.down {
+  position: absolute;
+  bottom: -40px;
+  right: 45%;
+}
+.bmcs-view > section > .roadmap-container > .content > .card-reverse-container > .complete-card:hover {
+  background: rgba(249, 216, 51, 0.1);
+}
 .bmcs-view > section > .roadmap-container > .content > .card {
   margin-top: 20px;
   position: relative;
