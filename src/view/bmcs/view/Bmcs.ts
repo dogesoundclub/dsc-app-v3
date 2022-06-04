@@ -27,10 +27,12 @@ export default class Bmcs implements View {
                         el("p", msg("BMCS_DESC")),
                         el(".button-container",
                             el("a", "MINT", { click: () => { new MintingPopup() } }),
-                            el("a.outline", "SYNTHESIS", { click: () => { 
-                                // ViewUtil.go("/bmcs/preparation")
-                                new Alert("합성 기능이 중단되었습니다."); 
-                            } }),
+                            el("a.outline", "SYNTHESIS", {
+                                click: () => {
+                                    // ViewUtil.go("/bmcs/preparation")
+                                    new Alert("합성 기능이 중단되었습니다.");
+                                }
+                            }),
                         ),
                         el(".scroll-container",
                             el("img", { src: "/images/shared/icn/icn_scroll.svg", alt: "scroll" }),
@@ -128,7 +130,7 @@ export default class Bmcs implements View {
                                     el("p", msg("BMCS_ROADMAP_CARD_TITLE2")),
                                     el("img.right", { src: "/images/view/bmcs/home/icn-arrow-right.svg" }),
                                 ),
-                                el(".card.complete-card ", { click: () => { new BMCSAlert(msg("BMCS_ROADMAP_ALERT_TITLE3"), msg("BMCS_ROADMAP_ALERT_DESC3"), "OK") } },
+                                el(".card.complete-card", { click: () => { new BMCSAlert(msg("BMCS_ROADMAP_ALERT_TITLE3"), msg("BMCS_ROADMAP_ALERT_DESC3"), "OK") } },
                                     el("img.complete", { src: "/images/view/bmcs/home/complete.png", alt: "complete" }),
                                     el("h4", "010%"),
                                     el("p", msg("BMCS_ROADMAP_CARD_TITLE3")),
@@ -136,7 +138,8 @@ export default class Bmcs implements View {
                                 ),
                             ),
                             el(".card-reverse-container",
-                                el(".card", { click: () => { new BMCSAlert(msg("BMCS_ROADMAP_ALERT_TITLE4"), msg("BMCS_ROADMAP_ALERT_DESC4"), "OK") } },
+                                el(".card.complete-card", { click: () => { new BMCSAlert(msg("BMCS_ROADMAP_ALERT_TITLE4"), msg("BMCS_ROADMAP_ALERT_DESC4"), "OK") } },
+                                    el("img.complete", { src: "/images/view/bmcs/home/complete.png", alt: "complete" }),
                                     el("h4", "030%"),
                                     el("p", msg("BMCS_ROADMAP_CARD_TITLE4")),
                                     el("img.left", { src: "/images/view/bmcs/home/icn-arrow-left.svg" }),
@@ -153,7 +156,8 @@ export default class Bmcs implements View {
                                 ),
                             ),
                             el(".card-container",
-                                el(".card", { click: () => { new BMCSAlert(msg("BMCS_ROADMAP_ALERT_TITLE7"), msg("BMCS_ROADMAP_ALERT_DESC7"), "OK") } },
+                                el(".card.complete-card", { click: () => { new BMCSAlert(msg("BMCS_ROADMAP_ALERT_TITLE7"), msg("BMCS_ROADMAP_ALERT_DESC7"), "OK") } },
+                                    el("img.complete", { src: "/images/view/bmcs/home/complete.png", alt: "complete" }),
                                     el("h4", "060%"),
                                     el("p", msg("BMCS_ROADMAP_CARD_TITLE7")),
                                     el("img.right", { src: "/images/view/bmcs/home/icn-arrow-right.svg" }),
