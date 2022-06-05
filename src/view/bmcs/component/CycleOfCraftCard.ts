@@ -5,6 +5,7 @@ import Klaytn from "../../../klaytn/Klaytn";
 import Wallet from "../../../klaytn/Wallet";
 import Alert from "../../shared/Alert";
 import ViewUtil from "../../ViewUtil";
+import CraftLoading from "./craft-loading/CraftLoading";
 
 
 export default class CycleOfCraftCard extends DomNode {
@@ -33,7 +34,7 @@ export default class CycleOfCraftCard extends DomNode {
                     }),
                 ),
                 el(".progress-container",
-                    el("img", { src: "/images/view/bmcs/cycle-of-craft/loading.png", alt: "loading" }),
+                    new CraftLoading(),
                     el(".progress"),
                     el(".content",
                         el("p", "새로 얻은 BMCS는 제작 진행률 트랜잭션이 필요합니다."),
@@ -65,10 +66,30 @@ export default class CycleOfCraftCard extends DomNode {
             const acc = (currentBlock - startBlock) * speed % pointPerEngine;
 
             let bar;
+            let mobileBar;
             this.append(
-                el(".info-container",
+                el(".image-container",
                     el("img", { src: metadata.image, alt: "bmcs" }, { click: () => ViewUtil.go(`/bmcs/mates/${id}`) }),
+                    new CraftLoading(),
+                ),
+                el("hr"),
+                el(".info-container",
                     el(".title", metadata.name),
+                    el(".content",
+                        el(".text-cotnainer",
+                            el(".title", "휙득까지 남은 Block"),
+                            el("p", CommonUtil.numberWithCommas(String((pointPerEngine - acc) / speed))),
+                        ),
+                        el(".text-cotnainer",
+                            el(".title", "제작 완료된 엔진 수"),
+                            el("p", CommonUtil.numberWithCommas(String(claimableCount))),
+                        ),
+                    ),
+                    el(".progress-container",
+                        el(".progress",
+                            bar = el(".bar"),
+                        ),
+                    ),
                     el("a", "엔진 받기", {
                         click: async () => {
                             if (claimableCount === 0) {
@@ -80,19 +101,44 @@ export default class CycleOfCraftCard extends DomNode {
                         },
                     }),
                 ),
-                el(".progress-container",
-                    el("img", { src: "/images/view/bmcs/cycle-of-craft/loading.png", alt: "loading" }),
-                    el(".progress",
-                        bar = el(".bar"),
-                    ),
+                el(".mobile-info-container",
                     el(".content",
-                        el(".title", "휙득까지 남은 Block"),
-                        el("p", CommonUtil.numberWithCommas(String((pointPerEngine - acc) / speed))),
-                        el(".title", "제작 완료된 엔진 수"),
-                        el("p", CommonUtil.numberWithCommas(String(claimableCount))),
+                        el(".title-container",
+                            el(".title", metadata.name),
+                            el(".text-cotnainer",
+                                el(".title", "휙득까지 남은 Block"),
+                                el("p", CommonUtil.numberWithCommas(String((pointPerEngine - acc) / speed))),
+                            ),
+                        ),
+                        el(".sub-container",
+                            el(".progress-container",
+                                el(".progress",
+                                    mobileBar = el(".bar"),
+                                ),
+                            ),
+                            el(".text-cotnainer",
+                                el(".title", "제작 완료된 엔진 수"),
+                                el("p", CommonUtil.numberWithCommas(String(claimableCount))),
+                            ),
+                        ),
                     ),
+                    el("a", "엔진 받기", {
+                        click: async () => {
+                            if (claimableCount === 0) {
+                                new Alert("아직 받을 수 있는 엔진이 없습니다.");
+                            } else {
+                                await CycleContract.claim(id, claimableCount);
+                                ViewUtil.waitTransactionAndRefresh();
+                            }
+                        },
+                    }),
                 ),
             );
+
+
+            mobileBar.style({
+                width: `${acc / pointPerEngine * 100}%`,
+            });
 
             bar.style({
                 width: `${acc / pointPerEngine * 100}%`,
