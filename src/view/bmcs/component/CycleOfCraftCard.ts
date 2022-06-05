@@ -14,12 +14,19 @@ export default class CycleOfCraftCard extends DomNode {
         super(".cycle-of-craft-card");
 
         if (startBlock === 0 || level === 0) {
+        // if (true) {
             level = parseInt((metadata.attributes.find((a: any) => a.trait_type === "Crafting Speed")?.value.substring("Level ".length)));
             this.append(
-                el(".info-container",
+                el(".image-container",
                     el("img", { src: metadata.image, alt: "bmcs" }, { click: () => ViewUtil.go(`/bmcs/mates/${id}`) }),
+                    new CraftLoading(),
+                ),
+                el("hr"),
+                el(".info-container",
+                    // el("img", { src: metadata.image, alt: "bmcs" }, { click: () => ViewUtil.go(`/bmcs/mates/${id}`) }),
                     el(".title", metadata.name),
-                    el("a", "제작 진행률 확인", {
+                    // el("hr"),
+                    el("a", "채굴 시작하기", {
                         click: async () => {
                             const owner = await Wallet.loadAddress();
                             if (owner !== undefined) {
@@ -30,16 +37,18 @@ export default class CycleOfCraftCard extends DomNode {
                                 await CycleContract.setLevel(id, startBlock, level, results);
                                 ViewUtil.waitTransactionAndRefresh();
                             }
+                            console.log("clicked");
                         },
                     }),
-                ),
-                el(".progress-container",
-                    new CraftLoading(),
+                    el(".progress-container",
+                    // new CraftLoading(),
                     el(".progress"),
                     el(".content",
-                        el("p", "새로 얻은 BMCS는 제작 진행률 트랜잭션이 필요합니다."),
+                        el("p", "새로 얻은 BMCS는 채굴 시작 트랜잭션이 필요합니다."),
                     ),
                 ),
+                ),
+                
             );
         }
 
