@@ -10,8 +10,8 @@ import BmcsLayout from "./Layout";
 export default class CycleOfCraft implements View {
 
     private container: DomNode;
-    private currentCycleDisplay: DomNode;
-    private remainCycleDisplay: DomNode;
+    // private currentCycleDisplay: DomNode;
+    // private remainCycleDisplay: DomNode;
     private totalClaimableCount: number = 0;
     private totalClaimableCountDisplay: DomNode;
     private list: DomNode;
@@ -25,17 +25,17 @@ export default class CycleOfCraft implements View {
                         el("p", "주의 : 바이어스를 전송 또는 판매할 경우, 클레임되지 않은 엔진들은 모두 분해됩니다."),
                     ),
                     el("h1", "CYCLE OF CRAFT"),
-                    el(".block-container",
-                        el(".content",
-                            el(".title", "Current Cycle"),
-                            this.currentCycleDisplay = el("p", "0 Block"),
-                        ),
-                        el("hr"),
-                        el(".content",
-                            el(".title", "Remain Next Half-Life"),
-                            this.remainCycleDisplay = el("p", "0 Block"),
-                        ),
-                    ),
+                    // el(".block-container",
+                    //     el(".content",
+                    //         el(".title", "Current Cycle"),
+                    //         this.currentCycleDisplay = el("p", "0 Block"),
+                    //     ),
+                    //     el("hr"),
+                    //     el(".content",
+                    //         el(".title", "Remain Next Half-Life"),
+                    //         this.remainCycleDisplay = el("p", "0 Block"),
+                    //     ),
+                    // ),
                     el(".claim-container",
                         el(".title", "Accumulated Engines"),
                         this.totalClaimableCountDisplay = el(".account", "... EA"),
@@ -86,7 +86,7 @@ export default class CycleOfCraft implements View {
             }
             await Promise.all(promises);
 
-            this.currentCycleDisplay.empty().appendText(`${currentBlock} Block`);
+            // this.currentCycleDisplay.empty().appendText(`${currentBlock} Block`);
             // this.remainCycleDisplay.empty().appendText(`${} Block`);
             this.totalClaimableCountDisplay.empty().appendText(`${this.totalClaimableCount} EA`);
         }
