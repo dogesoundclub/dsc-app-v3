@@ -2,6 +2,7 @@ import { View, ViewParams } from "skyrouter";
 export default class CycleOfCraft implements View {
     private container;
     private totalClaimableCount;
+    private totalClaimableCountDisplay;
     private list;
     constructor();
     changeParams(params: ViewParams, uri: string): void;
