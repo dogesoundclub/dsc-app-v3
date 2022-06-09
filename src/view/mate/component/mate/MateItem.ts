@@ -12,7 +12,7 @@ export default class MateItem extends DomNode {
 
     constructor(list: MateList, id: number, name: string | undefined, selectable: boolean, showingRarity: boolean) {
         super(`a.mate-item${list.votedMates.includes(id) === true ? ".off" : ""}`);
-        this.append(el("img", { src: `https://storage.googleapis.com/dsc-mate/336/dscMate-${id}.png` }), el("span.id", `#${id} ${name}`));
+        this.append(el("img", { src: `https://storage.googleapis.com/dsc-mate/336/dscMate-${id}.png` }), el("span.id", `#${id} ${name === undefined ? "" : name}`));
 
         if (showingRarity === true) {
             el("span.score", CommonUtil.numberWithCommas(String((rarity.scores as any)[id]))).appendTo(this);
