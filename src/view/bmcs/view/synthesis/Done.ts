@@ -32,10 +32,9 @@ export default class SynthesisDone implements View {
     }
 
     private async load(biasId: number) {
-        const uri = await BiasContract.tokenURI(biasId);
-        const json = await (await fetch(uri)).json();
-        this.cong.empty().appendText(`${json.name} 를\n획득하였습니다.`);
-        this.image.domElement.src = json.image;
+        const metadata = await (await fetch(`https://api.dogesound.club/bmcs/${biasId}`)).json();
+        this.cong.empty().appendText(`${metadata.name} 를\n획득하였습니다.`);
+        this.image.domElement.src = metadata.image;
     }
 
     public changeParams(params: ViewParams, uri: string): void {

@@ -94,11 +94,10 @@ export default class CycleOfCraft implements View {
           const claimableCount = await CycleContract.claimableCount(biasId);
           this.totalClaimableCount += claimableCount.toNumber();
 
-          const uri = await BiasContract.tokenURI(biasId);
-          const json = await (await fetch(uri)).json();
+          const metadata = await (await fetch(`https://api.dogesound.club/bmcs/${biasId}`)).json();
           new CycleOfCraftCard(
             biasId.toNumber(),
-            json,
+            metadata,
             currentBlock,
             startBlocks.toNumber(),
             level.toNumber(),
