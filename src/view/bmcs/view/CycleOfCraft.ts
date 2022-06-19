@@ -94,7 +94,9 @@ export default class CycleOfCraft implements View {
           const claimableCount = await CycleContract.claimableCount(biasId);
           this.totalClaimableCount += claimableCount.toNumber();
 
-          const metadata = await (await fetch(`https://api.dogesound.club/bmcs/${biasId}`)).json();
+          const metadata = await (
+            await fetch(`https://api.dogesound.club/bmcs/${biasId}`)
+          ).json();
           new CycleOfCraftCard(
             biasId.toNumber(),
             metadata,

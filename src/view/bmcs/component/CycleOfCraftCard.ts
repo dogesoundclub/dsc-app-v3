@@ -19,7 +19,7 @@ export default class CycleOfCraftCard extends DomNode {
     super(".cycle-of-craft-card");
 
     if (startBlock === 0 || level === 0) {
-    // if (true) {
+      // if (true) {
       level = parseInt(
         metadata.attributes
           .find((a: any) => a.trait_type === "Crafting Speed")
@@ -80,7 +80,7 @@ export default class CycleOfCraftCard extends DomNode {
             // el("img", { src: metadata.image, alt: "bmcs" }, { click: () => ViewUtil.go(`/bmcs/mates/${id}`) }),
             el(".title", metadata.name),
             // el("hr"),
-            
+
             el(
               ".progress-container",
               // new CraftLoading(),
@@ -112,7 +112,7 @@ export default class CycleOfCraftCard extends DomNode {
               }
               console.log("clicked");
             },
-          }),
+          })
         )
       );
     } else {
