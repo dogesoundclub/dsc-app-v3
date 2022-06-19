@@ -1,6 +1,6 @@
 key,ko,en,jp
 BAPP_TITLE,도지사운드클럽,DogeSoundClub,DogeSoundClub
-FOOTER_DESC,"주식회사 디에스씨레이블 | 대표이사 :권태홍 | 사업자번호 :838-86-02498 | 개인정보보호책임자:권태홍\n주소: 서울시 성동구 아차산로5길 26, 802호 | support@ayias.io","주식회사 디에스씨레이블 | 대표이사 :권태홍 | 사업자번호 :838-86-02498 | 개인정보보호책임자:권태홍\n주소: 대전광역시 유성구 대학로 82, 5층 505호 | support@ayias.io","주식회사 디에스씨레이블 | 대표이사 :권태홍 | 사업자번호 :838-86-02498 | 개인정보보호책임자:권태홍\n주소: 대전광역시 유성구 대학로 82, 5층 505호 | support@ayias.io"
+FOOTER_DESC,"주식회사 디에스씨레이블 | 대표이사 :권태홍 | 사업자번호 :838-86-02498 | 개인정보보호책임자:권태홍\n주소: 서울시 성동구 아차산로5길 26, 802호 | support@dsclabel.co.kr","주식회사 디에스씨레이블 | 대표이사 :권태홍 | 사업자번호 :838-86-02498 | 개인정보보호책임자:권태홍\n주소: 대전광역시 유성구 대학로 82, 5층 505호 | support@dsclabel.co.kr","주식회사 디에스씨레이블 | 대표이사 :권태홍 | 사업자번호 :838-86-02498 | 개인정보보호책임자:권태홍\n주소: 대전광역시 유성구 대학로 82, 5층 505호 | support@dsclabel.co.kr"
 HOME_TITLE,Welcome to Doge Sound Club!,Welcome to Doge Sound Club!,Welcome to Doge Sound Club!
 HOME_DESC,도지사운드클럽은 NFT를 이용한 거버넌스로 운영되는 NFT 수집가들의 사교 모임입니다.\nMATES를 이용해서 클럽에 가입하고 투표할 수 있습니다.,"Doge Sound Club is a social gathering of NFT collectors
 operated by NFT governance. \nYou can use MATES to join the club and vote.","都知事サウンドクラブは、NFTを利用したガバナンスによって運営されるNFTコレクターによる社交の集まりです。\n
@@ -415,7 +415,7 @@ MEDIUM_BUTTON,Medium,Medium,Medium
 GITHUB_BUTTON,Github,Github,Github
 YOUTUBE_BUTTON,Youtube,Youtube,Youtube
 EMAIL_BUTTON,E-mail,E-mail,E-mail
-EMAIL_DESC,support@ayias.io,dogesoundclub @ gmail.com,dogesoundclub @ gmail.com
+EMAIL_DESC,support@dsclabel.co.kr,dogesoundclub @ gmail.com,dogesoundclub @ gmail.com
 DOCS_BUTTON,Docs,Docs,Docs
 REGISTER_BUTTON,등록하기,Register,Register
 SUBMIT_BUTTON,제출하기,Submit,Submit
