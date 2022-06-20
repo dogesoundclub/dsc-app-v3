@@ -1,10 +1,8 @@
 {
-    "menu": [{
-            "uri": "buyMate",
-            "name": "BUY MATE"
-        },
+    "menu": [
         {
-            "name": "TEAM"
+            "uri": "mates",
+            "name": "MATE?"
         },
         {
             "uri": "gallery",
@@ -12,7 +10,7 @@
         },
         {
             "uri": "holder",
-            "name": "MATES"
+            "name": "ACTIVITIES"
         },
         {
             "uri": "fullyOn",

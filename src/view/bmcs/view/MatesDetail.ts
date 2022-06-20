@@ -64,8 +64,7 @@ export default class BmcsMatesDetail implements View {
         const claimable = await BiasPoolContract.claimableOf(this.id);
         this.mixDisplay.empty().appendText(CommonUtil.numberWithCommas(utils.formatEther(claimable)));
 
-        const uri = await BiasContract.tokenURI(this.id);
-        const metadata = await (await fetch(uri)).json();
+        const metadata = await (await fetch(`https://api.dogesound.club/bmcs/${this.id}`)).json();
 
         this.imageDisplay.domElement.src = metadata.image;
         this.nameDisplay.empty().appendText(metadata.name);
