@@ -2,7 +2,6 @@
     >header {
         position: relative;
         z-index : 1;
-        height  : 100vh;
 
         >.page-wrap {
             display: none;
@@ -29,6 +28,10 @@
             opacity        : .4;
             width          : 100%;
             height         : 100vh;
+
+            @media @phone {
+                height: 100%;
+            }
         }
 
         >section {
@@ -37,7 +40,8 @@
             padding-top: 20%;
 
             @media @phone {
-                padding: 100px 20px 20px 20px;
+                display: block;
+                padding: 10% 20px 20px 20px;
             }
 
             >h1 {

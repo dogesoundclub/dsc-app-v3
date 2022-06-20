@@ -6584,7 +6584,6 @@ body {
 .bmcs-view > header {
   position: relative;
   z-index: 1;
-  height: 100vh;
 }
 .bmcs-view > header > .page-wrap {
   display: none;
@@ -6611,6 +6610,11 @@ body {
   width: 100%;
   height: 100vh;
 }
+@media only screen and (max-width: 719px) {
+  .bmcs-view > header > .overlay {
+    height: 100%;
+  }
+}
 .bmcs-view > header > section {
   max-width: 1156px;
   margin: auto;
@@ -6618,7 +6622,8 @@ body {
 }
 @media only screen and (max-width: 719px) {
   .bmcs-view > header > section {
-    padding: 100px 20px 20px 20px;
+    display: block;
+    padding: 10% 20px 20px 20px;
   }
 }
 .bmcs-view > header > section > h1 {
