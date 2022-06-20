@@ -69,7 +69,7 @@ export default class Layout implements View {
               el(
                 ".term",
                 el("a", { href: "/terms" }, "서비스이용약관"),
-                el("a", "as.io")
+                el("a", "support@dsclabel.co.kr")
                 // el("a", "개인정보처리방침"),
                 // el("a", "회사소개"),
               ),
@@ -98,7 +98,7 @@ export default class Layout implements View {
     document.title = `Doge Sound Club - ${title}`;
   }
 
-  public changeParams(params: ViewParams, uri: string): void {}
+  public changeParams(params: ViewParams, uri: string): void { }
 
   public close(): void {
     this.container.delete();
