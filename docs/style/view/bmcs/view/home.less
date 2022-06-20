@@ -2,6 +2,11 @@
     >header {
         position: relative;
         z-index : 1;
+        height  : 100vh;
+
+        @media @phone {
+            height: 150vh;
+        }
 
         >.page-wrap {
             display: none;
@@ -18,6 +23,7 @@
 
         >.overlay {
             position       : absolute;
+            min-height     : 100vh;
             z-index        : -1;
             top            : 0;
             bottom         : 0;
@@ -28,10 +34,6 @@
             opacity        : .4;
             width          : 100%;
             height         : 100vh;
-
-            @media @phone {
-                height: 100%;
-            }
         }
 
         >section {

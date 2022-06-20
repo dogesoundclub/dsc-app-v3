@@ -6584,6 +6584,12 @@ body {
 .bmcs-view > header {
   position: relative;
   z-index: 1;
+  height: 100vh;
+}
+@media only screen and (max-width: 719px) {
+  .bmcs-view > header {
+    height: 150vh;
+  }
 }
 .bmcs-view > header > .page-wrap {
   display: none;
@@ -6599,6 +6605,7 @@ body {
 }
 .bmcs-view > header > .overlay {
   position: absolute;
+  min-height: 100vh;
   z-index: -1;
   top: 0;
   bottom: 0;
@@ -6609,11 +6616,6 @@ body {
   opacity: 0.4;
   width: 100%;
   height: 100vh;
-}
-@media only screen and (max-width: 719px) {
-  .bmcs-view > header > .overlay {
-    height: 100%;
-  }
 }
 .bmcs-view > header > section {
   max-width: 1156px;
