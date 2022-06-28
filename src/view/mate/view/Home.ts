@@ -217,6 +217,9 @@ export default class Home implements View {
                   src: "/images/view/mate/home/partnership/plateno.png",
                 }),
                 el("img", {
+                  src: "/images/view/mate/home/partnership/spanlel24x7.png",
+                }),
+                el("img", {
                   src: "/images/view/mate/home/partnership/ozys.png",
                 }),
                 el("img", {
