@@ -45,12 +45,12 @@ export default class CycleOfCraft implements View {
           el(
             ".claim-container",
             el(".title", "Accumulated Engines"),
-            (this.totalClaimableCountDisplay = el(".account", "... EA")),
-            el("a", "모든 엔진 수령하기", {
-              click: async () => {
-                new Alert("모든 엔진 수령하기 기능 테스트중입니다.");
-              },
-            })
+            (this.totalClaimableCountDisplay = el(".account", "... EA"))
+            // el("a", "모든 엔진 수령하기", {
+            //   click: async () => {
+            //     new Alert("모든 엔진 수령하기 기능 테스트중입니다.");
+            //   },
+            // })
           )
         ),
         el(
