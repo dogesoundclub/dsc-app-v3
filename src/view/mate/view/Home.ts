@@ -214,6 +214,12 @@ export default class Home implements View {
                   src: "/images/view/mate/home/partnership/sk.png",
                 }),
                 el("img", {
+                  src: "/images/view/mate/home/partnership/apmss.png",
+                }),
+                el("img", {
+                  src: "/images/view/mate/home/partnership/fsn.png",
+                }),
+                el("img", {
                   src: "/images/view/mate/home/partnership/plateno.png",
                 }),
                 el("img", {
@@ -275,25 +281,7 @@ export default class Home implements View {
                 }),
                 el("img", {
                   src: "/images/view/mate/home/partnership/crytorus.png",
-                })
-              ),
-              el(
-                ".title-container",
-                el(".title", msg("HOME_PARTNERSHIP_GOVERNANCE_TITLE")),
-                el(
-                  ".arrow-container",
-                  el("img", {
-                    src: "/images/shared/icn/icn_arrow_left.svg",
-                    alt: "arrow-left",
-                  }),
-                  el("img", {
-                    src: "/images/shared/icn/icn_arrow_right.svg",
-                    alt: "arrow-right",
-                  })
-                )
-              ),
-              el(
-                ".content",
+                }),
                 el("img", {
                   src: "/images/view/mate/home/partnership/klayRabbit.png",
                 }),
@@ -312,7 +300,8 @@ export default class Home implements View {
                 el("img", {
                   src: "/images/view/mate/home/partnership/kepler.png",
                 })
-              )
+              ),
+              
             )
           ),
           el("hr"),
