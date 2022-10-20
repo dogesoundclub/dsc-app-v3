@@ -29,21 +29,22 @@ import Terms from "./view/mate/view/Terms";
 
 // bmcs
 import Bmcs from "./view/bmcs/view/Bmcs";
+import CycleOfCraft from "./view/bmcs/view/CycleOfCraft";
 import BmcsGallery from "./view/bmcs/view/Gallery";
 import BmcsLayout from "./view/bmcs/view/Layout";
 import BmcsMatesDetail from "./view/bmcs/view/MatesDetail";
-import CycleOfCraft from "./view/bmcs/view/CycleOfCraft";
-import Preparation from "./view/bmcs/view/synthesis/Preparation";
-import SelectedMate from "./view/bmcs/view/synthesis/SelectedMate";
-import SynthesisProgress from "./view/bmcs/view/synthesis/Progress";
 import SynthesisDone from "./view/bmcs/view/synthesis/Done";
+import Preparation from "./view/bmcs/view/synthesis/Preparation";
+import SynthesisProgress from "./view/bmcs/view/synthesis/Progress";
+import SelectedMate from "./view/bmcs/view/synthesis/SelectedMate";
 
 // e-mate
-import EmateLayout from "./view/e-mate/view/Layout";
-import EmateHome from "./view/e-mate/view/Home";
-import EmateGallery from "./view/e-mate/view/Gallery";
-import MyEmate from "./view/e-mate/view/mates/MyMate";
+import Unstaking from "./view/bmcs/view/Unstaking";
 import CraftOfDrill from "./view/e-mate/view/CraftOfDrill";
+import EmateGallery from "./view/e-mate/view/Gallery";
+import EmateHome from "./view/e-mate/view/Home";
+import EmateLayout from "./view/e-mate/view/Layout";
+import MyEmate from "./view/e-mate/view/mates/MyMate";
 
 (async () => {
     msg.language = BrowserInfo.language;
@@ -51,7 +52,7 @@ import CraftOfDrill from "./view/e-mate/view/CraftOfDrill";
 
     // mate
     SkyRouter.route("**", Layout, [
-        "bmcs", "bmcs/mates/{id}", "bmcs/gallery", "bmcs/cycle-of-craft", "bmcs/preparation", "bmcs/selected-mate/{mateId}/{cardId}", "bmcs/progress/{mateId}/{cardId}", "bmcs/done/{biasId}",
+        "bmcs", "bmcs/mates/{id}", "bmcs/gallery", "bmcs/cycle-of-craft", "bmcs/preparation", "bmcs/unstaking", "bmcs/selected-mate/{mateId}/{cardId}", "bmcs/progress/{mateId}/{cardId}", "bmcs/done/{biasId}",
         "e-mate", "e-mate/gallery", "e-mate/my", "e-mate/craft-of-drill",
     ]);
     SkyRouter.route("", Home);
@@ -90,12 +91,13 @@ import CraftOfDrill from "./view/e-mate/view/CraftOfDrill";
     SkyRouter.route("e-mate/craft-of-drill", CraftOfDrill);
 
     // bmcs
-    SkyRouter.route(["bmcs", "bmcs/mates/{id}", "bmcs/gallery", "bmcs/cycle-of-craft", "bmcs/preparation", "bmcs/selected-mate/{mateId}/{cardId}", "bmcs/progress/{mateId}/{cardId}", "bmcs/done/{biasId}"], BmcsLayout);
+    SkyRouter.route(["bmcs", "bmcs/mates/{id}", "bmcs/gallery", "bmcs/cycle-of-craft", "bmcs/preparation", "bmcs/unstaking", "bmcs/selected-mate/{mateId}/{cardId}", "bmcs/progress/{mateId}/{cardId}", "bmcs/done/{biasId}"], BmcsLayout);
     SkyRouter.route("bmcs", Bmcs);
     SkyRouter.route("bmcs/mates/{id}", BmcsMatesDetail);
     SkyRouter.route("bmcs/gallery", BmcsGallery);
     SkyRouter.route("bmcs/cycle-of-craft", CycleOfCraft);
     SkyRouter.route("bmcs/preparation", Preparation);
+    SkyRouter.route("bmcs/unstaking", Unstaking);
     SkyRouter.route("bmcs/selected-mate/{mateId}/{cardId}", SelectedMate);
     SkyRouter.route("bmcs/progress/{mateId}/{cardId}", SynthesisProgress);
     SkyRouter.route("bmcs/done/{biasId}", SynthesisDone);

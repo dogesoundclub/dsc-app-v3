@@ -2,7 +2,6 @@ import { DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import PageSelect from "../../mate/component/PageSelect";
-import Alert from "../../shared/Alert";
 import ViewUtil from "../../ViewUtil";
 import BMCSAlert from "../component/BMCSAlert";
 import BMCSCollapsibleItem from "../component/BMCSCollapsibleItem";
@@ -27,10 +26,15 @@ export default class Bmcs implements View {
                         el("p", msg("BMCS_DESC")),
                         el(".button-container",
                             el("a", "MINT", { click: () => { new MintingPopup() } }),
-                            el("a.outline", "SYNTHESIS", {
+                            /*el("a.outline", "SYNTHESIS", {
                                 click: () => {
                                     // ViewUtil.go("/bmcs/preparation")
                                     new Alert("합성 기능이 중단되었습니다.");
+                                }
+                            }),*/
+                            el("a.outline", "UNSTAKING", {
+                                click: () => {
+                                    ViewUtil.go("/bmcs/unstaking");
                                 }
                             }),
                         ),

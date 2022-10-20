@@ -16,6 +16,14 @@ class BiasContractContract extends Contract {
         return BigNumber.from(await this.runMethod("mixPrice"));
     }
 
+    public async returnMixTime(): Promise<BigNumber> {
+        return BigNumber.from(await this.runMethod("returnMixTime"));
+    }
+
+    public async compoundBlocks(biasId: BigNumberish): Promise<BigNumber> {
+        return BigNumber.from(await this.runMethod("compoundBlocks", biasId));
+    }
+
     public async compound(biasId: BigNumberish, cardId: BigNumberish, uri: string, signature: string): Promise<boolean> {
         const owner = await Wallet.loadAddress();
         if (owner !== undefined) {
@@ -65,6 +73,11 @@ class BiasContractContract extends Contract {
             }
         }
         return true;
+    }
+
+
+    public async withdrawMix(biasId: BigNumberish): Promise<void> {
+        await this.runWalletMethod("withdrawMix", biasId);
     }
 }
 
