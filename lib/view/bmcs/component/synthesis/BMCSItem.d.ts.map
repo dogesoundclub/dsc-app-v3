@@ -1,0 +1,1 @@
+{"version":3,"file":"BMCSItem.d.ts","sourceRoot":"","sources":["../../../../../src/view/bmcs/component/synthesis/BMCSItem.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAM,MAAM,gBAAgB,CAAC;AAE7C,MAAM,CAAC,OAAO,OAAO,QAAS,SAAQ,OAAO;IAKtB,EAAE,EAAE,MAAM;IAH7B,OAAO,CAAC,KAAK,CAA4B;IACzC,OAAO,CAAC,QAAQ,CAA4B;gBAEzB,EAAE,EAAE,MAAM;YAiBf,IAAI;IAOX,QAAQ;CAGlB"}

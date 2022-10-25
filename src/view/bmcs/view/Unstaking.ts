@@ -7,7 +7,7 @@ import MateContract from "../../../contracts/MateContract";
 import Klaytn from "../../../klaytn/Klaytn";
 import Wallet from "../../../klaytn/Wallet";
 import ViewUtil from "../../ViewUtil";
-import MateItem from "../component/synthesis/MateItem";
+import BMCSItem from "../component/synthesis/BMCSItem";
 import BmcsLayout from "./Layout";
 
 export default class Unstaking implements View {
@@ -17,16 +17,16 @@ export default class Unstaking implements View {
     private mateBalance: DomNode;
     private mixPrice: DomNode;
 
-    private selectedMateItem: MateItem | undefined;
+    private selectedMateItem: BMCSItem | undefined;
 
     constructor() {
-        BmcsLayout.current.title = "메이트 선택";
+        BmcsLayout.current.title = "BMCS 선택";
         BmcsLayout.current.content.append(
             this.container = el(".synthesis-preparation-view",
                 el("section",
                     el("header",
                         el(".title",
-                            el("h2", "언스테이킹 가능한 메이트"),
+                            el("h2", "언스테이킹 가능한 BMCS"),
                             this.mateBalance = el("p"),
                         ),
                         el("a", {
@@ -47,7 +47,7 @@ export default class Unstaking implements View {
                         el("a", "언스테이킹", {
                             click: async () => {
                                 if (this.selectedMateItem !== undefined) {
-                                    await BiasCompoundContract.withdrawMix(this.selectedMateItem.id + 10000);
+                                    await BiasCompoundContract.withdrawMix(this.selectedMateItem.id);
                                     ViewUtil.waitTransactionAndRefresh();
                                 }
                             },
@@ -78,7 +78,7 @@ export default class Unstaking implements View {
                     const mateId = await MateContract.tokenOfOwnerByIndex(walletAddress, index);
                     const compoundBlocks = (await BiasCompoundContract.compoundBlocks(mateId.toNumber() + 10000)).toNumber();
                     if (compoundBlocks != 0 && currentBlock - compoundBlocks >= returnMixTime) {
-                        const mateItem = new MateItem(mateId.toNumber()).appendTo(this.mateList);
+                        const mateItem = new BMCSItem(mateId.toNumber() + 10000).appendTo(this.mateList);
                         mateItem.on("selected", () => {
                             this.selectedMateItem?.deselect();
                             this.selectedMateItem = mateItem;
