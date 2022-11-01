@@ -40,7 +40,7 @@ export default class Unstaking implements View {
                     this.mateList = el(".mate-container"),
                     el("hr"),
                     el(".detail",
-                        el("h2", "1 메이트 당 언스테이킹 가능 믹스 수량"),
+                        el("h2", "1 BMCS 당 언스테이킹 가능 믹스 수량"),
                         this.mixPrice = el(".price", "..."),
                     ),
                     el(".button-wrap",
@@ -67,7 +67,7 @@ export default class Unstaking implements View {
         if (walletAddress !== undefined) {
 
             const balance = (await BiasContract.balanceOf(walletAddress)).toNumber();
-            let synthesizableBalance = balance;
+            let synthesizableBalance = 0;
 
             const currentBlock = await Klaytn.loadBlockNumber();
             const returnMixTime = (await BiasCompoundContract.returnMixTime()).toNumber();
@@ -89,9 +89,7 @@ export default class Unstaking implements View {
                                     this.selectedMateItem = undefined;
                                 }
                             });
-                        } else {
-                            console.log("else", i, synthesizableBalance);
-                            synthesizableBalance--;
+                            synthesizableBalance += 1
                         }
                     }
                 }
@@ -100,9 +98,6 @@ export default class Unstaking implements View {
             }
 
             await Promise.all(promises);
-            if (synthesizableBalance < 0) {
-                synthesizableBalance = 0;
-            }
             this.mateBalance.appendText(synthesizableBalance.toString());
 
             const mixPrice = await BiasCompoundContract.mixPrice();
