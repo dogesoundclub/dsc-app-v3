@@ -3,7 +3,7 @@ import { utils } from "ethers";
 import { View, ViewParams } from "skyrouter";
 import CommonUtil from "../../../CommonUtil";
 import BiasCompoundContract from "../../../contracts/BiasCompoundContract";
-import MateContract from "../../../contracts/MateContract";
+import BiasContract from "../../../contracts/BiasContract";
 import Klaytn from "../../../klaytn/Klaytn";
 import Wallet from "../../../klaytn/Wallet";
 import ViewUtil from "../../ViewUtil";
@@ -66,7 +66,7 @@ export default class Unstaking implements View {
         const walletAddress = await Wallet.loadAddress();
         if (walletAddress !== undefined) {
 
-            const balance = (await MateContract.balanceOf(walletAddress)).toNumber();
+            const balance = (await BiasContract.balanceOf(walletAddress)).toNumber();
             let synthesizableBalance = balance;
 
             const currentBlock = await Klaytn.loadBlockNumber();
@@ -75,22 +75,24 @@ export default class Unstaking implements View {
             const promises: Promise<void>[] = [];
             for (let i = 0; i < balance; i += 1) {
                 const promise = async (index: number) => {
-                    const mateId = await MateContract.tokenOfOwnerByIndex(walletAddress, index);
-                    const compoundBlocks = (await BiasCompoundContract.compoundBlocks(mateId.toNumber() + 10000)).toNumber();
-                    if (compoundBlocks != 0 && currentBlock - compoundBlocks >= returnMixTime) {
-                        const mateItem = new BMCSItem(mateId.toNumber() + 10000).appendTo(this.mateList);
-                        mateItem.on("selected", () => {
-                            this.selectedMateItem?.deselect();
-                            this.selectedMateItem = mateItem;
-                        });
-                        mateItem.on("deselected", () => {
-                            if (this.selectedMateItem === mateItem) {
-                                this.selectedMateItem = undefined;
-                            }
-                        });
-                    } else {
-                        console.log("else", i, synthesizableBalance);
-                        synthesizableBalance--;
+                    const bmcsId = await BiasContract.tokenOfOwnerByIndex(walletAddress, index);
+                    if (bmcsId.gte(10000)) {
+                        const compoundBlocks = (await BiasCompoundContract.compoundBlocks(bmcsId.toNumber())).toNumber();
+                        if (compoundBlocks != 0 && currentBlock - compoundBlocks >= returnMixTime) {
+                            const mateItem = new BMCSItem(bmcsId.toNumber()).appendTo(this.mateList);
+                            mateItem.on("selected", () => {
+                                this.selectedMateItem?.deselect();
+                                this.selectedMateItem = mateItem;
+                            });
+                            mateItem.on("deselected", () => {
+                                if (this.selectedMateItem === mateItem) {
+                                    this.selectedMateItem = undefined;
+                                }
+                            });
+                        } else {
+                            console.log("else", i, synthesizableBalance);
+                            synthesizableBalance--;
+                        }
                     }
                 }
 
