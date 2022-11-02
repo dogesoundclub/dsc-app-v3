@@ -176,7 +176,7 @@ export default class CycleOfCraftCard extends DomNode {
               if (claimableCount === 0) {
                 new Alert("아직 받을 수 있는 엔진이 없습니다.");
               } else {
-                await CycleContract.claim(id, claimableCount);
+                await CycleContract.claim(id, claimableCount > 10 ? 10 : claimableCount);
                 ViewUtil.waitTransactionAndRefresh();
               }
             },
@@ -218,7 +218,7 @@ export default class CycleOfCraftCard extends DomNode {
               if (claimableCount === 0) {
                 new Alert("아직 받을 수 있는 엔진이 없습니다.");
               } else {
-                await CycleContract.claim(id, claimableCount);
+                await CycleContract.claim(id, claimableCount > 10 ? 10 : claimableCount);
                 ViewUtil.waitTransactionAndRefresh();
               }
             },
