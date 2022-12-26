@@ -27,7 +27,8 @@ export default class Home implements View {
             el(".intro", msg("HOME_TITLE")),
             el(".description", msg("HOME_DESC")),
             el("button", msg("ENTER_BUTTON"), {
-              click: () => ViewUtil.go("/mates"),
+              href: "https://discord.gg/dogesoundclub",
+              target: "_blank",
             })
           )
         ),
@@ -300,8 +301,7 @@ export default class Home implements View {
                 el("img", {
                   src: "/images/view/mate/home/partnership/kepler.png",
                 })
-              ),
-              
+              )
             )
           ),
           el("hr"),
@@ -444,11 +444,11 @@ export default class Home implements View {
                   const results = await (
                     await fetch(
                       "https://api.dogesound.club/sign-mint-dogesound-winner?" +
-                      new URLSearchParams({
-                        winner: winnerInfo.winner,
-                        round: winnerInfo.round,
-                        dogesound: winnerInfo.dogesound,
-                      })
+                        new URLSearchParams({
+                          winner: winnerInfo.winner,
+                          round: winnerInfo.round,
+                          dogesound: winnerInfo.dogesound,
+                        })
                     )
                   ).text();
                   console.log(results);
@@ -494,11 +494,11 @@ export default class Home implements View {
                   const results = await (
                     await fetch(
                       "https://api.dogesound.club/sign-mint-dogesound-winner?" +
-                      new URLSearchParams({
-                        winner: winnerInfo.winner,
-                        round: winnerInfo.round,
-                        dogesound: winnerInfo.dogesound,
-                      })
+                        new URLSearchParams({
+                          winner: winnerInfo.winner,
+                          round: winnerInfo.round,
+                          dogesound: winnerInfo.dogesound,
+                        })
                     )
                   ).text();
                   if (
@@ -528,7 +528,7 @@ export default class Home implements View {
     }
   }
 
-  public changeParams(params: ViewParams, uri: string): void { }
+  public changeParams(params: ViewParams, uri: string): void {}
 
   public close(): void {
     if (this.container.deleted !== true) {
