@@ -215,6 +215,9 @@ export default class Home implements View {
                   src: "/images/view/mate/home/partnership/sk.png",
                 }),
                 el("img", {
+                  src: "/images/view/mate/home/partnership/uppsala.png",
+                }),
+                el("img", {
                   src: "/images/view/mate/home/partnership/apmss.png",
                 }),
                 el("img", {
