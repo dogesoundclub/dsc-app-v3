@@ -27,7 +27,7 @@ export default class Activities implements View {
                     el("h2", "HOLDER CERTIFICATION WITH DISCORD"),
                     el("p", "Mate can be purchased at OPENSEA, the world's largest NFT exchange. It can also be purchased at KLUBB, a domestic MIX-based exchange."),
                     el("a", "CERTIFICATION", {
-                        href: `https://discord.com/api/oauth2/authorize?client_id=939772385945612288&redirect_uri=${encodeURIComponent(`${window.location.protocol}//${window.location.host}/activities`)}&response_type=code&scope=identify`,
+                        href: `https://discord.com/api/oauth2/authorize?client_id=1074340739930140682&redirect_uri=${encodeURIComponent(`${window.location.protocol}//${window.location.host}/activities`)}&response_type=code&scope=identify`,
                     }),
                 ),
                 el("hr"),
