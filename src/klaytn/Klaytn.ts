@@ -2,7 +2,7 @@ import { BigNumber } from "@ethersproject/bignumber";
 
 class Klaytn {
 
-    private caver = new (window as any).Caver(new (window as any).Caver.providers.WebsocketProvider("wss://klaytn04.fautor.app/ws/", {
+    private caver = new (window as any).Caver(new (window as any).Caver.providers.WebsocketProvider("wss://public-node-api.klaytnapi.com/v1/cypress/ws", {
         reconnect: {
             auto: true,
             delay: 1000,
