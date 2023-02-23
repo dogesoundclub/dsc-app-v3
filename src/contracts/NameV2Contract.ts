@@ -16,11 +16,11 @@ class NameV2Contract extends Contract {
     //     return BigNumber.from(await this.runMethod("mixForDeleting"));
     // }
 
-    public async set(nft: string, mateId: BigNumberish, name: string): Promise<void> {
+    public async set(nft: string, mateId: Number, name: string): Promise<void> {
         await this.runWalletMethod("set", nft, mateId, name);
     }
 
-    public async remove(nft: string, mateId: BigNumberish): Promise<void> {
+    public async remove(nft: string, mateId: Number): Promise<void> {
         await this.runWalletMethod("remove", nft, mateId);
     }
 
@@ -28,11 +28,11 @@ class NameV2Contract extends Contract {
         return await this.runMethod("exists", name);
     }
 
-    public async names(nft: string, mateId: BigNumberish): Promise<string> {
+    public async names(nft: string, mateId: Number): Promise<string> {
         return await this.runMethod("names", nft, mateId);
     }
 
-    public async named(nft: string, mateId: BigNumberish): Promise<boolean> {
+    public async named(nft: string, mateId: Number): Promise<boolean> {
         return await this.runMethod("named", nft, mateId);
     }
 }

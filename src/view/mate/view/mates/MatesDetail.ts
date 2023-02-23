@@ -142,7 +142,7 @@ export default class MatesDetail implements View {
                             if (nameTermCheckbox.domElement.checked === true) {
                                 // const mixNeeded = await NameV2Contract.named(MateContract.address, this.id) !== true ? 0 : await NameV2Contract.getMIXForChanging();
 
-                                const balance = await MixContract.balanceOf(owner);
+                                // const balance = await MixContract.balanceOf(owner);
                                 // if (balance.lt(mixNeeded)) {
                                 //     new Confirm(`${String(parseInt(utils.formatEther(mixNeeded), 10))} 믹스가 필요합니다.`, "믹스 구매", () => {
                                 //         open("https://klayswap.com/exchange/swap?input=0x0000000000000000000000000000000000000000&output=0xdd483a970a7a7fef2b223c3510fac852799a88bf");
