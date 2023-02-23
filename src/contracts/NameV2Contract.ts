@@ -8,13 +8,13 @@ class NameV2Contract extends Contract {
         super(Config.contracts.NameV2, require("./NameV2ContractABI.json"));
     }
 
-    public async getMIXForChanging(): Promise<BigNumber> {
-        return BigNumber.from(await this.runMethod("mixForChanging"));
-    }
+    // public async getMIXForChanging(): Promise<BigNumber> {
+    //     return BigNumber.from(await this.runMethod("mixForChanging"));
+    // }
     
-    public async getMIXForDeleting(): Promise<BigNumber> {
-        return BigNumber.from(await this.runMethod("mixForDeleting"));
-    }
+    // public async getMIXForDeleting(): Promise<BigNumber> {
+    //     return BigNumber.from(await this.runMethod("mixForDeleting"));
+    // }
 
     public async set(nft: string, mateId: BigNumberish, name: string): Promise<void> {
         await this.runWalletMethod("set", nft, mateId, name);
