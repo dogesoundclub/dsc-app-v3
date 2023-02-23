@@ -104,8 +104,8 @@ export default class MatesDetail implements View {
             let messageInput: DomNode<HTMLInputElement>;
             let messageTermCheckbox: DomNode<HTMLInputElement>;
 
-            const mixForChanging = await NameV2Contract.getMIXForChanging();
-            const mixForDeleting = await NameV2Contract.getMIXForDeleting();
+            // const mixForChanging = await NameV2Contract.getMIXForChanging();
+            // const mixForDeleting = await NameV2Contract.getMIXForDeleting();
 
             this.container.append(
                 /*el("a.transfer-button", msg("MATE_TRANSFER_BUTTON"), {
@@ -122,51 +122,56 @@ export default class MatesDetail implements View {
                 el("section.name-container",
                     el("h2", msg("MATE_DETAIL_NAME_FORM_TITLE")),
                     el("p", msg("MATE_DETAIL_NAME_FORM_DESCRIPTION")
-                        .replace(/{mixForChanging}/g, String(parseInt(utils.formatEther(mixForChanging), 10)))
-                        .replace(/{mixForDeleting}/g, String(parseInt(utils.formatEther(mixForDeleting), 10)))
+                        // .replace(/{mixForChanging}/g, String(parseInt(utils.formatEther(mixForChanging), 10)))
+                        // .replace(/{mixForDeleting}/g, String(parseInt(utils.formatEther(mixForDeleting), 10)))
+                        .replace(/{mixForChanging}/g, "이제 가스비만 지불하고 이름을 변경할 수 있습니다.")
+                        .replace(/{mixForDeleting}/g, "이제 가스비만 지불하고 이름을 삭제할 수 있습니다.")
                     ),
                     nameInput = el("input", { placeholder: msg("MATE_DETAIL_NAME_FORM_INPUT") }),
                     el(".checkbox-container",
                         nameTermCheckbox = el("input", { type: "checkbox" }),
                         el("label", msg("MATE_DETAIL_NAME_FORM_TERMS")
-                            .replace(/{mixForChanging}/g, String(parseInt(utils.formatEther(mixForChanging), 10)))
-                            .replace(/{mixForDeleting}/g, String(parseInt(utils.formatEther(mixForDeleting), 10)))
+                            // .replace(/{mixForChanging}/g, String(parseInt(utils.formatEther(mixForChanging), 10)))
+                            // .replace(/{mixForDeleting}/g, String(parseInt(utils.formatEther(mixForDeleting), 10)))
+                            .replace(/{mixForChanging}/g, "이제 가스비만 지불하고 이름을 변경할 수 있습니다.")
+                            .replace(/{mixForDeleting}/g, "이제 가스비만 지불하고 이름을 삭제할 수 있습니다.")
                         ),
                     ),
                     el("a.submit-button", msg("MATE_DETAIL_NAME_FORM_SUBMIT"), {
                         click: async () => {
                             if (nameTermCheckbox.domElement.checked === true) {
-                                const mixNeeded = await NameV2Contract.named(MateContract.address, this.id) !== true ? 0 : await NameV2Contract.getMIXForChanging();
+                                // const mixNeeded = await NameV2Contract.named(MateContract.address, this.id) !== true ? 0 : await NameV2Contract.getMIXForChanging();
 
                                 const balance = await MixContract.balanceOf(owner);
-                                if (balance.lt(mixNeeded)) {
-                                    new Confirm(`${String(parseInt(utils.formatEther(mixNeeded), 10))} 믹스가 필요합니다.`, "믹스 구매", () => {
-                                        open("https://klayswap.com/exchange/swap?input=0x0000000000000000000000000000000000000000&output=0xdd483a970a7a7fef2b223c3510fac852799a88bf");
-                                    });
-                                }
+                                // if (balance.lt(mixNeeded)) {
+                                //     new Confirm(`${String(parseInt(utils.formatEther(mixNeeded), 10))} 믹스가 필요합니다.`, "믹스 구매", () => {
+                                //         open("https://klayswap.com/exchange/swap?input=0x0000000000000000000000000000000000000000&output=0xdd483a970a7a7fef2b223c3510fac852799a88bf");
+                                //     });
+                                // }
 
-                                else if ((await MixContract.allowance(owner, NameV2Contract.address)).lt(mixNeeded)) {
-                                    await MixContract.approve(NameV2Contract.address, constants.MaxUint256);
-                                    setTimeout(async () => {
-                                        const name = nameInput.domElement.value;
-                                        if (await NameV2Contract.exists(name) === true) {
-                                            new Alert(msg("MATE_NAME_EXISTS_ERROR"), msg("CONFIRM_BUTTON"));
-                                        } else {
-                                            await NameV2Contract.set(MateContract.address, this.id, name);
-                                            ViewUtil.waitTransactionAndRefresh();
-                                        }
-                                    }, 2000);
-                                }
+                                // else if ((await MixContract.allowance(owner, NameV2Contract.address)).lt(mixNeeded)) {
+                                //     await MixContract.approve(NameV2Contract.address, constants.MaxUint256);
+                                //     setTimeout(async () => {
+                                //         const name = nameInput.domElement.value;
+                                //         if (await NameV2Contract.exists(name) === true) {
+                                //             new Alert(msg("MATE_NAME_EXISTS_ERROR"), msg("CONFIRM_BUTTON"));
+                                //         } else {
+                                //             await NameV2Contract.set(MateContract.address, this.id, name);
+                                //             ViewUtil.waitTransactionAndRefresh();
+                                //         }
+                                //     }, 2000);
+                                // }
 
-                                else {
-                                    const name = nameInput.domElement.value;
-                                    if (await NameV2Contract.exists(name) === true) {
-                                        new Alert(msg("MATE_NAME_EXISTS_ERROR"), msg("CONFIRM_BUTTON"));
-                                    } else {
-                                        await NameV2Contract.set(MateContract.address, this.id, name);
-                                        ViewUtil.waitTransactionAndRefresh();
-                                    }
+                                // else 
+                                // {
+                                const name = nameInput.domElement.value;
+                                if (await NameV2Contract.exists(name) === true) {
+                                    new Alert(msg("MATE_NAME_EXISTS_ERROR"), msg("CONFIRM_BUTTON"));
+                                } else {
+                                    await NameV2Contract.set(MateContract.address, this.id, name);
+                                    ViewUtil.waitTransactionAndRefresh();
                                 }
+                                // }
                             }
                         },
                     }),
@@ -174,27 +179,28 @@ export default class MatesDetail implements View {
                         el("a", msg("MATE_DETAIL_REMOVE_NAME_BUTTON"), {
                             click: async () => {
                                 new Confirm(msg("MATE_DETAIL_REMOVE_NAME_CONFIRM"), msg("CONFIRM_BUTTON"), async () => {
-                                    const mixNeeded = await NameV2Contract.getMIXForDeleting();
+                                    // const mixNeeded = await NameV2Contract.getMIXForDeleting();
 
                                     const balance = await MixContract.balanceOf(owner);
-                                    if (balance.lt(mixNeeded)) {
-                                        new Confirm(`${String(parseInt(utils.formatEther(mixNeeded), 10))} 믹스가 필요합니다.`, "믹스 구매", () => {
-                                            open("https://klayswap.com/exchange/swap?input=0x0000000000000000000000000000000000000000&output=0xdd483a970a7a7fef2b223c3510fac852799a88bf");
-                                        });
-                                    }
+                                    // if (balance.lt(mixNeeded)) {
+                                    //     new Confirm(`${String(parseInt(utils.formatEther(mixNeeded), 10))} 믹스가 필요합니다.`, "믹스 구매", () => {
+                                    //         open("https://klayswap.com/exchange/swap?input=0x0000000000000000000000000000000000000000&output=0xdd483a970a7a7fef2b223c3510fac852799a88bf");
+                                    //     });
+                                    // }
 
-                                    else if ((await MixContract.allowance(owner, NameV2Contract.address)).lt(mixNeeded)) {
-                                        await MixContract.approve(NameV2Contract.address, constants.MaxUint256);
-                                        setTimeout(async () => {
-                                            await NameV2Contract.remove(MateContract.address, this.id);
-                                            ViewUtil.waitTransactionAndRefresh();
-                                        }, 2000);
-                                    }
+                                    // else if ((await MixContract.allowance(owner, NameV2Contract.address)).lt(mixNeeded)) {
+                                    //     await MixContract.approve(NameV2Contract.address, constants.MaxUint256);
+                                    //     setTimeout(async () => {
+                                    //         await NameV2Contract.remove(MateContract.address, this.id);
+                                    //         ViewUtil.waitTransactionAndRefresh();
+                                    //     }, 2000);
+                                    // }
 
-                                    else {
+                                    // else 
+                                    // {
                                         await NameV2Contract.remove(MateContract.address, this.id);
                                         ViewUtil.waitTransactionAndRefresh();
-                                    }
+                                    // }
                                 });
                             },
                         }),
