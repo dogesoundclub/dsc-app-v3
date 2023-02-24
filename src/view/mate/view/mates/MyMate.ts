@@ -35,7 +35,8 @@ export default class MyMate implements View {
                     el("h2", msg("HOLDER_DISCORD_CERTIFICATION_TITLE")),
                     el("p", msg("HOLDER_DISCORD_CERTIFICATION_DESC")),
                     el("a", msg("HOLDER_DISCORD_CERTIFICATION_BUTTON"), {
-                        href: `https://discord.com/api/oauth2/authorize?client_id=1074340739930140682&redirect_uri=${encodeURIComponent(`${window.location.protocol}//${window.location.host}/myMate`)}&response_type=code&scope=identify`,
+                        //href: `https://discord.com/api/oauth2/authorize?client_id=1074340739930140682&redirect_uri=${encodeURIComponent(`${window.location.protocol}//${window.location.host}/myMate`)}&response_type=code&scope=identify`,
+                        href: `https://discord.com/api/oauth2/authorize?client_id=1072739158570844180&redirect_uri=${encodeURIComponent(`${window.location.protocol}//${window.location.host}/myMate`)}&response_type=code&scope=identify`,
                     }),
                 ),
             ),
