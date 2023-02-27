@@ -128,7 +128,10 @@ export default class Activities implements View {
                 if (
                     d.mate === true ||
                     d.emate === true ||
-                    d.bmcs === true
+                    d.bmcs === true ||
+                    d.drgroot === true ||
+                    d.belif === true ||
+                    d.belif2 === true
                 ) {
                     new Alert("홀더 인증 완료");
                 } else {
