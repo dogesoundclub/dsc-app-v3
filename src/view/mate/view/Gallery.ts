@@ -86,6 +86,9 @@ export default class Gallery implements View {
 
                 let queryId: number | undefined = parseInt(this.query, 10);
                 queryId = isNaN(queryId) === true ? undefined : queryId;
+                if(mateNames[id] === undefined) {
+                    mateNames[id] = "";
+                }
 
                 if (id === queryId || mateNames[id].replace(/ /g, "").toLowerCase().indexOf(this.query.replace(/ /g, "").toLowerCase()) !== -1) {
                     mates.push(id);
