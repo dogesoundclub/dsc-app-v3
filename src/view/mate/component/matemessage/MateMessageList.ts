@@ -19,7 +19,7 @@ export default class MateMessageList extends DomNode {
                         el("th.address", "HOLDER ADDR", { width: "25%" }),
                     ),
                 ),
-                this.messageList = el("tbody"),
+                this.messageList = el("tbody"),{style: {"table-layout": "fixed", "word-break" : "break-all" } },
             ),
         );
         this.loadMessages();
